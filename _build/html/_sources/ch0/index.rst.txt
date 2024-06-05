@@ -1,0 +1,13 @@
+Chapter 0. Some Underlying Geometric Notations
+==============================================
+
+content
+
+.. toctree::
+    :maxdepth: 2
+    
+    homotopy-and-homotopy-type
+    cell-complexes
+    operations-on-spaces
+    two-criteria-for-homotopy-equivalence
+    the-homotopy-extension-property
