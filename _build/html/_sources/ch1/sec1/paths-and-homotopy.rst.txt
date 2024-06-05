@@ -1,4 +1,0 @@
-Paths and Homotopy
-==================
-
-content

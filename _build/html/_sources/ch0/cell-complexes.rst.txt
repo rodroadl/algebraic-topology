@@ -1,4 +1,0 @@
-Cell complexes
-==============
-
-content

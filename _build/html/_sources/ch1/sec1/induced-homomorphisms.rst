@@ -1,4 +1,0 @@
-Induced Homomorphisms
-=====================
-
-content

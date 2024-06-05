@@ -1,4 +1,0 @@
-Operations on Spaces
-====================
-
-content
