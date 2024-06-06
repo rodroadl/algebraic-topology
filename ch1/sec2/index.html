@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1.2. Van Kampen’s Theorem &#8212; Algebraic Topology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch1/sec2/index';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Free Products of Groups" href="free-products-of-groups.html" />
+    <link rel="prev" title="Induced Homomorphisms" href="../sec1/induced-homomorphisms.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Algebraic Topology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../preface/index.html">Preface</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preface/standard-notations.html">Standard Notations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch0/index.html">Chapter 0. Some Underlying Geometric Notations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch0/homotopy-and-homotopy-type.html">Homotopy and Homotopy Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch0/cell-complexes.html">Cell complexes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch0/operations-on-spaces.html">Operations on Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch0/two-criteria-for-homotopy-equivalence.html">Two Criteria for Homotopy Equivalence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch0/the-homotopy-extension-property.html">The Homotopy Extension Property</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Chapter 1. The Fundamental Group</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../sec1/index.html">1.1. Basic Constructions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sec1/paths-and-homotopy.html">Paths and Homotopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sec1/the-fundamental-group-of-the-circle.html">The Fundamental Group of the Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sec1/induced-homomorphisms.html">Induced Homomorphisms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">1.2. Van Kampen’s Theorem</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="free-products-of-groups.html">Free Products of Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="the-van-kampen-theorem.html">The van Kampen theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="applications-to-cell-complexes.html">Applications to Cell Complexes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../sec3/index.html">1.3. Covering Spaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sec3/lifting-properties.html">Lifting Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sec3/the-classification-of-covering-spaces.html">The Classification of Covering Spaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sec3/deck-transformations-and-group-actions.html">Deck Transformations and Group Actions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../additional-topics/index.html">Additional Topics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../additional-topics/graphs-and-free-groups.html">1.A. Graphs and Free Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../additional-topics/k-g-1-spaces-and-graphs-of-groups.html">1.B. K(G,1) Spaces and Graphs of Groups</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch2/index.html">Chapter 2. Homology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch2/sec1/index.html">2.1. Simplicial and Singular Homology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec1/delta-complexes.html"><span class="math notranslate nohighlight">\(\Delta\)</span>-Complexes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec1/simplicial-homology.html">Simplicial Homology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec1/singular-homology.html">Singular Homology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec1/homotopy-invariance.html">Homotopy Invariance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec1/exact-sequences-and-excision.html">Exact Sequences and Excision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec1/the-equivalence-of-simplicial-and-singular-homotopy.html">The Equivalence of Simplicial and Singular Homology</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch2/sec2/index.html">2.2. Computations and Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec2/degree.html">Degree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec2/cellular-homology.html">Cellular Homology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec2/mayer-vietoris-sequences.html">Mayer Vietoris Sequences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec2/homology-with-coefficients.html">Homology with Coefficients</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch2/sec3/index.html">2.3. The Formal Viewpoint</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec3/axioms-for-homology.html">Axioms for Homology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/sec3/categories-and-functors.html">Categories and Functors</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch2/additional-topics/index.html">Additional Topics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/additional-topics/homology-and-fundamental-group.html">2.A. Homology and Fundamental Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/additional-topics/classical-applications.html">2.B. Classical Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch2/additional-topics/simplicial-approximation.html">2.C. Simplicial Approximation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch3/index.html">Chapter 3. Cohomology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch3/sec1/index.html">3.1. Cohomology Groups</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec1/the-universal-coefficient-theorem.html">The Universal Coefficient Theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec1/cohomology-of-spaces.html">Cohomology of Spaces</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch3/sec2/index.html">3.2. Cup Product</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec2/the-cohomology-ring.html">The Cohomology Ring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec2/a-kunneth-formula.html">A Künneth Formula</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec2/spaces-with-polynomial-cohomology.html">Spaces with Polynomial Cohomology</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch3/sec3/index.html">3.3. Poincaré Duality</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec3/orientations-and-homology.html">Orientations and Homology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec3/the-duality-theorem.html">The Duality Theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec3/connection-with-cup-product.html">Connection with Cup Product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/sec3/other-forms-of-duality.html">Other Forms of Duality</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch3/additional-topics/index.html">Additional Topics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/universal-coefficients-for-homology.html">3.A. Universal Coefficients for Homology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/the-general-kunneth-formula.html">3.B. The General Künneth Formula</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/h-spaces-and-hopf-algebras.html">3.C. H-Spaces and Hopf Algebras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/the-cohomology-of-so_n.html">3.D. The Cohomology of SO(n)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/bockstein-homomorphisms.html">3.E. Bockstein Homomorphisms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/limits-and-ext.html">3.F. Limits and Ext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/transfer-homomorphisms.html">3.G. Transfer Homomorphisms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch3/additional-topics/local-coefficients.html">3.H. Local Coefficients</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch4/index.html">Chapter 4. Homotopy Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch4/sec1/index.html">4.1. Homotopy Groups</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec1/definitions-and-basic-constructions.html">Definitions and Basic Constructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec1/whitehead-s-theorem.html">Whitehead’s Theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec1/cellular-approximation.html">Cellular Approximation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec1/cw-approximation.html">CW Approximation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch4/sec2/index.html">4.2. Elementary Methods of Calculation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec2/excision-for-homotopy-groups.html">Excision for Homotopy Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec2/the-hurewicz-theorem.html">The Hurewicz Theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec2/fiber-bundles.html">Fiber Bundles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec2/stable-homotopy-groups.html">Stable Homotopy Groups</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch4/sec3/index.html">4.3. Connections with Cohomology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec3/the-homotopy-construction-of-cohomology.html">The Homotopy Construction of Cohomology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec3/fibrations.html">Fibrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec3/postnikov-towers.html">Postnikov Towers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/sec3/obstruction-theory.html">Obstruction Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch4/additional-topics/index.html">Additional Topics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/basepoints-and-homotopy.html">4.A. Basepoints and Homotopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/the-hopf-invariant.html">4.B. The Hopf Invariant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/minimal-cell-structures.html">4.C. Minimal Cell Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/cohomology-of-fiber-bundles.html">4.D. Cohomology of Fiber Bundles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/the-brown-representability-theorem.html">4.E. The Brown Representability Theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/spectra-and-homology-theories.html">4.F. Spectra and Homology Theories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/gluing-constructions.html">4.G. Gluing Constructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/eckmann-hilton-duality.html">4.H. Eckmann-Hilton Duality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/stable-splittings-of-spaces.html">4.I. Stable Splittings of Spaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/the-loopspace-of-a-suspension.html">4.J. The Loopspace of a Suspension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/the-dold-thom-theorem.html">4.K. The Dold-Thom Theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch4/additional-topics/steenrod-squares-and-powers.html">4.L. Steenrod Squares and Powers</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/topology-of-cell-complexes.html">Topology of Cell Complexes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/the-compact-open-topology.html">The Compact-Open Topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/the-homotopy-extension-property.html">The Homotopy Extension Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/simplicial-cw-structures.html">Simplicial CW Structures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/ch1/sec2/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.2. Van Kampen’s Theorem</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="van-kampen-s-theorem">
+<h1>1.2. Van Kampen’s Theorem<a class="headerlink" href="#van-kampen-s-theorem" title="Permalink to this heading">#</a></h1>
+<p>content</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="free-products-of-groups.html">Free Products of Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the-van-kampen-theorem.html">The van Kampen theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications-to-cell-complexes.html">Applications to Cell Complexes</a></li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../sec1/induced-homomorphisms.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Induced Homomorphisms</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="free-products-of-groups.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Free Products of Groups</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By James Kim
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Allen Hatcher.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
