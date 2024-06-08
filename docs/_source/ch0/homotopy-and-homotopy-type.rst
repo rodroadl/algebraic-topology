@@ -106,7 +106,7 @@ distinguishing these two notions.
 Let us describe now an example of a 2-dimensional subspace of :math:`\mathbb{R}^3`, known as the 
 *house with two rooms*, which is contractible but not in any obvious way.
 
-.. image::fig/house-with-two-rooms.png
+.. image:: fig/house-with-two-rooms.png
 
 To build this space, start with a box divided into two chambers by a horizontal rectangle, where by a 
 'rectangle' we mean not just the four edges of a rectangle but also its interior. Access to 
