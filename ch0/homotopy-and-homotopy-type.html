@@ -468,7 +468,59 @@ The family <span class="math notranslate nohighlight">\(f_t\)</span> should be c
 <p>It is easy to produce many more examples similar to the letter examples, with the deformation retraction <span class="math notranslate nohighlight">\(f_t\)</span> obtained by sliding along line segments.
 The figure on the left below shows such a deformation retraction of a Möbius band onto its core circle.</p>
 <img alt="../_images/mobius-band.png" src="../_images/mobius-band.png" />
-<p>The three figures on the right show deformation retractions in which a disk with two smaller open subdisks removed shrinks to three different subspaces.</p>
+<p>The three figures on the right show deformation retractions in which a disk with
+two smaller open subdisks removed shrinks to three different subspaces.</p>
+<p>In all these examples the structure that gives rise to the deformation retraction can
+be described by means of the following definition. For a mp <span class="math notranslate nohighlight">\(f:x \rightarrow Y\)</span>, the <strong>mapping
+cylinder</strong> <span class="math notranslate nohighlight">\(M_f\)</span> is the quotient space of the disjoint union <span class="math notranslate nohighlight">\((X \times I) \sqcup Y\)</span> obtained by identifying
+each <span class="math notranslate nohighlight">\((x,1) \in X \times I\)</span> with :math: <cite>f(x) in Y</cite>. In the letter examples,
+the space <span class="math notranslate nohighlight">\(X\)</span> is the outer boundary of the thick letter, <span class="math notranslate nohighlight">\(Y\)</span> is the thin letter, and <span class="math notranslate nohighlight">\(f:X \rightarrow Y\)</span> sends
+the outer endpoint of each line segment to its inner endpoint. A similar description
+applies to the other examples. Then it is a general fact that a mapping cylinder <span class="math notranslate nohighlight">\(M_f\)</span>
+deformation retracts to the subspace <span class="math notranslate nohighlight">\(Y\)</span> by sliding each point <span class="math notranslate nohighlight">\((x,t)\)</span> along the segment
+<span class="math notranslate nohighlight">\(\{x\} \times I \subset M_f\)</span> to the endpoint <span class="math notranslate nohighlight">\(f(x) \in Y\)</span>. Continuity of this deformation retraction is
+evident in the specific examples above, and for a general <span class="math notranslate nohighlight">\(f:X \rightarrow Y\)</span> it can be verified
+using Proposition A.17 in the Appendix concerning the interplay between quotient
+spaces and product spaces.</p>
+<p>Not all deformation retractions arise in this simple way from mapping cylinders.
+For example, the thick <strong>X</strong> deformation retracts to the thin X, which in turn deformation
+retracts to the point of intersection of its two crossbars. The net result is a deformatio
+retraction of <strong>X</strong> onto a point, during which certain pairs of points follow paths
+that merge before reaching their final destination. Later in this section we will describe a
+considerably more complicated example. the so-called ‘house with two rooms’.</p>
+<p>A deformation retraction <span class="math notranslate nohighlight">\(F_t:X \rightarrow X\)</span> is a special case of the general notion of a
+<strong>homotopy</strong>, which is simply any family of maps <span class="math notranslate nohighlight">\(f_t:X \rightarrow Y, \, t \in I\)</span>, such that the associated
+map <span class="math notranslate nohighlight">\(F:X \times I \rightarrow Y\)</span> given by <span class="math notranslate nohighlight">\(F(x,t) = f_t(x)\)</span> is continuous. One says that two
+maps <span class="math notranslate nohighlight">\(f_0 , f_1 : X \rightarrow Y\)</span> are <strong>homotopic</strong> if there exists a homotopy <span class="math notranslate nohighlight">\(f_t\)</span> connecting them,
+and one writes <span class="math notranslate nohighlight">\(f_i \simeq f_1\)</span>.</p>
+<p>In these terms, a deformation retraction of <span class="math notranslate nohighlight">\(X\)</span> onto a subspace <span class="math notranslate nohighlight">\(A\)</span> is a homotopy
+from the identity map of <span class="math notranslate nohighlight">\(X\)</span> to a <strong>retraction</strong> of <span class="math notranslate nohighlight">\(X\)</span> onto <span class="math notranslate nohighlight">\(A\)</span>, a map <span class="math notranslate nohighlight">\(r:X \rightarrow X\)</span> such that
+<span class="math notranslate nohighlight">\(r(X) = A\)</span> and <span class="math notranslate nohighlight">\(r \mid A = \mathbb{1}\)</span>. One could equally well regard a retraction as a map <span class="math notranslate nohighlight">\(r:X \rightarrow X\)</span>
+restricting to the identity on the subspace <span class="math notranslate nohighlight">\(A \subset X\)</span>. From a more formal viewpoint a
+retraction is a mpa <span class="math notranslate nohighlight">\(r:X\rightarrow X\)</span> with <span class="math notranslate nohighlight">\(r^2=r\)</span>, since this equation says exactly that <span class="math notranslate nohighlight">\(r\)</span> is the
+identity on its image. Retractions are the topological analogs of projection operators in other parts of mathematics.</p>
+<p>Not all retractions come from deformation retractions. For example, a space <span class="math notranslate nohighlight">\(X\)</span>
+always retracts onto any point <span class="math notranslate nohighlight">\(x_0 \in X\)</span> via the constant map sending all of <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(x_0\)</span>,
+but a space that deformation retracts onto a point must be path-connected since a
+deformation retraction of <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(x_0\)</span> gives a path joining each <span class="math notranslate nohighlight">\(x \in X\)</span> to <span class="math notranslate nohighlight">\(x_0\)</span>. It is less
+trivial to show that there are path-connected spaces that do not deformation retract
+onto a point. One would expect this to be the case for the letters ‘with holes’, <strong>A</strong>, <strong>B</strong>,
+<strong>D</strong>, <strong>O</strong>, <strong>P</strong>, <strong>Q</strong>, <strong>R</strong>. In Chapter 1 we will develop techniques to prove this.</p>
+<p>A homotopy <span class="math notranslate nohighlight">\(f_t : X \rightarrow X\)</span> that gives a deformation retraction of <span class="math notranslate nohighlight">\(X\)</span> onto a subspace
+<span class="math notranslate nohighlight">\(A\)</span> has the property that <span class="math notranslate nohighlight">\(f_t \mid A = \mathbb{1}\)</span> for all <span class="math notranslate nohighlight">\(t\)</span>. In general, a homotopy <span class="math notranslate nohighlight">\(f_t : X \rightarrow Y\)</span> whose
+restriction to a subspace <span class="math notranslate nohighlight">\(A \subset X\)</span> is independent of <span class="math notranslate nohighlight">\(t\)</span> is called a <strong>homotopy relative
+to</strong> <span class="math notranslate nohighlight">\(A\)</span>, or more concisely, a homotopy rel <span class="math notranslate nohighlight">\(A\)</span>. Thus, a deformation retraction of <span class="math notranslate nohighlight">\(X\)</span> onto
+<span class="math notranslate nohighlight">\(A\)</span> is a homotopy rel <span class="math notranslate nohighlight">\(A\)</span> from the identity map of <span class="math notranslate nohighlight">\(X\)</span> to a retraction of <span class="math notranslate nohighlight">\(X\)</span> onto <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>If a space <span class="math notranslate nohighlight">\(f_t : X \rightarrow X\)</span> that gives a deformation retraction of <span class="math notranslate nohighlight">\(X\)</span> onto a subspace <span class="math notranslate nohighlight">\(A\)</span> via <span class="math notranslate nohighlight">\(f_t:X\rightarrow X\)</span>, then if
+<span class="math notranslate nohighlight">\(r:X\rightarrow A\)</span> denotes the resulting retraction and <span class="math notranslate nohighlight">\(i:A\rightarrow X\)</span> the inclusion, we have <span class="math notranslate nohighlight">\(ri=\mathbb{1}\)</span>
+and <span class="math notranslate nohighlight">\(ir \simeq \mathbb{1}\)</span>, the latter homotopy being given by <span class="math notranslate nohighlight">\(f_t\)</span>. Generalizing this situation, a
+map <span class="math notranslate nohighlight">\(f:X \rightarrow Y\)</span> is called a <strong>homotopy equivalence</strong> if there is a map <span class="math notranslate nohighlight">\(g:Y \rightarrow X\)</span> such that
+<span class="math notranslate nohighlight">\(fg \simeq \mathbb{1}\)</span>  and <span class="math notranslate nohighlight">\(gf \simeq \mathbb{1}\)</span>. The spaces <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are said to be <strong>homotopy equivalent</strong> or to
+have the same <strong>homotopy type</strong>. The notation is <span class="math notranslate nohighlight">\(X \simeq Y\)</span>. It is an easy easy exercise to check
+that this is an equivalence relation, in contrast with the nonsymmetric notion of deformation
+retraction . For example, the three graphs <a class="reference internal" href="../_images/three-graphs.png"><img alt="three-graphs" src="../_images/three-graphs.png" style="width: 91.45px; height: 12.850000000000001px;" /></a> are all homotopy
+equivalent since they are deformation retracts of the same space, as we saw earlier,
+but none of the three is a deformation retract of any other.</p>
 </section>
 
 
