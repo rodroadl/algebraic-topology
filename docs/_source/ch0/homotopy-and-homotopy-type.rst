@@ -103,8 +103,40 @@ to constant map. In general, this is slightly weaker than saying the space defor
 retracts to a point; see the exercises at the end of the chapter for an example
 distinguishing these two notions.
 
+Let us describe now an example of a 2-dimensional subspace of :math:`\mathbb{R}^3`, known as the 
+*house with two rooms*, which is contractible but not in any obvious way.
 
+.. image::fig/house-with-two-rooms.png
 
+To build this space, start with a box divided into two chambers by a horizontal rectangle, where by a 
+'rectangle' we mean not just the four edges of a rectangle but also its interior. Access to 
+the two chambers from outside the box is provided by two vertical tunnels. The upper 
+tunnel is made by punching out a square from the top of the box and another square 
+directly below it from the middle horizontal rectangle, then inserting four vertical 
+rectangles, the walls of the tunnel. This tunnel allows entry to the lower chamber 
+from outside the box. The lower tunnel is formed in similar fashion, providing entry 
+to the upper chamber. Finally, two vertical rectangles are inserted to form 'support 
+walls' for the two tunnels. The resulting space :math:`X` thus consists of three horizontal 
+pieces homeomorphic to annuli plus all the vertical rectangles that form  the walls of 
+the two chambers. 
+
+To see that :math:`X` is contractible, consider a closed :math:`\epsilon`-neighborhood :math:`N(X)` of :math:`X`. 
+This clearly deformation retracts onto :math:`X` if :math:`\epsilon` is sufficiently small. In fact, :math:`N(X)` 
+is the mapping cylinder of a map from the boundary surface of :math:`N(X)` to :math:`X`. Less 
+obvious is the fact that :math:`N(X)` is homeomorphic to :math:`D^3`,the unit ball in :math:`\mathbb{R}^3`. To see 
+this, imagine forming :math:`N(X)` from a ball of clay by pushing a finger into the ball to 
+create the upper tunnel, then gradually hollowing out the lower chamber, and similarly 
+pushing a finger in to create the lower tunnel and hollowing out the upper chamber. 
+Mathematically, this process gives a family of embeddings :math:`h_t:D^3 \rightarrow \mathbb{R}^3` starting with 
+the usual inclusion :math:`D^3 \hookrightarrow \mathbb{R}^3` and ending with a homeomorphism onto :math:`N(X)`.
+
+Thus we have :math:`X \simeq N(X) = D^3 \simeq \, point`, so :math:`X` is contractible since 
+homotopy equivalence is an equivalence relation. In fact, :math:`X` deformation retracts to a point. For 
+if :math:`f_t` is a deformation retraction of the ball :math:`N(X)` to a point :math:`x_0 \in X` and if :math:`r:N(X) \rightarrow X` 
+is a retraction, for example the end result of a deformation retraction of :math:`N(X)` to :math:`X`, 
+then the restriction of the composition :math:`rf_t` to :math:`X` is a deformation retraction of :math:`X` to 
+:math:`x_0`. However, it is quite a challenging exercise to see exactly what this deformation 
+retraction look like.
 
 .. |three-graphs| image:: fig/three-graphs.png
     :scale: 5%
