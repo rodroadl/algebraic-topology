@@ -6,9 +6,9 @@ if they have 'the same shape' in a sense that is much broader than homeomorphism
 To take an everyday example, the letters of the alphabet can be written either as unions of finitely many straight 
 and curved line segments, or in thickened forms that are compact regions in the plane bounded by one or more simple closed curves. 
 In each case the thin letter is a subspace of the thick letter, and we can continuously shrink the thick letter to the thin one. 
-A nice way to do this is to decompse a thick letter, call it **X**, into line segments connecting each point on the outer boundary of **X** to a unique point of the think subletter X, 
-as indicated in the figure. Then we can shrink **X** to X by sliding each point of **X**-X into X along the line segment that contains it. 
-Points that are already X do not move.
+A nice way to do this is to decompse a thick letter, call it **X**, into line segments connecting each point on the outer boundary of **X** 
+to a unique point of the think subletter X, as indicated in the figure. Then we can shrink **X** to X by sliding each point of **X**-X into X 
+along the line segment that contains it. Points that are already X do not move.
 
 .. image:: fig/ABC.png
     :width: 400
@@ -97,7 +97,13 @@ any homotopy equivalence :math:`f:X\rightarrow Y`. We observed previously that :
 retracts to :math:`Y`, so what needs to be proved is that:math:`M_f` also deformation retracts to its 
 other end :math:`X` if :math:`f` is a homotopy equivalence. This is shown in Corollary 0.21.
 
-A space having the homo
+A space having the homotopy type of a point is called **contractible**. This amounts 
+to requiring that the identity map of the space be **nullhomotopic**, that is, homotopic
+to constant map. In general, this is slightly weaker than saying the space deformation
+retracts to a point; see the exercises at the end of the chapter for an example
+distinguishing these two notions.
+
+
 
 
 .. |three-graphs| image:: fig/three-graphs.png
