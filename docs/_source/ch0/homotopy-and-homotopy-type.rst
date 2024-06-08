@@ -93,11 +93,11 @@ but none of the three is a deformation retract of any other.
 It is true in general that two spaces :math:`X` and :math:`Y` are homotopy equivalent if and only
 if there exists a third space :math:`Z` containing both :math:`X` and :math:`Y` as deformation retracts. For 
 the less trivial implication one can in fact take :math:`Z` to be the mapping cylinder :math:`M_f` of
-any homotopy equivalence :math:`f:X\rightarrow Y \`. We observed previously that :math:`M_f` deformation 
+any homotopy equivalence :math:`f:X\rightarrow Y`. We observed previously that :math:`M_f` deformation 
 retracts to :math:`Y`, so what needs to be proved is that:math:`M_f` also deformation retracts to its 
 other end :math:`X` if :math:`f` is a homotopy equivalence. This is shown in Corollary 0.21.
 
-A space having the 
+A space having the homo
 
 
 .. |three-graphs| image:: fig/three-graphs.png
