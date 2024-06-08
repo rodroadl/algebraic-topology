@@ -73,6 +73,10 @@ latex_elements = {
 \usepackage[titles]{tocloft}
 \usepackage{mathtools}
 \usepackage{amsmath}
+\usepackage{relsize}
+\usepackage{amsmath}
+\usepackage{mathbbm}
+\usepackage{dsfont}
 \cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
 \setlength{\cftchapnumwidth}{0.75cm}
 \setlength{\cftsecindent}{\cftchapnumwidth}
