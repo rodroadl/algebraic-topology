@@ -18,29 +18,28 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f7f2df90" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=2b91c5f0"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch0/cell-complexes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -124,6 +123,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../index.html">
   
@@ -139,7 +140,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -326,9 +327,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -406,10 +407,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -417,7 +418,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -452,6 +453,48 @@ document.write(`
 <p>A familiar way of constructing the torus <span class="math notranslate nohighlight">\(S^1 \times S^1\)</span> is by identifying opposite isdes
 of a square. More generally, an orientable surface <span class="math notranslate nohighlight">\(M_g\)</span> of  genus <span class="math notranslate nohighlight">\(g\)</span> can be constructed
 from a polygon with <span class="math notranslate nohighlight">\(4g\)</span> sides by identifying pairs of edges, as shown in the figure in the first three cases <span class="math notranslate nohighlight">\(g=1,2,3\)</span>.</p>
+<img alt="../_images/cell-complexes.png" src="../_images/cell-complexes.png" />
+<p>The <span class="math notranslate nohighlight">\(4g\)</span> edges of the polygon become a union of <span class="math notranslate nohighlight">\(2g\)</span> circles in the surface, all intersecting
+in a single point. The interior of the polygon ccan be thought of as an open disk, or a <span class="math notranslate nohighlight">\(\mathbf{2}\)</span>-<strong>cell</strong>,
+attached to the union of the <span class="math notranslate nohighlight">\(2g\)</span> circles. One can also regard the union of the circles as being obtained
+from their common point of intersection, by attaching <span class="math notranslate nohighlight">\(2g\)</span> open arcs, or <span class="math notranslate nohighlight">\(\mathbf{1}\)</span>-<strong>cells</strong>. Thus
+the surface can be built up in stages: Start with a point, attach <span class="math notranslate nohighlight">\(1\)</span>-cells to this point,
+then attach a <span class="math notranslate nohighlight">\(2\)</span>-cell.</p>
+<p>A natural generalization of this is to construct a space by the following procedure:</p>
+<ol class="arabic simple">
+<li><p>Start with a discrete Set <span class="math notranslate nohighlight">\(X^0\)</span>, whose points are regarded as <span class="math notranslate nohighlight">\(0\)</span>-cells.</p></li>
+</ol>
+<p>2. Inductively, form the <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>-<strong>skeleton</strong> <span class="math notranslate nohighlight">\(X^n\)</span> from <span class="math notranslate nohighlight">\(X^{n-1}\)</span> by attaching <span class="math notranslate nohighlight">\(n\)</span>-cells <span class="math notranslate nohighlight">\(e^n_{\alpha}\)</span> via maps
+<span class="math notranslate nohighlight">\(\varphi_\alpha:S^{n-1} \rightarrow X^{n-1}\)</span>. This means that <span class="math notranslate nohighlight">\(X^n\)</span> is the quotient space of the disjoint union
+<span class="math notranslate nohighlight">\(X^{n-1}\sqcup_\alpha D^n_\alpha\)</span> with a collection of <span class="math notranslate nohighlight">\(n\)</span>-disks <span class="math notranslate nohighlight">\(D^n_\alpha\)</span> under the identifications
+<span class="math notranslate nohighlight">\(x~\varphi_\alpha(x)\)</span> for <span class="math notranslate nohighlight">\(x \in \partial D^n_\alpha\)</span>. Thus as a set, <span class="math notranslate nohighlight">\(X^n=X^{n-1}\sqcup_\alpha e^n_\alpha\)</span> where each <span class="math notranslate nohighlight">\(e^n_\alpha\)</span> is an
+open <span class="math notranslate nohighlight">\(n\)</span>-disk.
+3. One can either stop this inductive</p>
+<p>It is true in general that two spaces <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are homotopy equivalent if and only
+if there exists a third space <span class="math notranslate nohighlight">\(Z\)</span> containing both <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> as deformation retracts. For
+the less trivial implication one can in fact take <span class="math notranslate nohighlight">\(Z\)</span> to be the mapping cylinder <span class="math notranslate nohighlight">\(M_f\)</span> deformation
+retracts to <span class="math notranslate nohighlight">\(Y\)</span>, so what needs to be proved is that <span class="math notranslate nohighlight">\(M_f\)</span> also deformation retracts to its
+other end <span class="math notranslate nohighlight">\(X\)</span> if <span class="math notranslate nohighlight">\(f\)</span> is a homotopy equivalence. This is shown in Corollary 0.21.</p>
+<p>If <span class="math notranslate nohighlight">\(X=X^n\)</span> for some <span class="math notranslate nohighlight">\(n\)</span>, then <span class="math notranslate nohighlight">\(X\)</span> is said to be finite-dimensional, and the smallest
+such <span class="math notranslate nohighlight">\(n\)</span> is the <strong>dimension</strong> of <span class="math notranslate nohighlight">\(X\)</span>, the maximum dimension of cells of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p><strong>Example 0.1.</strong> A <span class="math notranslate nohighlight">\(1\)</span>-dimensional cell complex <span class="math notranslate nohighlight">\(X=X^1\)</span> is what is called a <strong>graph</strong> in
+algebraic topology. It consists of vertices (the <span class="math notranslate nohighlight">\(0\)</span>-cells) to which edges (the <span class="math notranslate nohighlight">\(1\)</span>-cells) are
+attached. The two ends of an edge can be attached to the same vertex.</p>
+<p><strong>Example 0.2.</strong> The house with two rooms, pictured earlier, has a visually obvious
+<span class="math notranslate nohighlight">\(2\)</span>-dimensional cell complex structure. The <span class="math notranslate nohighlight">\(0\)</span>-cells are the vertices where three or more
+of the depicted edges meet, and the <span class="math notranslate nohighlight">\(1\)</span>-cells are the interiors of the edges connecting
+theses vertices. This gives the <span class="math notranslate nohighlight">\(1\)</span>-skeleton <span class="math notranslate nohighlight">\(X^1\)</span>, and the <span class="math notranslate nohighlight">\(2\)</span>-cells are the components of
+the remainder of the space, <span class="math notranslate nohighlight">\(X-X^1\)</span>. If one counts up, one finds there are <span class="math notranslate nohighlight">\(29\)</span> <span class="math notranslate nohighlight">\(0\)</span>-cells,
+<span class="math notranslate nohighlight">\(51\)</span> <span class="math notranslate nohighlight">\(1\)</span>-cells, and <span class="math notranslate nohighlight">\(23\)</span> <span class="math notranslate nohighlight">\(2\)</span>-cells, with the alternating sum <span class="math notranslate nohighlight">\(29-51+23\)</span> equal to <span class="math notranslate nohighlight">\(1\)</span>. This is
+the <strong>Euler characteristic</strong>, which for a cell complex with finitely many cells is defined
+to be the number of even-dimensional cells minus the number of odd-dimensional
+cells. As we shall show in Theorem 2.44, the Euler characteristic of a cell complex
+depends only on its homotopy type, so the fact that the house with two rooms has the
+homotopy type of a point implies that its Euler characteristic must be <span class="math notranslate nohighlight">\(1\)</span>, no matter
+how it is represented as a cell complex.</p>
+<p><strong>Example 0.3.</strong> The sphere <span class="math notranslate nohighlight">\(S^n\)</span> has the structure of a cell complex with just two cells, <span class="math notranslate nohighlight">\(e^0\)</span>
+and <span class="math notranslate nohighlight">\(e^n\)</span>, the <span class="math notranslate nohighlight">\(n\)</span>-cell being attached by the constant map <span class="math notranslate nohighlight">\(S^{n-1}\rightarrow e^0\)</span>. This is equivalent
+to regarding <span class="math notranslate nohighlight">\(S^n\)</span> as the quotient space <span class="math notranslate nohighlight">\(D^n/\partial D^n\)</span></p>
 </section>
 
 
@@ -533,8 +576,8 @@ By James Kim
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
