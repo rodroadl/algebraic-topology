@@ -14,9 +14,9 @@ Standard Notations
 
 :math:`D^n` : the unit disk or ball in :math:`\mathbb{R}^{n}`, all points of distance :math:`\leq 1` from the origin.
 
-:math:`\delta D^n = S^{n-1}` : the boundary of the :math:`n`-disk.
+:math:`\partial D^n = S^{n-1}` : the boundary of the :math:`n`-disk.
 
-:math:`e^n` : an :math:`n`-cell, homeomorphic to the open :math:`n`-disk :math:`D^n - \delta D^n` In particular, :math:`D^0` and :math:`e^0` consist of a single point since :math:`\mathbb{R}^0 = \{0\}`. But :math:`S^0` consists of two points since it is :math:`\delta D^1`.
+:math:`e^n` : an :math:`n`-cell, homeomorphic to the open :math:`n`-disk :math:`D^n - \partial D^n` In particular, :math:`D^0` and :math:`e^0` consist of a single point since :math:`\mathbb{R}^0 = \{0\}`. But :math:`S^0` consists of two points since it is :math:`\delta D^1`.
 
 :math:`\mathbb{1}` : the identity function from set to itself.
 
