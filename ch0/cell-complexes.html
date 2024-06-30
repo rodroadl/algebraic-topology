@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d0e920" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -450,36 +451,46 @@ document.write(`
                   
   <section id="cell-complexes">
 <h1>Cell complexes<a class="headerlink" href="#cell-complexes" title="Permalink to this heading">#</a></h1>
+<a class="reference internal image-reference" href="../_images/cell-complexes.png"><img alt="../_images/cell-complexes.png" class="align-right" src="../_images/cell-complexes.png" style="width: 50%;" /></a>
 <p>A familiar way of constructing the torus <span class="math notranslate nohighlight">\(S^1 \times S^1\)</span> is by identifying opposite isdes
 of a square. More generally, an orientable surface <span class="math notranslate nohighlight">\(M_g\)</span> of  genus <span class="math notranslate nohighlight">\(g\)</span> can be constructed
-from a polygon with <span class="math notranslate nohighlight">\(4g\)</span> sides by identifying pairs of edges, as shown in the figure in the first three cases <span class="math notranslate nohighlight">\(g=1,2,3\)</span>.</p>
-<img alt="../_images/cell-complexes.png" src="../_images/cell-complexes.png" />
-<p>The <span class="math notranslate nohighlight">\(4g\)</span> edges of the polygon become a union of <span class="math notranslate nohighlight">\(2g\)</span> circles in the surface, all intersecting
+from a polygon with <span class="math notranslate nohighlight">\(4g\)</span> sides by identifying pairs of edges, as shown in the figure in the first three cases <span class="math notranslate nohighlight">\(g=1,2,3\)</span>.
+The <span class="math notranslate nohighlight">\(4g\)</span> edges of the polygon become a union of <span class="math notranslate nohighlight">\(2g\)</span> circles in the surface, all intersecting
 in a single point. The interior of the polygon ccan be thought of as an open disk, or a <span class="math notranslate nohighlight">\(\mathbf{2}\)</span>-<strong>cell</strong>,
 attached to the union of the <span class="math notranslate nohighlight">\(2g\)</span> circles. One can also regard the union of the circles as being obtained
 from their common point of intersection, by attaching <span class="math notranslate nohighlight">\(2g\)</span> open arcs, or <span class="math notranslate nohighlight">\(\mathbf{1}\)</span>-<strong>cells</strong>. Thus
 the surface can be built up in stages: Start with a point, attach <span class="math notranslate nohighlight">\(1\)</span>-cells to this point,
 then attach a <span class="math notranslate nohighlight">\(2\)</span>-cell.</p>
 <p>A natural generalization of this is to construct a space by the following procedure:</p>
+<div class="no-indent docutils container">
 <ol class="arabic simple">
 <li><p>Start with a discrete Set <span class="math notranslate nohighlight">\(X^0\)</span>, whose points are regarded as <span class="math notranslate nohighlight">\(0\)</span>-cells.</p></li>
-</ol>
-<p>2. Inductively, form the <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>-<strong>skeleton</strong> <span class="math notranslate nohighlight">\(X^n\)</span> from <span class="math notranslate nohighlight">\(X^{n-1}\)</span> by attaching <span class="math notranslate nohighlight">\(n\)</span>-cells <span class="math notranslate nohighlight">\(e^n_{\alpha}\)</span> via maps
+<li><p>Inductively, form the <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>-<strong>skeleton</strong> <span class="math notranslate nohighlight">\(X^n\)</span> from <span class="math notranslate nohighlight">\(X^{n-1}\)</span> by attaching <span class="math notranslate nohighlight">\(n\)</span>-cells <span class="math notranslate nohighlight">\(e^n_{\alpha}\)</span> via maps
 <span class="math notranslate nohighlight">\(\varphi_\alpha:S^{n-1} \rightarrow X^{n-1}\)</span>. This means that <span class="math notranslate nohighlight">\(X^n\)</span> is the quotient space of the disjoint union
-<span class="math notranslate nohighlight">\(X^{n-1}\sqcup_\alpha D^n_\alpha\)</span> with a collection of <span class="math notranslate nohighlight">\(n\)</span>-disks <span class="math notranslate nohighlight">\(D^n_\alpha\)</span> under the identifications
-<span class="math notranslate nohighlight">\(x~\varphi_\alpha(x)\)</span> for <span class="math notranslate nohighlight">\(x \in \partial D^n_\alpha\)</span>. Thus as a set, <span class="math notranslate nohighlight">\(X^n=X^{n-1}\sqcup_\alpha e^n_\alpha\)</span> where each <span class="math notranslate nohighlight">\(e^n_\alpha\)</span> is an
-open <span class="math notranslate nohighlight">\(n\)</span>-disk.
-3. One can either stop this inductive</p>
-<p>It is true in general that two spaces <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are homotopy equivalent if and only
-if there exists a third space <span class="math notranslate nohighlight">\(Z\)</span> containing both <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> as deformation retracts. For
-the less trivial implication one can in fact take <span class="math notranslate nohighlight">\(Z\)</span> to be the mapping cylinder <span class="math notranslate nohighlight">\(M_f\)</span> deformation
-retracts to <span class="math notranslate nohighlight">\(Y\)</span>, so what needs to be proved is that <span class="math notranslate nohighlight">\(M_f\)</span> also deformation retracts to its
-other end <span class="math notranslate nohighlight">\(X\)</span> if <span class="math notranslate nohighlight">\(f\)</span> is a homotopy equivalence. This is shown in Corollary 0.21.</p>
+<span class="math notranslate nohighlight">\(X^{n-1}\bigsqcup_\alpha D^n_\alpha\)</span> with a collection of <span class="math notranslate nohighlight">\(n\)</span>-disks <span class="math notranslate nohighlight">\(D^n_\alpha\)</span> under the identifications
+<span class="math notranslate nohighlight">\(x~\varphi_\alpha(x)\)</span> for <span class="math notranslate nohighlight">\(x \in \partial D^n_\alpha\)</span>. Thus as a set, <span class="math notranslate nohighlight">\(X^n=X^{n-1}\bigsqcup_\alpha e^n_\alpha\)</span> where each <span class="math notranslate nohighlight">\(e^n_\alpha\)</span> is an
+open <span class="math notranslate nohighlight">\(n\)</span>-disk.</p></li>
+<li><p>One can either stop this inductive process at a finite stage, setting <span class="math notranslate nohighlight">\(X=X^n\)</span> for
+some <span class="math notranslate nohighlight">\(n &lt; \infty\)</span>, or one can continue indefinitely, setting <span class="math notranslate nohighlight">\(X=\bigcup_nX^n\)</span>. In the latter
+case <span class="math notranslate nohighlight">\(X\)</span> is given the weak topology: A set <span class="math notranslate nohighlight">\(A \subset X\)</span> is open (or closed) iff <span class="math notranslate nohighlight">\(A\cap X^n\)</span> is
+open (or closed) in <span class="math notranslate nohighlight">\(X^n\)</span> for each <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ol>
+</div>
+<div class="no-indent docutils container">
+<p>A space <span class="math notranslate nohighlight">\(X\)</span> constructed in this way is called a <strong>cell complex</strong> or <strong>CW complex</strong>. The
+explanation of the letters ‘CW’ is given in the Appendix, where a number of basic
+topological properties of cell complexes are proved. The reader who wonders about
+various point-set topological questions lurking in the background of the following
+discussion should consult the Appendix for details.</p>
+</div>
 <p>If <span class="math notranslate nohighlight">\(X=X^n\)</span> for some <span class="math notranslate nohighlight">\(n\)</span>, then <span class="math notranslate nohighlight">\(X\)</span> is said to be finite-dimensional, and the smallest
 such <span class="math notranslate nohighlight">\(n\)</span> is the <strong>dimension</strong> of <span class="math notranslate nohighlight">\(X\)</span>, the maximum dimension of cells of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="no-indent docutils container">
 <p><strong>Example 0.1.</strong> A <span class="math notranslate nohighlight">\(1\)</span>-dimensional cell complex <span class="math notranslate nohighlight">\(X=X^1\)</span> is what is called a <strong>graph</strong> in
 algebraic topology. It consists of vertices (the <span class="math notranslate nohighlight">\(0\)</span>-cells) to which edges (the <span class="math notranslate nohighlight">\(1\)</span>-cells) are
 attached. The two ends of an edge can be attached to the same vertex.</p>
+</div>
+<div class="no-indent docutils container">
 <p><strong>Example 0.2.</strong> The house with two rooms, pictured earlier, has a visually obvious
 <span class="math notranslate nohighlight">\(2\)</span>-dimensional cell complex structure. The <span class="math notranslate nohighlight">\(0\)</span>-cells are the vertices where three or more
 of the depicted edges meet, and the <span class="math notranslate nohighlight">\(1\)</span>-cells are the interiors of the edges connecting
@@ -492,9 +503,82 @@ cells. As we shall show in Theorem 2.44, the Euler characteristic of a cell comp
 depends only on its homotopy type, so the fact that the house with two rooms has the
 homotopy type of a point implies that its Euler characteristic must be <span class="math notranslate nohighlight">\(1\)</span>, no matter
 how it is represented as a cell complex.</p>
+</div>
+<div class="no-indent docutils container">
 <p><strong>Example 0.3.</strong> The sphere <span class="math notranslate nohighlight">\(S^n\)</span> has the structure of a cell complex with just two cells, <span class="math notranslate nohighlight">\(e^0\)</span>
 and <span class="math notranslate nohighlight">\(e^n\)</span>, the <span class="math notranslate nohighlight">\(n\)</span>-cell being attached by the constant map <span class="math notranslate nohighlight">\(S^{n-1}\rightarrow e^0\)</span>. This is equivalent
-to regarding <span class="math notranslate nohighlight">\(S^n\)</span> as the quotient space <span class="math notranslate nohighlight">\(D^n/\partial D^n\)</span></p>
+to regarding <span class="math notranslate nohighlight">\(S^n\)</span> as the quotient space <span class="math notranslate nohighlight">\(D^n/\partial D^n\)</span>.</p>
+</div>
+<div class="no-indent docutils container">
+<p><strong>Example 0.4. Real projective</strong> <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>-<strong>space</strong> <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> is defined to be the space of all lines
+through the origin in <span class="math notranslate nohighlight">\(\mathbb{R}^{n+1}\)</span>. Each such line is determined by a nonzero vector in <span class="math notranslate nohighlight">\(\mathbb{R}^{n+1}\)</span>,
+unique up to scalar multiplication, and <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> is topologized as the quotient space of
+<span class="math notranslate nohighlight">\(\mathbb{R}^{n+1}-\{0\}\)</span> under the equivalence relation <span class="math notranslate nohighlight">\(v\sim \lambda v\)</span> for scalars <span class="math notranslate nohighlight">\(\lambda \neq 0\)</span>. We can restrict
+to vectors of length <span class="math notranslate nohighlight">\(1\)</span>, so <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> is also the quotient space <span class="math notranslate nohighlight">\(s^n/(v \sim -v)\)</span>, the sphere
+with antipodal points identified. This is equivalent to saying that <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> is the quotient
+space of hemisphere <span class="math notranslate nohighlight">\(D^n\)</span> with antipodal points of <span class="math notranslate nohighlight">\(\partial D^n\)</span> identified. Since <span class="math notranslate nohighlight">\(\partial D^n\)</span> with
+antipodal points identified is just <span class="math notranslate nohighlight">\(\mathbb{R}P^{n-1}\)</span>, we see that <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> is obtained from <span class="math notranslate nohighlight">\(\mathbb{R}P^{n-1}\)</span> by
+attaching an <span class="math notranslate nohighlight">\(n\)</span>-cell, with the quotient projection <span class="math notranslate nohighlight">\(s^{n-1} \rightarrow \mathbb{R}P^{n-1}\)</span> as the attaching map.
+It follows by induction on <span class="math notranslate nohighlight">\(n\)</span>; that <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> has a cell complex structure <span class="math notranslate nohighlight">\(e^0\cup e^1\cup \dots \cup e^n\)</span>
+with one cell <span class="math notranslate nohighlight">\(e^i\)</span> in each dimension <span class="math notranslate nohighlight">\(i \leq n\)</span>.</p>
+</div>
+<div class="no-indent docutils container">
+<p><strong>Example 0.5.</strong> Since <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> is obtained from <span class="math notranslate nohighlight">\(\mathbb{R}P^{n-1}\)</span> by attaching an <span class="math notranslate nohighlight">\(n\)</span>-cell, the infinite
+union <span class="math notranslate nohighlight">\(\mathbb{R}P^\infty=\bigcup_n \mathbb{R}P^n\)</span> becomes a cell complex with one cell in each dimension. We
+can view <span class="math notranslate nohighlight">\(\mathbb{R}P^\infty\)</span> as the space of lines through the origin in <span class="math notranslate nohighlight">\(\mathbb{R}^\infty = \bigcup_n \mathbb{R}^n\)</span>.</p>
+</div>
+<div class="no-indent-no-margin docutils container">
+<p><strong>Example 0.6. Complex projective</strong> <span class="math notranslate nohighlight">\(n\)</span>-<strong>space</strong> <span class="math notranslate nohighlight">\(\mathbb{C}P^n\)</span> is the space of complex lines through
+the origin in <span class="math notranslate nohighlight">\(\mathbb{C}^{n+1}\)</span>, that is <span class="math notranslate nohighlight">\(1\)</span>-dimensional vector subspaces of <span class="math notranslate nohighlight">\(\mathbb{C}^{n+1}\)</span>. As in the case
+of <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span>, each line is determined by a nonzero vector in <span class="math notranslate nohighlight">\(\mathbb{C}^{n+1}\)</span>, unique up to scalar
+multiplication, and <span class="math notranslate nohighlight">\(\mathbb{C}P^n\)</span> is topologized as the quotient space of <span class="math notranslate nohighlight">\(\mathbb{C}^{n+1}-\{0\}\)</span> under the
+equivalence relation <span class="math notranslate nohighlight">\(v \sim \lambda v\)</span> for <span class="math notranslate nohighlight">\(\lambda \neq 0\)</span>. Equivalently, this is the quotient of the unit
+sphere <span class="math notranslate nohighlight">\(S^{2n_1}\subset \mathbb{C}^{n+1}\)</span> with <span class="math notranslate nohighlight">\(v \sim \;lambda v\)</span> for <span class="math notranslate nohighlight">\(\mid \lambda \mid = 1\)</span>. It is also possible to obtain <span class="math notranslate nohighlight">\(\mathbb{C}P^n\)</span> as a
+quotient space of the disk <span class="math notranslate nohighlight">\(D^{2n}\)</span> under the identifications <span class="math notranslate nohighlight">\(v \sim \lambda v\)</span> for <span class="math notranslate nohighlight">\(v \in \partial D^{2n}\)</span>, in the
+following way. The vectors in <span class="math notranslate nohighlight">\(S^{2n+1} \subset \mathbb{C}^{n+1}\)</span> with last coordinate real and nonnegative
+are precisely the vectors of the form <span class="math notranslate nohighlight">\((w, \sqrt{1-|w|^2})\in \mathbb{C}^n \times \mathbb{C}\)</span> with <span class="math notranslate nohighlight">\(|w| \leq 1\)</span>. Such
+vectors form the graph of the function <span class="math notranslate nohighlight">\(w \mapsto \sqrt{1-|w|^2}\)</span>. This is a disk <span class="math notranslate nohighlight">\(D^{2n}_+\)</span> bounded
+by the sphere <span class="math notranslate nohighlight">\(S^{2n-1} \subset S^{2n+1}\)</span> consisting of vectors <span class="math notranslate nohighlight">\((w,0) \in \mathbb{C}^n \times \mathbb{C}\)</span> with <span class="math notranslate nohighlight">\(|w|=1\)</span>. Each
+vector in <span class="math notranslate nohighlight">\(S^{2n+1}\)</span> is equivalent under the identifications <span class="math notranslate nohighlight">\(v \sim \lambda v\)</span> to a vector in <span class="math notranslate nohighlight">\(D^{2n}_+\)</span>, and
+the latter vector is unique if its last coordinate is nonzero. If the last coordinate is
+zero, we have just the identifications <span class="math notranslate nohighlight">\(v \sim \lambda v\)</span> for :math:` v in S^{2n-1}`.</p>
+</div>
+<p>From this description of <span class="math notranslate nohighlight">\(\mathbb{C}^n\)</span> as the quotient of <span class="math notranslate nohighlight">\(D^{2n}_+\)</span> under the identifications
+<span class="math notranslate nohighlight">\(v \sim \lambda v\)</span> for <span class="math notranslate nohighlight">\(v \in S^{2n-1}\)</span> it follows that <span class="math notranslate nohighlight">\(\mathbb{C}P^n\)</span> is obtained from <span class="math notranslate nohighlight">\(\mathbb{C}P^{n-1}\)</span> by attaching a
+cell <span class="math notranslate nohighlight">\(e^{2n}\)</span> via the quotient map <span class="math notranslate nohighlight">\(S^{2n-1} \rightarrow \mathbb{C}P^{n-1}\)</span> . So by induction on <span class="math notranslate nohighlight">\(n\)</span> we obtain a cell
+structure <span class="math notranslate nohighlight">\(\mathbb{C}P^n= e^0 \cup e^2 \cup \cdots e^{2n}\)</span> with cells only in even dimensions. Similarly, <span class="math notranslate nohighlight">\(\mathbb{C}P^\infty\)</span>
+has a cell structure with one cell in each even dimension.</p>
+<p>After these examples we return now to general theory. Each cell <span class="math notranslate nohighlight">\(e^n_\alpha\)</span> in a cell
+complex <span class="math notranslate nohighlight">\(X\)</span> has a <strong>characteristic map</strong> <span class="math notranslate nohighlight">\(\Phi_\alpha : D^n_\alpha \rightarrow X\)</span> which extends the attaching map
+<span class="math notranslate nohighlight">\(\varphi_\alpha\)</span> and is a homeomorphism from the interior of <span class="math notranslate nohighlight">\(D^n_\alpha\)</span> onto <span class="math notranslate nohighlight">\(e^n_\alpha\)</span>. Namely, we can take
+<span class="math notranslate nohighlight">\(\Phi_\alpha\)</span> to be the composition <span class="math notranslate nohighlight">\(D^n_\alpha \hookrightarrow X^{n-1} \bigsqcup _\alpha D^n_\alpha \rightarrow X^n \hookrightarrow X\)</span> where the middle map is
+the quotient map defining <span class="math notranslate nohighlight">\(X^n\)</span>. For example, in the canonical cell structure on <span class="math notranslate nohighlight">\(S^n\)</span>
+described in Example 0.3., a characteristic map for the <span class="math notranslate nohighlight">\(n\)</span>-cell is the quotient map
+<span class="math notranslate nohighlight">\(D^n \rightarrow S^n\)</span> collapsing <span class="math notranslate nohighlight">\(\partial D^n\)</span> to a point. For <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> a characteristic map for the cell <span class="math notranslate nohighlight">\(e^i\)</span> is
+the quotient map <span class="math notranslate nohighlight">\(D^i \rightarrow \mathbb{R}P^i \subset \mathbb{R}^n\)</span> identifying antipodal points of <span class="math notranslate nohighlight">\(\partial D^i\)</span>, and similarly
+for <span class="math notranslate nohighlight">\(\mathbb{C}P^n\)</span>.</p>
+<p>A <strong>subcomplex</strong> of a cell complex <span class="math notranslate nohighlight">\(X\)</span> is a closed subspace <span class="math notranslate nohighlight">\(A \subset X\)</span> that is a union
+of cells of <span class="math notranslate nohighlight">\(X\)</span>. Since <span class="math notranslate nohighlight">\(A\)</span> is closed, the characteristic map of each cell in <span class="math notranslate nohighlight">\(A\)</span> has image
+contained in <span class="math notranslate nohighlight">\(A\)</span>, and in particular the image of the attaching map of each cell in <span class="math notranslate nohighlight">\(A\)</span> is
+contained in <span class="math notranslate nohighlight">\(A\)</span>, so <span class="math notranslate nohighlight">\(A\)</span> is a cell complex in its own right. A pair <span class="math notranslate nohighlight">\((X,A)\)</span> consisting of a
+cell complex <span class="math notranslate nohighlight">\(X\)</span> and a subcomplex <span class="math notranslate nohighlight">\(A\)</span> will be called a <strong>CW pair</strong>.</p>
+<p>For example, each skeleton <span class="math notranslate nohighlight">\(X^n\)</span> of a cell complex <span class="math notranslate nohighlight">\(X\)</span> is a subcomplex. Particular
+cases of this are the subcomplexes <span class="math notranslate nohighlight">\(\mathbb{R}P^k \subset \mathbb{R}P^n\)</span> and <span class="math notranslate nohighlight">\(\mathbb{C}P^k \subset \mathbb{C}P^n\)</span> for <span class="math notranslate nohighlight">\(k \leq n\)</span>. These are
+in fact the only subcomplexes of <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> and <span class="math notranslate nohighlight">\(\mathbb{C}P^n\)</span>.</p>
+<p>These are natural inclusions <span class="math notranslate nohighlight">\(S^0 \subset S^1 \subset \cdots \subset S^n\)</span>, but these subspheres are not
+subcomplexes of <span class="math notranslate nohighlight">\(s^n\)</span> in its usual cell structure with just two cells. However, we can give
+<span class="math notranslate nohighlight">\(S^n\)</span> a different cell structure in which each of the subspheres <span class="math notranslate nohighlight">\(S^k\)</span> is a subcomplex, by
+regarding each <span class="math notranslate nohighlight">\(S^k\)</span> as being obtained inductively from the equatorial <span class="math notranslate nohighlight">\(S^{k-1}\)</span> by attaching
+two <span class="math notranslate nohighlight">\(k\)</span>-cells, the components of <span class="math notranslate nohighlight">\(S^k-S^{k-1}\)</span>. The infinite-dimensional sphere <span class="math notranslate nohighlight">\(S^\infty = \bigcup_n S^n\)</span>
+then becomes a cell complex as well. Note that the two-to-one quotient map <span class="math notranslate nohighlight">\(S^\infty \rightarrow \mathbb{R}P^\infty\)</span>
+that identifies antipodal points of <span class="math notranslate nohighlight">\(S^\infty\)</span> identifies the two <span class="math notranslate nohighlight">\(n\)</span>-cells of <span class="math notranslate nohighlight">\(S^\infty\)</span> to the single
+<span class="math notranslate nohighlight">\(n\)</span>-cell of <span class="math notranslate nohighlight">\(\mathbb{R}P^\infty\)</span>.</p>
+<p>In the examples of cell complexes given so far, the closure of each cell is a subcomplex,
+and more generally the closure of any collection of cells is a subcomeplx.
+Most naturally arising cell structures have this property, but it need not hold in general.
+For example, if we start with <span class="math notranslate nohighlight">\(S^1\)</span> with its minimal cellstructure nad attach to this
+a <span class="math notranslate nohighlight">\(2\)</span>-cell by a map <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1\)</span> whose image is a nontrvial subacr of <span class="math notranslate nohighlight">\(S^1\)</span>, then the closure
+of the <span class="math notranslate nohighlight">\(2\)</span>-cell is not a subcomples since its contains only a part of the <span class="math notranslate nohighlight">\(1\)</span>-cell.</p>
 </section>
 
 

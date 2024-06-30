@@ -7,8 +7,8 @@ To take an everyday example, the letters of the alphabet can be written either a
 and curved line segments, or in thickened forms that are compact regions in the plane bounded by one or more simple closed curves. 
 In each case the thin letter is a subspace of the thick letter, and we can continuously shrink the thick letter to the thin one. 
 A nice way to do this is to decompse a thick letter, call it **X**, into line segments connecting each point on the outer boundary of **X** 
-to a unique point of the think subletter X, as indicated in the figure. Then we can shrink **X** to X by sliding each point of **X**-X into X 
-along the line segment that contains it. Points that are already X do not move.
+to a unique point of the thin subletter X, as indicated in the figure. Then we can shrink **X** to X by sliding each point of **X**-X into X 
+along the line segment that contains it. Points that are already in X do not move.
 
 .. image:: fig/ABC.png
     :width: 400
@@ -28,6 +28,7 @@ It is easy to produce many more examples similar to the letter examples, with th
 The figure on the left below shows such a deformation retraction of a Möbius band onto its core circle.
 
 .. image:: fig/mobius-band.png
+    :align: center
 
 The three figures on the right show deformation retractions in which a disk with 
 two smaller open subdisks removed shrinks to three different subspaces.
@@ -35,7 +36,13 @@ two smaller open subdisks removed shrinks to three different subspaces.
 In all these examples the structure that gives rise to the deformation retraction can 
 be described by means of the following definition. For a mp :math:`f:x \rightarrow Y`, the **mapping 
 cylinder** :math:`M_f` is the quotient space of the disjoint union :math:`(X \times I) \sqcup Y` obtained by identifying 
-each :math:`(x,1) \in X \times I` with :math: `f(x) \in Y`. In the letter examples, 
+each :math:`(x,1) \in X \times I` with :math:`f(x) \in Y`. 
+
+.. image:: fig/mapping-cylinder.png
+    :align: center
+    :width: 60%
+
+In the letter examples, 
 the space :math:`X` is the outer boundary of the thick letter, :math:`Y` is the thin letter, and :math:`f:X \rightarrow Y` sends 
 the outer endpoint of each line segment to its inner endpoint. A similar description 
 applies to the other examples. Then it is a general fact that a mapping cylinder :math:`M_f` 
@@ -107,6 +114,7 @@ Let us describe now an example of a 2-dimensional subspace of :math:`\mathbb{R}^
 *house with two rooms*, which is contractible but not in any obvious way.
 
 .. image:: fig/house-with-two-rooms.png
+    :align: center
 
 To build this space, start with a box divided into two chambers by a horizontal rectangle, where by a 
 'rectangle' we mean not just the four edges of a rectangle but also its interior. Access to 

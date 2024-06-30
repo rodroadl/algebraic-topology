@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d0e920" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -40,6 +41,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch0/operations-on-spaces';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -449,7 +451,55 @@ document.write(`
                   
   <section id="operations-on-spaces">
 <h1>Operations on Spaces<a class="headerlink" href="#operations-on-spaces" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<p>Cell complexes have a very nice mixture of rigidity and flexibility, with enough
+rigidity to allow many arguments to proceed in a combinatorial cell-by-cell fashion
+and enough flexibility to allow many natural constructions to be performed on them.
+Here are some of those constructions.</p>
+<div class="no-indent docutils container">
+<p><strong>Products</strong>. If <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are cell complexes, then <span class="math notranslate nohighlight">\(Y \times Y\)</span> has the structure of a cell
+complex with cells the products <span class="math notranslate nohighlight">\(e^m_\alpha \times e^n_\beta\)</span> where <span class="math notranslate nohighlight">\(e^m_\alpha\)</span> ranges over the cells of <span class="math notranslate nohighlight">\(X\)</span> and
+<span class="math notranslate nohighlight">\(e^n_\beta\)</span> ranges over the cells of <span class="math notranslate nohighlight">\(Y\)</span>. For example, the cell structure on the torus <span class="math notranslate nohighlight">\(S^1 \times S^1\)</span>
+described at the beginning of this section is obtained in this way from the standard
+cell structure on <span class="math notranslate nohighlight">\(S^1\)</span>. For completely general CW complexes <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> there is one
+small complication: The topology on <span class="math notranslate nohighlight">\(X \times Y\)</span> as a cell complex is sometimes finer than
+the prouct topology, with more open sets than the product topology has, though the
+two topologies coincide if either <span class="math notranslate nohighlight">\(X\)</span> or <span class="math notranslate nohighlight">\(Y\)</span> has only finitely many cells, or if both <span class="math notranslate nohighlight">\(X\)</span>
+and <span class="math notranslate nohighlight">\(Y\)</span> have countably many cells. This is explained in the Appendix. In practice this
+subtle issue of point-set topology rarely causes problems, however.</p>
+</div>
+<div class="no-indent-no-margin docutils container">
+<p><strong>Quotients</strong>. If <span class="math notranslate nohighlight">\((X,A)\)</span> is a CW pair consisting of a cell complex <span class="math notranslate nohighlight">\(X\)</span> and a subcomples <span class="math notranslate nohighlight">\(A\)</span>,
+then the quotient space <span class="math notranslate nohighlight">\(X / A\)</span> inherits a natural cell complex structure from <span class="math notranslate nohighlight">\(X\)</span>. The
+cells of <span class="math notranslate nohighlight">\(X/A\)</span> are the cells of <span class="math notranslate nohighlight">\(X-A\)</span> plus one new <span class="math notranslate nohighlight">\(0\)</span>-cell, the image of <span class="math notranslate nohighlight">\(A\)</span> in <span class="math notranslate nohighlight">\(X/A\)</span>. For a
+cell <span class="math notranslate nohighlight">\(e^n_\alpha\)</span> of <span class="math notranslate nohighlight">\(X-A\)</span> attached by <span class="math notranslate nohighlight">\(\varphi_\alpha : S^{n-1} \rightarrow X^{n-1}\)</span>, the attaching map for the corresponding
+cell in <span class="math notranslate nohighlight">\(X/A\)</span> is the composition <span class="math notranslate nohighlight">\(S^{n-1} \rightarrow X^{n-1}\rightarrow X^{n-1}/A^{n-1}\)</span>.</p>
+</div>
+<p>For example, if we give <span class="math notranslate nohighlight">\(S^{n-1}\)</span> any cell structure and build <span class="math notranslate nohighlight">\(D^n\)</span> from <span class="math notranslate nohighlight">\(S^{n-1}\)</span> by attaching
+an <span class="math notranslate nohighlight">\(n\)</span>-cell, then the quotient <span class="math notranslate nohighlight">\(D^n / S^{n-1}\)</span> is <span class="math notranslate nohighlight">\(S^n\)</span> with its usual cell structure. As another
+example, take <span class="math notranslate nohighlight">\(X\)</span> to be a closed orientable surface with the cell structure described at
+the beginning of this section, with a single <span class="math notranslate nohighlight">\(2\)</span>-cell, and let <span class="math notranslate nohighlight">\(A\)</span> be the complement of this
+<span class="math notranslate nohighlight">\(2\)</span>-cell, the <span class="math notranslate nohighlight">\(1\)</span>-skeleton of <span class="math notranslate nohighlight">\(X\)</span>. Then <span class="math notranslate nohighlight">\(X/A\)</span> has a cell structure consisting of a <span class="math notranslate nohighlight">\(0\)</span>-cell with
+a <span class="math notranslate nohighlight">\(2\)</span>-cell attached, and there is only one way to attach a cell to a <span class="math notranslate nohighlight">\(0\)</span>-cell, by the constant
+map, so <span class="math notranslate nohighlight">\(X/A\)</span> is <span class="math notranslate nohighlight">\(S^2\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/suspension.png"><img alt="../_images/suspension.png" class="align-right" src="../_images/suspension.png" style="width: 146.8px; height: 156.8px;" /></a>
+<div class="no-indent-no-margin docutils container">
+<p><strong>Suspension</strong>. For a space <span class="math notranslate nohighlight">\(X\)</span>, the <strong>suspension</strong> SX is the quotient of
+<span class="math notranslate nohighlight">\(X \times I\)</span> obtained by collapsing <span class="math notranslate nohighlight">\(X\times\{0\}\)</span> to one point and <span class="math notranslate nohighlight">\(X\times\{1\}\)</span> to another
+point. The motivating example is <span class="math notranslate nohighlight">\(X=S^n\)</span>, when <span class="math notranslate nohighlight">\(SX=S^{n+1}\)</span>
+with the two ‘suspension points’ at the north and south poles of
+<span class="math notranslate nohighlight">\(S^{n+1}\)</span>, the points <span class="math notranslate nohighlight">\((0, \cdots, 0, \pm 1)\)</span>. One can regard <span class="math notranslate nohighlight">\(SX\)</span> as a double cone
+on <span class="math notranslate nohighlight">\(X\)</span>, the union of two copies ofthe <strong>cone</strong> <span class="math notranslate nohighlight">\(CX=(X\times I) / (X\times \{0\})\)</span>. If <span class="math notranslate nohighlight">\(X\)</span> is a CW complex,
+so are <span class="math notranslate nohighlight">\(SX\)</span> and <span class="math notranslate nohighlight">\(CX\)</span> as aquotients of <span class="math notranslate nohighlight">\(X \times I\)</span> with its product cell structure, <span class="math notranslate nohighlight">\(I\)</span> being
+given the standard cell structure of two <span class="math notranslate nohighlight">\(0\)</span>-cells joined by a <span class="math notranslate nohighlight">\(1\)</span>-cell.</p>
+</div>
+<p>Suspension becomes increasingly important the farther one goes into algebraic
+topology, though why this should be so is certainly not evident in advance. One
+especially useful property of suspension is that not only spaces but also maps can be
+suspended. Namely, a mpa <span class="math notranslate nohighlight">\(f:X\rightarrow Y\)</span> suspends to <span class="math notranslate nohighlight">\(Sf:SX \rightarrow SY\)</span>, the quotient map of
+<span class="math notranslate nohighlight">\(f\times \mathbb{1}: X \times I \rightarrow Y \times I\)</span>.</p>
+<div class="no-indent-no-margin docutils container">
+<p><strong>Join</strong>. The cone <span class="math notranslate nohighlight">\(CX\)</span> is the union of all line</p>
+</div>
 </section>
 
 

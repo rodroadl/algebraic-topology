@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d0e920" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -456,8 +457,8 @@ To take an everyday example, the letters of the alphabet can be written either a
 and curved line segments, or in thickened forms that are compact regions in the plane bounded by one or more simple closed curves.
 In each case the thin letter is a subspace of the thick letter, and we can continuously shrink the thick letter to the thin one.
 A nice way to do this is to decompse a thick letter, call it <strong>X</strong>, into line segments connecting each point on the outer boundary of <strong>X</strong>
-to a unique point of the think subletter X, as indicated in the figure. Then we can shrink <strong>X</strong> to X by sliding each point of <strong>X</strong>-X into X
-along the line segment that contains it. Points that are already X do not move.</p>
+to a unique point of the thin subletter X, as indicated in the figure. Then we can shrink <strong>X</strong> to X by sliding each point of <strong>X</strong>-X into X
+along the line segment that contains it. Points that are already in X do not move.</p>
 <a class="reference internal image-reference" href="../_images/ABC.png"><img alt="../_images/ABC.png" class="align-center" src="../_images/ABC.png" style="width: 400px;" /></a>
 <p>We can think of this shrinking process as taking place during a time interval <span class="math notranslate nohighlight">\(0 \leq t \leq 1\)</span>, and then it defines a family of functions
 <span class="math notranslate nohighlight">\(f_t\)</span>: <strong>X</strong> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <strong>X</strong> parametrized by <span class="math notranslate nohighlight">\(t \in I=[0,1]\)</span>, where <span class="math notranslate nohighlight">\(f_t(x)\)</span> is the point to which a given point
@@ -469,13 +470,15 @@ while points <span class="math notranslate nohighlight">\(x \in\)</span> X are s
 The family <span class="math notranslate nohighlight">\(f_t\)</span> should be continuous in the sense that the associated map <span class="math notranslate nohighlight">\(X\times I \rightarrow X, \, (x,t) \mapsto f_t(x)\)</span>, is continuous.</p>
 <p>It is easy to produce many more examples similar to the letter examples, with the deformation retraction <span class="math notranslate nohighlight">\(f_t\)</span> obtained by sliding along line segments.
 The figure on the left below shows such a deformation retraction of a Möbius band onto its core circle.</p>
-<img alt="../_images/mobius-band.png" src="../_images/mobius-band.png" />
+<img alt="../_images/mobius-band.png" class="align-center" src="../_images/mobius-band.png" />
 <p>The three figures on the right show deformation retractions in which a disk with
 two smaller open subdisks removed shrinks to three different subspaces.</p>
 <p>In all these examples the structure that gives rise to the deformation retraction can
 be described by means of the following definition. For a mp <span class="math notranslate nohighlight">\(f:x \rightarrow Y\)</span>, the <strong>mapping
 cylinder</strong> <span class="math notranslate nohighlight">\(M_f\)</span> is the quotient space of the disjoint union <span class="math notranslate nohighlight">\((X \times I) \sqcup Y\)</span> obtained by identifying
-each <span class="math notranslate nohighlight">\((x,1) \in X \times I\)</span> with :math: <cite>f(x) in Y</cite>. In the letter examples,
+each <span class="math notranslate nohighlight">\((x,1) \in X \times I\)</span> with <span class="math notranslate nohighlight">\(f(x) \in Y\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/mapping-cylinder.png"><img alt="../_images/mapping-cylinder.png" class="align-center" src="../_images/mapping-cylinder.png" style="width: 60%;" /></a>
+<p>In the letter examples,
 the space <span class="math notranslate nohighlight">\(X\)</span> is the outer boundary of the thick letter, <span class="math notranslate nohighlight">\(Y\)</span> is the thin letter, and <span class="math notranslate nohighlight">\(f:X \rightarrow Y\)</span> sends
 the outer endpoint of each line segment to its inner endpoint. A similar description
 applies to the other examples. Then it is a general fact that a mapping cylinder <span class="math notranslate nohighlight">\(M_f\)</span>
@@ -536,7 +539,7 @@ retracts to a point; see the exercises at the end of the chapter for an example
 distinguishing these two notions.</p>
 <p>Let us describe now an example of a 2-dimensional subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, known as the
 <em>house with two rooms</em>, which is contractible but not in any obvious way.</p>
-<img alt="../_images/house-with-two-rooms.png" src="../_images/house-with-two-rooms.png" />
+<img alt="../_images/house-with-two-rooms.png" class="align-center" src="../_images/house-with-two-rooms.png" />
 <p>To build this space, start with a box divided into two chambers by a horizontal rectangle, where by a
 ‘rectangle’ we mean not just the four edges of a rectangle but also its interior. Access to
 the two chambers from outside the box is provided by two vertical tunnels. The upper
