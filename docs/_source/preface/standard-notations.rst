@@ -16,7 +16,7 @@ Standard Notations
 
 :math:`\partial D^n = S^{n-1}` : the boundary of the :math:`n`-disk.
 
-:math:`e^n` : an :math:`n`-cell, homeomorphic to the open :math:`n`-disk :math:`D^n - \partial D^n` In particular, :math:`D^0` and :math:`e^0` consist of a single point since :math:`\mathbb{R}^0 = \{0\}`. But :math:`S^0` consists of two points since it is :math:`\delta D^1`.
+:math:`e^n` : an :math:`n`-cell, homeomorphic to the open :math:`n`-disk :math:`D^n - \partial D^n`. In particular, :math:`D^0` and :math:`e^0` consist of a single point since :math:`\mathbb{R}^0 = \{0\}`. But :math:`S^0` consists of two points since it is :math:`\delta D^1`.
 
 :math:`\mathbb{1}` : the identity function from set to itself.
 
@@ -28,7 +28,7 @@ Standard Notations
 
 :math:`A \subset B` or :math:`B \supset A` : set-theoretic containment, not necessarily proper.
 
-:math:`\hookrightarrow` : the inclusion map :math:`A \rightarrow B` when :math:`A \subset B`
+:math:`A \hookrightarrow B` : the inclusion map :math:`A \rightarrow B` when :math:`A \subset B`
 
 :math:`A - B` : set-theoretic difference, all points in :math:`A` that are not in :math:`B`.
 

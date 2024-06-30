@@ -1,8 +1,16 @@
-/* p {
+p {
     text-indent: 2em;
 }
 
 .math{
     text-indent: 0;
 }
-*/
+
+div.no-indent-no-margin p {
+    text-indent: 0;
+    margin-bottom: 0;
+}
+
+div.no-indent p {
+    text-indent: 0;
+}

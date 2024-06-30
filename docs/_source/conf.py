@@ -53,7 +53,7 @@ html_static_path = ['_static']
 # A list of CSS files. The entry must be a filename string or a tuple containing the filename string and the attributes dictionary. 
 # The filename must be relative to the html_static_path, or a full URI with scheme like https://example.org/style.css. 
 # The attributes is used for attributes of <link> tag. It defaults to an empty list.
-# html_css_files = ['custom.css']
+html_css_files = ['custom.css']
 
 # The “title” for HTML documentation generated with Sphinx’s own templates. 
 # This is appended to the <title> tag of individual pages, and used in the navigation bar as the “topmost” element. 
