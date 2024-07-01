@@ -159,7 +159,8 @@ Again let us defer the proof and look at some examples.
 
     .. _Example 0.11:
 
-    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <Example 0.8>` that a sphere with two points identified is homo
+    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <mathjax:Example 0.8>` that a sphere with two points 
+    identified is homotopy equivalent to :math:`S^1 \vee S^2`. The sphere 
 
 .. |three-graphs| image:: fig/three-graphs.png
     :scale: 5%
