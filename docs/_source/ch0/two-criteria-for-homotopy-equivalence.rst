@@ -159,8 +159,18 @@ Again let us defer the proof and look at some examples.
 
     .. _Example 0.11:
 
-    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <mathjax:Example 0.8>` that a sphere with two points 
+    .. image:: fig/example0-11.png
+        :width: 30%
+        :align: right
+
+    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <Example 0.8:mathjax>` that a sphere with two points 
     identified is homotopy equivalent to :math:`S^1 \vee S^2`. The sphere 
+    with two points identified can be obtained by attaching :math:`S^2` 
+    to :math:`S^1` by a map that wraps a closed arc :math:`A` in :math:`S^2` around :math:`S^1`,
+    as shown in the figure. Since :math:`A` is contractible, this attaching 
+    map is homotopic to a constant map of :math:`A` yields :math:`S^1 \vee S^2`. The result
+    then follows since :math:`(S^2, A)` is a CW pair, :math:`S^2` being obtained from :math:`A` by attaching a 
+    :math:`2`-cell.
 
 .. |three-graphs| image:: fig/three-graphs.png
     :scale: 5%
