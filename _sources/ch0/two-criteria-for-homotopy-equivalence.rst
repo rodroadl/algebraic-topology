@@ -26,6 +26,8 @@ showing how this result can be applied.
 
 .. container:: no-indent-no-margin
 
+    .. Example 0.7:
+
     **Example 0.7: Graphs**. The three graphs |three-graphs| are homotopy equivalent since 
     each is a deformation retract of a disk with two holes, but we can also deduce this 
     from the collapsing criterion above since collapsing the middle edge of the first and 
@@ -57,6 +59,8 @@ the fundamental group of a space, the subject of Chapter 1.
 
 .. container:: no-indent
     
+    .. _Example 0.8:
+
     **Example 0.8**. Consider the space :math:`X` obtained
     from :math:`S^2` by attaching the two ends of an arc 
     :math:`A` to two distinct points on the sphere, say the 
@@ -69,6 +73,8 @@ the fundamental group of a space, the subject of Chapter 1.
     :math:`X/A` and :math:`X/B` are homotopy equivalent to :math:`X`. The space :math:`X/A` is the quotient :math:`S^2/S^0`,
     the sphere with two potins identified, and :math:`X/B` is :math:`S^1 \vee S^2`. Hence :math:`S^2 / S^0` and :math:`S^1 \vee S^2`
     are homotopy equivalent, a fact which may not be entirely obvious at first glance.
+
+.. _Example 0.9:
 
 .. container:: no-indent
 
@@ -92,7 +98,11 @@ the fundamental group of a space, the subject of Chapter 1.
     sum of :math:`S^1` with :math:`n` :math:`2`-spheres. (One can see why a wedge sum is sometimes a called a 
     'bouquet' in the older literature.)
 
+.. _Example 1.10:
+
 .. container:: no-indent-no-margin
+
+    .. _Example 0.10:
 
     **Example 0.10: Reduced Suspension**. Let :math:`X` be a CW complex and :math:`x_0 \in X` a :math:`0`-cell.
     Inside the suspension :math:`SX` we have the line segment :math:`\{x_0\} \times I`, and collapsing this to a 
@@ -149,8 +159,17 @@ Again let us defer the proof and look at some examples.
 
 .. container:: no-indent
 
-    **Example 0.11**. 
+    .. _Example 0.11:
 
+    **Example 0.11**. Let us rederive the result in :ref:`Example 0.8 <Example 0.8>` that a sphere with two points identified is homo
+
+    test :ref:`Example 0.10 <Example 0.10>`
+
+    test :ref:`Example 1.10 <Example 1.10>`
+
+test :ref:`Example 0.10 <Example 0.10>`
+
+test :ref:`Example 1.10 <Example 1.10>`
 
 .. |three-graphs| image:: fig/three-graphs.png
     :scale: 5%
