@@ -476,7 +476,19 @@ given a homotopy <span class="math notranslate nohighlight">\(f_t:A \rightarrow 
 <div><p><em>A pair</em> <span class="math notranslate nohighlight">\((X,A)\)</span> <em>has the homotopy extension property if and only if</em> <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I\)</span> <em>is a
 retract of</em> <span class="math notranslate nohighlight">\(X \times I\)</span>.</p>
 </div></blockquote>
-<p>For one</p>
+<p>For one implication, the homotopy extension property for <span class="math notranslate nohighlight">\((X,A)\)</span> implies that the
+identity map <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I \rightarrow X \times \{0\} \cup A \times I\)</span> extends to a map :math:` X times I rightarrow X times {0} cup A times I`,
+so <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I\)</span> is a retract of <span class="math notranslate nohighlight">\(X \times I\)</span>. The converse is equally easy when <span class="math notranslate nohighlight">\(A\)</span> is closed
+in <span class="math notranslate nohighlight">\(X\)</span>. Then any two maps <span class="math notranslate nohighlight">\(X \times \{0\} \rightarrow Y\)</span> and <span class="math notranslate nohighlight">\(A \times I \rightarrow Y\)</span> that agree on <span class="math notranslate nohighlight">\(A \times \{0\}\)</span> combine
+to give a map <span class="math notranslate nohighlight">\(X \times \{0\} \cup A\times I \rightarrow Y\)</span> which is continuous since it is continuous on the
+closed sets <span class="math notranslate nohighlight">\(X \times \{0\}\)</span> and <span class="math notranslate nohighlight">\(A \times I\)</span>. By composing this map <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I \rightarrow Y\)</span> with a
+retraction <span class="math notranslate nohighlight">\(X \times I \rightarrow X \times \{0\} \cup A \rightarrow I\)</span> we get an extension <span class="math notranslate nohighlight">\(X \times I \rightarrow Y\)</span>, so <span class="math notranslate nohighlight">\((X,A)\)</span> has the
+homotopy extension property. The hypothesis that <span class="math notranslate nohighlight">\(A\)</span> is closed can be avoided by a
+mor complicated argument given in the Appendix. If <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I\)</span> is a retract of
+<span class="math notranslate nohighlight">\(X \times I\)</span> and <span class="math notranslate nohighlight">\(X\)</span> is Hausdorff, then <span class="math notranslate nohighlight">\(A\)</span> must in fact be closed in <span class="math notranslate nohighlight">\(X\)</span>. For if <span class="math notranslate nohighlight">\(r:X \times I \rightarrow X \times I\)</span>
+is a retraction onto <span class="math notranslate nohighlight">\(X\times \{0\} \cup A \times I\)</span>, then the iamge of <span class="math notranslate nohighlight">\(r\)</span> is the set of points <span class="math notranslate nohighlight">\(z \in X \times I\)</span>
+with <span class="math notranslate nohighlight">\(r(z)=z\)</span>, a closed set if <span class="math notranslate nohighlight">\(X\)</span> is Hausdorff, so <span class="math notranslate nohighlight">\(X \times \{0\} \cup A\times I\)</span> is closed in <span class="math notranslate nohighlight">\(X \times I\)</span> and
+hence <span class="math notranslate nohighlight">\(A\)</span> is closed in <span class="math notranslate nohighlight">\(X\)</span>.</p>
 </section>
 
 
