@@ -495,7 +495,7 @@ homotopy type of the whole space. Here is a positive result in this direction:</
 </div></blockquote>
 <p>A proof will be given later in Proposition 0.17, but for now let us look at some examples
 showing how this result can be applied.</p>
-<div class="no-indent-no-margin docutils container">
+<div class="no-indent-no-margin docutils container" id="example-0-7">
 <p><strong>Example 0.7: Graphs</strong>. The three graphs <a class="reference internal" href="../_images/three-graphs.png"><img alt="three-graphs" src="../_images/three-graphs.png" style="width: 91.45px; height: 12.850000000000001px;" /></a> are homotopy equivalent since
 each is a deformation retract of a disk with two holes, but we can also deduce this
 from the collapsing criterion above since collapsing the middle edge of the first and
@@ -519,8 +519,8 @@ is a rather nontrivial theorem that the Euler characteristic of a space depends 
 its homotopy type. A different algebraic invariant that works equally well for graphs,
 and whose rigorous development requires less effort than the Euler characteristic, is
 the fundamental group of a space, the subject of Chapter 1.</p>
-<a class="reference internal image-reference" href="../_images/example0-8.png"><img alt="../_images/example0-8.png" class="align-right" src="../_images/example0-8.png" style="width: 40%;" /></a>
 <div class="no-indent docutils container" id="example-0-8">
+<a class="reference internal image-reference" href="../_images/example0-8.png"><img alt="../_images/example0-8.png" class="align-right" src="../_images/example0-8.png" style="width: 40%;" /></a>
 <p><strong>Example 0.8</strong>. Consider the space <span class="math notranslate nohighlight">\(X\)</span> obtained
 from <span class="math notranslate nohighlight">\(S^2\)</span> by attaching the two ends of an arc
 <span class="math notranslate nohighlight">\(A\)</span> to two distinct points on the sphere, say the
@@ -597,8 +597,8 @@ these spaces all to have the same homotopy type. This is often the case:</p>
 <span class="math notranslate nohighlight">\(X_0 \sqcup_f X_1 \simeq X_0 \sqcup_g X_1\)</span>.</p>
 </div></blockquote>
 <p>Again let us defer the proof and look at some examples.</p>
-<div class="no-indent docutils container">
-<a class="reference internal image-reference" href="../_images/example0-11.png" id="example-0-11"><img alt="../_images/example0-11.png" class="align-right" id="example-0-11" src="../_images/example0-11.png" style="width: 30%;" /></a>
+<div class="no-indent docutils container" id="example-0-11">
+<a class="reference internal image-reference" href="../_images/example0-11.png"><img alt="../_images/example0-11.png" class="align-right" src="../_images/example0-11.png" style="width: 30%;" /></a>
 <p><strong>Example 0.11</strong>. Let us rederive the result in <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-0-8"><span class="std std-ref">Example 0.8</span></a> that a sphere with two points
 identified is homotopy equivalent to <span class="math notranslate nohighlight">\(S^1 \vee S^2\)</span>. The sphere
 with two points identified can be obtained by attaching <span class="math notranslate nohighlight">\(S^2\)</span>
@@ -608,13 +608,29 @@ map is homotopic to a constant map of <span class="math notranslate nohighlight"
 then follows since <span class="math notranslate nohighlight">\((S^2, A)\)</span> is a CW pair, <span class="math notranslate nohighlight">\(S^2\)</span> being obtained from <span class="math notranslate nohighlight">\(A\)</span> by attaching a
 <span class="math notranslate nohighlight">\(2\)</span>-cell.</p>
 </div>
-<div class="no-indent docutils container">
+<div class="no-indent docutils container" id="example-0-12">
 <p><strong>Example 0.12</strong>. In similar fashion we can see that the necklace in <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-0-9"><span class="std std-ref">Example 0.9</span></a> is
 homotopy equivalent to the wedge sum of a circle with <span class="math notranslate nohighlight">\(n\)</span> <span class="math notranslate nohighlight">\(2\)</span>-spheres. The necklace
 can be obtained from a circle by attaching <span class="math notranslate nohighlight">\(n\)</span> <span class="math notranslate nohighlight">\(2\)</span>-spheres along arcs, so the necklace
 is homotopy equivalent to the space obtained by attaching <span class="math notranslate nohighlight">\(n\)</span> <span class="math notranslate nohighlight">\(2\)</span>-spheres to a circle
 at points. Then we can slide these attaching points around the circle until they all
 coincide, producing the wedge sum.</p>
+</div>
+<div class="no-indent docutils container" id="example-0-13">
+<p><strong>Example 0.13</strong>. Here is an application of the earlier fact that collapsing a contractible
+subcomplex is a homotopy equivalence: If <span class="math notranslate nohighlight">\((X,A)\)</span> is a CW pair, consisting of a cell
+complex <span class="math notranslate nohighlight">\(X\)</span> and a subcomplex <span class="math notranslate nohighlight">\(A\)</span>, then <span class="math notranslate nohighlight">\(X/A \simeq X \cup CA\)</span>, the mapping cone of the
+inclusion <span class="math notranslate nohighlight">\(A \hookrightarrow X\)</span>. For we have <span class="math notranslate nohighlight">\(X/A=(X\cup CA)/CA \simeq X \cup CA\)</span> since <span class="math notranslate nohighlight">\(CA\)</span> is a contractible
+subcomplex of <span class="math notranslate nohighlight">\(X \cup CA\)</span>.</p>
+</div>
+<div class="no-indent docutils container" id="example-0-14">
+<p><strong>Example 0.14</strong>. If <span class="math notranslate nohighlight">\((X,A)\)</span> is a CW pair and <span class="math notranslate nohighlight">\(A\)</span> is contractible in <span class="math notranslate nohighlight">\(X\)</span>, that is, the inclusion
+<span class="math notranslate nohighlight">\(A \hookrightarrow X\)</span> is homotopic to a constant map, then <span class="math notranslate nohighlight">\(X/A \simeq X \vee SA\)</span>. Namely, by the previous
+example we have <span class="math notranslate nohighlight">\(X/A \simeq X \cup CA\)</span>, and then since <span class="math notranslate nohighlight">\(A\)</span> is contractible in <span class="math notranslate nohighlight">\(X\)</span>, the mapping
+cone <span class="math notranslate nohighlight">\(X \cup CA\)</span> of the inclusion <span class="math notranslate nohighlight">\(A \hookrightarrow X\)</span> is homotopy equivalent to the mapping cone of
+a constant map, which is <span class="math notranslate nohighlight">\(X \vee SA\)</span>. For example, <span class="math notranslate nohighlight">\(S^n / S^i \simeq S^n \vee S^{i+1}\)</span> for <span class="math notranslate nohighlight">\(i &lt; n\)</span>, since
+<span class="math notranslate nohighlight">\(S^i\)</span> is contractible in <span class="math notranslate nohighlight">\(S^n\)</span> if <span class="math notranslate nohighlight">\(i &lt; n\)</span>. In particular this gives <span class="math notranslate nohighlight">\(S^2/S^0 \simeq S^2 \vee S^1\)</span>, which is
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-0-8"><span class="std std-ref">Example 0.8</span></a> again.</p>
 </div>
 </section>
 </section>
