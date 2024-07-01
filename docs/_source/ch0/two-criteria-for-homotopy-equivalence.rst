@@ -163,7 +163,7 @@ Again let us defer the proof and look at some examples.
         :width: 30%
         :align: right
 
-    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <Example 0.8:mathjax>` that a sphere with two points 
+    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <Example 0.8>` that a sphere with two points 
     identified is homotopy equivalent to :math:`S^1 \vee S^2`. The sphere 
     with two points identified can be obtained by attaching :math:`S^2` 
     to :math:`S^1` by a map that wraps a closed arc :math:`A` in :math:`S^2` around :math:`S^1`,
@@ -171,6 +171,15 @@ Again let us defer the proof and look at some examples.
     map is homotopic to a constant map of :math:`A` yields :math:`S^1 \vee S^2`. The result
     then follows since :math:`(S^2, A)` is a CW pair, :math:`S^2` being obtained from :math:`A` by attaching a 
     :math:`2`-cell.
+
+.. container:: no-indent
+
+    **Example 0.12**. In similar fashion we can see that the necklace in :hoverxref:`Example 0.9 <Example 0.9>` is 
+    homotopy equivalent to the wedge sum of a circle with :math:`n` :math:`2`-spheres. The necklace 
+    can be obtained from a circle by attaching :math:`n` :math:`2`-spheres along arcs, so the necklace 
+    is homotopy equivalent to the space obtained by attaching :math:`n` :math:`2`-spheres to a circle 
+    at points. Then we can slide these attaching points around the circle until they all 
+    coincide, producing the wedge sum.
 
 .. |three-graphs| image:: fig/three-graphs.png
     :scale: 5%
