@@ -57,9 +57,9 @@ the fundamental group of a space, the subject of Chapter 1.
     :align: right
     :width: 40%
 
+.. _Example 0.8:
+
 .. container:: no-indent
-    
-    .. _Example 0.8:
 
     **Example 0.8**. Consider the space :math:`X` obtained
     from :math:`S^2` by attaching the two ends of an arc 
@@ -98,11 +98,9 @@ the fundamental group of a space, the subject of Chapter 1.
     sum of :math:`S^1` with :math:`n` :math:`2`-spheres. (One can see why a wedge sum is sometimes a called a 
     'bouquet' in the older literature.)
 
-.. _Example 1.10:
+.. _Example 0.10:
 
 .. container:: no-indent-no-margin
-
-    .. _Example 0.10:
 
     **Example 0.10: Reduced Suspension**. Let :math:`X` be a CW complex and :math:`x_0 \in X` a :math:`0`-cell.
     Inside the suspension :math:`SX` we have the line segment :math:`\{x_0\} \times I`, and collapsing this to a 
@@ -161,15 +159,7 @@ Again let us defer the proof and look at some examples.
 
     .. _Example 0.11:
 
-    **Example 0.11**. Let us rederive the result in :ref:`Example 0.8 <Example 0.8>` that a sphere with two points identified is homo
-
-    test :ref:`Example 0.10 <Example 0.10>`
-
-    test :ref:`Example 1.10 <Example 1.10>`
-
-test :ref:`Example 0.10 <Example 0.10>`
-
-test :ref:`Example 1.10 <Example 1.10>`
+    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <Example 0.8>` that a sphere with two points identified is homo
 
 .. |three-graphs| image:: fig/three-graphs.png
     :scale: 5%
