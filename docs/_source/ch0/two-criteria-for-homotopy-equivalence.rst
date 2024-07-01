@@ -24,9 +24,9 @@ homotopy type of the whole space. Here is a positive result in this direction:
 A proof will be given later in Proposition 0.17, but for now let us look at some examples 
 showing how this result can be applied.
 
-.. container:: no-indent-no-margin
+.. _Example 0.7:
 
-    .. Example 0.7:
+.. container:: no-indent-no-margin
 
     **Example 0.7: Graphs**. The three graphs |three-graphs| are homotopy equivalent since 
     each is a deformation retract of a disk with two holes, but we can also deduce this 
@@ -53,13 +53,13 @@ its homotopy type. A different algebraic invariant that works equally well for g
 and whose rigorous development requires less effort than the Euler characteristic, is 
 the fundamental group of a space, the subject of Chapter 1.
 
-.. image:: fig/example0-8.png
-    :align: right
-    :width: 40%
-
 .. _Example 0.8:
 
 .. container:: no-indent
+
+    .. image:: fig/example0-8.png
+        :align: right
+        :width: 40%
 
     **Example 0.8**. Consider the space :math:`X` obtained
     from :math:`S^2` by attaching the two ends of an arc 
@@ -155,15 +155,15 @@ these spaces all to have the same homotopy type. This is often the case:
 
 Again let us defer the proof and look at some examples.
 
-.. container:: no-indent
+.. _Example 0.11:
 
-    .. _Example 0.11:
+.. container:: no-indent
 
     .. image:: fig/example0-11.png
         :width: 30%
         :align: right
 
-    **Example 0.11**. Let us rederive the result in :hoverxref:`Example 0.8 <Example 0.8>` that a sphere with two points 
+    **Example 0.11**. Let us rederive the result in :ref:`Example 0.8 <Example 0.8>` that a sphere with two points 
     identified is homotopy equivalent to :math:`S^1 \vee S^2`. The sphere 
     with two points identified can be obtained by attaching :math:`S^2` 
     to :math:`S^1` by a map that wraps a closed arc :math:`A` in :math:`S^2` around :math:`S^1`,
@@ -172,14 +172,48 @@ Again let us defer the proof and look at some examples.
     then follows since :math:`(S^2, A)` is a CW pair, :math:`S^2` being obtained from :math:`A` by attaching a 
     :math:`2`-cell.
 
+.. _Example 0.12:
+
 .. container:: no-indent
 
-    **Example 0.12**. In similar fashion we can see that the necklace in :hoverxref:`Example 0.9 <Example 0.9>` is 
+    **Example 0.12**. In similar fashion we can see that the necklace in :ref:`Example 0.9 <Example 0.9>` is 
     homotopy equivalent to the wedge sum of a circle with :math:`n` :math:`2`-spheres. The necklace 
     can be obtained from a circle by attaching :math:`n` :math:`2`-spheres along arcs, so the necklace 
     is homotopy equivalent to the space obtained by attaching :math:`n` :math:`2`-spheres to a circle 
     at points. Then we can slide these attaching points around the circle until they all 
     coincide, producing the wedge sum.
+
+.. _Example 0.13:
+
+.. container:: no-indent
+
+    **Example 0.13**. Here is an application of the earlier fact that collapsing a contractible 
+    subcomplex is a homotopy equivalence: If :math:`(X,A)` is a CW pair, consisting of a cell 
+    complex :math:`X` and a subcomplex :math:`A`, then :math:`X/A \simeq X \cup CA`, the mapping cone of the 
+    inclusion :math:`A \hookrightarrow X`. For we have :math:`X/A=(X\cup CA)/CA \simeq X \cup CA` since :math:`CA` is a contractible 
+    subcomplex of :math:`X \cup CA`.
+
+.. _Example 0.14:
+
+.. container:: no-indent
+
+    **Example 0.14**. If :math:`(X,A)` is a CW pair and :math:`A` is contractible in :math:`X`, that is, the inclusion 
+    :math:`A \hookrightarrow X` is homotopic to a constant map, then :math:`X/A \simeq X \vee SA`. Namely, by the previous 
+    example we have :math:`X/A \simeq X \cup CA`, and then since :math:`A` is contractible in :math:`X`, the mapping 
+    cone :math:`X \cup CA` of the inclusion :math:`A \hookrightarrow X` is homotopy equivalent to the mapping cone of 
+    a constant map, which is :math:`X \vee SA`. For example, :math:`S^n / S^i \simeq S^n \vee S^{i+1}` for :math:`i < n`, since 
+    :math:`S^i` is contractible in :math:`S^n` if :math:`i < n`. In particular this gives :math:`S^2/S^0 \simeq S^2 \vee S^1`, which is 
+    :ref:`Example 0.8 <Example 0.8>` again.
+
+
+
+
+
+
+
+
+
+
 
 .. |three-graphs| image:: fig/three-graphs.png
     :scale: 5%
