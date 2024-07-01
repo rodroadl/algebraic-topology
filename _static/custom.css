@@ -14,3 +14,7 @@ div.no-indent-no-margin p {
 div.no-indent p {
     text-indent: 0;
 }
+
+div.no-margin p{
+    margin-bottom: 0;
+}

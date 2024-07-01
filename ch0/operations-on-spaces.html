@@ -30,16 +30,29 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5d0e920" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ff32c7ab" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=2b91c5f0"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/hoverxref.js"></script>
+    <script src="../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../_static/js/micromodal.min.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch0/operations-on-spaces';</script>
@@ -498,8 +511,74 @@ especially useful property of suspension is that not only spaces but also maps c
 suspended. Namely, a mpa <span class="math notranslate nohighlight">\(f:X\rightarrow Y\)</span> suspends to <span class="math notranslate nohighlight">\(Sf:SX \rightarrow SY\)</span>, the quotient map of
 <span class="math notranslate nohighlight">\(f\times \mathbb{1}: X \times I \rightarrow Y \times I\)</span>.</p>
 <div class="no-indent-no-margin docutils container">
-<p><strong>Join</strong>. The cone <span class="math notranslate nohighlight">\(CX\)</span> is the union of all line</p>
+<p><strong>Join</strong>. The cone <span class="math notranslate nohighlight">\(CX\)</span> is the union of all line segments joining points of <span class="math notranslate nohighlight">\(X\)</span> to an external
+vertex, and similarly the suspension <span class="math notranslate nohighlight">\(SX\)</span> is the union of all line segments joining
+points of <span class="math notranslate nohighlight">\(x\)</span> to two external vertices. More generally, given <span class="math notranslate nohighlight">\(X\)</span> and a second space <span class="math notranslate nohighlight">\(Y\)</span>,
+one can define the space of all line segments joining points in <span class="math notranslate nohighlight">\(X\)</span> to points in <span class="math notranslate nohighlight">\(Y\)</span>. This
+is the <strong>join</strong> <span class="math notranslate nohighlight">\(X * Y\)</span>, the quotient space of <span class="math notranslate nohighlight">\(X \times Y \times I\)</span> under the identifications <span class="math notranslate nohighlight">\((x, y_1, 0) \sim (x, y_2, 0)\)</span>
+and <span class="math notranslate nohighlight">\((x_1,y,1) \sim (x_2, y, 1)\)</span>. Thus we are collapsing the subspace <span class="math notranslate nohighlight">\(X \times Y \times \{0\}\)</span>
+to <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(X \times Y \times \{1\}\)</span> to <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/join.png"><img alt="../_images/join.png" class="align-right" src="../_images/join.png" style="width: 40%;" /></a>
+<p>For example, if <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are both closed intervals, then we
+are collapsing two opposite faces of a cube
+onto line segments so that the cube becomes
+a tetrahedron. In the general case, <span class="math notranslate nohighlight">\(X * Y\)</span>
+contains copies of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> at its two ends,
+and every other point <span class="math notranslate nohighlight">\((x,y,t)\)</span> in <span class="math notranslate nohighlight">\(X * Y\)</span> is on a unique line segment joining the point
+<span class="math notranslate nohighlight">\(x \in X \subset X*Y\)</span> to the point <span class="math notranslate nohighlight">\(y \in Y \subset X*Y\)</span>, the segment obtained by fixing <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>
+and letting the coordinate <span class="math notranslate nohighlight">\(t\)</span> in <span class="math notranslate nohighlight">\((x,y,t)\)</span> vary.</p>
 </div>
+<p>A nice way to write points of <span class="math notranslate nohighlight">\(X * Y\)</span> is as formal linear combinations <span class="math notranslate nohighlight">\(t_1x+t_2y\)</span>
+with <span class="math notranslate nohighlight">\(0 \leq t_i \leq 1\)</span> and <span class="math notranslate nohighlight">\(t_1 + t_2 = 1\)</span>, subject to the rules <span class="math notranslate nohighlight">\(0x+1y=y\)</span> and <span class="math notranslate nohighlight">\(1x+0y=x\)</span>
+that correspond exactly to the identifications defining <span class="math notranslate nohighlight">\(X*Y\)</span>. In much the same
+way, an iterated join <span class="math notranslate nohighlight">\(X_1 * \cdots X_n\)</span> can be constructued as the space of formal linear
+combinations <span class="math notranslate nohighlight">\(t_1x_1+\cdots t_nx_n\)</span> with <span class="math notranslate nohighlight">\(0\leq t_i \leq 1\)</span> and <span class="math notranslate nohighlight">\(t_1 + \cdots +t_n=1\)</span>, with the
+convenction that terms <span class="math notranslate nohighlight">\(0x_i\)</span> can be omitted. A very special case that plays a central
+role in algebraic topology is when each <span class="math notranslate nohighlight">\(X_i\)</span> is just a point. For example, the join of
+two points is a line segment, the join of three points is a triangle, and the join of four
+points is a tetrahedron. In general, the join of <span class="math notranslate nohighlight">\(n\)</span> points is a convex polyhedron of
+dimension <span class="math notranslate nohighlight">\(n-1\)</span> is called a <strong>simplex</strong>. Concretely, if the <span class="math notranslate nohighlight">\(n\)</span> points are the <span class="math notranslate nohighlight">\(n\)</span> standard
+basis vectors for <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, then their join is the <span class="math notranslate nohighlight">\((n-1)\)</span>-dimensional simplex</p>
+<div class="math notranslate nohighlight">
+\[\Delta^{n-1}=\{(t_1, \cdots , t_n) \in \mathbb{R}^n | t_1 + \cdots + t_n = 1 \text{ and } t_i \geq 0\}\]</div>
+<div class="no-indent-no-margin docutils container">
+<p>Another interesting examples is when each <span class="math notranslate nohighlight">\(X_i\)</span> is <span class="math notranslate nohighlight">\(S^0\)</span>, two points. If we take the two
+points of <span class="math notranslate nohighlight">\(X_i\)</span> to be the two unit vectors along the <span class="math notranslate nohighlight">\(i^{th}\)</span> coordinate axis in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, then the
+join <span class="math notranslate nohighlight">\(X_1 * \cdots *X_n\)</span> is the union of <span class="math notranslate nohighlight">\(2^n\)</span> copies of the simplex <span class="math notranslate nohighlight">\(\Delta^{n-1}\)</span>, and radial projection
+from the origin gives a homeomorphism between <span class="math notranslate nohighlight">\(X_1 * \cdots X_n\)</span> and <span class="math notranslate nohighlight">\(S^{n-1}\)</span>.</p>
+</div>
+<p>If <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are CW complexes, then there is a natural CW structure on <span class="math notranslate nohighlight">\(X*Y\)</span>
+having the subspaces <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> as subcomplexes, with the remaining cells being the
+product cells of <span class="math notranslate nohighlight">\(X \times Y \times (0,1)\)</span>. As usual with products, the CW topology on <span class="math notranslate nohighlight">\(X * Y\)</span> may
+be finer than the quotient of the product topology on <span class="math notranslate nohighlight">\(X \times Y \times I\)</span>.</p>
+<div class="no-indent-no-margin docutils container">
+<p><strong>Wedge Sum</strong>. This is a rather trivial but still quite useful operation. Given spaces <span class="math notranslate nohighlight">\(X\)</span> and
+<span class="math notranslate nohighlight">\(Y\)</span> with chosen points <span class="math notranslate nohighlight">\(x_0 \in X\)</span> and <span class="math notranslate nohighlight">\(y_0 \in Y\)</span>, then the <strong>wedge sum</strong> <span class="math notranslate nohighlight">\(X \vee Y\)</span> is the quotient
+of the disjoint union <span class="math notranslate nohighlight">\(X \sqcup Y\)</span> obtained by identifying <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(y_0\)</span> to a single point. For
+example, <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> is homeomorphic to the figure ‘<span class="math notranslate nohighlight">\(8\)</span>’, two circles touching at a point.
+More generally one could form the wedge sum <span class="math notranslate nohighlight">\(\bigvee _\alpha X_\alpha\)</span> of an arbitrary collection of
+spaces <span class="math notranslate nohighlight">\(X_\alpha\)</span> by starting with the disjoint union <span class="math notranslate nohighlight">\(\bigsqcup _\alpha X_\alpha\)</span> and identifying points <span class="math notranslate nohighlight">\(x_\alpha \in X_\alpha\)</span>
+to a single point. In case the spaces <span class="math notranslate nohighlight">\(X_\alpha\)</span> are cell complexes and the points <span class="math notranslate nohighlight">\(x_\alpha\)</span> are
+<span class="math notranslate nohighlight">\(0\)</span>-cells, then <span class="math notranslate nohighlight">\(\bigvee_\alpha X_\alpha\)</span> is a cell complex since it is obtained from the cell complex <span class="math notranslate nohighlight">\(\bigsqcup_\alpha X_\alpha\)</span>
+by collapsing a subcomplex to a point.</p>
+</div>
+<p>For any cell complex <span class="math notranslate nohighlight">\(X\)</span>, the quotient <span class="math notranslate nohighlight">\(X^n / X^{n-1}\)</span> is a wedge sum of <span class="math notranslate nohighlight">\(n\)</span>-spheres <span class="math notranslate nohighlight">\(\bigvee_\alpha S^n_\alpha\)</span>,
+with one sphere for each <span class="math notranslate nohighlight">\(n\)</span>-cell of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="no-indent-no-margin docutils container">
+<p><strong>Smash Product</strong>. Like suspension, this is another construction whose importance becomes
+evident only later. Inside a product space <span class="math notranslate nohighlight">\(X \times Y\)</span> there are copies of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>,
+namely <span class="math notranslate nohighlight">\(X \times \{y_0\}\)</span> and <span class="math notranslate nohighlight">\(\{x_0\} \times Y\)</span> for points <span class="math notranslate nohighlight">\(x_0 \in X\)</span> and <span class="math notranslate nohighlight">\(y_0 \in Y\)</span>. These two copies of <span class="math notranslate nohighlight">\(X\)</span>
+and <span class="math notranslate nohighlight">\(Y\)</span> in <span class="math notranslate nohighlight">\(X \times Y\)</span> intersect only at the point <span class="math notranslate nohighlight">\((x_0, y_0)\)</span>, so their union can be identified
+with the wedge sum <span class="math notranslate nohighlight">\(X \vee Y\)</span>. The <strong>smash product</strong> <span class="math notranslate nohighlight">\(X \wedge Y\)</span> is then defined to be the quotient
+<span class="math notranslate nohighlight">\(X \times Y / X \vee Y\)</span>. One can think of <span class="math notranslate nohighlight">\(X \wedge Y\)</span> as a reduced version of <span class="math notranslate nohighlight">\(X \times Y\)</span> obtained
+by collapsing away the parts that are not genuinely a product, the separate factors <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+</div>
+<p>The smash product <span class="math notranslate nohighlight">\(X \wedge Y\)</span> is a cell complex if <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are cell complexes with <span class="math notranslate nohighlight">\(x_0\)</span>
+and <span class="math notranslate nohighlight">\(y_0\)</span> <span class="math notranslate nohighlight">\(0\)</span>-cells, assuming that we give <span class="math notranslate nohighlight">\(X \times Y\)</span> the cell-complex topology rather than the
+product topology in cases when these two topologies differ. For example, <span class="math notranslate nohighlight">\(S^m \wedge S^n\)</span> has
+a cell structure with just two cells, of dimensions <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(m+n\)</span>, hence <span class="math notranslate nohighlight">\(S^m \wedge S^n = S^{m+n}\)</span>.
+In particular, when <span class="math notranslate nohighlight">\(m=n=1\)</span> we see that collapsing longitude and meridian circles
+of a torus to a point produces a <span class="math notranslate nohighlight">\(2\)</span>-sphere.</p>
 </section>
 
 
