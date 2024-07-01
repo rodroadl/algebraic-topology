@@ -91,3 +91,9 @@ latex_elements = {
     'printindex': r'\footnotesize\raggedright\printindex',
 }
 latex_show_urls = 'footnote'
+
+# sphinx-hoverxref customization
+# show a tooltip in all the appearances of the :ref: role
+hoverxref_auto_ref = True
+# To render a tooltip where its contents has a mathjax
+hoverxref_mathjax = True
