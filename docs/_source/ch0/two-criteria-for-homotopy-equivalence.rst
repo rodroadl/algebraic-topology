@@ -59,7 +59,7 @@ the fundamental group of a space, the subject of Chapter 1.
 
     .. image:: fig/example0-8.png
         :align: right
-        :width: 50%
+        :width: 40%
 
     **Example 0.8**. Consider the space :math:`X` obtained
     from :math:`S^2` by attaching the two ends of an arc 
@@ -88,7 +88,7 @@ the fundamental group of a space, the subject of Chapter 1.
     'necklace with :math:`n` beads'.
 
     .. image:: fig/example0-9.png
-        :width: 30%
+        :width: 100%
         :align: center
 
     The third space :math:`Z` in the figure, a strand of :math:`n` beads with a 
