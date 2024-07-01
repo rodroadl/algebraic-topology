@@ -57,16 +57,14 @@ the fundamental group of a space, the subject of Chapter 1.
 
 .. container:: no-indent
 
+    .. image:: fig/example0-8.png
+        :align: center
+        :width: 40%
+
     **Example 0.8**. Consider the space :math:`X` obtained
     from :math:`S^2` by attaching the two ends of an arc 
     :math:`A` to two distinct points on the sphere, say the 
-    north and south poles. 
-    
-    .. image:: fig/example0-8.png
-        :align: right
-        :width: 40%
-    
-    Let :math:`B` be an arc in :math:`S^2`
+    north and south poles. Let :math:`B` be an arc in :math:`S^2`
     joining the two points where :math:`A` attaches. Then 
     :math:`X` can be given CW complex structure with 
     the two endpoints of :math:`A` and :math:`B` as :math:`0`-cells, the 
