@@ -57,7 +57,7 @@ the fundamental group of a space, the subject of Chapter 1.
 
 .. container:: no-indent
 
-    .. image:: fig/example0-8.png
+    .. image:: fig/example-0-8.png
         :align: right
         :width: 40%
 
@@ -87,7 +87,7 @@ the fundamental group of a space, the subject of Chapter 1.
     equivalent space :math:`Y` consisting of :math:`n` :math:`2`-spheres, each tangent to its two neighbors, a 
     'necklace with :math:`n` beads'.
 
-    .. image:: fig/example0-9.png
+    .. image:: fig/example-0-9.png
         :width: 100%
         :align: center
 
@@ -159,7 +159,7 @@ Again let us defer the proof and look at some examples.
 
 .. container:: no-indent
 
-    .. image:: fig/example0-11.png
+    .. image:: fig/example-0-11.png
         :width: 30%
         :align: right
 
