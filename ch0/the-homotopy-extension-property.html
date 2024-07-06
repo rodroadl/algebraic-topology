@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-light.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-borderless.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/micromodal.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ff32c7ab" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=95a7cc38" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -476,6 +476,7 @@ given a homotopy <span class="math notranslate nohighlight">\(f_t:A \rightarrow 
 <div><p><em>A pair</em> <span class="math notranslate nohighlight">\((X,A)\)</span> <em>has the homotopy extension property if and only if</em> <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I\)</span> <em>is a
 retract of</em> <span class="math notranslate nohighlight">\(X \times I\)</span>.</p>
 </div></blockquote>
+<div class="no-indent docutils container">
 <p>For one implication, the homotopy extension property for <span class="math notranslate nohighlight">\((X,A)\)</span> implies that the
 identity map <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I \rightarrow X \times \{0\} \cup A \times I\)</span> extends to a map :math:` X times I rightarrow X times {0} cup A times I`,
 so <span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I\)</span> is a retract of <span class="math notranslate nohighlight">\(X \times I\)</span>. The converse is equally easy when <span class="math notranslate nohighlight">\(A\)</span> is closed
@@ -489,6 +490,160 @@ mor complicated argument given in the Appendix. If <span class="math notranslate
 is a retraction onto <span class="math notranslate nohighlight">\(X\times \{0\} \cup A \times I\)</span>, then the iamge of <span class="math notranslate nohighlight">\(r\)</span> is the set of points <span class="math notranslate nohighlight">\(z \in X \times I\)</span>
 with <span class="math notranslate nohighlight">\(r(z)=z\)</span>, a closed set if <span class="math notranslate nohighlight">\(X\)</span> is Hausdorff, so <span class="math notranslate nohighlight">\(X \times \{0\} \cup A\times I\)</span> is closed in <span class="math notranslate nohighlight">\(X \times I\)</span> and
 hence <span class="math notranslate nohighlight">\(A\)</span> is closed in <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</div>
+<p>A simple example of a pair <span class="math notranslate nohighlight">\((X,A)\)</span> with <span class="math notranslate nohighlight">\(A\)</span> closed for which the homotopy
+extension property fails is the pair <span class="math notranslate nohighlight">\((I,A)\)</span> where <span class="math notranslate nohighlight">\(A = \{0, 1, \dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4},\cdots \}\)</span>. It is not hard to
+show that there is no continuous retraction <span class="math notranslate nohighlight">\(I\times I \rightarrow I \times \{0\} \cup A \times I\)</span>. The breakdown of
+homotopy extension here can be attributed to the bad structure of <span class="math notranslate nohighlight">\((X,A)\)</span> near <span class="math notranslate nohighlight">\(0\)</span>.
+With nicer local structure the homotopy extension property does hold, as the next example shows.</p>
+<div class="no-indent docutils container" id="example-0-15">
+<a class="reference internal image-reference" href="../_images/example-0-15.png"><img alt="../_images/example-0-15.png" class="align-right" src="../_images/example-0-15.png" style="width: 25%;" /></a>
+<p><strong>Example 0.15</strong>. A pair <span class="math notranslate nohighlight">\((X,A)\)</span> has the homotopy extension property if <span class="math notranslate nohighlight">\(A\)</span> has a mapping
+cylinder neighborhood in <span class="math notranslate nohighlight">\(X\)</span>, by which we mean a closed
+neighborhood <span class="math notranslate nohighlight">\(N\)</span> containing a subspace <span class="math notranslate nohighlight">\(B\)</span>, thought of as the
+boundary of <span class="math notranslate nohighlight">\(N\)</span>, with <span class="math notranslate nohighlight">\(N-B\)</span> an open neighborhood of <span class="math notranslate nohighlight">\(A\)</span>,
+such that there exists a map <span class="math notranslate nohighlight">\(f:B \rightarrow A\)</span> and a homeomorphism
+<span class="math notranslate nohighlight">\(h:M-f \rightarrow N\)</span> with <span class="math notranslate nohighlight">\(h \mid A \cup B = \mathbb{1}\)</span>. Mapping cylinder neighborhoods
+like this occur fairly often. For example, the thick letters
+discussed at the beginning of the chapter provide such
+neighborhoods of the thin letters, regarded as subspaces of the plane. To verify the
+homotopy extension property, notice first that <span class="math notranslate nohighlight">\(I \times I\)</span> retracts onto <span class="math notranslate nohighlight">\(I \times \{0\} \cup \partial I \times I\)</span>, hence
+<span class="math notranslate nohighlight">\(B \times I \times I\)</span> retracts onto <span class="math notranslate nohighlight">\(B \times I \times \{0\} \cup B \times \partial I \times I\)</span>, and this retraction induces a retraction
+of <span class="math notranslate nohighlight">\(M_f \times I\)</span> onto <span class="math notranslate nohighlight">\(M_f \times \{0\} \cup (A \cup B) \times I\)</span>. Thus <span class="math notranslate nohighlight">\((M_f, A \cup B)\)</span> has the homotopy extension
+property. Hence so does the homeomorphic pair <span class="math notranslate nohighlight">\((N, A \cup B)\)</span>. Now given a map
+<span class="math notranslate nohighlight">\(X \rightarrow Y\)</span> and a homotopy of its restriction to <span class="math notranslate nohighlight">\(A\)</span>, we can take the constant homotopy on
+<span class="math notranslate nohighlight">\(X - (N-B)\)</span> and then extend over <span class="math notranslate nohighlight">\(N\)</span> by applying the homotopy extension property
+for <span class="math notranslate nohighlight">\((N, A\cup B)\)</span> to the given homotopy on <span class="math notranslate nohighlight">\(A\)</span> and the constant homotopy on <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</div>
+<div class="no-indent docutils container" id="proposition-0-16">
+<blockquote>
+<div><p><strong>Proposition 0.16.</strong> <em>If</em> <span class="math notranslate nohighlight">\((X,A)\)</span> <em>is a CW pair, then</em> <span class="math notranslate nohighlight">\(X \times \{0\}\cup A \times I\)</span> <em>is a deformation retract
+of</em> <span class="math notranslate nohighlight">\(X \times I\)</span>, <em>hence</em> <span class="math notranslate nohighlight">\((X,A)\)</span> <em>has the homotopy extension property.</em></p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/proposition-0-16.png"><img alt="../_images/proposition-0-16.png" class="align-right" src="../_images/proposition-0-16.png" style="width: 20%;" /></a>
+<p><strong>Proof:</strong> There is a retraction <span class="math notranslate nohighlight">\(r:D^n \times I \rightarrow D^n \times \{0\} \cup \partial D^n \times I\)</span>, for example
+the radial projection from the point point <span class="math notranslate nohighlight">\((0,2) \in D^n \times \mathbb{R}\)</span>. Then setting
+setting <span class="math notranslate nohighlight">\(r_t = tr + (1-t)\mathbb{1}\)</span> gives a deformation retraction of <span class="math notranslate nohighlight">\(D^n \times I\)</span>
+onto <span class="math notranslate nohighlight">\(D^n \times \{0\} \cup \partial D^n \times I\)</span>. This deformation retraction gives rise to
+a deformation retraction of <span class="math notranslate nohighlight">\(X^n \times I\)</span> onto <span class="math notranslate nohighlight">\(X^n \times \{0\} \cup (X^{n-1} \cup A^n) \times I\)</span>
+since <span class="math notranslate nohighlight">\(X^n \times I\)</span> is obtained from <span class="math notranslate nohighlight">\(X^n \times \{0\} \cup (X^{n-1} \cup A^n) \times I\)</span> during the <span class="math notranslate nohighlight">\(t\)</span>-interval <span class="math notranslate nohighlight">\([1/2^{n+1},1/2^n]\)</span>,
+this infinite concatenation of homotopies is a deformation retraction of <span class="math notranslate nohighlight">\(X \times I\)</span> onto
+<span class="math notranslate nohighlight">\(X \times \{0\} \cup A \times I\)</span>. There is no problem with continuity of this deformation retraction
+at <span class="math notranslate nohighlight">\(t=0\)</span> since it is  continuous on <span class="math notranslate nohighlight">\(X^n \times I\)</span>, being stationary there during the <span class="math notranslate nohighlight">\(t\)</span>-interval
+<span class="math notranslate nohighlight">\([0,1/2^{n+1}]\)</span>, and CW complexes have the weak topology with respect to their skeleta
+so a map is continuous iff its restriction to each skeleton is continuous. <span style="float:right">&#9723</span></p>
+</div>
+<p>Now we can prove a generalizatoin of the earlier assertion that collapsing a
+contractible subcomplex is a homotopy equivalence.</p>
+<div class="no-indent docutils container" id="proposition-0-17">
+<blockquote>
+<div><p><strong>Proposition 0.17.</strong> <em>If the pair</em> <span class="math notranslate nohighlight">\((X,A)\)</span> <em>satisfies the homotopy extension property and</em>
+<span class="math notranslate nohighlight">\(A\)</span> <em>is contractible, then the quotient map</em> <span class="math notranslate nohighlight">\(q:X \rightarrow X/A\)</span> <em>is a homotopy equivalence.</em></p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/proposition-0-17.png"><img alt="../_images/proposition-0-17.png" class="align-right" src="../_images/proposition-0-17.png" style="width: 40%;" /></a>
+<p><strong>Proof:</strong> Let <span class="math notranslate nohighlight">\(f_t:X \rightarrow X\)</span> be a homotopy extending a contraction of <span class="math notranslate nohighlight">\(A\)</span>, with <span class="math notranslate nohighlight">\(f_0 = \mathbb{1}\)</span>. Since
+<span class="math notranslate nohighlight">\(f_t(A) \subset A\)</span> for all <span class="math notranslate nohighlight">\(t\)</span> , the composition <span class="math notranslate nohighlight">\(qf_t:X \rightarrow X/A\)</span> sends <span class="math notranslate nohighlight">\(A\)</span> to a point and hence factors
+as a composition <span class="math notranslate nohighlight">\(X \overset{q}{\rightarrow} X/A \rightarrow X/A\)</span>. Denoting the latter map by <span class="math notranslate nohighlight">\(\bar{f}_t:X/A \rightarrow X/A\)</span>,
+we have <span class="math notranslate nohighlight">\(qf_t = \bar{f}_tq\)</span> in the first of the two
+diagrams at the right. When <span class="math notranslate nohighlight">\(t=1\)</span> we have
+<span class="math notranslate nohighlight">\(f_1(A)\)</span> equal to a point, the point to which <span class="math notranslate nohighlight">\(A\)</span>
+contracts, so <span class="math notranslate nohighlight">\(f_1\)</span> induces a map <span class="math notranslate nohighlight">\(g:X/A \rightarrow X\)</span>
+with <span class="math notranslate nohighlight">\(gq=f_1\)</span>, as in the second diagram. It
+follows that <span class="math notranslate nohighlight">\(qg = \bar{f}_1\)</span> since <span class="math notranslate nohighlight">\(qg(\bar{x}) = qgq(x) = qf_1(x) = \bar{f}_1q(x) = \bar{f}_1(\bar{x})\)</span>. The
+maps <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are inverse homotopy equivalences since <span class="math notranslate nohighlight">\(gq = f_1 \simeq f_0 = \mathbb{1}\)</span> via <span class="math notranslate nohighlight">\(f_t\)</span> and
+<span class="math notranslate nohighlight">\(qg = \bar{f}_1 \simeq \bar{f}_0 = \mathbb{1}\)</span> via <span class="math notranslate nohighlight">\(\bar{f}_t\)</span>.</p>
+</div>
+<p>Another application of the homotopy extension property, giving a slightly more
+refined version of one of our earlier criteria for homotopy equivalence, is the following:</p>
+<div class="no-indent docutils container" id="proposition-0-18">
+<blockquote>
+<div><p><strong>Proposition 0.18.</strong> <em>If</em> <span class="math notranslate nohighlight">\((X_1, A)\)</span> <em>is a CW pair and we have attaching maps</em> <span class="math notranslate nohighlight">\(f,g:A \rightarrow X_0\)</span>
+<em>that are homotopic, then</em> <span class="math notranslate nohighlight">\(X_0 \sqcup_f X_1 \simeq X_0 \sqcup_g X_1\)</span> rel <span class="math notranslate nohighlight">\(X_0\)</span>.</p>
+</div></blockquote>
+<div class="indent docutils container">
+<p>Here the definition of <span class="math notranslate nohighlight">\(W \simeq Z \text{ rel } Y\)</span> for pairs <span class="math notranslate nohighlight">\((W,Y)\)</span> and <span class="math notranslate nohighlight">\((Z,Y)\)</span> is that there are
+maps <span class="math notranslate nohighlight">\(\varphi : W \rightarrow Z\)</span> and <span class="math notranslate nohighlight">\(\psi : Z \rightarrow W\)</span> restricting to the identity on <span class="math notranslate nohighlight">\(Y\)</span>, such that <span class="math notranslate nohighlight">\(\psi \varphi \simeq \mathbb{1}\)</span>
+and <span class="math notranslate nohighlight">\(\varphi \psi \simeq \mathbb{1}\)</span> via homotopies that restrict to the identity on <span class="math notranslate nohighlight">\(Y\)</span> at all times.</p>
+</div>
+<p><strong>Proof:</strong> If <span class="math notranslate nohighlight">\(F:A\times I \rightarrow X_0\)</span> is a homotopy from <span class="math notranslate nohighlight">\(f\)</span> to <span class="math notranslate nohighlight">\(g\)</span>, consider the space <span class="math notranslate nohighlight">\(X_0 \sqcup_F (X_1 \times I)\)</span>.
+This contains both <span class="math notranslate nohighlight">\(X_0 \sqcup_f X_1\)</span> and <span class="math notranslate nohighlight">\(X_0 \sqcup_g X_1\)</span> as subspaces. A deformation retraction
+of <span class="math notranslate nohighlight">\(X_1 \times I\)</span> onto <span class="math notranslate nohighlight">\(X_1 \times \{0\} \cup A \times I\)</span> as in <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-0-16"><span class="std std-ref">Proposition 0.16</span></a> induces a deformation retraction
+of <span class="math notranslate nohighlight">\(X_0 \sqcup_F (X_1 \times I)\)</span> onto <span class="math notranslate nohighlight">\(X_0 \sqcup_f X_1\)</span>. Similarly <span class="math notranslate nohighlight">\(X_0 \sqcup_F (X_1 \times I)\)</span> deformation retracts onto
+<span class="math notranslate nohighlight">\(X_0 \sqcup_g X_1\)</span>. Both these deformation retractions restrict to the identity on <span class="math notranslate nohighlight">\(X_0\)</span>, so together
+they give a homotopy equivalence <span class="math notranslate nohighlight">\(X_0 \sqcup_f X_1 \simeq X_0 \sqcup_g X_1\)</span> rel <span class="math notranslate nohighlight">\(X_0\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<p>We finish this chapter with a technical result whose proof will involve several
+applications of the homotopy extension property:</p>
+<div class="no-indent docutils container" id="proposition-0-19">
+<blockquote>
+<div><p><strong>Proposition 0.19.</strong> <em>Suppose</em> <span class="math notranslate nohighlight">\((X,A)\)</span> <em>and</em> <span class="math notranslate nohighlight">\((Y,A)\)</span> <em>satisfy the homotopy extension property,</em>
+<em>and</em> <span class="math notranslate nohighlight">\(f:X \rightarrow Y\)</span> <em>is a homotopy equivalence with</em> <span class="math notranslate nohighlight">\(f|A=\mathbb{1}\)</span>. <em>Then</em> <span class="math notranslate nohighlight">\(f\)</span> <em>is a homotopy</em>
+<em>equivalence</em> rel <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="no-indent docutils container" id="corollary-0-20">
+<blockquote>
+<div><p><strong>Corollary 0.20.</strong> <em>If</em> <span class="math notranslate nohighlight">\((X,A)\)</span> <em>satisfies the homotopy extension property and the inclusion</em>
+<span class="math notranslate nohighlight">\(A \hookrightarrow X\)</span> <em>is a homotopy equivalence, then</em> <span class="math notranslate nohighlight">\(A\)</span> <em>is a deformation retract of</em> <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> Apply the <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-0-19"><span class="std std-ref">proposition</span></a> to the inclusion <span class="math notranslate nohighlight">\(A \hookrightarrow X\)</span>.</p>
+</div>
+<div class="no-indent docutils container" id="corollary-0-21">
+<blockquote>
+<div><p><strong>Corollary 0.21.</strong> <em>A map</em> <span class="math notranslate nohighlight">\(f:X \rightarrow Y\)</span> <em>is a homotopy equivalence iff</em> <span class="math notranslate nohighlight">\(X\)</span> <em>is a deformation
+retract of the mapping cylinder</em> <span class="math notranslate nohighlight">\(M_f\)</span>. <em>Hence, two spaces</em> <span class="math notranslate nohighlight">\(X\)</span> <em>and</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>are homotopy
+equivalent iff there is a third space containing both</em> <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> <em>as deformation retracts.</em></p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/corollary-0-21.png"><img alt="../_images/corollary-0-21.png" class="align-right" src="../_images/corollary-0-21.png" style="width: 25%;" /></a>
+<p><strong>Proof:</strong> In the diagram at the right the maps <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> are the inclusions
+and <span class="math notranslate nohighlight">\(r\)</span> is the canonical retraction, so <span class="math notranslate nohighlight">\(f=ri\)</span> and <span class="math notranslate nohighlight">\(i \simeq jf\)</span>. Since
+<span class="math notranslate nohighlight">\(j\)</span> and <span class="math notranslate nohighlight">\(r\)</span> are homotopy equivalences, it follows that <span class="math notranslate nohighlight">\(f\)</span> is a homotopy
+equivalence iff <span class="math notranslate nohighlight">\(i\)</span> is a homotopy equivalence, since the composition
+of two homotopy equivalences is a homotopy equivalence and a map homotopic to a
+homotopy equivalence is a homotopy equivalence. Now apply the preceding corollary
+to the pair <span class="math notranslate nohighlight">\((M_f, X)\)</span>, which satisfies the homotopy extension property by <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-0-15"><span class="std std-ref">Example 0.15</span></a>
+using the neighborhood <span class="math notranslate nohighlight">\(X \times [0, \frac{1}{2}]\)</span> of <span class="math notranslate nohighlight">\(X\)</span> in <span class="math notranslate nohighlight">\(M_f\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<div class="no-indent-no-margin docutils container" id="proof-of-0-19">
+<p><strong>Proof of</strong> <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-0-19"><span class="std std-ref">0.19</span></a> <strong>:</strong> Let <span class="math notranslate nohighlight">\(g:\rightarrow X\)</span> be a homotopy inverse for <span class="math notranslate nohighlight">\(f\)</span>. There will be three steps
+to the proof:</p>
+<div class="indent-no-margin docutils container">
+<p>(1) Construct a homotopy from <span class="math notranslate nohighlight">\(g\)</span> to a map <span class="math notranslate nohighlight">\(g_1\)</span> with <span class="math notranslate nohighlight">\(g_1 \mid A = \mathcal{1}\)</span>.</p>
+<p>(2) Show <span class="math notranslate nohighlight">\(g_1f \simeq \mathbb{1} \text{ rel } A\)</span>.</p>
+<p>(3) show <span class="math notranslate nohighlight">\(fg_1 \simeq \mathbb{1} \text{ rel } A\)</span>.</p>
+</div>
+<div class="no-indent-no-margin docutils container">
+<p>(1) Let <span class="math notranslate nohighlight">\(h_t: X \rightarrow X\)</span> be a homotopy from <span class="math notranslate nohighlight">\(gf=h_0\)</span> to <span class="math notranslate nohighlight">\(\mathbb{1}=h_1\)</span>. Since <span class="math notranslate nohighlight">\(f \mid A=\mathbb{1}\)</span>, we
+can view <span class="math notranslate nohighlight">\(h_t \mid A\)</span> as a homotopy from <span class="math notranslate nohighlight">\(g \mid A\)</span> to <span class="math notranslate nohighlight">\(\mathbb{1}\)</span>. Then since we assume <span class="math notranslate nohighlight">\((Y,A)\)</span> has the
+homotopy extension property, we can extend this homotopy to a homotopy <span class="math notranslate nohighlight">\(g_t: Y \rightarrow X\)</span>
+from <span class="math notranslate nohighlight">\(g=g_0\)</span> to a map <span class="math notranslate nohighlight">\(g_1\)</span> with <span class="math notranslate nohighlight">\(g_1 \mid A = \mathbb{1}\)</span>.</p>
+<p>(2) A hotopy from <span class="math notranslate nohighlight">\(g_1 f\)</span> to <span class="math notranslate nohighlight">\(\mathbb{1}\)</span> is given by the formulas</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}k_t = \begin{cases}
+g_{1-2t}f  &amp; 0 \leq t \leq \frac{1}{2} \\
+h_{2t-1},  &amp; \frac{1}{2} \leq t \leq 1
+\end{cases}\end{split}\]</div>
+<p>Note that the two definitions agree when <span class="math notranslate nohighlight">\(t=\frac{1}{2}\)</span>. Since <span class="math notranslate nohighlight">\(f \mid A=\mathbb{1}\)</span> and <span class="math notranslate nohighlight">\(g_t =h_t\)</span> on <span class="math notranslate nohighlight">\(A\)</span>,
+the homotopy <span class="math notranslate nohighlight">\(k_t \mid A\)</span> starts and ends with the identity, and its second half simply retraces
+its first half, that is, <span class="math notranslate nohighlight">\(k_t = k_{1-t}\)</span> on <span class="math notranslate nohighlight">\(A\)</span>. We will define a ‘homotopy of homotopies’</p>
+<a class="reference internal image-reference" href="../_images/proposition-0-19.png"><img alt="../_images/proposition-0-19.png" class="align-right" src="../_images/proposition-0-19.png" style="width: 30%;" /></a>
+<p><span class="math notranslate nohighlight">\(k_{tu}: A \rightarrow X\)</span> by means of the figure at the right showing the parameter
+domain <span class="math notranslate nohighlight">\(I \times I\)</span> for the pairs <span class="math notranslate nohighlight">\((t,u)\)</span>, with the <span class="math notranslate nohighlight">\(t\)</span>-axis horizontal
+and the <span class="math notranslate nohighlight">\(u\)</span>-axis vertical. On the bottom edge of the square we define
+<span class="math notranslate nohighlight">\(k_{t0} = k_t \mid A\)</span>. Below the ‘V’ we define <span class="math notranslate nohighlight">\(k_{tu}\)</span> to be independent of <span class="math notranslate nohighlight">\(t\)</span>.
+This is unambiguous since <span class="math notranslate nohighlight">\(k_t=k_{1-t}\)</span> on <span class="math notranslate nohighlight">\(A\)</span>. Since <span class="math notranslate nohighlight">\(k_0=\mathbb{1}\)</span> on <span class="math notranslate nohighlight">\(A\)</span>,
+we have <span class="math notranslate nohighlight">\(k_{tu}=\mathbb{1}\)</span> for <span class="math notranslate nohighlight">\((t,u)\)</span> in the left, right, and top edges of the square. Next we
+extend <span class="math notranslate nohighlight">\(k_{tu}\)</span> over <span class="math notranslate nohighlight">\(X\)</span>, as follows. Since <span class="math notranslate nohighlight">\((X,A)\)</span> has the homotopy extension property,
+so does <span class="math notranslate nohighlight">\((X \times I, A \times I)\)</span>, as one can see from the equivalent retraction property. Viewing
+<span class="math notranslate nohighlight">\(k_{tu}\)</span> as a homotopy of <span class="math notranslate nohighlight">\(k_t \mid A\)</span>, we can therefore extend <span class="math notranslate nohighlight">\(k_{tu} A \rightarrow X\)</span> to <span class="math notranslate nohighlight">\(k_{tu}: X \rightarrow X\)</span> with
+<span class="math notranslate nohighlight">\(k_{t0}=k_t\)</span>. If we restrict this <span class="math notranslate nohighlight">\(k_{tu}\)</span> to the left, top, and right edges of the <span class="math notranslate nohighlight">\((t,u)\)</span>-square,
+we get a homotopy <span class="math notranslate nohighlight">\(g_1 f \simeq \mathbb{1} \text{ rel } A\)</span>.</p>
+<p>(3) Since <span class="math notranslate nohighlight">\(g_1 \simeq g\)</span>, we have <span class="math notranslate nohighlight">\(fg_1 \simeq fg \simeq \mathbb{1}\)</span>, so <span class="math notranslate nohighlight">\(fg_1 \simeq \mathbb{1}\)</span> and steps (1) and (2) can be
+repeated with the pair <span class="math notranslate nohighlight">\(f, \, g\)</span> replaced by <span class="math notranslate nohighlight">\(g_1, \, f\)</span>. The result is a map <span class="math notranslate nohighlight">\(f_1: X \rightarrow Y\)</span> with
+<span class="math notranslate nohighlight">\(f_1 \mid A = \mathbb{1}\)</span> and <span class="math notranslate nohighlight">\(f_1g_1 \simeq \mathbb{1} \text{ rel } A\)</span>. Hence <span class="math notranslate nohighlight">\(f_1 \simeq f_1(g_1 f) = (f_1 g_1)f \simeq f \text{ rel } A\)</span>. From this
+we deduce that <span class="math notranslate nohighlight">\(fg_1 \simeq f_1g_1 \simeq \mathbb{1} \text{ rel } A\)</span>.</p>
+</div>
+</div>
 </section>
 
 

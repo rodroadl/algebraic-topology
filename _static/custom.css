@@ -1,5 +1,7 @@
 p {
     text-indent: 2em;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .math{
@@ -16,5 +18,14 @@ div.no-indent p {
 }
 
 div.no-margin p{
+    margin-bottom: 0;
+}
+
+div.indent p {
+    text-indent: 2em;
+}
+
+div.indent-no-margin p{
+    text-indent: 2em;
     margin-bottom: 0;
 }
