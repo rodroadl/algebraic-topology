@@ -17,3 +17,4 @@ to be referred back to later for basic definitions.
     operations-on-spaces
     two-criteria-for-homotopy-equivalence
     the-homotopy-extension-property
+    exercises
