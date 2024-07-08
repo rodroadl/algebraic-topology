@@ -22,6 +22,8 @@ Exercises
 
     (c) Show that a map homotopic to a homotopy equivalence is a homotopy equivalence.
 
+    test reference :ref:`exercise 2 <ex2>`
+
     .. _ex4:
 
     **4.** A 
