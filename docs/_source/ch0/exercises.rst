@@ -1,19 +1,23 @@
 Exercises
 ================
 
-.. container:: no-indent
+.. _ex-0-0-01: 
 
-    .. _ex-0-0-01: 
+.. container:: no-indent
 
     **1.** Construct an explicit deformation retraction of the torus with one point deleted 
     onto a graph consisting of two circles intersecting in a point, namely, longitude and 
     meridian circles of the torus.
 
-    .. _ex-0-0-02:
+.. _ex-0-0-02:
+
+.. container:: no-indent
     
     **2.** Construct an explicit deformation retraction of :math:`\mathbb{R}^n-\{0\}` onto :math:`S^{n-1}`.
 
-    .. _ex-0-0-03:
+.. _ex-0-0-03:
+
+.. container:: no-indent
 
     **3.** (a) Show that the composition of homotopy equivalences :math:`X \rightarrow Y` and :math:`Y\rightarrow Z` is a 
     homotopy equivalence :math:`X\rightarrow Z`. Deduce that homotopy equivalence is an equivalence relation.
@@ -22,20 +26,26 @@ Exercises
 
     \(c\) Show that a map homotopic to a homotopy equivalence is a homotopy equivalence.
 
-    .. _ex-0-0-04:
+.. _ex-0-0-04:
+
+.. container:: no-indent
 
     **4.** A **deformation retraction in the weak sense** of a space :math:`X` to a subspace :math:`A` is a 
     homotopy :math:`f_t : X\rightarrow X` such that :math:`f_0 = \mathbb{1}, \, f_1(X) \subset A`, and :math:`f_t(A) \subset A` for all :math:`t`. Show 
     that if :math:`X` deformation retracts to :math:`A` in this weak sense, then the inclusion :math:`A \hookrightarrow X` is 
     a homotopy equivalence.
 
-    .. _ex-0-0-05:
+.. _ex-0-0-05:
+
+.. container:: no-indent
 
     **5.** Show that if a space :math:`X` deformation retracts to a point :math:`x \in X`, then for each 
     neighborhood :math:`U` of :math:`x` in :math:`X` there exists a neighborhood :math:`V \subset U` of :math:`x` such that the 
     inclusion map :math:`V \hookrightarrow U` is nullhomotopic.
 
-    .. _ex-0-0-06:
+.. _ex-0-0-06:
+
+.. container:: no-indent
 
     .. image:: fig/ex-06-a.png
         :width: 20%
@@ -59,7 +69,9 @@ Exercises
     line. Show there is a deformation retraction in the weak sense (see :ref:`Exercise 4 <ex-0-0-04>`) of :math:`Y` 
     onto :math:`Z`, but no true deformation retraction.
 
-    .. _ex-0-0-07:
+.. _ex-0-0-07:
+
+.. container:: no-indent
 
     .. image:: fig/ex-07.png
         :width: 40%
@@ -77,26 +89,36 @@ Exercises
     The desired space :math:`Y` is then obtained from this subspace of :math:`\mathbb{R}^3` by wrapping one more 
     cone on the Cantor set around the boundary of the disk.
 
-    .. _ex-0-0-08:
+.. _ex-0-0-08:
+
+.. container:: no-indent
 
     **8.** For :math:`n > 2`, construct an :math:`n`-room analog of the house with two rooms.
 
-    .. _ex-0-0-09:
+.. _ex-0-0-09:
+
+.. container:: no-indent
 
     **9.** Show that a retract of a contractible space is contractible.
 
-    .. _ex-0-0-10:
+.. _ex-0-0-10:
+
+.. container:: no-indent
 
     **10.** Show that a space :math:`X` is contractible iff every map :math:`f:X \rightarrow Y`, for arbitrary :math:`Y`, is 
     nullhomotopic. Similarly, show :math:`X` is contractible iff every map :math:`f: Y \rightarrow X` is nullhomotopic.
 
-    .. _ex-0-0-11:
+.. _ex-0-0-11:
+
+.. container:: no-indent
 
     **11.** Show that :math:`f:X \rightarrow Y` is a homotopy equivalence if there exist maps :math:`g,h:Y \rightarrow X`
     such that :math:`fg \simeq \mathcal{1}` and :math:`hf \simeq \mathbb{1}`. More generally, show that :math:`f` is a homotopy equivalence 
     if :math:`fg` and :math:`hf` are homotopy equivalences.
 
-    .. _ex-0-0-12:
+.. _ex-0-0-12:
+
+.. container:: no-indent
 
     **12.** Show that a homotopy equivalence :math:`f:X\rightarrow Y` induces a bijection between the set 
     of path-components of :math:`X` and the set of path-components of :math:`Y`, and that :math:`f` restricts to 
@@ -105,28 +127,38 @@ Exercises
     of path-components. Deduce that if the components of a space :math:`X` coincide with its 
     path-components, then the same holds for any space :math:`Y` homotopy equivalent to :math:`X`.
 
-    .. _ex-0-0-13:
+.. _ex-0-0-13:
+
+.. container:: no-indent
 
     **13.** Show that any two deformation retractions :math:`r^0_t` and :math:`r^1_t` of a space :math:`X` onto a 
     subspace :math:`A` can be joined by a continuous family of deformation retractions :math:`r^s_t`,
     :math:`0 \leq s \leq 1`, of :math:`X` onto :math:`A`, where continuity means that the map :math:`X \times I \times I \rightarrow X` sending
     :math:`(x,s,t)` to :math:`r^s_t(x)` is continuous.
 
-    .. _ex-0-0-14:
+.. _ex-0-0-14:
+
+.. container:: no-indent
 
     **14.** Given positive integers :math:`v, \, e`, and :math:`f` satisfying :math:`v-e+f = 2`, constructy a cell 
     structure on :math:`S^2`  having :math:`v` :math:`0`-cells, :math:`e` :math:`1`-cells, and :math:`f` :math:`2`-cells.
 
-    .. _ex-0-0-15:
+.. _ex-0-0-15:
+
+.. container:: no-indent
 
     **15.** Enumerate all the subcomplexes of :math:`S^{\infty}`, with the cell structure on :math:`S^\infty` that has :math:`S^n`
     as its :math:`n`-skeleton.
 
-    .. _ex-0-0-16:
+.. _ex-0-0-16:
+
+.. container:: no-indent
 
     **16.** Show that :math:`S^\infty` is contractible.
 
-    .. _ex-0-0-17:
+.. _ex-0-0-17:
+
+.. container:: no-indent
 
     **17.** (a) Show that the mapping cylinder of every map :math:`f:S^1 \rightarrow S^1` is a CW complex.
 
@@ -134,16 +166,22 @@ Exercises
     
     a Möbius band as deformation retracts.
 
-    .. _ex-0-0-18:
+.. _ex-0-0-18:
+
+.. container:: no-indent
 
     **18.** Show that :math:`S^1 * S^1 = S^3`, and more generally :math:`S^m * S^n = S^{m+n+1}`.
 
-    .. _ex-0-0-19:
+.. _ex-0-0-19:
+
+.. container:: no-indent
 
     **19.** Show that the space obtained from :math:`S^2` by attaching :math:`n` :math:`2`-cells along any collection
     of :math:`n` circles in :math:`S^2` is homotopy equivalent to the wedge sum of :math:`n+1` :math:`2`-spheres.
 
-    .. _ex-0-0-20:
+.. _ex-0-0-20:
+
+.. container:: no-indent
 
     .. image:: fig/ex-20.png
         :align: right
@@ -153,43 +191,57 @@ Exercises
     intersecting itself in a circle, as shown in the figure, is homotopy 
     equivalent to :math:`S^1 \vee S^1 \vee S^2`.
 
-    .. _ex-0-0-21:
+.. _ex-0-0-21:
+
+.. container:: no-indent
 
     **21.** If :math:`X` is a connected Hausdorff space that is a union of a finite number of :math:`2`-spheres,
     any two of which intersect in at most one point, show that :math:`X` is homotopy equivalent 
     to a wedge sum of :math:`S^1`'s and :math:`S^2`'s.
 
-    .. _ex-0-0-22:
+.. _ex-0-0-22:
+
+.. container:: no-indent
 
     **22.** Let :math:`X` be a finite graph lying in a half-plane :math:`P \subset \mathbb{R}^3` and intersecting the edge 
     of :math:`P` in a subset of the vertices of :math:`X`. Describe the homotopy type of the 'surface of 
     revolution' obtained by rotating :math:`X` about the edge line of :math:`P`.
 
-    .. _ex-0-0-23:
+.. _ex-0-0-23:
+
+.. container:: no-indent
 
     **23.** Show that a CW complex is contractible if it is the union of two contractible 
     subcomplexes whose intersection is also contractible.
 
-    .. _ex-0-0-24:
+.. _ex-0-0-24:
+
+.. container:: no-indent
 
     **24.** Let :math:`X` and :math:`Y` be CW complexes with :math:`0`-cells :math:`x_0` and :math:`y_0`. Show that the quotient
     spaces :math:`X * Y / (X *\{y_0\} \cup \{x_0\} *Y)` and :math:`S(X\wedge Y)/S(\{x_0\} \wedge \{y_0\})` are homeomorphic,
     and deduce that :math:`X * Y \simeq S (X \wedge Y)`.
 
-    .. _ex-0-0-25:
+.. _ex-0-0-25:
+
+.. container:: no-indent
 
     **25.** If :math:`X` is a CW complex with components :math:`X_\alpha`, show that the suspension :math:`SX` is 
     homotopy equivalent to :math:`\bigvee_\alpha SX_\alpha` for some graph :math:`Y`. In the case that :math:`X` is a finite
     gprah, show that :math:`SX` is homotopy equivalent to a wedge sum of circles and :math:`2`-spheres.
 
-    .. _ex-0-0-26:
+.. _ex-0-0-26:
+
+.. container:: no-indent
 
     **26.** Use :ref:`Corollary 0.20 <Corollary 0.20>` to show that if :math:`(X,A)` has the homotopy extension property,
     then :math:`X \times I` deformation retracts to :math:`X \times \{0\} \cup A \times I`. Deduce from this that 
     :ref:`Proposition 0.18 <Proposition 0.18>` holds more generally for any pair :math:`(X_1, A)` satisfying the homotopy extension
     property.
 
-    .. _ex-0-0-27:
+.. _ex-0-0-27:
+
+.. container:: no-indent
 
     **27.** Given a pair :math:`(X,A)` and a homotopy equivalence :math:`f:A\rightarrow B`, show that the natural
     map :math:`X \rightarrow \sqcup_f X` is a homotopy equivalence if :math:`(X,A)` satisfies the homotopy extension 
@@ -198,12 +250,16 @@ Exercises
     identifying each set :math:`f^{-1}(b)` to a point. When :math:`B` is a point this gives another proof of 
     :ref:`Proposition 0.17 <Proposition 0.17>`.
 
-    .. _ex-0-0-28:
+.. _ex-0-0-28:
+
+.. container:: no-indent
 
     **28.** Show that if :math:`(X_1, A)` satisfies the homotopy extension property, then so does every 
     pair :math:`(X_0 \sqcup_f X_1, X_0)` obtained by attaching :math:`X_1` to a space :math:`X_0` via a map :math:`f:A \rightarrow X_0`.
 
-    .. _ex-0-0-29:
+.. _ex-0-0-29:
+
+.. container:: no-indent
 
     **29.** In case the CW complex :math:`X` is obtained from a subcomplex :math:`A` by attaching a single 
     cell :math:`e^n`, describe exactly what the extension of a homotopy :math:`f_t: A \rightarrow Y` to :math:`X` given by
