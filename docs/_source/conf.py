@@ -77,6 +77,7 @@ latex_elements = {
     'preamble': r'''
 \usepackage{mathtools}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{relsize}
 \usepackage{amsmath}
 \usepackage{mathbbm}
