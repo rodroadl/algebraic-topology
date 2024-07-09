@@ -464,8 +464,136 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="paths-and-homotopy">
-<h1>Paths and Homotopy<a class="headerlink" href="#paths-and-homotopy" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<span id="id1"></span><h1>Paths and Homotopy<a class="headerlink" href="#paths-and-homotopy" title="Permalink to this heading">#</a></h1>
+<p>The fundamental group will be defined in terms of loops and deformations of
+loops. Sometimes it will be useful to consider more generally paths and their
+deformations, so we begin with this slight extra generality.</p>
+<p>By a <strong>path</strong> in a space <span class="math notranslate nohighlight">\(X\)</span> we mean a continuous map <span class="math notranslate nohighlight">\(f:I \rightarrow X\)</span> where <span class="math notranslate nohighlight">\(I\)</span> is the unit
+interval [0,1]. The idea of continuously deforming a path, keeping its endpoints
+fixed, is made precise by the following defintion. A <strong>homotopy</strong> of paths in <span class="math notranslate nohighlight">\(X\)</span> is a
+family <span class="math notranslate nohighlight">\(f_t: I \rightarrow X, \, 0 \leq t \leq 1\)</span>, such that</p>
+<p>When two paths <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_1\)</span> are connected in this way by a homotopy <span class="math notranslate nohighlight">\(f_t\)</span>, they are said
+to be <strong>homotopic</strong>. The notation for this <span class="math notranslate nohighlight">\(f_0 \simeq f_1\)</span>.</p>
+<div class="no-indent docutils container" id="example-1-1">
+<p><strong>Example 1.1: Linear Homotopies.</strong> Any tow paths <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_1\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> having the same
+endpoints <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> are homotopic via the homotopy <span class="math notranslate nohighlight">\(f_t(s)=(1-t)f_0(s)+tf_1(s)\)</span>.
+During this homotopy each point <span class="math notranslate nohighlight">\(f_0(s)\)</span> travels along the line segment to <span class="math notranslate nohighlight">\(f_1(s)\)</span> at constant
+speed. This is because the line through <span class="math notranslate nohighlight">\(f_0(s)\)</span> and <span class="math notranslate nohighlight">\(f_1(s)\)</span> is linearly parametrized
+as <span class="math notranslate nohighlight">\(f_0(s)+t[f_1(s)-f_0(s)]=(1-t)f_0(s)+tf_1(s)\)</span>, with the segment from <span class="math notranslate nohighlight">\(f_0(s)\)</span>
+then this segment degenerates to a point and <span class="math notranslate nohighlight">\(f_t(s)=f_0(s)\)</span> for all <span class="math notranslate nohighlight">\(t\)</span>. This occurs in
+particular for <span class="math notranslate nohighlight">\(s=0\)</span> and <span class="math notranslate nohighlight">\(s=1\)</span>, so each <span class="math notranslate nohighlight">\(f_t\)</span> is a path from <span class="math notranslate nohighlight">\(x_0\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span>. Continuity of
+the homotopy <span class="math notranslate nohighlight">\(f_t\)</span> as a map <span class="math notranslate nohighlight">\(I \times I \rightarrow \mathbb{R}^n\)</span> follows from continuity of <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_1\)</span> since the
+algebraic operations of vector addition and scalar multiplication in the formula for <span class="math notranslate nohighlight">\(f_t\)</span>
+are continuous.</p>
+</div>
+<p>This construction shows more generally that for a convex subspace <span class="math notranslate nohighlight">\(X \subset \mathbb{R}^n\)</span>, all
+paths in <span class="math notranslate nohighlight">\(X\)</span> with given endpoints <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> are homotopic, since if <span class="math notranslate nohighlight">\(f_0\)</span> and <cite>f_1</cite> lie in
+<span class="math notranslate nohighlight">\(X\)</span> then so does the homotopy <span class="math notranslate nohighlight">\(f_t\)</span>.</p>
+<p>Before proceeding further we need to verify a technical property:</p>
+<div class="no-indent docutils container" id="proposition-1-2">
+<blockquote>
+<div><p><strong>Proposition 1.2.</strong> <em>The relation of homotopy on paths with fixed endpoints in any space
+is an equivalence relation</em></p>
+</div></blockquote>
+<div class="indent docutils container">
+<p>The equivalence class of a path <span class="math notranslate nohighlight">\(f\)</span> under the equivalence relation of homotopy
+will be denoted <span class="math notranslate nohighlight">\([f]\)</span> and called the <strong>homotopy class</strong> of <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+<p><strong>Proof:</strong> Reflexivity is evident since <span class="math notranslate nohighlight">\(f \simeq f\)</span> by the constant homotopy <span class="math notranslate nohighlight">\(f_t = f\)</span>. Symmetry
+is also easy since if <span class="math notranslate nohighlight">\(f_0 \simeq f_1\)</span> via <span class="math notranslate nohighlight">\(f_t\)</span>, then <span class="math notranslate nohighlight">\(f_1 \simeq f_0\)</span> via the inverse homotopy <span class="math notranslate nohighlight">\(f_{1-t}\)</span>.</p>
+<a class="reference internal image-reference" href="../../_images/proposition-1.2.png"><img alt="../../_images/proposition-1.2.png" class="align-right" src="../../_images/proposition-1.2.png" style="width: 25%;" /></a>
+<p>For transitivity, if <span class="math notranslate nohighlight">\(f_0 \simeq f_1\)</span> via <span class="math notranslate nohighlight">\(f_t\)</span> and if <span class="math notranslate nohighlight">\(f_1 = g_0\)</span> with <span class="math notranslate nohighlight">\(g_0 \simeq g_1\)</span>
+via <span class="math notranslate nohighlight">\(g_t\)</span>, then <span class="math notranslate nohighlight">\(f_0 \simeq g_1\)</span> via the homotopy <span class="math notranslate nohighlight">\(h_t\)</span> that equals <span class="math notranslate nohighlight">\(f_{2t}\)</span> for
+<span class="math notranslate nohighlight">\(0 \leq t \leq \frac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(g_{2t-1}\)</span> for <span class="math notranslate nohighlight">\(\frac{1}{2} \leq t \leq 1\)</span>. These two definitions
+agree for <span class="math notranslate nohighlight">\(t=\frac{1}{2}\)</span> since we assume <span class="math notranslate nohighlight">\(f_1 = g_0\)</span>. Continuity of the
+associated map <span class="math notranslate nohighlight">\(H(s,t)=h_t(s)\)</span> comes from the elemetary
+fact, which will be used frequently without explicit mention, that a function defined
+on the union of two closed sets is continuous if it is continuous when restricted to
+each of the closed sets separately. In the case at hand we have <span class="math notranslate nohighlight">\(H(s,t)=F(s,2t)\)</span> for
+<span class="math notranslate nohighlight">\(0 \leq t \leq \frac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(H(s,t) = G(s, 2t-1)\)</span> for <span class="math notranslate nohighlight">\(\frac{1}{2} \leq t \leq 1\)</span> where <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are the maps
+<span class="math notranslate nohighlight">\(I \times I \rightarrow X\)</span> associated to the homotopies <span class="math notranslate nohighlight">\(f_t\)</span> and <span class="math notranslate nohighlight">\(g_t\)</span>. Since <span class="math notranslate nohighlight">\(H\)</span> is continuous on <span class="math notranslate nohighlight">\(I \times [0, \frac{1}{2}]\)</span>
+and on <span class="math notranslate nohighlight">\(I \times [\frac{1}{2}, I]\)</span>, it is continuous on <span class="math notranslate nohighlight">\(I \times I\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<p>Given two paths <span class="math notranslate nohighlight">\(f,g:I \rightarrow X\)</span> such that <span class="math notranslate nohighlight">\(f(1) = g(0)\)</span>, there is a <strong>composition</strong> or
+<strong>product path</strong> <span class="math notranslate nohighlight">\(f\cdot g\)</span> that traverses first <span class="math notranslate nohighlight">\(f\)</span> and then <span class="math notranslate nohighlight">\(g\)</span>, defined by the formula</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f\cdot g =
+\begin{cases}
+f(2s) &amp; 0 s \leq \frac{1}{2} \\
+g(2s-1) &amp; \frac{1}{2} \leq s \leq 1
+\end{cases}\end{split}\]</div>
+<a class="reference internal image-reference" href="../../_images/composition.png"><img alt="../../_images/composition.png" class="align-right" src="../../_images/composition.png" style="width: 30%;" /></a>
+<p>Thus <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are traversed twice as fast in order for <span class="math notranslate nohighlight">\(f\cdot g\)</span> to be traversed in unit
+time. This product operation respects homotopy classes
+since if <span class="math notranslate nohighlight">\(f_0 \simeq f_1\)</span> and <span class="math notranslate nohighlight">\(g_0 \simeq g_1\)</span> via homotopies <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(g_t\)</span>,
+and if <span class="math notranslate nohighlight">\(f_0(1) = g_0(0)\)</span> so that <span class="math notranslate nohighlight">\(f_0\cdot g_0\)</span> is defined, then <span class="math notranslate nohighlight">\(f_t \cdot g_t\)</span>
+is defined and provides a homotopy <span class="math notranslate nohighlight">\(f_0 \cdot g_0 \simeq f_1 \cdot g_1\)</span>.</p>
+<p>In particular, suppose we retrict attention to paths <span class="math notranslate nohighlight">\(f: I \rightarrow X\)</span> with the same starting
+and ending point <span class="math notranslate nohighlight">\(f(0) = f(1) =x_0 \in X\)</span>. Such pats are called <strong>loops</strong>, and the
+common starting and ending point <span class="math notranslate nohighlight">\(x_0\)</span> is referred to as the <strong>basepoint</strong>. The set of all
+homotopy classes <span class="math notranslate nohighlight">\([f]\)</span> of loops <span class="math notranslate nohighlight">\(f:I \rightarrow X\)</span> at the basepoint <span class="math notranslate nohighlight">\(x_0\)</span> is denoted <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.</p>
+<div class="no-indent docutils container" id="proposition-1-3">
+<blockquote>
+<div><p><strong>Proposition 1.3.</strong> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> <em>is a group with respect to the product</em> <span class="math notranslate nohighlight">\([f][g]=[f\cdot g]\)</span>.</p>
+</div></blockquote>
+<div class="indent docutils container">
+<p>This group is called the <strong>fundamental group</strong> of <span class="math notranslate nohighlight">\(X\)</span> at the basepoint <span class="math notranslate nohighlight">\(x_0\)</span>. We
+will see in <span class="xref std std-ref">Chapter 4</span> that <span class="math notranslate nohighlight">\(\pi_1(X, x_0)\)</span> is the first in a sequence of groups <span class="math notranslate nohighlight">\(\pi_n(X,x_0)\)</span>,
+called homotopy groups, which are defined in an entirely analogous fashion using the
+<span class="math notranslate nohighlight">\(n\)</span>-dimensional cube <span class="math notranslate nohighlight">\(I^n\)</span> in place of <span class="math notranslate nohighlight">\(I\)</span>.</p>
+</div>
+<div class="no-indent-no-margin docutils container">
+<p><strong>Proof:</strong> By restricting attention to loops with a fixed basepoint <span class="math notranslate nohighlight">\(x_0 \in X\)</span> we guarantee
+that the product <span class="math notranslate nohighlight">\(f\cdot g\)</span> of any two such loops is defined. We have already observed
+that the homotopy class of <span class="math notranslate nohighlight">\(f \cdot g\)</span> depends only on the homotopy classes of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>,
+so the product <span class="math notranslate nohighlight">\([f][g]=[f\cdot g]\)</span> is well-defined. It remains to verify the three axioms
+for a group.</p>
+</div>
+<div class="indent-no-margin docutils container">
+<p>As a preliminary step, define a <strong>reparametrization</strong> of a path <span class="math notranslate nohighlight">\(f\)</span> to be a
+composition <span class="math notranslate nohighlight">\(f\varphi\)</span> where <span class="math notranslate nohighlight">\(\varphi:I \rightarrow I\)</span> is any continuous map such that <span class="math notranslate nohighlight">\(\varphi(0)=0\)</span> and <span class="math notranslate nohighlight">\(\varphi(1)=1\)</span>.
+Reparametrizing a path preserves its homotopy class since <span class="math notranslate nohighlight">\(f\varphi \simeq f\)</span> via the homotopy
+<span class="math notranslate nohighlight">\(f\varphi_t\)</span> where <span class="math notranslate nohighlight">\(\varphi_t(s) = (1-t)\varphi(s) + ts\)</span> so that <span class="math notranslate nohighlight">\(\varphi_0 = \varphi\)</span> and <span class="math notranslate nohighlight">\(\varphi_1(s) = s\)</span>. Note that
+<span class="math notranslate nohighlight">\((1-t)\varphi(s)+ts\)</span> lies between <span class="math notranslate nohighlight">\(\varphi(s)\)</span> and <span class="math notranslate nohighlight">\(s\)</span>, hence is in <span class="math notranslate nohighlight">\(I\)</span>, so the composition <span class="math notranslate nohighlight">\(f\varphi_t\)</span> is
+defined.</p>
+<a class="reference internal image-reference" href="../../_images/reparametrization.png"><img alt="../../_images/reparametrization.png" class="align-right" src="../../_images/reparametrization.png" style="width: 25%;" /></a>
+<p>If we are given paths <span class="math notranslate nohighlight">\(f,\, g,\, h\)</span> with <span class="math notranslate nohighlight">\(f(1)=g(0)\)</span> and <span class="math notranslate nohighlight">\(g(1)=h(0)\)</span>, then both products
+<span class="math notranslate nohighlight">\((f\cdot g)\cdot h\)</span> and <span class="math notranslate nohighlight">\(f\cdot (g\cdot h)\)</span> are defined, and <span class="math notranslate nohighlight">\(f\cdot(g\cdot h)\)</span> is a reparametrization
+of <span class="math notranslate nohighlight">\((f\cdot g)\cdot h\)</span> by the piecewise linear function <span class="math notranslate nohighlight">\(\varphi\)</span> whose graph is shown
+in the figure at the right. Hece <span class="math notranslate nohighlight">\((f \cdot g)\cdot h \simeq f \cdot(g\cdot h)\)</span>. Restricting attention
+to loops at the basepoint <span class="math notranslate nohighlight">\(x_0\)</span>, this says the product in <span class="math notranslate nohighlight">\(\pi_1(X, x_0)\)</span> is
+associative.</p>
+<a class="reference internal image-reference" href="../../_images/two-graphs.png"><img alt="../../_images/two-graphs.png" class="align-right" src="../../_images/two-graphs.png" style="width: 40%;" /></a>
+<p>Given a path <span class="math notranslate nohighlight">\(f:I\rightarrow X\)</span>, let <span class="math notranslate nohighlight">\(c\)</span> be the constant path at <span class="math notranslate nohighlight">\(f(1)\)</span>, defined by <span class="math notranslate nohighlight">\(c(s)=f(1)\)</span>
+for all <span class="math notranslate nohighlight">\(s\in I\)</span>. Then <span class="math notranslate nohighlight">\(f\cdot c\)</span> is a reparametrization of <span class="math notranslate nohighlight">\(f\)</span> via the function <span class="math notranslate nohighlight">\(\varphi\)</span> whose graph is
+shown in the first figure at the right, so <span class="math notranslate nohighlight">\(f \cdot c \simeq f\)</span>. Similarly,
+<span class="math notranslate nohighlight">\(c \cdot f \simeq f\)</span> where <span class="math notranslate nohighlight">\(c\)</span> is now the constant path at <span class="math notranslate nohighlight">\(f(0)\)</span>, using
+the reparametrization function in the second figure. Taking
+<span class="math notranslate nohighlight">\(f\)</span> to be a loop, we deduce that the homotopy class of the
+constant path at <span class="math notranslate nohighlight">\(x_0\)</span> is a two-sided identity in <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.</p>
+<p>For a path <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\(x_0\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span>, the <strong>inverse path</strong> <span class="math notranslate nohighlight">\(\mathbf{\bar{f}}\)</span> from <span class="math notranslate nohighlight">\(x_1\)</span> back to <span class="math notranslate nohighlight">\(x_0\)</span> is defined
+by <span class="math notranslate nohighlight">\(\bar{f}(s)=f(1-s)\)</span>. To see that <span class="math notranslate nohighlight">\(f \cdot \bar{f}\)</span> is homotopic to a constant path we use the
+homotopy <span class="math notranslate nohighlight">\(h_t = f_t \cdot g_t\)</span> where <span class="math notranslate nohighlight">\(f_t\)</span> is the path that equals <span class="math notranslate nohighlight">\(f\)</span> on the interval <span class="math notranslate nohighlight">\([0,1-t]\)</span>
+and that is stationary at <span class="math notranslate nohighlight">\(f(1-t)\)</span> on the interval <span class="math notranslate nohighlight">\([1-t,1]\)</span>, and :math`g_t` is the inverse path of
+<span class="math notranslate nohighlight">\(f_t\)</span>.</p>
+<a class="reference internal image-reference" href="../../_images/inverse.png"><img alt="../../_images/inverse.png" class="align-right" src="../../_images/inverse.png" style="width: 25%;" /></a>
+</div>
+<div class="indent docutils container">
+<p>We could also describe <span class="math notranslate nohighlight">\(h_t\)</span> in terms of the associated function
+<span class="math notranslate nohighlight">\(H:I \times I \rightarrow X\)</span> using the decomposition of <span class="math notranslate nohighlight">\(I\times I\)</span> shown in the figure. On
+the bottom edge of the square <span class="math notranslate nohighlight">\(H\)</span> is given by <span class="math notranslate nohighlight">\(f \cdot \bar{f}\)</span> and below the ‘V’ we
+let <span class="math notranslate nohighlight">\(H(s,t)\)</span> be independent of <span class="math notranslate nohighlight">\(t\)</span>, while above the ‘V’ we let <span class="math notranslate nohighlight">\(H(s,t)\)</span> be
+independent of <span class="math notranslate nohighlight">\(s\)</span>. Going back to the first description of <span class="math notranslate nohighlight">\(h_t\)</span>, we see that since <span class="math notranslate nohighlight">\(f_0 = f\)</span>
+and <span class="math notranslate nohighlight">\(f_1\)</span> is the constant path <span class="math notranslate nohighlight">\(c\)</span> at <span class="math notranslate nohighlight">\(x_0,\, h_t\)</span> is homotopy from <span class="math notranslate nohighlight">\(f\cdot \bar{f}\)</span> to <span class="math notranslate nohighlight">\(c\cdot \bar{c}\)</span>. Replacing
+<span class="math notranslate nohighlight">\(f\)</span> by <span class="math notranslate nohighlight">\(\bar{f}\)</span> gives <span class="math notranslate nohighlight">\(\bar{f}\cdot f \simeq c\)</span> for <span class="math notranslate nohighlight">\(c\)</span> the constant path at <span class="math notranslate nohighlight">\(x\)</span>. Taking <span class="math notranslate nohighlight">\(f\)</span> to be a loop at the
+basepoint <span class="math notranslate nohighlight">\(x_0\)</span>, we deduce that <span class="math notranslate nohighlight">\([\bar{f}]\)</span> is a two-sided inverse for <span class="math notranslate nohighlight">\([f]\)</span> in <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+</div>
+<div class="no-indent docutils container" id="example-1-4">
+<p><strong>Example 1.4.</strong> For a convex set <span class="math notranslate nohighlight">\(X\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> with basepoint <span class="math notranslate nohighlight">\(x_0 \in X\)</span> we have <span class="math notranslate nohighlight">\(\pi_1(X,x_0)=0\)</span>,
+the trivial group, since any two loops <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_1\)</span> based at <span class="math notranslate nohighlight">\(x_0\)</span> are homotopic via the
+linear homotopy <span class="math notranslate nohighlight">\(f_t(s)=(1-t)f_0(s)+tf_1(s)\)</span>, as described in <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-1-1"><span class="std std-ref">Example 1.1</span></a>.</p>
+</div>
 </section>
 
 
