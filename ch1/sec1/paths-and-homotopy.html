@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=95a7cc38" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=39aa9100" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -183,6 +183,7 @@
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Paths and Homotopy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="the-fundamental-group-of-the-circle.html">The Fundamental Group of the Circle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="induced-homomorphisms.html">Induced Homomorphisms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises.html">Exercises</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../sec2/index.html">1.2. Van Kampen’s Theorem</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -593,6 +594,49 @@ basepoint <span class="math notranslate nohighlight">\(x_0\)</span>, we deduce t
 <p><strong>Example 1.4.</strong> For a convex set <span class="math notranslate nohighlight">\(X\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> with basepoint <span class="math notranslate nohighlight">\(x_0 \in X\)</span> we have <span class="math notranslate nohighlight">\(\pi_1(X,x_0)=0\)</span>,
 the trivial group, since any two loops <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_1\)</span> based at <span class="math notranslate nohighlight">\(x_0\)</span> are homotopic via the
 linear homotopy <span class="math notranslate nohighlight">\(f_t(s)=(1-t)f_0(s)+tf_1(s)\)</span>, as described in <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-1-1"><span class="std std-ref">Example 1.1</span></a>.</p>
+</div>
+<p>It is not so easy to show that a space has a nontrivial fundamental group since one
+must somehow demonstarte the nonexistence of homotopies between certain loops.
+We will tackle the simplest example shortly, computing the fundamental group of the circle.</p>
+<p>It is natural to ask about the dependence of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> on the choice of the basepoint
+<span class="math notranslate nohighlight">\(x_0\)</span>. Since <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> involves only path-component of <span class="math notranslate nohighlight">\(X\)</span> containing <span class="math notranslate nohighlight">\(x_0\)</span>, it
+is clear that we can hope to find relation between <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> and <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> for two
+basepoints <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> only if <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> lie in the same path-component of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<a class="reference internal image-reference" href="../../_images/change-of-basepoint.png"><img alt="../../_images/change-of-basepoint.png" class="align-right" src="../../_images/change-of-basepoint.png" style="width: 30%;" /></a>
+<p>So let <span class="math notranslate nohighlight">\(h : I \rightarrow X\)</span> be a pathfrom <span class="math notranslate nohighlight">\(x_0\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span>, with the inverse path
+<span class="math notranslate nohighlight">\(\bar{h}(s)=h(1-s)\)</span> from <span class="math notranslate nohighlight">\(x_1\)</span> the loop <span class="math notranslate nohighlight">\(h \cdot f \cdot \bar{h}\)</span> based at <span class="math notranslate nohighlight">\(x_0\)</span>.
+Strictly speaking, we should choose an order of forming the product <span class="math notranslate nohighlight">\(h \cdot f \cdot \bar{h}\)</span>, either
+<span class="math notranslate nohighlight">\((h \cdot f)\)</span> or <span class="math notranslate nohighlight">\(h \cdot (f \cdot \bar{h})\)</span>, but the two choices are homotopic and we are only interested in
+homotopy classes here. Alternatively, to avoid any ambiguity we could define a general
+<span class="math notranslate nohighlight">\(n\)</span>-fold product <span class="math notranslate nohighlight">\(f_1 \cdot \cdots f_n\)</span> in which the path <span class="math notranslate nohighlight">\(f_i\)</span> is traversed in the time interval
+<span class="math notranslate nohighlight">\([\frac{i-1}{n}, \frac{i}{n}]\)</span>. Either way, we defie a <strong>change-of-basepoint</strong> map <span class="math notranslate nohighlight">\(\beta_h : \pi_1(X,x_1) \rightarrow \pi_1(X,x_0)\)</span>
+by <span class="math notranslate nohighlight">\(\beta_h [f] = [h \cdot f \cdot \bar{h}]\)</span>. This is well-defined since if <span class="math notranslate nohighlight">\(f_t\)</span> is a homotopy of loops based at
+<span class="math notranslate nohighlight">\(x_1\)</span> then <span class="math notranslate nohighlight">\(h \cdot f_t \cdot \bar{h}\)</span> is a homotopy of loops based at <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
+<div class="no-indent docutils container" id="proposition-1-5">
+<blockquote>
+<div><p><strong>Proposition 1.5.</strong> <em>The map</em> <span class="math notranslate nohighlight">\(\beta_h : \pi_1(X,x_1) \rightarrow \pi_1 (X,x_0)\)</span> <em>is an isomorphism</em>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> We see first that <span class="math notranslate nohighlight">\(\beta_h\)</span> is a homomorphism since <span class="math notranslate nohighlight">\(\beta_h[f \cdot g] = [h \cdot f \cdot g \cdot \bar{h}] = [h \cdot f \cdot \bar{h} \cdot h \cdot g\cdot \bar{h}] = \beta_h[f]\beta_h[g]\)</span>.
+Further, <span class="math notranslate nohighlight">\(\beta_h\)</span> is an isomorphism with inverse <span class="math notranslate nohighlight">\(\beta_{\bar{h}}\)</span> since
+<span class="math notranslate nohighlight">\(\beta_h \beta_{\bar{h}}=\beta_h[\bar{h} \cdot f \cdot h]=[h \cdot \bar{h} \cdot f \cdot h \cdot \bar{h}] = [f]\)</span>, and similarly <span class="math notranslate nohighlight">\(\beta_{\bar{h}}\beta_h[f]=[f]\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<p>Thus if <span class="math notranslate nohighlight">\(X\)</span> is path-connected, the group <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> is, up to isomorphism, independent
+of the choice of basepoint <span class="math notranslate nohighlight">\(x_0\)</span>. In this case the notation <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> is often
+abbreviated to <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>, or one could go further and write just <span class="math notranslate nohighlight">\(\pi_1 X\)</span>.</p>
+<p>In general, a space is called <strong>simply-connected</strong> if it is path-connected and has
+trivial fundamental group. The following result explains the name.</p>
+<div class="no-indent docutils container" id="proposition-1-6">
+<blockquote>
+<div><p><strong>Proposition 1.6.</strong> <em>A space</em> <span class="math notranslate nohighlight">\(X\)</span> <em>is simply-connected iff there is a unique homotopy class
+of paths connecting any two points in</em> <span class="math notranslate nohighlight">\(X\)</span>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> Path-connectedness is the existence of paths connecting every pair of points,
+so we need to be concerned only with the uniqueness of connecting paths. Suppose
+<span class="math notranslate nohighlight">\(\pi_1(X)=0\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are two paths from <span class="math notranslate nohighlight">\(x_0\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span>, then <span class="math notranslate nohighlight">\(f \simeq f \cdot \bar{g}\cdot g\simeq g\)</span> since
+the loops <span class="math notranslate nohighlight">\(\bar{g} \cdot g\)</span> and <span class="math notranslate nohighlight">\(f \cdot \bar{g}\)</span> are each homotopic to constant loops, using the assumption
+<span class="math notranslate nohighlight">\(\pi_1(X,x_0)=0\)</span> in the latter case. Conversely, if there is only one homotopy class of
+paths connecting a basepoint <span class="math notranslate nohighlight">\(x_0\)</span> to itself, then all loops at <span class="math notranslate nohighlight">\(x_0\)</span> are homotopic to the
+constnat loop and <span class="math notranslate nohighlight">\(\pi_1(X,x_0)=0\)</span>.</p>
 </div>
 </section>
 

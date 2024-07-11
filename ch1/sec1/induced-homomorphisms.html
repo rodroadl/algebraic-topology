@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=95a7cc38" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=39aa9100" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -58,7 +58,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch1/sec1/induced-homomorphisms';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.2. Van Kampen’s Theorem" href="../sec2/index.html" />
+    <link rel="next" title="Exercises" href="exercises.html" />
     <link rel="prev" title="The Fundamental Group of the Circle" href="the-fundamental-group-of-the-circle.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,6 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="paths-and-homotopy.html">Paths and Homotopy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="the-fundamental-group-of-the-circle.html">The Fundamental Group of the Circle</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Induced Homomorphisms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises.html">Exercises</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../sec2/index.html">1.2. Van Kampen’s Theorem</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -465,7 +466,154 @@ document.write(`
                   
   <section id="induced-homomorphisms">
 <h1>Induced Homomorphisms<a class="headerlink" href="#induced-homomorphisms" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<p><span style="margin-left: 2em"> Suppose <span class="math notranslate nohighlight">\(\varphi:X \rightarrow Y\)</span> is a map taking the basepoint <span class="math notranslate nohighlight">\(x_0 \in X\)</span> to the basepoint <span class="math notranslate nohighlight">\(y_0 \in Y\)</span>.
+For brevity we write <span class="math notranslate nohighlight">\(\varphi:(X,x_0)\rightarrow (Y,y_0)\)</span> in this situation. Then <span class="math notranslate nohighlight">\(\varphi\)</span> induces a homomorphism
+<span class="math notranslate nohighlight">\(\varphi_*: \pi_1(X,x_0) \rightarrow \pi_1(Y, y_0)\)</span>, defined by composing loops <span class="math notranslate nohighlight">\(f:I \rightarrow X\)</span> based at
+<span class="math notranslate nohighlight">\(x_0\)</span> with <span class="math notranslate nohighlight">\(\varphi\)</span>, that is <span class="math notranslate nohighlight">\(\varphi_*[f_0]=[\varphi f_0]=[\varphi f_1]=\varphi_* [f_1]\)</span>. Furthermore, <span class="math notranslate nohighlight">\(\varphi_*\)</span> is a homomorphism
+since <span class="math notranslate nohighlight">\(\varphi (f\cdot g)=(\varphi f) \cdot (\varphi g)\)</span>, both functions having the value <span class="math notranslate nohighlight">\(\varphi f(2s)\)</span> for <span class="math notranslate nohighlight">\(0 \leq s \leq \frac{1}{2}\)</span>
+and the value <span class="math notranslate nohighlight">\(\varphi g(2s-1)\)</span> for <span class="math notranslate nohighlight">\(\frac{1}{2} \leq s \leq 1\)</span>.</p>
+<p><span style="margin-left: 2em"> Two basic properties of induced homomorphisms are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\varphi \psi)_* = \varphi_* \psi_*\)</span> for a composition <span class="math notranslate nohighlight">\((X,x_0)\xrightarrow{\psi}(Y,y_0)\xrightarrow{\varphi}(Z,z_0)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{1}_* = \mathbb{1}\)</span>, which is a concise way of saying that the identity map <span class="math notranslate nohighlight">\(\mathbb{1}:X\rightarrow X\)</span> induces
+the identity map <span class="math notranslate nohighlight">\(\mathbb{1}:\pi_1(X,x_0) \rightarrow \pi_1(X,x_0)\)</span>.</p></li>
+</ul>
+<p>The first of these follows from the fact that composition of maps is associative, so
+<span class="math notranslate nohighlight">\((\varphi \psi)f = \varphi(\psi f)\)</span>, and the second is obvious. These two properties of induced
+homomorphisms are what makes the fundamental group a functor. The formal definition
+of a functor requires the introduction of certain other preliminary concepts, however,
+so we postpone this until it is needed in <span class="xref std std-ref">§2.3</span>.</p>
+<p><span style="margin-left: 2em"> As an application we can deduce easily that if <span class="math notranslate nohighlight">\(\varphi\)</span> is a homeomorphism with inverse
+<span class="math notranslate nohighlight">\(\psi\)</span> then <span class="math notranslate nohighlight">\(\varphi_*\)</span> is an isomorphism with inverse <span class="math notranslate nohighlight">\(\varphi_* \psi_* = (\varphi \psi)_* = \mathbb{1}_* = \mathbb{1}\)</span>
+and similarly <span class="math notranslate nohighlight">\(\psi _* \varphi_* = \mathbb{1}\)</span>. We will use this fact in the following calculation of the
+fundamental groups of higher-dimensional spheres:</p>
+<blockquote id="proposition-1-14">
+<div><p><strong>Proposition 1.14.</strong> <span class="math notranslate nohighlight">\(\pi_1(S^n)=0\)</span> <em>if</em> <span class="math notranslate nohighlight">\(n \geq 2\)</span>.</p>
+</div></blockquote>
+<p><span style="margin-left: 2em"> The main step in the proof will be a general fact that will also play a key role in the next section:</p>
+<div class="docutils container" id="lemma-1-15">
+<blockquote>
+<div><p><strong>Lemma 1.15.</strong> <em>If a space*</em> <span class="math notranslate nohighlight">\(X\)</span> <em>is the union of a collection of path-connected open sets</em>
+<span class="math notranslate nohighlight">\(A_\alpha\)</span> <em>each containing the basepoint</em> <span class="math notranslate nohighlight">\(x_0 \in X\)</span> <em>and if each intersection</em> <span class="math notranslate nohighlight">\(A_\alpha \cap A_\beta\)</span> <em>is
+path-connected, then every loop in</em> <span class="math notranslate nohighlight">\(X\)</span> <em>at</em> <span class="math notranslate nohighlight">\(x_0\)</span> <em>is homotopic to a product of loops each of
+which is contained in a single</em> <span class="math notranslate nohighlight">\(A_\alpha\)</span></p>
+</div></blockquote>
+<p><strong>Proof:</strong> Given a loop <span class="math notranslate nohighlight">\(f:I \rightarrow X\)</span> at the basepoint <span class="math notranslate nohighlight">\(x_0\)</span>, we claim there is a partition
+<span class="math notranslate nohighlight">\(0=s_0&lt;s_1&lt; \cdots &lt; s_m = 1\)</span> of <span class="math notranslate nohighlight">\(I\)</span> such that each subinterval <span class="math notranslate nohighlight">\([s_{i-1},s_i]\)</span> is mapped by <span class="math notranslate nohighlight">\(f\)</span> to
+a single <span class="math notranslate nohighlight">\(A_\alpha\)</span>. Namely, since  <span class="math notranslate nohighlight">\(f\)</span> is continuous, each <span class="math notranslate nohighlight">\(s \in I\)</span> has an open neighborhood
+<span class="math notranslate nohighlight">\(V_s\)</span> in <span class="math notranslate nohighlight">\(I\)</span> mapped by <span class="math notranslate nohighlight">\(f\)</span> to some <span class="math notranslate nohighlight">\(A_\alpha\)</span>. We may in fact take <span class="math notranslate nohighlight">\(V_s\)</span> to be an interval whose
+closure is mapped to a single <span class="math notranslate nohighlight">\(A_\alpha\)</span>. Compactness of <span class="math notranslate nohighlight">\(I\)</span> implies that a finite number of
+these intervals cover <span class="math notranslate nohighlight">\(I\)</span>. The endpoints of this finite set of intervals then define the
+desired partition of <span class="math notranslate nohighlight">\(I\)</span></p>
+<p><span style="margin-left: 2em"> Denote the <span class="math notranslate nohighlight">\(A_\alpha\)</span> containing <span class="math notranslate nohighlight">\(f([s_{i-1},s_i])\)</span> by <span class="math notranslate nohighlight">\(A_i\)</span>, and let <span class="math notranslate nohighlight">\(f_i\)</span> be the path obtained by
+restricting <span class="math notranslate nohighlight">\(f\)</span> to <span class="math notranslate nohighlight">\([s_{i-1},s_i]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is the composition <span class="math notranslate nohighlight">\(f_1 \cdot \cdots \cdot f_m\)</span> with <span class="math notranslate nohighlight">\(f_i\)</span> a path in
+<span class="math notranslate nohighlight">\(A_i\)</span>.</p>
+<a class="reference internal image-reference" href="../../_images/lem-1-15.png"><img alt="../../_images/lem-1-15.png" class="align-right" src="../../_images/lem-1-15.png" style="width: 40%;" /></a>
+<p>Since we assume <span class="math notranslate nohighlight">\(A_i \cap A_{i+1}\)</span> is path-connected,
+we may choose a path <span class="math notranslate nohighlight">\(g_i\)</span> in <span class="math notranslate nohighlight">\(A_i \cap A_{i+1}\)</span> from <span class="math notranslate nohighlight">\(x_0\)</span> to
+the point <span class="math notranslate nohighlight">\(f(s_i) \in A_i \cap A_{i+1}\)</span>. Consider the loop
+<span class="math notranslate nohighlight">\((f_1 \cdot \bar{g}_1) \cdot (g_1 \cdot f_2 \cdot \bar{g}_2) \cdot (g_2 \cdot f_3 \cdot \bar{g}_3) \cdot \cdots \cdot (g_{m-1} \cdot f_m)\)</span>
+which is homotopic to <span class="math notranslate nohighlight">\(f\)</span>. This loop is a composition
+of loops each lying in a single <span class="math notranslate nohighlight">\(A_i\)</span>, the loops indicated
+by the parentheses. <span style="float:right">&#9723</span></p>
+</div>
+<p><strong>Proof of Proposition 1.14:</strong> We can express <span class="math notranslate nohighlight">\(S^n\)</span> as the union of two open sets <span class="math notranslate nohighlight">\(A_1\)</span>
+and <span class="math notranslate nohighlight">\(A_2\)</span> each homeomorphic to <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> such that <span class="math notranslate nohighlight">\(A_1 \cap A_2\)</span> is homeomorphic to <span class="math notranslate nohighlight">\(S^{n-1} \times \mathbb{R}\)</span>,
+for example by taking <span class="math notranslate nohighlight">\(A_1\)</span> and <span class="math notranslate nohighlight">\(A_2\)</span> to be the complements of two antipodal points in
+<span class="math notranslate nohighlight">\(S^n\)</span>. Choose a basepoint <span class="math notranslate nohighlight">\(x_0\)</span> in <span class="math notranslate nohighlight">\(A_1 \cap A_2\)</span>. If <span class="math notranslate nohighlight">\(n \geq 2\)</span> then <span class="math notranslate nohighlight">\(A_1 \cap A_2\)</span> is path-connected.
+The lemma then applies to say that every loop in <span class="math notranslate nohighlight">\(S^n\)</span> based at <span class="math notranslate nohighlight">\(x_0\)</span> is homotopic to a
+product of loops in <span class="math notranslate nohighlight">\(A_1\)</span> or <span class="math notranslate nohighlight">\(A_2\)</span>. Both <span class="math notranslate nohighlight">\(\pi_1(A_1)\)</span> and <span class="math notranslate nohighlight">\(\pi_1(A_2)\)</span> are zero since <span class="math notranslate nohighlight">\(A_1\)</span> and <span class="math notranslate nohighlight">\(A_2\)</span> are
+homeomorphic to <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Hence every loop in <span class="math notranslate nohighlight">\(S^n\)</span> is nullhomotopic. <span style="float:right">&#9723</span></p>
+<div class="docutils container" id="corollary-1-16">
+<blockquote>
+<div><p><strong>Corollary 1.16.</strong> <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> <em>is not homeomorphic to*</em> <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> <em>for</em> <span class="math notranslate nohighlight">\(n \neq 2\)</span>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> Suppose <span class="math notranslate nohighlight">\(f:\mathbb{R}^2 \rightarrow \mathbb{R}^n\)</span> is a homeomorphism. The case <span class="math notranslate nohighlight">\(n=1\)</span> is easily
+disposed of since <span class="math notranslate nohighlight">\(\mathbb{R}^2-\{0\}\)</span> is path-connected but the homeomorphic space <span class="math notranslate nohighlight">\(\mathbb{R}^n-\{f(0)\}\)</span>
+is not path-connected when <span class="math notranslate nohighlight">\(n=1\)</span>. When <span class="math notranslate nohighlight">\(n&gt;2\)</span> we cannot distinguish <span class="math notranslate nohighlight">\(\mathbb{R}^2-\{0\}\)</span>
+from <span class="math notranslate nohighlight">\(\mathbb{R}^n-\{f(0)\}\)</span> by the number of path-components, but we can distinguish them
+by their fundamental groupos. Namely, for a point <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, the complement <span class="math notranslate nohighlight">\(\mathbb{R}^n-\{x\}\)</span>
+is homeomorphic to <span class="math notranslate nohighlight">\(S^{n-1} \times \mathbb{R}\)</span>, so <a class="hxr-hoverxref hxr-tooltip reference internal" href="the-fundamental-group-of-the-circle.html#proposition-1-12"><span class="std std-ref">Proposition 1.12</span></a> implies that <span class="math notranslate nohighlight">\(\pi_1(\mathbb{R}^n-\{x\})\)</span> is
+isomorphic to <span class="math notranslate nohighlight">\(\pi_1(S^{n-1}) \times \pi_1(\mathbb{R}) \approx \pi_1(S^{n-1})\)</span>. Hence <span class="math notranslate nohighlight">\(\pi_1(\mathbb{R}^n -\{x\})\)</span> is <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> for <span class="math notranslate nohighlight">\(n=2\)</span> and
+trivial for <span class="math notranslate nohighlight">\(n&gt;2\)</span>, using <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-1-14"><span class="std std-ref">Proposition 1.14</span></a> in the latter case. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> The more general statement that <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span> is not homeomorphic to <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> if <span class="math notranslate nohighlight">\(m \neq n\)</span> can
+be proved in the same way using either the higher homotopy groups or homology
+groups. In fact, nonempty open sets in <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> can be homeomorphic only if
+<span class="math notranslate nohighlight">\(m=n\)</span>, as we will show in <span class="xref std std-ref">Theorem 2.26</span> using homology.</p>
+<p><span style="margin-left: 2em"> induced homomorphisms allow relations between spaces to be transformed into
+relations between their fundamental groups. Here is an illustration of this principle:</p>
+<div class="docutils container" id="proposition-1-17">
+<blockquote>
+<div><p><strong>Proposition 1.17.</strong> <em>If a space</em> <span class="math notranslate nohighlight">\(X\)</span> <em>retracts onto a subspace</em> <span class="math notranslate nohighlight">\(A\)</span>, <em>then the homomorphism</em>
+<span class="math notranslate nohighlight">\(i_*:\pi_1 (A,x_0) \rightarrow \pi_1(X,x_0)\)</span> <em>induced by the inclusion</em> <span class="math notranslate nohighlight">\(i:A \hookrightarrow X\)</span> <em>is injective. If</em> <span class="math notranslate nohighlight">\(A\)</span> <em>is a
+deformation retract of</em> <span class="math notranslate nohighlight">\(X\)</span>, then <span class="math notranslate nohighlight">\(i_*\)</span> is an isomorphism.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> If <span class="math notranslate nohighlight">\(r:X\rightarrow A\)</span> is a retraction, then <span class="math notranslate nohighlight">\(ri=\mathbb{1}\)</span>, which implies that <span class="math notranslate nohighlight">\(i_*\)</span>
+is injective. If <span class="math notranslate nohighlight">\(r_t:X \rightarrow X\)</span> is a deformation retraction of <span class="math notranslate nohighlight">\(X\)</span> onto <span class="math notranslate nohighlight">\(A\)</span>, so <span class="math notranslate nohighlight">\(r_0=\mathbb{1},\, r_t|A =\mathbb{1}\)</span>,
+and <span class="math notranslate nohighlight">\(r_1(X) \subset A\)</span>, then for any loo <span class="math notranslate nohighlight">\(f:I\rightarrow X\)</span> based at <span class="math notranslate nohighlight">\(x_0 \in A\)</span> the composition <span class="math notranslate nohighlight">\(r_t f\)</span> gives
+a homotopy of <span class="math notranslate nohighlight">\(f\)</span> to a loop in <span class="math notranslate nohighlight">\(A\)</span>, so <span class="math notranslate nohighlight">\(i_*\)</span> is also surjective. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> This gives another way of seeing that <span class="math notranslate nohighlight">\(S^1\)</span> is not a retract of <span class="math notranslate nohighlight">\(D^2\)</span>, a fact we showed
+earlier in the proof of the <a class="hxr-hoverxref hxr-tooltip reference internal" href="the-fundamental-group-of-the-circle.html#theorem-1-9"><span class="std std-ref">Brouwer fixed point theorem</span></a>, since the inclusion-induced
+map <span class="math notranslate nohighlight">\(\pi_1(S^1)\rightarrow \pi_1(D^2)\)</span> is a homomorphism <span class="math notranslate nohighlight">\(\mathbb{Z}\rightarrow 0\)</span> that cannot be injective.</p>
+<p><span style="margin-left: 2em"> The exact group-theoretic analog of a retraction is a homomorphism <span class="math notranslate nohighlight">\(\rho\)</span> of a group
+<span class="math notranslate nohighlight">\(G\)</span> onto a subgroup <span class="math notranslate nohighlight">\(H\)</span> such that <span class="math notranslate nohighlight">\(\rho\)</span> restricts to the identity on <span class="math notranslate nohighlight">\(H\)</span>. In the notation
+above, if we identify <span class="math notranslate nohighlight">\(\pi_1(A)\)</span> with its image under <span class="math notranslate nohighlight">\(i_*\)</span>, then <span class="math notranslate nohighlight">\(r_*\)</span> is such a homomorphism
+from <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> onto the subgroup <span class="math notranslate nohighlight">\(\pi_1(A)\)</span>. The existence of a retracting homomorphism
+<span class="math notranslate nohighlight">\(\rho : G \rightarrow H\)</span> is quite a strong condition on <span class="math notranslate nohighlight">\(H\)</span>. If <span class="math notranslate nohighlight">\(H\)</span> is a normal subgroup, it implies that
+<span class="math notranslate nohighlight">\(G\)</span> is the direct product of <span class="math notranslate nohighlight">\(H\)</span> and the kernel of <span class="math notranslate nohighlight">\(\rho\)</span>. If <span class="math notranslate nohighlight">\(H\)</span> is not normal, then <span class="math notranslate nohighlight">\(G\)</span> is what
+is called in group theory the semi-direct product of <span class="math notranslate nohighlight">\(H\)</span> and the kernel of <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
+<p><span style="margin-left: 2em"> Recall from Chapter 0 the general definition of a homotopy as a family <span class="math notranslate nohighlight">\(\varphi_t : X \rightarrow Y,\, t\in I\)</span>,
+such that the associated map <span class="math notranslate nohighlight">\(\Phi : X \times I \rightarrow Y ,\, \Phi(x,t) = \varphi_t(x)\)</span>, is continuous. If <span class="math notranslate nohighlight">\(\varphi_t\)</span>
+takes a subspace <span class="math notranslate nohighlight">\(A \subset X\)</span> to a subspace <span class="math notranslate nohighlight">\(B \subset Y\)</span> for all <span class="math notranslate nohighlight">\(t\)</span>, then we speak of a homotopy of
+maps of pairs, <span class="math notranslate nohighlight">\(\varphi_t : (X,A) \rightarrow (Y,B)\)</span>. In particular, a <strong>basepoint-preserving homotopy</strong>
+<span class="math notranslate nohighlight">\(\varphi_t:(X,x_0) \rightarrow (Y, y_0)\)</span> is the case that <span class="math notranslate nohighlight">\(\varphi_t(x_0)=y_0\)</span> for all <span class="math notranslate nohighlight">\(t\)</span>. Another basic property
+of induced homomorphisms is their invariance under such homotopies:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\varphi_t:(X,x_0)\rightarrow (Y,y_0)\)</span> is a basepoint-preserving homotopy, then <span class="math notranslate nohighlight">\(\varphi_{0*} = \varphi_{1*}\)</span>.</p></li>
+</ul>
+<p>This holds since <span class="math notranslate nohighlight">\(\varphi{0*}[f]=[\varphi_0 f]=[\varphi_1f]=\varphi_{1*}[f]\)</span>, the middle equality coming
+from the homotopy <span class="math notranslate nohighlight">\(\varphi_t f\)</span>.</p>
+<p><span style="margin-left: 2em"> There is a notion of homotopy equivalence for spaces with basepoints. One says
+<span class="math notranslate nohighlight">\((X, x_0) \simeq (Y,y_0)\)</span> if there are maps <span class="math notranslate nohighlight">\(\varphi : (X,x_0) \rightarrow (Y, y_0)\)</span> and <span class="math notranslate nohighlight">\(\psi : (Y,y_0)\rightarrow (X, x_0)\)</span>
+with homotopies <span class="math notranslate nohighlight">\(\varphi \psi \simeq \mathbb{1}\)</span> and <span class="math notranslate nohighlight">\(\psi \varphi \simeq \mathbb{1}\)</span> through maps fixing the basepoints. In
+this case the induced maps on <span class="math notranslate nohighlight">\(\pi_1\)</span> satisfy <span class="math notranslate nohighlight">\(\varphi_* \psi_* = (\varphi \psi)_* = \mathbb{1}_*=\mathbb{1}\)</span> and likewise
+<span class="math notranslate nohighlight">\(\psi_* \varphi_* = \mathbb{1}\)</span>, so <span class="math notranslate nohighlight">\(\varphi_*\)</span> and <span class="math notranslate nohighlight">\(\psi_*\)</span> are inverse isomorphisms <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\approx \pi_1(Y,y_0)\)</span>. This
+somewhat formal argument gives another proof that a deformation retration induces
+an isomorphism on fundamental groups, since if <span class="math notranslate nohighlight">\(X\)</span> deformation retracts onto <span class="math notranslate nohighlight">\(A\)</span> then
+<span class="math notranslate nohighlight">\((X,x_0) \simeq (A,x_0)\)</span> for any choice of basepoint <span class="math notranslate nohighlight">\(x_0 \in A\)</span>.</p>
+<p><span style="margin-left: 2em"> Having to pay so much attention to basepoints when dealing with the fundamental
+groups is something of a nuisance. For homotopy equivalences one does not have to
+be quite so careful, as the conditions on basepoints can actually be dropped:</p>
+<blockquote id="proposition-1-18">
+<div><p><strong>Proposition 1.18.</strong> <em>If</em> <span class="math notranslate nohighlight">\(\varphi : X \rightarrow Y\)</span> <em>is a homotopy equivalence, then the induced homomorphism</em>
+<span class="math notranslate nohighlight">\(\varphi_*:\pi_1(X,x_0) \rightarrow \pi_1(Y, \varphi(x_0))\)</span> <em>is an isomorphism for all</em> <span class="math notranslate nohighlight">\(x_0 \in X\)</span>.</p>
+</div></blockquote>
+<p><span style="margin-left: 2em"> The proof will use a simple fact about homotopies that do not fix the basepoint:</p>
+<div class="docutils container" id="lemma-1-19">
+<blockquote>
+<div><a class="reference internal image-reference" href="../../_images/lem-1-19.png"><img alt="../../_images/lem-1-19.png" class="align-right" src="../../_images/lem-1-19.png" style="width: 40%;" /></a>
+<p><strong>Lemma 1.19.</strong> <em>If</em> <span class="math notranslate nohighlight">\(\varphi_t:X \rightarrow Y\)</span> <em>is a homotopy and</em> <span class="math notranslate nohighlight">\(h\)</span> <em>is the path</em> <span class="math notranslate nohighlight">\(\varphi_t(x_0)\)</span> <em>formed by the images of
+a basepoint</em> <span class="math notranslate nohighlight">\(x_0 \in X\)</span>, <em>then the three maps in the diagram at the right satisfy</em> <span class="math notranslate nohighlight">\(\varphi_{0*}=\beta_h \varphi_{1*}\)</span>.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../../_images/lem-pf-1-19.png"><img alt="../../_images/lem-pf-1-19.png" class="align-right" src="../../_images/lem-pf-1-19.png" style="width: 30%;" /></a>
+<p><strong>Proof:</strong> Let <span class="math notranslate nohighlight">\(h_t\)</span> be the restriction of <span class="math notranslate nohighlight">\(h\)</span> to the interval <span class="math notranslate nohighlight">\([0,t]\)</span>,
+with a reparametrization so that the domain of <span class="math notranslate nohighlight">\(h_t\)</span> is still
+<span class="math notranslate nohighlight">\([0,1]\)</span>. Explicitly, we can take <span class="math notranslate nohighlight">\(h_t(x)=h(ts)\)</span>. Then if <span class="math notranslate nohighlight">\(f\)</span> is
+a loop in <span class="math notranslate nohighlight">\(X\)</span> at the basepoint <span class="math notranslate nohighlight">\(x_0\)</span>, the product <span class="math notranslate nohighlight">\(h_t \cdot (\varphi_t f) \cdot \bar{h}_t\)</span>
+gives a homotopy of loops at <span class="math notranslate nohighlight">\(\varphi_0(x_0)\)</span>. Restricting this
+homotopy to <span class="math notranslate nohighlight">\(t=0\)</span> and <span class="math notranslate nohighlight">\(t=1\)</span>, we see that <span class="math notranslate nohighlight">\(\varphi_{0*}([f])=\beta_h(\varphi_{1*}([f]))\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<p><strong>Proof of 1.18:</strong> Let <span class="math notranslate nohighlight">\(\psi : Y \rightarrow X\)</span> be a homotopy-inverse for <span class="math notranslate nohighlight">\(\varphi\)</span>, so that <span class="math notranslate nohighlight">\(\varphi \psi \simeq \mathbb{1}\)</span> and
+<span class="math notranslate nohighlight">\(\psi \varphi \simeq \mathbb{1}\)</span>. Consider the maps</p>
+<div class="math notranslate nohighlight">
+\[\pi_1(X,x_0) \xrightarrow{\varphi_*} \pi_1(Y,\varphi (x_0)) \xrightarrow{\varphi_*} \pi_1(X,\psi \varphi (x_0)) \xrightarrow{\varphi_*} \pi_1(Y,\varphi \psi \varphi (x_0))\]</div>
+<p>The composition of the first two maps is an isomorphism since <span class="math notranslate nohighlight">\(\psi \varphi \simeq \mathbb{1}\)</span> implies that
+<span class="math notranslate nohighlight">\(\psi_* \varphi_* = \beta_h\)</span> for some <span class="math notranslate nohighlight">\(h\)</span>, by the <a class="hxr-hoverxref hxr-tooltip reference internal" href="#lemma-1-19"><span class="std std-ref">lemma</span></a>. In particular, since <span class="math notranslate nohighlight">\(\psi_* \varphi_*\)</span> is an isomorphism,
+<span class="math notranslate nohighlight">\(\varphi_*\)</span> is injective. The same reasoning with the second and third maps shows that <span class="math notranslate nohighlight">\(\psi_*\)</span>
+is injective. Thus the first two of the three maps are injections and their composition
+is an isomorphism, so the first map <span class="math notranslate nohighlight">\(\varphi_*\)</span> must be surjective as well as injective. <span style="float:right">&#9723</span></p>
 </section>
 
 
@@ -489,11 +637,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../sec2/index.html"
+       href="exercises.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1.2. Van Kampen’s Theorem</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

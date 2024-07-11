@@ -16,3 +16,4 @@ free group is free.
     paths-and-homotopy
     the-fundamental-group-of-the-circle
     induced-homomorphisms
+    exercises

@@ -181,12 +181,62 @@ homotopy classes :math:`[f]` of loops :math:`f:I \rightarrow X` at the basepoint
     the trivial group, since any two loops :math:`f_0` and :math:`f_1` based at :math:`x_0` are homotopic via the
     linear homotopy :math:`f_t(s)=(1-t)f_0(s)+tf_1(s)`, as described in :ref:`Example 1.1 <example 1.1>`.
 
-        
+It is not so easy to show that a space has a nontrivial fundamental group since one
+must somehow demonstarte the nonexistence of homotopies between certain loops.
+We will tackle the simplest example shortly, computing the fundamental group of the circle.
 
-        
+It is natural to ask about the dependence of :math:`\pi_1(X,x_0)` on the choice of the basepoint
+:math:`x_0`. Since :math:`\pi_1(X,x_0)` involves only path-component of :math:`X` containing :math:`x_0`, it 
+is clear that we can hope to find relation between :math:`\pi_1(X,x_0)` and :math:`\pi_1(X,x_0)` for two
+basepoints :math:`x_0` and :math:`x_1` only if :math:`x_0` and :math:`x_1` lie in the same path-component of :math:`X`.
 
+.. image:: fig/change-of-basepoint.png
+    :align: right
+    :width: 30%
 
+So let :math:`h : I \rightarrow X` be a pathfrom :math:`x_0` to :math:`x_1`, with the inverse path
+:math:`\bar{h}(s)=h(1-s)` from :math:`x_1` the loop :math:`h \cdot f \cdot \bar{h}` based at :math:`x_0`.
+Strictly speaking, we should choose an order of forming the product :math:`h \cdot f \cdot \bar{h}`, either
+:math:`(h \cdot f)` or :math:`h \cdot (f \cdot \bar{h})`, but the two choices are homotopic and we are only interested in
+homotopy classes here. Alternatively, to avoid any ambiguity we could define a general
+:math:`n`-fold product :math:`f_1 \cdot \cdots f_n` in which the path :math:`f_i` is traversed in the time interval
+:math:`[\frac{i-1}{n}, \frac{i}{n}]`. Either way, we defie a **change-of-basepoint** map :math:`\beta_h : \pi_1(X,x_1) \rightarrow \pi_1(X,x_0)`
+by :math:`\beta_h [f] = [h \cdot f \cdot \bar{h}]`. This is well-defined since if :math:`f_t` is a homotopy of loops based at 
+:math:`x_1` then :math:`h \cdot f_t \cdot \bar{h}` is a homotopy of loops based at :math:`x_0`.
 
+.. _proposition 1.5.:
+
+.. container:: no-indent
+
+            **Proposition 1.5.** *The map* :math:`\beta_h : \pi_1(X,x_1) \rightarrow \pi_1 (X,x_0)` *is an isomorphism*.
+
+        **Proof:** We see first that :math:`\beta_h` is a homomorphism since :math:`\beta_h[f \cdot g] = [h \cdot f \cdot g \cdot \bar{h}] = [h \cdot f \cdot \bar{h} \cdot h \cdot g\cdot \bar{h}] = \beta_h[f]\beta_h[g]`.
+        Further, :math:`\beta_h` is an isomorphism with inverse :math:`\beta_{\bar{h}}` since
+        :math:`\beta_h \beta_{\bar{h}}=\beta_h[\bar{h} \cdot f \cdot h]=[h \cdot \bar{h} \cdot f \cdot h \cdot \bar{h}] = [f]`, and similarly :math:`\beta_{\bar{h}}\beta_h[f]=[f]`. |qed|
+    
+Thus if :math:`X` is path-connected, the group :math:`\pi_1(X,x_0)` is, up to isomorphism, independent
+of the choice of basepoint :math:`x_0`. In this case the notation :math:`\pi_1(X,x_0)` is often
+abbreviated to :math:`\pi_1(X)`, or one could go further and write just :math:`\pi_1 X`.
+
+In general, a space is called **simply-connected** if it is path-connected and has 
+trivial fundamental group. The following result explains the name.
+
+.. _proposition 1.6.:
+
+.. container:: no-indent
+
+        **Proposition 1.6.** *A space* :math:`X` *is simply-connected iff there is a unique homotopy class
+        of paths connecting any two points in* :math:`X`.
+
+    **Proof:** Path-connectedness is the existence of paths connecting every pair of points,
+    so we need to be concerned only with the uniqueness of connecting paths. Suppose 
+    :math:`\pi_1(X)=0`. If :math:`f` and :math:`g` are two paths from :math:`x_0` to :math:`x_1`, then :math:`f \simeq f \cdot \bar{g}\cdot g\simeq g` since
+    the loops :math:`\bar{g} \cdot g` and :math:`f \cdot \bar{g}` are each homotopic to constant loops, using the assumption
+    :math:`\pi_1(X,x_0)=0` in the latter case. Conversely, if there is only one homotopy class of 
+    paths connecting a basepoint :math:`x_0` to itself, then all loops at :math:`x_0` are homotopic to the 
+    constnat loop and :math:`\pi_1(X,x_0)=0`.
+
+    
 
 
 
