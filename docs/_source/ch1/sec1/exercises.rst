@@ -21,6 +21,7 @@ union of finitely many closed convex sets.
 **5.** Show that for a space :math:`X`, the following three conditions are equivalent:
 
 .. container:: no-margin
+    
     |indent| \(a\) Every map :math:`S^1 \rightarrow X` is homotopic to a constant map, with image a point.
 
     |indent| \(b\) Every map :math:`S^1 \rightarrow X` extends to a map :math:`D^2 \rightarrow X`.
