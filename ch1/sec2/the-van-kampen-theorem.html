@@ -469,7 +469,7 @@ document.write(`
 <p><span style="margin-left: 2em"> Suppose a space <span class="math notranslate nohighlight">\(X\)</span> is decomposed as the union of a collection of path-connected
 open subsets <span class="math notranslate nohighlight">\(A_\alpha\)</span>, each of which contains the basepoint <span class="math notranslate nohighlight">\(x_0 \in X\)</span>. By the remarks in the
 preceding paragraph, the homomorphisms <span class="math notranslate nohighlight">\(j_\alpha:\pi_1(A_\alpha)\rightarrow \pi_1(X)\)</span> induced by the
-inclusions <span class="math notranslate nohighlight">\(A_\alpha \hookrightarrow X\)</span> extend to a homomorphism <span class="math notranslate nohighlight">\(\phi : {\Large *}\pi_1(A_\alpah)\rightarrow \pi_1(X)\)</span>. The van Kampen
+inclusions <span class="math notranslate nohighlight">\(A_\alpha \hookrightarrow X\)</span> extend to a homomorphism <span class="math notranslate nohighlight">\(\phi : {\Large *}\pi_1(A_\alpha)\rightarrow \pi_1(X)\)</span>. The van Kampen
 theorem will say that <span class="math notranslate nohighlight">\(\phi\)</span> is very often surjective, but we can expect <span class="math notranslate nohighlight">\(\phi\)</span> to have nontrivial
 kernel in general. For if <span class="math notranslate nohighlight">\(i_{\alpha \beta}:\pi_1(A_\alpha \cap A_\beta) \rightarrow \pi_1(A_\alpha)\)</span> is the homomorphism induced
 by the inclusion <span class="math notranslate nohighlight">\(A_\alpha \cup A\beta \hookrightarrow X\)</span>, so the kernel of <span class="math notranslate nohighlight">\(\phi\)</span> contains all the elements
@@ -486,7 +486,7 @@ hence</em> <span class="math notranslate nohighlight">\(\phi\)</span> <em>induce
 <div class="docutils container" id="example-1-21">
 <p><strong>Example 1.21: Wedge Sums.</strong> In <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../ch0/operations-on-spaces.html#wedge-sum"><span class="std std-ref">Chapter 0 we defined the wedge sum</span></a> <span class="math notranslate nohighlight">\(\bigvee _\alpha X_\alpha\)</span> of a
 collection of spaces <span class="math notranslate nohighlight">\(X_\alpha\)</span> with basepoints <span class="math notranslate nohighlight">\(x_\alpha \in X_\alpha\)</span> to be the quotient space of the
-disjoint union <span class="math notranslate nohighlight">\(\bigsqcup _\alpha X_\alpha\)</span> in which all the basepoints <span class="math notranslate nohighlight">\(x_\alpha\)</span> are identified to a single point.
+disjoint union <span class="math notranslate nohighlight">\(\coprod _\alpha X_\alpha\)</span> in which all the basepoints <span class="math notranslate nohighlight">\(x_\alpha\)</span> are identified to a single point.
 If each <span class="math notranslate nohighlight">\(x_\alpha\)</span> is a deformation retract of an open neighborhood <span class="math notranslate nohighlight">\(U_\alpha\)</span> in <span class="math notranslate nohighlight">\(X_\alpha\)</span>, then <span class="math notranslate nohighlight">\(X_\alpha\)</span> is
 a deformation retract of its open neighborhood <span class="math notranslate nohighlight">\(A_\alpha = X_\alpha \bigvee _{\beta \neq \alpha}U_\beta\)</span>. The intersection
 of two or more distinct <span class="math notranslate nohighlight">\(A_\alpha\)</span>’s is <span class="math notranslate nohighlight">\(\bigvee_\alpha U_\alpha\)</span>, which deformation retracts to a point. Van
@@ -560,10 +560,10 @@ element of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p><span style="margin-left: 2em"> If we can show that any two factorizations of <span class="math notranslate nohighlight">\([f]\)</span> are equivalent, this will say that
 the map <span class="math notranslate nohighlight">\(Q \rightarrow \pi_1(X)\)</span> induced by <span class="math notranslate nohighlight">\(\phi\)</span> is injective, hence the kernel of <span class="math notranslate nohighlight">\(\phi\)</span> is exactly <span class="math notranslate nohighlight">\(N\)</span>, and
 the proof will be complete.</p>
-<p><span style="margin-left: 2em"> Let <span class="math notranslate nohighlight">\([f_1] \codts [f_k]\)</span> and <span class="math notranslate nohighlight">\([f'_1] \cdots [f'_l]\)</span> be two factorizations of <span class="math notranslate nohighlight">\([f]\)</span>. The composed
+<p><span style="margin-left: 2em"> Let <span class="math notranslate nohighlight">\([f_1] \cdots [f_k]\)</span> and <span class="math notranslate nohighlight">\([f'_1] \cdots [f'_l]\)</span> be two factorizations of <span class="math notranslate nohighlight">\([f]\)</span>. The composed
 paths <span class="math notranslate nohighlight">\(f_1 \cdot \cdots \cdot f_k\)</span> and <span class="math notranslate nohighlight">\(f_1'\cdot \cdots \cdot f_l'\)</span> are then homotopic, so let <span class="math notranslate nohighlight">\(F:I\times I \rightarrow X\)</span> be a homotopy
 from <span class="math notranslate nohighlight">\(f_1 \cdot \cdots \cdot f_k\)</span> to <span class="math notranslate nohighlight">\(f_1' \cdot \cdots \cdot f_l'\)</span>. There exist partitions <span class="math notranslate nohighlight">\(0=s_0&lt;s_1&lt;\cdots &lt; s_m = 1\)</span>
-and <span class="math notranslate nohighlight">\(0=t_0&lt;t_1&lt; \cdots &lt; t_n =1 ` such that each rectangle :math:`R_{ij}=[s_{i-1},s_i]\times [t_{j-1},t_j]\)</span>
+and <span class="math notranslate nohighlight">\(0 = t_0 &lt; t_1 &lt; \cdots &lt; t_n =1\)</span> such that each rectangle <span class="math notranslate nohighlight">\(R_{ij}=[s_{i-1},s_i]\times [t_{j-1},t_j]\)</span>
 is mapped by <span class="math notranslate nohighlight">\(F\)</span> into a single <span class="math notranslate nohighlight">\(A_\alpha\)</span>, which we label <span class="math notranslate nohighlight">\(A_{ij}\)</span>. These partitions may be
 obtained by covering <span class="math notranslate nohighlight">\(I\times I\)</span> by finitely many rectangles <span class="math notranslate nohighlight">\([a,b] \times [c,d]\)</span> each mapping to a
 single <span class="math notranslate nohighlight">\(A_\alpha\)</span>, using a compactness argument, then partitioning <span class="math notranslate nohighlight">\(I \times I\)</span> by the union of all
@@ -736,21 +736,21 @@ difficult than in the special case of torus knots.</p>
 <a class="reference internal image-reference" href="../../_images/eg-1-25.png"><img alt="../../_images/eg-1-25.png" class="align-right" src="../../_images/eg-1-25.png" style="width: 20%;" /></a>
 <p><strong>Example 1.25: The Shrinking Wedge of Circles.</strong> Consider the subspace
 <span class="math notranslate nohighlight">\(X \subset \mathbb{R}^2\)</span> that is the union of the circles <span class="math notranslate nohighlight">\(C_n\)</span> of radius <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> and
-center <span class="math notranslate nohighlight">\((\frac{1}{n}, 0)\)</span> for <span class="math notranslate nohighlight">\(n=1,2, \cdots `. At first glance one might confuse
-:math:`X\)</span> with the wedge sum of an infinite sequence of circles, but we will
+center <span class="math notranslate nohighlight">\((\frac{1}{n}, 0)\)</span> for <span class="math notranslate nohighlight">\(n=1,2, \cdots\)</span>. At first glance one might confuse
+<span class="math notranslate nohighlight">\(X\)</span> with the wedge sum of an infinite sequence of circles, but we will
 show that <span class="math notranslate nohighlight">\(X\)</span> has a much larger fundamental group than the wedge
 sum. Consider the retractions <span class="math notranslate nohighlight">\(r_n : X \rightarrow C_n\)</span> collapsing all <span class="math notranslate nohighlight">\(C_i\)</span>’s except <span class="math notranslate nohighlight">\(C_n\)</span> to the origin.
-Each <span class="math notranslate nohighlight">\(r_n\)</span> induces a surjection <span class="math notranslate nohighlight">\(\rho _n : \pi_1(X) \rightarrow \pi_1(C_n) \aaprox \mathbb{Z}\)</span>, where we take the origin as
-the basepoint. The product of the <span class="math notranslate nohighlight">\(\rho_n\)</span>’s is a homomorphism <span class="math notranslate nohighlight">\(\rho :\pi_1(X) \rightarrow \bigsqcap _\infty \mathbb{Z}\)</span> to the
+Each <span class="math notranslate nohighlight">\(r_n\)</span> induces a surjection <span class="math notranslate nohighlight">\(\rho _n : \pi_1(X) \rightarrow \pi_1(C_n) \approx \mathbb{Z}\)</span>, where we take the origin as
+the basepoint. The product of the <span class="math notranslate nohighlight">\(\rho_n\)</span>’s is a homomorphism <span class="math notranslate nohighlight">\(\rho :\pi_1(X) \rightarrow \prod _\infty \mathbb{Z}\)</span> to the
 direct product (not the direct sum) of infinitely many copies of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, and <span class="math notranslate nohighlight">\(\rho\)</span> is surjective
 since for every sequence of integers <span class="math notranslate nohighlight">\(k_n\)</span> we can construct a loop <span class="math notranslate nohighlight">\(f:I\rightarrow X\)</span> that wraps
 <span class="math notranslate nohighlight">\(k_n\)</span> times around <span class="math notranslate nohighlight">\(C_n\)</span> in the time interval <span class="math notranslate nohighlight">\([1-\frac{1}{n},1-\frac{1}{n+1}]\)</span>. This infinite composition
 of loops is certainly continuous at each time less than <span class="math notranslate nohighlight">\(1\)</span>, and it is continuous at time
 <span class="math notranslate nohighlight">\(1\)</span> since every neighborhood of the basepoint in <span class="math notranslate nohighlight">\(X\)</span> contains all but finitely many of the
-circles <span class="math notranslate nohighlight">\(C_n\)</span>. Since <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> maps onto the uncountable group <span class="math notranslate nohighlight">\(\bigsqcap_\infty \mathbb{Z}\)</span>, it is uncountable.
+circles <span class="math notranslate nohighlight">\(C_n\)</span>. Since <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> maps onto the uncountable group <span class="math notranslate nohighlight">\(\prod_\infty \mathbb{Z}\)</span>, it is uncountable.
 On the other hand, the fundamental group of a wedge sum of countably many circles
 is countably generated, hence countable.</p>
-<p><span style="margin-left: 2em"> The group <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is actually far more complicated than <span class="math notranslate nohighlight">\(\bigsqcap_\infty \mathbb{Z}\)</span>. For one thing,
+<p><span style="margin-left: 2em"> The group <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is actually far more complicated than <span class="math notranslate nohighlight">\(\prod_\infty \mathbb{Z}\)</span>. For one thing,
 it is nonabelian, since the retraction <span class="math notranslate nohighlight">\(X \rightarrow C_1 \cup \cdots \cup C_n\)</span> that collapses all the circles
 smaller than <span class="math notranslate nohighlight">\(C_n\)</span> to the basepoint induces a surjection from <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> to a free group on
 <span class="math notranslate nohighlight">\(n\)</span> generators. For a complete description of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> see <span class="xref std std-ref">[Cannon &amp; Conner 2000]</span>.</p>
