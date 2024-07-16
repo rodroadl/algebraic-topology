@@ -466,7 +466,85 @@ document.write(`
                   
   <section id="free-products-of-groups">
 <h1>Free Products of Groups<a class="headerlink" href="#free-products-of-groups" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<p><span style="margin-left: 2em"> Suppose one is given a collection of groups <span class="math notranslate nohighlight">\(G_\alpha\)</span> and one wishes to construct a
+single group containing all these groups as subgroups. One way to do this would be
+to take the product group <span class="math notranslate nohighlight">\(\prod_\alpha G_\alpha\)</span>, whose elements can be regarded as the functions
+<span class="math notranslate nohighlight">\(\alpha \mapsto g_\alpha \in G_\alpha\)</span>. Or one could restrict to functions taking on nonidentity values at
+most finitely often, forming the direct sum <span class="math notranslate nohighlight">\(\bigoplus_\alpha G_\alpha\)</span>. Both these constructions produce
+groups containing all the <span class="math notranslate nohighlight">\(G_\alpha\)</span>’s as subgroups, but with the property that elements of
+different subgroups <span class="math notranslate nohighlight">\(G_\alpha\)</span> commute with each other. In the realm of nonabelian groups
+this commutativity is unnatural, and so one would like a ‘nonabelian’ version of <span class="math notranslate nohighlight">\(\prod_\alpha G_\alpha\)</span>
+or <span class="math notranslate nohighlight">\(\bigoplus_\alpha G_\alpha\)</span>. Since the sum <span class="math notranslate nohighlight">\(\bigoplus_\alpha G_\alpha\)</span> is smaller and presumably simpler than <span class="math notranslate nohighlight">\(\prod_\alpha G_\alpha\)</span>, it
+should be easier to construct a nonabelian version of <span class="math notranslate nohighlight">\(\bigoplus_\alpha G_\alpha\)</span>, and this is what the free
+product <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span> achieves.</p>
+<p><span style="margin-left: 2em"> Here is the precise definition. As a set, the free product <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span> consists of all
+words <span class="math notranslate nohighlight">\(g_1g_2 \cdots g_m\)</span> of arbitrary finite length <span class="math notranslate nohighlight">\(m \geq 0\)</span>, where each letters <span class="math notranslate nohighlight">\(g_i\)</span> belongs to
+a group <span class="math notranslate nohighlight">\(G_{\alpha_i}\)</span> and is not the identity element of <span class="math notranslate nohighlight">\(G_{\alpha_i}\)</span>, and the adjacent letters <span class="math notranslate nohighlight">\(g_i\)</span> and <span class="math notranslate nohighlight">\(g_{i+1}\)</span>
+belong to different groups <span class="math notranslate nohighlight">\(G_\alpha\)</span>, that is, <span class="math notranslate nohighlight">\(\alpha_i \neq \alpha_{i+1}\)</span>. Words satisfying these conditions
+are called <em>reduced</em>, the idea being that unreduced words can always be simplified to
+reduced words by writing adjacent letters that lie in the same <span class="math notranslate nohighlight">\(G_{\alpha_i}\)</span> as a single letter and
+by canceling trivial letters. The empty word is allowed, and will be identity element
+of <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span>. The group operation in <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span> is juxtaposition, <span class="math notranslate nohighlight">\((g_1 \cdots g_m)(h_1 \cdots h_n) =\)</span>
+:math:` g_1 cdots g_m h_1 cdots h_n`. This product may not be reduced, however: If <span class="math notranslate nohighlight">\(g_m\)</span> and <span class="math notranslate nohighlight">\(h_1\)</span> belong
+to the same <span class="math notranslate nohighlight">\(G_\alpha\)</span>, they should be combined into a single letter <span class="math notranslate nohighlight">\((g_mh_1)\)</span> according to the
+multiplication in <span class="math notranslate nohighlight">\(G_\alpha\)</span>, and if this new letter <span class="math notranslate nohighlight">\(g_mh_1\)</span> happens to be the identity of <span class="math notranslate nohighlight">\(G_\alpha\)</span>, it
+should be canceled from the product. This may allow <span class="math notranslate nohighlight">\(g_{m-1}\)</span> and <span class="math notranslate nohighlight">\(g_2\)</span> to be combined,
+and possibly canceled too. Repetition of this process eventually produces a reduced
+word. For example, in the product <span class="math notranslate nohighlight">\((g_1 \cdots g_m)(g^{-1}_m \cdots g^{-1}_1)\)</span> everything cancels and
+we get the identity element of <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span>, the empty word.</p>
+<p><span style="margin-left: 2em"> Verifying directly that this multiplication is associative would be rather tedious,
+but there is an indirect approach that avoids most of the word. Let <span class="math notranslate nohighlight">\(W\)</span> be the set of
+reduced words <span class="math notranslate nohighlight">\(g_1 \cdots g_m\)</span> as above, including the empty word. To each <span class="math notranslate nohighlight">\(g \in G_\alpha\)</span> we
+associate the function <span class="math notranslate nohighlight">\(L_g : W\rightarrow W\)</span> given by multiplication on the left, <span class="math notranslate nohighlight">\(L_g(g_1 \cdots g_m)=\)</span>
+<span class="math notranslate nohighlight">\(gg_1 \cdots g_m\)</span> where we combine <span class="math notranslate nohighlight">\(g\)</span> with <span class="math notranslate nohighlight">\(g_1\)</span> if <span class="math notranslate nohighlight">\(g_1 \in G_\alpha\)</span> to make <span class="math notranslate nohighlight">\(gg_1 \cdots g_m\)</span> a reduced
+word. A key property of the association <span class="math notranslate nohighlight">\(g \mapsto L_g\)</span> is the formula <span class="math notranslate nohighlight">\(L_{gg'}=L_gL_{g'}\)</span> for
+<span class="math notranslate nohighlight">\(g,g' \in G_\alpha\)</span>, that is, <span class="math notranslate nohighlight">\(g(g'(g_1 \cdots g_m)) = (gg')(g_1 \cdots g_m)\)</span>. This special case of
+associativity follows rather trivially from associativity in <span class="math notranslate nohighlight">\(G_\alpha\)</span>. The formula <span class="math notranslate nohighlight">\(L_{gg'} = L_gL_{g'}\)</span>
+implies that <span class="math notranslate nohighlight">\(L_g\)</span> is invertible with inverse <span class="math notranslate nohighlight">\(L_{g^{-1}}\)</span>. Therefore the association <span class="math notranslate nohighlight">\(g \mapsto L_g\)</span>
+defines a homomorphism from <span class="math notranslate nohighlight">\(G_\alpha\)</span> to the group <span class="math notranslate nohighlight">\(P(W)\)</span> of all permutations of <span class="math notranslate nohighlight">\(W\)</span>. More
+generally, we can define <span class="math notranslate nohighlight">\(L:W \rightarrowP(W)\)</span> by <span class="math notranslate nohighlight">\(L(g_1 \cdots g_m) = L_{g_1} \cdots L_{g_m}\)</span> for each reduced
+word <span class="math notranslate nohighlight">\(g_1 \cdots g_m\)</span>. This function <span class="math notranslate nohighlight">\(L\)</span> is injective since the permutation <span class="math notranslate nohighlight">\(L(g_1 \cdots g_m)\)</span> sends
+the empty word to <span class="math notranslate nohighlight">\(g_1 \cdots g_m\)</span>. The product operation in <span class="math notranslate nohighlight">\(W\)</span> corresponds under <span class="math notranslate nohighlight">\(L\)</span> to
+composition in <span class="math notranslate nohighlight">\(P(W)\)</span>, because of the relation <span class="math notranslate nohighlight">\(L_{gg'}=L_gL_{g'}\)</span>. Since composition in
+<span class="math notranslate nohighlight">\(P(W)\)</span> is associative, we conclude that the product in <span class="math notranslate nohighlight">\(W\)</span> is associative.</p>
+<p><span style="margin-left: 2em"> In particular, we have the free product <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span> as described earlier. This is an
+example of a <em>free group</em>, the free product of any numbers of copies of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, finite or
+infinite. The elements of a free group are uniquely representable as reduced words in
+powers of generators for the various copies of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, with one generator for each <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, just
+as in the case of <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span>. These generators are called a <em>basis</em> for the free group, and the
+number of basis elements is the <em>rank</em> of the free group. The abelianization of a free
+group is a free abelian group with basis the same set of generators, so since the rank
+of a free abelian group is well-defined, independent of the choice of basis, the same
+is true for the rank of a free group.</p>
+<p><span style="margin-left: 2em"> An interesting example of a free product that is not a free group is <span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_2\)</span>. This
+is like <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span> but simpler since <span class="math notranslate nohighlight">\(a^2 = e = b^2\)</span>, so powers of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are not needed, and
+<span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_2\)</span> consists of just the alternating words in <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>: <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(ab\)</span>, <span class="math notranslate nohighlight">\(ba\)</span>, <span class="math notranslate nohighlight">\(aba\)</span>, <span class="math notranslate nohighlight">\(bab\)</span>,
+<span class="math notranslate nohighlight">\(abab\)</span>, <span class="math notranslate nohighlight">\(baba\)</span>, <span class="math notranslate nohighlight">\(ababa\)</span>, <span class="math notranslate nohighlight">\(\cdots\)</span>, together with the empty word. The structure of <span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_2\)</span>
+can be elucidated by looking at the homomorphism <span class="math notranslate nohighlight">\(\varphi : \mathbb{Z}_2 * \mathbb{Z}_2 \rightarrow \mathbb{Z}_2\)</span> associating to
+each word its length mod <span class="math notranslate nohighlight">\(2\)</span>. Obviously <span class="math notranslate nohighlight">\(\varphi\)</span> is surjective, and its kernel consists of the
+words of even length. These form a infinite cyclic subgroup generated by <span class="math notranslate nohighlight">\(ab\)</span> since
+<span class="math notranslate nohighlight">\(ba=(ab)^{-1}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_2\)</span>. in fact, <span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_2\)</span> is the semi-direct product of the subgroups
+<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> generated by <span class="math notranslate nohighlight">\(ab\)</span> and <span class="math notranslate nohighlight">\(a\)</span>, with the conjugation relation <span class="math notranslate nohighlight">\(a(ab)a^{-1}=(ab)^{-1}\)</span>.
+This group is sometimes called the infinite dihedral group.</p>
+<p><span style="margin-left: 2em"> For a general free product <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span>, each group <span class="math notranslate nohighlight">\(G_\alpha\)</span> is naturally identified with a
+subgroup of <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span>, the subgroup consisting of the empty word and the nonidentity
+one-letter words <span class="math notranslate nohighlight">\(g \in G_\alpha\)</span>. From this viewpoint the empty word is the common identity
+element of all the subgroups <span class="math notranslate nohighlight">\(G_\alpha\)</span>, which are otherwise disjoint. A consequence
+of associativity is that anay product <span class="math notranslate nohighlight">\(g_1 \codts g_m\)</span> of elements <span class="math notranslate nohighlight">\(g_i\)</span> in the groups <span class="math notranslate nohighlight">\(G_\alpha\)</span> has a
+unique reduced form, the element of <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span> obtained by performing the multiplications
+in any order. Any sequence of reduction operations on an unreduced product
+<span class="math notranslate nohighlight">\(g_1 \cdots g_m\)</span>, ombining adjacent letters <span class="math notranslate nohighlight">\(g_i\)</span> and <span class="math notranslate nohighlight">\(g_{i+1}\)</span> that lie in the same <span class="math notranslate nohighlight">\(G_\alpha\)</span> or canceling
+a <span class="math notranslate nohighlight">\(g_i\)</span> that is the identity, can be viewed as a way of inserting parentheses into <span class="math notranslate nohighlight">\(g_1 \cdots g_m\)</span>
+and performing the resulting sequence of multiplications. Thus associativity implies
+that any two sequences of reduction operations performed on the same unreduced
+word always yield the same reduced word.</p>
+<p><span style="margin-left: 2em"> A basic property of the free product <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span> is that any collection of
+homomorphisms <span class="math notranslate nohighlight">\(\varphi_\alpha : G_\alpha \rightarrow H\)</span> extends uniquely to a homomorphism <span class="math notranslate nohighlight">\(\varphi : {\Large *}_\alpha G_\alpha \rightarrow H\)</span>. Namely,
+the value of <span class="math notranslate nohighlight">\(\varphi\)</span> on a word <span class="math notranslate nohighlight">\(g_1 \cdots g_n\)</span> with <span class="math notranslate nohighlight">\(g_i \in G_{\alpha_i}\)</span> must be <span class="math notranslate nohighlight">\(\varphi_{\alpha_1}(g_1) \cdots \varphi_{\alpha_n}(g_n)\)</span>, and
+using this formula to define <span class="math notranslate nohighlight">\(\varphi\)</span> gives a well-defined homomorphism since the process
+of reducing an unreduced product in <span class="math notranslate nohighlight">\({\Large *}_\alpha G_\alpha\)</span> does not affect its image under <span class="math notranslate nohighlight">\(\varphi\)</span>. For
+example, for a free product <span class="math notranslate nohighlight">\(G {\Large *} H\)</span> the inclusions <span class="math notranslate nohighlight">\(G \hookrightarrow G \times H\)</span> and <span class="math notranslate nohighlight">\(H \hookrightarrow G \times H\)</span> induce
+a surjective homomorphism <span class="math notranslate nohighlight">\(G {\Large *} H \rightarrow G \times H\)</span>.</p>
 </section>
 
 
