@@ -125,7 +125,7 @@ we can rechoose the generators to be :math:`a_1, \cdots , a_{g-1}` and :math:`a_
 
 .. container::
 
-        **Corollary 1.28.** *For every group* :math:`G` *there is a* :math:`2`-*dimensional cell complex* :matH:`X_G`*with*
+        **Corollary 1.28.** *For every group* :math:`G` *there is a* :math:`2`-*dimensional cell complex* :matH:`X_G` *with*
         :math:`\pi_1(X_G) \approx G`.
     
     **Proof:** Choose a presentation :math:`G= \langle g_\alpha | r_\beta \rangle`. This exists since every group is a 
@@ -178,7 +178,7 @@ we can rechoose the generators to be :math:`a_1, \cdots , a_{g-1}` and :math:`a_
     <span style="float:right">&#9723</span>
 
 .. |X| image:: fig/graph-X.png
-    :scale: 5%
+    :scale: 3%
     
 .. |Y| image:: fig/graph-Y.png
-    :scale: 5%
+    :scale: 3%
