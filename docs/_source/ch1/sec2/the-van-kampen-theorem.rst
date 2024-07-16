@@ -4,7 +4,7 @@ The van Kampen theorem
 |indent| Suppose a space :math:`X` is decomposed as the union of a collection of path-connected
 open subsets :math:`A_\alpha`, each of which contains the basepoint :math:`x_0 \in X`. By the remarks in the 
 preceding paragraph, the homomorphisms :math:`j_\alpha:\pi_1(A_\alpha)\rightarrow \pi_1(X)` induced by the
-inclusions :math:`A_\alpha \hookrightarrow X` extend to a homomorphism :math:`\phi : {\Large *}\pi_1(A_\alpah)\rightarrow \pi_1(X)`. The van Kampen
+inclusions :math:`A_\alpha \hookrightarrow X` extend to a homomorphism :math:`\phi : {\Large *}\pi_1(A_\alpha)\rightarrow \pi_1(X)`. The van Kampen
 theorem will say that :math:`\phi` is very often surjective, but we can expect :math:`\phi` to have nontrivial
 kernel in general. For if :math:`i_{\alpha \beta}:\pi_1(A_\alpha \cap A_\beta) \rightarrow \pi_1(A_\alpha)` is the homomorphism induced
 by the inclusion :math:`A_\alpha \cup A\beta \hookrightarrow X`, so the kernel of :math:`\phi` contains all the elements
@@ -26,7 +26,7 @@ that under fairly broad hypotheses this gives a full description of :math:`\phi`
     
     **Example 1.21: Wedge Sums.** In :ref:`Chapter 0 we defined the wedge sum <Wedge Sum>` :math:`\bigvee _\alpha X_\alpha` of a 
     collection of spaces :math:`X_\alpha` with basepoints :math:`x_\alpha \in X_\alpha` to be the quotient space of the
-    disjoint union :math:`\bigsqcup _\alpha X_\alpha` in which all the basepoints :math:`x_\alpha` are identified to a single point.
+    disjoint union :math:`\coprod _\alpha X_\alpha` in which all the basepoints :math:`x_\alpha` are identified to a single point.
     If each :math:`x_\alpha` is a deformation retract of an open neighborhood :math:`U_\alpha` in :math:`X_\alpha`, then :math:`X_\alpha` is
     a deformation retract of its open neighborhood :math:`A_\alpha = X_\alpha \bigvee _{\beta \neq \alpha}U_\beta`. The intersection
     of two or more distinct :math:`A_\alpha`'s is :math:`\bigvee_\alpha U_\alpha`, which deformation retracts to a point. Van
@@ -118,10 +118,10 @@ element of :math:`Q`.
 the map :math:`Q \rightarrow \pi_1(X)` induced by :math:`\phi` is injective, hence the kernel of :math:`\phi` is exactly :math:`N`, and
 the proof will be complete.
 
-|indent| Let :math:`[f_1] \codts [f_k]` and :math:`[f'_1] \cdots [f'_l]` be two factorizations of :math:`[f]`. The composed
+|indent| Let :math:`[f_1] \cdots [f_k]` and :math:`[f'_1] \cdots [f'_l]` be two factorizations of :math:`[f]`. The composed
 paths :math:`f_1 \cdot \cdots \cdot f_k` and :math:`f_1'\cdot \cdots \cdot f_l'` are then homotopic, so let :math:`F:I\times I \rightarrow X` be a homotopy
 from :math:`f_1 \cdot \cdots \cdot f_k` to :math:`f_1' \cdot \cdots \cdot f_l'`. There exist partitions :math:`0=s_0<s_1<\cdots < s_m = 1`
-and :math:`0=t_0<t_1< \cdots < t_n =1 ` such that each rectangle :math:`R_{ij}=[s_{i-1},s_i]\times [t_{j-1},t_j]`
+and :math:`0 = t_0 < t_1 < \cdots < t_n =1` such that each rectangle :math:`R_{ij}=[s_{i-1},s_i]\times [t_{j-1},t_j]`
 is mapped by :math:`F` into a single :math:`A_\alpha`, which we label :math:`A_{ij}`. These partitions may be 
 obtained by covering :math:`I\times I` by finitely many rectangles :math:`[a,b] \times [c,d]` each mapping to a 
 single :math:`A_\alpha`, using a compactness argument, then partitioning :math:`I \times I` by the union of all
@@ -345,22 +345,22 @@ and :math:`[f_1'] \cdots [f_l']` are equivalent. |qed|
         
     **Example 1.25: The Shrinking Wedge of Circles.** Consider the subspace
     :math:`X \subset \mathbb{R}^2` that is the union of the circles :math:`C_n` of radius :math:`\frac{1}{n}` and
-    center :math:`(\frac{1}{n}, 0)` for :math:`n=1,2, \cdots `. At first glance one might confuse
+    center :math:`(\frac{1}{n}, 0)` for :math:`n=1,2, \cdots`. At first glance one might confuse
     :math:`X` with the wedge sum of an infinite sequence of circles, but we will
     show that :math:`X` has a much larger fundamental group than the wedge
     sum. Consider the retractions :math:`r_n : X \rightarrow C_n` collapsing all :math:`C_i`'s except :math:`C_n` to the origin.
-    Each :math:`r_n` induces a surjection :math:`\rho _n : \pi_1(X) \rightarrow \pi_1(C_n) \aaprox \mathbb{Z}`, where we take the origin as
-    the basepoint. The product of the :math:`\rho_n`'s is a homomorphism :math:`\rho :\pi_1(X) \rightarrow \bigsqcap _\infty \mathbb{Z}` to the 
+    Each :math:`r_n` induces a surjection :math:`\rho _n : \pi_1(X) \rightarrow \pi_1(C_n) \approx \mathbb{Z}`, where we take the origin as
+    the basepoint. The product of the :math:`\rho_n`'s is a homomorphism :math:`\rho :\pi_1(X) \rightarrow \prod _\infty \mathbb{Z}` to the 
     direct product (not the direct sum) of infinitely many copies of :math:`\mathbb{Z}`, and :math:`\rho` is surjective
     since for every sequence of integers :math:`k_n` we can construct a loop :math:`f:I\rightarrow X` that wraps
     :math:`k_n` times around :math:`C_n` in the time interval :math:`[1-\frac{1}{n},1-\frac{1}{n+1}]`. This infinite composition
     of loops is certainly continuous at each time less than :math:`1`, and it is continuous at time
     :math:`1` since every neighborhood of the basepoint in :Math:`X` contains all but finitely many of the 
-    circles :math:`C_n`. Since :math:`\pi_1(X)` maps onto the uncountable group :math:`\bigsqcap_\infty \mathbb{Z}`, it is uncountable.
+    circles :math:`C_n`. Since :math:`\pi_1(X)` maps onto the uncountable group :math:`\prod_\infty \mathbb{Z}`, it is uncountable.
     On the other hand, the fundamental group of a wedge sum of countably many circles
     is countably generated, hence countable.
 
-    |indent| The group :math:`\pi_1(X)` is actually far more complicated than :math:`\bigsqcap_\infty \mathbb{Z}`. For one thing,
+    |indent| The group :math:`\pi_1(X)` is actually far more complicated than :math:`\prod_\infty \mathbb{Z}`. For one thing,
     it is nonabelian, since the retraction :math:`X \rightarrow C_1 \cup \cdots \cup C_n` that collapses all the circles
     smaller than :math:`C_n` to the basepoint induces a surjection from :math:`\pi_1(X)` to a free group on 
     :math:`n` generators. For a complete description of :math:`\pi_1(X)` see :ref:`[Cannon & Conner 2000] <>`.

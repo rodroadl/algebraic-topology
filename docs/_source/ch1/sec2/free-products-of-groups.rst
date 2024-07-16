@@ -39,7 +39,7 @@ word. A key property of the association :math:`g \mapsto L_g` is the formula :ma
 associativity follows rather trivially from associativity in :math:`G_\alpha`. The formula :math:`L_{gg'} = L_gL_{g'}`
 implies that :math:`L_g` is invertible with inverse :math:`L_{g^{-1}}`. Therefore the association :math:`g \mapsto L_g`
 defines a homomorphism from :math:`G_\alpha` to the group :math:`P(W)` of all permutations of :math:`W`. More
-generally, we can define :math:`L:W \rightarrowP(W)` by :math:`L(g_1 \cdots g_m) = L_{g_1} \cdots L_{g_m}` for each reduced 
+generally, we can define :math:`L:W \rightarrow P(W)` by :math:`L(g_1 \cdots g_m) = L_{g_1} \cdots L_{g_m}` for each reduced 
 word :math:`g_1 \cdots g_m`. This function :math:`L` is injective since the permutation :math:`L(g_1 \cdots g_m)` sends
 the empty word to :math:`g_1 \cdots g_m`. The product operation in :math:`W` corresponds under :math:`L` to 
 composition in :math:`P(W)`, because of the relation :math:`L_{gg'}=L_gL_{g'}`. Since composition in
@@ -70,7 +70,7 @@ This group is sometimes called the infinite dihedral group.
 subgroup of :math:`{\Large *}_\alpha G_\alpha`, the subgroup consisting of the empty word and the nonidentity
 one-letter words :math:`g \in G_\alpha`. From this viewpoint the empty word is the common identity
 element of all the subgroups :math:`G_\alpha`, which are otherwise disjoint. A consequence
-of associativity is that anay product :math:`g_1 \codts g_m` of elements :math:`g_i` in the groups :math:`G_\alpha` has a 
+of associativity is that anay product :math:`g_1 \cdots g_m` of elements :math:`g_i` in the groups :math:`G_\alpha` has a 
 unique reduced form, the element of :math:`{\Large *}_\alpha G_\alpha` obtained by performing the multiplications
 in any order. Any sequence of reduction operations on an unreduced product
 :math:`g_1 \cdots g_m`, ombining adjacent letters :math:`g_i` and :math:`g_{i+1}` that lie in the same :math:`G_\alpha` or canceling
