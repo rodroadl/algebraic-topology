@@ -107,6 +107,8 @@ having the subspaces :math:`X` and :math:`Y` as subcomplexes, with the remaining
 product cells of :math:`X \times Y \times (0,1)`. As usual with products, the CW topology on :math:`X * Y` may 
 be finer than the quotient of the product topology on :math:`X \times Y \times I`.
 
+.. _Wedge Sum:
+
 .. container:: no-indent-no-margin
 
     **Wedge Sum**. This is a rather trivial but still quite useful operation. Given spaces :math:`X` and 

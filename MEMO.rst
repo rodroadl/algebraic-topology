@@ -1,0 +1,4 @@
+- 510 pages left
+- 20 minutes per page ... 3 pages per hour
+- 170 hours
+- about 6 pages per day
