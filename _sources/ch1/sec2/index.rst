@@ -49,6 +49,7 @@ construction of free products in some detail.
     free-products-of-groups
     the-van-kampen-theorem
     applications-to-cell-complexes
+    exercises
 
 .. |indent| raw:: html
 
