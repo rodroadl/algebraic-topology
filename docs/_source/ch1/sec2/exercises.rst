@@ -151,7 +151,68 @@ that the natural map :math:`L(X) \rightarrow X` induces an isomorphism :math:`\p
     mapping cone defined in :ref:`Chapter 0 <Chapter 0>`. Let :math:`X` be the subspace of :math:`\mathbb{R}` consisting of the 
     sequence :math:`1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\cdots` together with its limit point :Math:`0`.
 
-    |indent| (a) 
+    |indent| (a)    For the suspension :math:`SX`, show that :math:`\pi_1(SX)` is free on a countably infinite set of
+                    generators, and deduce that :math:`\pi_1(SX)` is countable. In contrast to this, the reduced
+                    suspension :math:`\sigma X`, obtained from :math:`SX` by collapsing the segment :math:`\{0\} \times I` to a point, is
+                    the shrinking wedge of circles in :ref:`Example 1.25`, with an uncountable fundamental 
+                    group.
+             (b)    Let :math:`C` be the mapping cone of the quotient map :math:`SX \rightarrow \sigma X`. Show that :math:`\pi_1(C)` is
+                    uncountable by constructing a homomorphism from :math:`\pi_1(C)` onto :math:`\prod_\infty \mathbb{Z} / \bigoplus _\infty \mathbb{Z}`. Note
+                    that :math:`C` is the reduced suspension of the cone :math:`CX`. Thus the reduced suspension
+                    of a contractible space need not be contractible, unlike the unreduced suspension.
+
+.. _Excercise 1-2-19:
+
+**19.** Show that the subspace of :math:`\mathbb{R}^3` that is the union of the spheres of radius :math:`\frac{1}{n}` and
+center :math:`(\frac{1}{n},0,0)` for :math:`n=1,2,\cdots` is simply-connected.
+
+.. _Exercise 1-2-20:
+
+**20.** Let :math:`X` be the subspace of :math:`\mathbb{R}^2` that is the union of the circles :math:`C_n` of radius :math:`n` and
+center :math:`(n,0)` for :math:`n=1,2,\cdots`. Show that :math:`\pi_1(X)` is the free group :math:`{\Large *}_n\pi_1(C_n)`, the same
+as for the infinite wedge sum :math:`\bigvee _\infty S^1`. Show that :math:`X` and :math:`\bigvee _\infty S^1` are in fact homotopy
+equivalent, but not homeomorphic.
+
+.. _Exercise 1-2-21:
+
+**21.** Show that the join :math:`X * Y` of two nonempty spaces :math:`X` and :math:`Y` is simply-connected 
+if :math:`X` is path-connected.
+
+.. _Exercise 1-2-22:
+
+.. container::
+
+    **22.** In this exercise we desribe an algorithm for computing a presentation of the
+    fundamental group of the complement of a smooth or piecewise linear knot :math:`K` in :math:`\mathbb{R}^3`,
+    called the *Wirtinger presentation*. To begin, we position the knot to lie almost flat on
+    a table, so that :math:`K` consists of finitely many disjoint arcs :math:`\alpha_i` where it intersects the 
+    table top together with finitely many disjoint arcs :math:`\beta_l` where :math:`K` crosses over itself.
+    The configuration at such crossing is shown in the first figure below.
+
+    .. image:: fig/ex-1-2-22.png
+        :align: center:
+        :width: 100%
+    
+    We build a 
+    :math:`2`-dimensional complex :math:`X` that is a deformation retract of :math:`\mathbb{R}^3-K` by the following
+    three steps. First, start with the rectangle :math:`T` formed by the table top. Next, just above
+    each arc :math:`\alpha_i` place a long, thin rectangular strip :math:`R_i`, curved to run parallel to :math:`\alpha_i` along
+    the full length of :math:`\alpha_i` and arched so that the two long edges of :math:`R_i` are identified with
+    points of :math:`T`, as in the second figure. Any arcs :math:`\beta_l` that cross over :math:`\alpha_i` are positioned
+    to lie in :math:`R_i`. Finally, over each arc :math:`\beta_l` put a square :math:`S_l`, bent downward along its four
+    edges so that these edges are identified with points of three strips :math:`R_i,\quad R_j`, and :math:`R_k` as 
+    in the fthird figure; namely, two opposite edges of :math:`S_l` are identified with short edges 
+    of :math:`R_j` and :math:`R_k` and the other two opposite edges of :math:`S_l` are identified with two arcs
+    crossing the interior of :math:`R_i`. The knot :math:`K` is now a subspace of :math:`X`, but after we lift :math:`K` up
+    slightly into the complement of :math:`X`, it becomes evident that :math:`X` is a deformation retract of 
+    :math:`\mathbb{R}^3-K`.
+
+    |indent| (a)    Assuming this bit of geometry, show that :math:`\pi_1(\mathbb{R}^3-K)` has a presentation with one
+                    generator :math:`x_i` for each strip :math:`R_i` and one relation of the form :math:`x_i x_j x_i^{-1} = x_k` for
+                    each square :math:`S_l`, where the indices are as in the figures above. [To get the correct
+                    signs it is helpful to use an orientation of :math:`K`.]
+             (b)    Use this presentation to show that the abelianization of :math:`\pi_1(\mathbb{R}^3-K)` is :math:`\mathbb{Z}`.
+
 
 .. |indent| raw:: html
 
