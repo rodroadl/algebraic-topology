@@ -440,7 +440,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -456,6 +458,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-covering-spaces-by-permutations">Representing Covering Spaces by Permutations</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -467,7 +477,279 @@ document.write(`
                   
   <section id="the-classification-of-covering-spaces">
 <h1>The Classification of Covering Spaces<a class="headerlink" href="#the-classification-of-covering-spaces" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<p><span style="margin-left: 2em"> We consider next the problem of classifying all the different covering spaces of
+afixed space <span class="math notranslate nohighlight">\(X\)</span>. Since the whole chapter is about paths, it should not be surprising
+that we will restrict attention to spaces <span class="math notranslate nohighlight">\(X\)</span> that are at least locally path-connected.
+Path-components of <span class="math notranslate nohighlight">\(X\)</span> are then the same as components, and for the purpose of classifying
+the covering spaces of <span class="math notranslate nohighlight">\(X\)</span> there is no loss in assuming that <span class="math notranslate nohighlight">\(X\)</span> is connected,
+or equivalently, path-connected. Local path-connectedness is inherited by covering
+spaces, so connected covering spaces of <span class="math notranslate nohighlight">\(X\)</span> are the same as path-connected covering
+spaces. The main thrust of the classification will be a correspondence between connected
+covering spaces of <span class="math notranslate nohighlight">\(X\)</span> and subgroups of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>. This is often called the Galois
+correspondence because of its surprising similarity to another basic correspondence
+in the purely algebraic subject of Galois theory. We will also describe a different
+method of classification that includes disconnected covering spaces as well.</p>
+<p><span style="margin-left: 2em"> The Galois correspondence arises from the function that assigns to each covering
+space <span class="math notranslate nohighlight">\(p:(\tilde{X}, \tilde{x}_0)\)</span> the subgroup <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X}, \tilde{x}_0))\)</span> of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>. First we
+consider whether this function is surjective. That is, we ask whether every subgroup of
+<span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> is realized as <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0))\)</span> for some covering space <span class="math notranslate nohighlight">\(p:(\tilde{X},\tilde{x}_0) \rihgtarrow (X, x_0)\)</span>.
+In particular we can ask whether the trivial subgroup is realized. Since <span class="math notranslate nohighlight">\(p_*\)</span> is always
+injective, this amounts to asking whether <span class="math notranslate nohighlight">\(X\)</span> has a simply-connected covering space.
+Answering this will take some work.</p>
+<p><span style="margin-left: 2em"> A necessary condition for <span class="math notranslate nohighlight">\(X\)</span> to have a simply-connected covering space is the
+following: Each point <span class="math notranslate nohighlight">\(x \in X\)</span> has a neighborhood <span class="math notranslate nohighlight">\(U\)</span> such that the inclusion-induced
+map <span class="math notranslate nohighlight">\(\pi_1(U,x) \rightarrow \pi_1(X,x)\)</span> is trivial; one says <span class="math notranslate nohighlight">\(X\)</span> is <strong>semilocally simply-connected</strong> if
+this holds. To see the necessity of this condition, suppose <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> is a covering
+space with <span class="math notranslate nohighlight">\(\tilde{X}\)</span> simply-connected. Every point :math:` in X` has a neighborhood <span class="math notranslate nohighlight">\(U\)</span> having a
+lift <span class="math notranslate nohighlight">\(\tilde{U} \subset \tilde{X}\)</span> projecting homeomorphically to <span class="math notranslate nohighlight">\(U\)</span> by <span class="math notranslate nohighlight">\(p\)</span>. Each loop in <span class="math notranslate nohighlight">\(U\)</span> lifts to a loop
+in <span class="math notranslate nohighlight">\(\tilde{U}\)</span>, and the lifted loop is nullhomotopic in <span class="math notranslate nohighlight">\(\tilde{X}\)</span> since <span class="math notranslate nohighlight">\(\pi_1(\tilde{X})=0\)</span>. So, composing this
+nullhomotopy with <span class="math notranslate nohighlight">\(p\)</span>, the original loop in <span class="math notranslate nohighlight">\(U\)</span> is nullhomotopic in <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p><span style="margin-left: 2em"> A locally simply-connected space is certainly semilocally simply-connected. For
+example, CW complexes have the much stronger property of being locally contractible,
+as we show in the <span class="xref std std-ref">Appendix</span>. An example of a space that is not semilocally simply-connected
+is the shrinking wedge of circles, the subspace <span class="math notranslate nohighlight">\(X \subset \mathbb{R}^2\)</span> consisting of the
+circles of radius <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> centered at the point <span class="math notranslate nohighlight">\((\frac{1}{n},0)\)</span> for <span class="math notranslate nohighlight">\(n=1,2, \cdots\)</span>, introduced in
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/the-van-kampen-theorem.html#example-1-25"><span class="std std-ref">Example 1.25</span></a>. On the other hand, if we take the cone <span class="math notranslate nohighlight">\(CX=(X \times I ) / (X \times \{0\})\)</span> on the
+shrinking wedge of circles, this is semilocally simply-connected since it is contractible, but
+it is not locally simply-connected.</p>
+<p><span style="margin-left: 2em"> We shall now show how to construct a simply-connected covering space of <span class="math notranslate nohighlight">\(X\)</span> if
+<span class="math notranslate nohighlight">\(X\)</span> is paht-connected, locally path-connected, and semilocally simply-connected. To
+motivate the construction, suppose <span class="math notranslate nohighlight">\(p:(\tilde{X}, \tidle{x}_0) \rightarrow (X,x_0)\)</span> is a simply-connected covering
+space. Each point <span class="math notranslate nohighlight">\(\tilded{x} \in \tilde{X}\)</span> can then be joined to <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> by a unique homotopy class of
+paths, by <span class="xref std std-ref">Proposition 1.6</span>, so we can view poitns of <span class="math notranslate nohighlight">\(\tilde{X}\)</span> as homotopy classes of paths
+starting at <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span>. The advantage of this is that, by the homotopy lifting property, homotopy
+classes of paths in <span class="math notranslate nohighlight">\(\tilde{X}\)</span> starting at <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> are the same as homotopy classes of paths
+in <span class="math notranslate nohighlight">\(X\)</span> starting at <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span>. This gives a way of describing <span class="math notranslate nohighlight">\(\tilde{X}\)</span> purely in terms of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p><span style="margin-left: 2em"> Given a path-connected, locally path-connected, semilocally simply-connected
+space <span class="math notranslate nohighlight">\(X\)</span> with a basepoint <span class="math notranslate nohighlight">\(x_0 \in X\)</span>, we are therefore led to define</p>
+<div class="math notranslate nohighlight">
+\[\tilde{X} = \{ [\gamma] | \gamma \text{ is a path in } X \text{ starting at } x_0\}\]</div>
+<p>where, as usual, <span class="math notranslate nohighlight">\([\gamma]\)</span> denotes the homotopy class of <span class="math notranslate nohighlight">\(\gamma\)</span> with respect to homotopies
+that fix the endpoints <span class="math notranslate nohighlight">\(\gamma(0)\)</span> and <span class="math notranslate nohighlight">\(\gamma(1)\)</span>. The function <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> sending <span class="math notranslate nohighlight">\([\gamma]\)</span> to <span class="math notranslate nohighlight">\(\gamma (1)\)</span> is
+then well-defined. Since <span class="math notranslate nohighlight">\(X\)</span> is path-connected, the endpoint <span class="math notranslate nohighlight">\(\gamma(1)\)</span> can be nay point of
+<span class="math notranslate nohighlight">\(X\)</span>, so <span class="math notranslate nohighlight">\(p\)</span> is surjective.</p>
+<p><span style="margin-left: 2em"> Before we define a topology on <span class="math notranslate nohighlight">\(\tilde{X}\)</span> we make a few preliminary observations. Let
+<span class="math notranslate nohighlight">\(\mathcal{U}\)</span> be hte collection of path-connected open sets <span class="math notranslate nohighlight">\(U \subset X\)</span> such that <span class="math notranslate nohighlight">\(\pi_1(U) \rightarrow \pi_1(X)\)</span> is
+trivial. Note that if the map <span class="math notranslate nohighlight">\(\pi_1(U) \rightarrow \pi_1(x)\)</span> is trivial for one choice of basepoint in <span class="math notranslate nohighlight">\(U\)</span>,
+it is trivial for all choices of basepoint since <span class="math notranslate nohighlight">\(U\)</span> is path-connected. A path-connected
+open subset <span class="math notranslate nohighlight">\(V \subset U \in \mathcal{U}\)</span> is also in <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> since the composition <span class="math notranslate nohighlight">\(\pi_1(V) \rightarrow \pi_1(U) \rightarrow \pi_1(X)\)</span>
+will also be trivial. It follows that <span class="math notranslate nohighlight">\(\mathcal{U}\)</span> is basis for the topology on <span class="math notranslate nohighlight">\(X\)</span> if <span class="math notranslate nohighlight">\(X\)</span> is locally
+path-connected and semilocally simply-connected.</p>
+<p><span style="margin-left: 2em"> given a set <span class="math notranslate nohighlight">\(U \in \mathcal{U}\)</span> and a path <span class="math notranslate nohighlight">\(\gamma\)</span> in <span class="math notranslate nohighlight">\(X\)</span> from <span class="math notranslate nohighlight">\(x_0\)</span> to a point in <span class="math notranslate nohighlight">\(U\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[U_{[\gamma]}=\{[\gamma \cdot \eta] | \eta \text{ is a path in } U \text{ with } \eta(0)=\gamma(1) \}\]</div>
+<p>As the notation indicates, <span class="math notranslate nohighlight">\(U_{[\gamma]}\)</span> depends only on the homotopy class <span class="math notranslate nohighlight">\([\gamma]\)</span>. Observe
+that <span class="math notranslate nohighlight">\(p:U_{[\gamma]} \rightarrow U\)</span> is surjective since <span class="math notranslate nohighlight">\(U\)</span> is path-connected and injective since different
+choices of <span class="math notranslate nohighlight">\(\eta\)</span> joining <span class="math notranslate nohighlight">\(\gamma(1)\)</span> to a fixed <span class="math notranslate nohighlight">\(x \in U\)</span> are all homotopic in <span class="math notranslate nohighlight">\(X\)</span>, the map
+<span class="math notranslate nohighlight">\(\pi_1(U) \rightarrow \pi_1(X)\)</span> being trivial. Another property is</p>
+<dl class="simple">
+<dt>(*) <span class="math notranslate nohighlight">\(U_{[\gamma]} = U_{[\gamma']}\)</span> if <span class="math notranslate nohighlight">\([\gamma'] \in U_{[\gamma]}\)</span>. For if <span class="math notranslate nohighlight">\(\gamma'=\gamma \cdot \eta\)</span> then elements of <span class="math notranslate nohighlight">\(U_{[\gamma']}\)</span> have the</dt><dd><p>form <span class="math notranslate nohighlight">\([\gamma \cdot \eta \cdot \mu]\)</span> and hence lie in <span class="math notranslate nohighlight">\(U_{[\gamma]}\)</span>, while elements of <span class="math notranslate nohighlight">\(U_{[\gamma]}\)</span> have the form
+<span class="math notranslate nohighlight">\([\gamma \cdot \mu] = [\gamma \cdot \eta \cdot \bar{\eta} \cdot \mu] = [\gamma' \cdot \bar{\eta} \cdot \mu]\)</span> and hence lie in <span class="math notranslate nohighlight">\(U_{[\gamma']}\)</span>.</p>
+</dd>
+</dl>
+<p>This can be used to show that the sets <span class="math notranslate nohighlight">\(U_{[\gamma]}\)</span> form a basis for a topology on <span class="math notranslate nohighlight">\(\tilde{X}\)</span>. For if
+we are given two such sets <span class="math notranslate nohighlight">\(U_{[\gamma]},\quad V_{[\gamma']}\)</span> and an element <span class="math notranslate nohighlight">\([\gamma''] \in U_{[\gamma]} \cap V_{[\gamma']}\)</span>, we have
+<span class="math notranslate nohighlight">\(U_{[\gamma]}=U_{[\gamma'']}\)</span> and <span class="math notranslate nohighlight">\(V_{[\gamma']}=V_{[\gamma]''}\)</span> by (*). So if <span class="math notranslate nohighlight">\(W \in \mathcal{U}\)</span> is contained in <span class="math notranslate nohighlight">\(U \cap V\)</span> and contains
+<span class="math notranslate nohighlight">\(\gamma''(1)\)</span> then <span class="math notranslate nohighlight">\(W_{[\gamma'']} \subset U_{[\gamma'']} \cap V_{[\gamma'']}\)</span> and <span class="math notranslate nohighlight">\([\gamma''] \in W_{[\gamma'']}\)</span>.</p>
+<p><span style="margin-left: 2em"> The bijection <span class="math notranslate nohighlight">\(p:U_{[\gamma]} \rightarrow U\)</span> is a homeomorphism since it gives a bijection between
+the subsets <span class="math notranslate nohighlight">\(V_{[\gamma']} \subset U_{[\gamma]}\)</span> and the sets <span class="math notranslate nohighlight">\(V \in \mathcal{U}\)</span> contained in <span class="math notranslate nohighlight">\(U\)</span>. Namely, in one direction
+we have <span class="math notranslate nohighlight">\(p(V_{[\gamma']})=V\)</span> and in the other direction we have <span class="math notranslate nohighlight">\(p^{-1}(V) \cap U_{[\gamma]} =V_{[\gamma']}\)</span> for
+any <span class="math notranslate nohighlight">\([\gamma'] \in U_{[\gamma]}\)</span> with endpoint in <span class="math notranslate nohighlight">\(V\)</span>, since <span class="math notranslate nohighlight">\(V_{[\gamma']} \subset U_{[\gamma']}=U_{[\gamma]}\)</span> and <span class="math notranslate nohighlight">\(V_{[\gamma']}\)</span> maps onto <span class="math notranslate nohighlight">\(V\)</span>
+by the bijection <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<p><span style="margin-left: 2em"> The preceding paragraph implies that <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> is continuous. We can also
+deduce that this is a covering space sincefor fixed <span class="math notranslate nohighlight">\(U \in \mathcal{U}\)</span>, the sets <span class="math notranslate nohighlight">\(U_{[\gamma]}\)</span> for varying <span class="math notranslate nohighlight">\([\gamma]\)</span>
+partition <span class="math notranslate nohighlight">\(p^{-1}(U)\)</span> because if <span class="math notranslate nohighlight">\([\gamma''] \in U_{[\gamma]} \cap U_{[\gamma']}\)</span> then <span class="math notranslate nohighlight">\(U_{[\gamma]}=U_{[\gamma'']}=U_{[\gamma']}\)</span> by (*).</p>
+<p><span style="margin-left: 2em"> It remains only to show that <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is simply-connected. For a point <span class="math notranslate nohighlight">\([\gamma] \in \tilde{X}\)</span> let <span class="math notranslate nohighlight">\(\gamma_t\)</span>
+be the path in <span class="math notranslate nohighlight">\(X\)</span> that equals <span class="math notranslate nohighlight">\(\gamma\)</span> on <span class="math notranslate nohighlight">\([0,t]\)</span> and is stationary at <span class="math notranslate nohighlight">\(\gamma(t)\)</span> on <span class="math notranslate nohighlight">\([t,1]\)</span>. Then the
+function <span class="math notranslate nohighlight">\(t\mapsto [\gamma_t]\)</span> is a path in <span class="math notranslate nohighlight">\(\tilde{X}`lifting :math:\)</span>gamma` that starts at <span class="math notranslate nohighlight">\([x_0]\)</span>, the homotopy class of
+the constant path at <span class="math notranslate nohighlight">\(x_0\)</span>, and ends at <span class="math notranslate nohighlight">\([\gamma]\)</span>. Since <span class="math notranslate nohighlight">\([\gamma]\)</span> was an arbitrary point in <span class="math notranslate nohighlight">\(\tilde{X}\)</span>, this
+shows that <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is path-connected. To show that <span class="math notranslate nohighlight">\(\pi_1(\tilde{X}, [x_0])=0\)</span> it suffices to show
+that the image of this group udner <span class="math notranslate nohighlight">\(p_*\)</span> are represented by loops <span class="math notranslate nohighlight">\(\gamma\)</span> at <span class="math notranslate nohighlight">\(x_0\)</span> that lift to loops in <span class="math notranslate nohighlight">\(\tilde{X}\)</span> at <span class="math notranslate nohighlight">\([x_0]\)</span>. We have
+observed that the path <span class="math notranslate nohighlight">\(t \mapsto [\gamma_t]\)</span> lifts <span class="math notranslate nohighlight">\(\gamma\)</span> starting at <span class="math notranslate nohighlight">\([x_0]\)</span>, and for this lifted path to
+be a loop means that <span class="math notranslate nohighlight">\([\gamma_1]=[x_0]\)</span>. Since <span class="math notranslate nohighlight">\(\gamma_1 = \gamma\)</span>, this says that <span class="math notranslate nohighlight">\([\gamma]=[x_0]\)</span>, so <span class="math notranslate nohighlight">\(\gamma\)</span> is
+nullhomotopic and the image of <span class="math notranslate nohighlight">\(p_*\)</span> is trivial.</p>
+<p><span style="margin-left: 2em"> This completes the construction of a simply-connected covering space <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><span style="margin-left: 2em"> In concrete cases one usually constructs a simply-connected covering space by
+more direct methods. For example, suppose <span class="math notranslate nohighlight">\(X\)</span> is the union of subspaces <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> for
+which simply-connected covering spaces <span class="math notranslate nohighlight">\(\tilde{A} \rightarrow A\)</span> and <span class="math notranslate nohighlight">\(\tilde{B} \rightarrow B\)</span> are already known. Then
+one can attempt to build a simply-connected covering space <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> by assembling
+copies of <span class="math notranslate nohighlight">\(\tilde{A}\)</span> and <span class="math notranslate nohighlight">\(\tilde{B}\)</span>. For example, for <span class="math notranslate nohighlight">\(X=S^1 \vee S^1\)</span>, if we take <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> to be the two
+circles, then <span class="math notranslate nohighlight">\(\tilde{A}\)</span> and <span class="math notranslate nohighlight">\(\tilde{B}\)</span> are each <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, and we can build the simply-connected cover <span class="math notranslate nohighlight">\(\tilde{X}\)</span>
+described earlier in this section by glueing together infinitely many copies of <span class="math notranslate nohighlight">\(\tilde{A}\)</span> and
+<span class="math notranslate nohighlight">\(\tilde{B}\)</span>, the horizontal and vertical lines in <span class="math notranslate nohighlight">\(\tilde{X}\)</span>. Here is another illustration of this method:
+|
+.. _Example 1.35:</p>
+<div class="docutils container">
+<p><strong>Example 1.35.</strong> For integers <span class="math notranslate nohighlight">\(m,n \geq 2\)</span>, let <span class="math notranslate nohighlight">\(X_{m,n}\)</span> be the quotient space of a cylinder
+<span class="math notranslate nohighlight">\(S^1 \times I\)</span> under the identifications <span class="math notranslate nohighlight">\((z,0) ~ (e^{2 \pi i / m}z,0)\)</span> and <span class="math notranslate nohighlight">\((z,1) ~ (e^{2\pi i /n}z, 1)\)</span>. Let
+<span class="math notranslate nohighlight">\(A \subset X\)</span> and <span class="math notranslate nohighlight">\(B \subset X\)</span> be the quotients of <span class="math notranslate nohighlight">\(S^1 \times [0, \frac{1}{2}]\)</span> and <span class="math notranslate nohighlight">\(S^1 \times [\frac{1}{2},1]\)</span>, so <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are
+the mapping cylinders of <span class="math notranslate nohighlight">\(z \mapsto z^m\)</span> and <span class="math notranslate nohighlight">\(z \mapsto z^n\)</span>, with <span class="math notranslate nohighlight">\(A \cap B=S^1\)</span>. The simplest case
+is <span class="math notranslate nohighlight">\(m=n=2\)</span>, when <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are Möbius bands and <span class="math notranslate nohighlight">\(X_{2,2}\)</span> is the Klein bottle. We
+encountered the complexes <span class="math notranslate nohighlight">\(X_{m,n}\)</span> previously in alalyzing orus knot complements in
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/the-van-kampen-theorem.html#example-1-24"><span class="std std-ref">Example 1.24</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/eg-1-35-a.png"><img alt="../../_images/eg-1-35-a.png" class="align-right" src="../../_images/eg-1-35-a.png" style="width: 20%;" /></a>
+<p><span style="margin-left: 2em"> The figure for <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/applications-to-cell-complexes.html#example-1-29"><span class="std std-ref">Example 1.29</span></a> at the end of preceding section
+shows what <span class="math notranslate nohighlight">\(A\)</span> looks like in the typical case <span class="math notranslate nohighlight">\(m=3\)</span>. We have <span class="math notranslate nohighlight">\(\pi_1(A) \approx \mathbb{Z}\)</span>,
+and the universal cover <span class="math notranslate nohighlight">\(\tilde{A}\)</span> is homeomorphic to a product <span class="math notranslate nohighlight">\(C_m \times \mathbb{R}\)</span> where
+<span class="math notranslate nohighlight">\(C_m\)</span> is the graph that is a cone on <span class="math notranslate nohighlight">\(m\)</span> points, as shown in the figure to
+the right .The situation for <span class="math notranslate nohighlight">\(B\)</span> is similar, and <span class="math notranslate nohighlight">\(\tilde{B}\)</span> is hoemomorphic to
+<span class="math notranslate nohighlight">\(C_n \times \mathbb{R}\)</span>. Now we attempt to build the universal cover <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> from copies
+of <span class="math notranslate nohighlight">\(\tilde{A}\)</span> and <span class="math notranslate nohighlight">\(\tilde{B}\)</span>. Start with a copy of <span class="math notranslate nohighlight">\(\tilde{A}\)</span>. Its boundary, the outer edges of
+its fins, consists of <span class="math notranslate nohighlight">\(m\)</span> copies of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Along each of these <span class="math notranslate nohighlight">\(m\)</span> boundary
+lines we attach a copy of <span class="math notranslate nohighlight">\(\tilde{B}\)</span>. Each of these copies of <span class="math notranslate nohighlight">\(\tilde{B}\)</span> has one of its boundary lines
+attached to the initial copy of <span class="math notranslate nohighlight">\(\tilde{A}\)</span>, leaving <span class="math notranslate nohighlight">\(n-1\)</span> boundary lines free, and we attach a
+new copy of <span class="math notranslate nohighlight">\(\tilde{A}\)</span> to each of these free boundary lines. Thus we now have <span class="math notranslate nohighlight">\(m(n-1)+1\)</span>
+copies of <span class="math notranslate nohighlight">\(\tilde{A}\)</span>. Each of the newly attached copies of <span class="math notranslate nohighlight">\(\tilde{A}\)</span> has <span class="math notranslate nohighlight">\(m-1\)</span> free boundary lines,
+and to each of these lines we attach a new copy of <span class="math notranslate nohighlight">\(\tilde{B}\)</span>. The process is now repeated ad
+infinitum in the evident way. Let <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> be the resulting space.</p>
+<a class="reference internal image-reference" href="../../_images/eg-1-35-b.png"><img alt="../../_images/eg-1-35-b.png" class="align-right" src="../../_images/eg-1-35-b.png" style="width: 30%;" /></a>
+<p><span style="margin-left: 2em"> The product structures <span class="math notranslate nohighlight">\(\tilde{A} = C_m \times \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(\tilde{B}=C_n \times \mathbb{R}\)</span>
+gives <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> the structure of a product <span class="math notranslate nohighlight">\(T_{m,n} \times \mathbb{R}\)</span> where <span class="math notranslate nohighlight">\(T_{m,n}\)</span>
+is an infinite graph constructed by an inductive scheme
+just like the construction of <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span>. Thus <span class="math notranslate nohighlight">\(T_{m,n}\)</span> is the union
+of a sequence of finite subgraphs, each obtained from the
+preceding by attaching new copies of <span class="math notranslate nohighlight">\(C_m\)</span> or <span class="math notranslate nohighlight">\(C_n\)</span>. Each
+of these finite subgraphs deformation retracts onto the
+preceding one. The infinite concatenation of these deformation
+retractions, with the <span class="math notranslate nohighlight">\(k^{th}\)</span> graph deformation retracting to the previous one
+during the time interval <span class="math notranslate nohighlight">\([\frac{1}{2^k}, \frac{1}{2^{k-1}}]\)</span>, gives a deformation retraction of <span class="math notranslate nohighlight">\(T_{m,n}\)</span> onto
+the initial stage <span class="math notranslate nohighlight">\(C_m\)</span>. Since <span class="math notranslate nohighlight">\(C_m\)</span> is contractible, this means <span class="math notranslate nohighlight">\(T_{m,n}\)</span> is contractible, hence
+also <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span>, which is the product <span class="math notranslate nohighlight">\(T_{m,n} \times \mathbb{R}\)</span>. In particular, <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> is simply-connected.</p>
+<a class="reference internal image-reference" href="ch1/sec3/fig/eg-1-35-c.png"><img alt="ch1/sec3/fig/eg-1-35-c.png" class="align-right" src="ch1/sec3/fig/eg-1-35-c.png" style="width: 25%;" /></a>
+<p><span style="margin-left: 2em"> The map that projects each copy of <span class="math notranslate nohighlight">\(\tilde{A}\)</span> in <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> to <span class="math notranslate nohighlight">\(A\)</span> and
+each copy of <span class="math notranslate nohighlight">\(\tilde{B}\)</span> to <span class="math notranslate nohighlight">\(B\)</span> is a covering space. To define this map
+precisely, choose a point <span class="math notranslate nohighlight">\(x_0 \in S^1\)</span>, and then the image of the
+line segment <span class="math notranslate nohighlight">\(\{x_0\} \times I\)</span> in <span class="math notranslate nohighlight">\(X_{m,n}\)</span> meets <span class="math notranslate nohighlight">\(A\)</span> in a line segment whose
+preimage in <span class="math notranslate nohighlight">\(\tilde{A}\)</span> consists of an infinite number of line segments,
+appearing in the earlier figure as the horizontal segments spiraling
+around the central vertical axis. The picture in <span class="math notranslate nohighlight">\(\tilde{B}\)</span> is
+similar, and when we glue together all the copies of <span class="math notranslate nohighlight">\(\tilde{A}\)</span> and <span class="math notranslate nohighlight">\(\tilde{B}\)</span>
+to form <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span>, we do so in such a way that these horizontal segments always line up
+exactly. This decomposes <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> into infinitely many rectangles, each formed from a
+rectangle in an <span class="math notranslate nohighlight">\(\tilde{A}\)</span> and a rectangle in a <span class="math notranslate nohighlight">\(\tilde{B}\)</span>. The covering projection <span class="math notranslate nohighlight">\(\tilde{X}_{m,n} \rightarrow X_{m,n}\)</span> is the
+quotient map that identifies all these rectangles.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><span style="margin-left: 2em"> Now we return to the general theory. The hypotheses for constructing a simply-connected
+covering space of <span class="math notranslate nohighlight">\(X\)</span> in fact suffice for constructing covering spaces realizing
+arbitrary subgroups of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>:</p>
+<div class="docutils container">
+<blockquote>
+<div><p><strong>Proposition 1.36.</strong> <em>Suppose</em> <span class="math notranslate nohighlight">\(X\)</span> <em>is path-connected, locally path-connected, and semilocally
+simply-connected. Then for every subgroup</em> <span class="math notranslate nohighlight">\(H \subset \pi_1(X,x_0)\)</span> <em>there is a covering
+space</em> <span class="math notranslate nohighlight">\(p:X_H \rightarrow X\)</span> <em>such that</em> <span class="math notranslate nohighlight">\(p_*(\pi_1(X_H,\tilde{x}_0))= H\)</span> <em>for a suitably chosen basepoint</em>
+<span class="math notranslate nohighlight">\(\tilde{x}_0 \in X_H\)</span>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> For points <span class="math notranslate nohighlight">\([\gamma],\quad [\gamma']\)</span> in the simply-connected covering space <span class="math notranslate nohighlight">\(\tilde{X}\)</span> constructed
+above, define <span class="math notranslate nohighlight">\([\gamma] ~ [\gamma']\)</span> to mean <span class="math notranslate nohighlight">\(\gamma(1) =\gamma'(1)\)</span> and <span class="math notranslate nohighlight">\([\gamma \cdot \bar{\gamma'} \in H]\)</span>. It is easy to see that
+this is an equivalence relation since <span class="math notranslate nohighlight">\(H\)</span> is a subgroup: it is reflexive since <span class="math notranslate nohighlight">\(H\)</span> contains
+the identity element, symmetric since <span class="math notranslate nohighlight">\(H\)</span> is closed under inverse, and transitive since
+<span class="math notranslate nohighlight">\(H\)</span> is closed under multiplication. Let <span class="math notranslate nohighlight">\(X_H\)</span> be the quotient space of <span class="math notranslate nohighlight">\(\tilde{X}\)</span> obtained by
+identifying <span class="math notranslate nohighlight">\([\gamma]\)</span> with <span class="math notranslate nohighlight">\([\gamma']\)</span> if <span class="math notranslate nohighlight">\([\gamma] ~ [\gamma']\)</span>. Note that if <span class="math notranslate nohighlight">\(\gamma(1)=\gamma'(1)\)</span>, then <span class="math notranslate nohighlight">\([\gamma] ~ [\gamma']\)</span>
+iff <span class="math notranslate nohighlight">\([\gamma \cdot \eta] ~ [\gamma' \cdot \eta]\)</span>. This means that if any two points in basic neighborhoods <span class="math notranslate nohighlight">\(U_{[\gamma]}\)</span>
+and <span class="math notranslate nohighlight">\(U_{[\gamma']}\)</span> are identified in <span class="math notranslate nohighlight">\(X_H\)</span> then the whole neighborhoods are identified. Hence
+the natural projection <span class="math notranslate nohighlight">\(X_H \rightarrow X\)</span> induced by <span class="math notranslate nohighlight">\([\gamma] \mapsto \gamma(1)\)</span> is a covering space.</p>
+<p><span style="margin-left: 2em"> If we choose for the basepoint <span class="math notranslate nohighlight">\(\tilde{x}_0 \in X_H\)</span> the equivalence class of the constant path
+<span class="math notranslate nohighlight">\(c\)</span> at <span class="math notranslate nohighlight">\(x_0\)</span>, then the image of <span class="math notranslate nohighlight">\(p_*:\pi_1(X_H, \tilde{x}_0) \rightarrow \pi_1(X,x_0)\)</span> is exactly <span class="math notranslate nohighlight">\(H\)</span>. This is because
+for a loop <span class="math notranslate nohighlight">\(\gamma\)</span> in <span class="math notranslate nohighlight">\(X\)</span> based at <span class="math notranslate nohighlight">\(x_0\)</span>, its lift to <span class="math notranslate nohighlight">\(\tilde{X}\)</span> starting at <span class="math notranslate nohighlight">\([c]\)</span> ends at <span class="math notranslate nohighlight">\([\gamma]\)</span>, so the image
+of this lifted path in <span class="math notranslate nohighlight">\(X_H\)</span> is a loop iff <span class="math notranslate nohighlight">\([\gamma] ~ [c]\)</span>, or equivalently, <span class="math notranslate nohighlight">\([\gamma] \in H\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><span style="margin-left: 2em"> Having taken care of the existence of covering spaces of <span class="math notranslate nohighlight">\(X\)</span> corresponding to all
+subgroups of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>, we turn now to the question of uniqueness. More specifically,
+we are interested in uniqueness up to isomorphism, where an <strong>isomorphism</strong> between
+covering spaces <span class="math notranslate nohighlight">\(p_1:\tilde{X}_1 \rightarrow X\)</span> and <span class="math notranslate nohighlight">\(p_2: \tilde{X}_2 \rightarrow X\)</span> is a homeomorphism <span class="math notranslate nohighlight">\(\tilde{X}_1 \rightarrow \tilde{X}_2\)</span> such
+that <span class="math notranslate nohighlight">\(p_1=p_2f\)</span>. This condition means exactly that <span class="math notranslate nohighlight">\(f\)</span> preserves the covering space
+structures, taking <span class="math notranslate nohighlight">\(p^{-1}_1(x)\)</span> to <span class="math notranslate nohighlight">\(p^{-1}_2(x)\)</span> for each <span class="math notranslate nohighlight">\(x \in X\)</span>. The inverse <span class="math notranslate nohighlight">\(f^{-1}\)</span> is then also an
+isomorphism, and the composition of two isomorphisms is an isomorphism, so we
+ahve an equivalence relation.</p>
+<div class="docutils container" id="proposition-1-37">
+<blockquote>
+<div><p><strong>Proposition 1.37.</strong> <em>If</em> <span class="math notranslate nohighlight">\(X\)</span> <em>is path-connected and locally path-connected, then two
+path-connected covering spaces</em> <span class="math notranslate nohighlight">\(p_1:\tilde{X}_1 \rightarrow X\)</span> <em>and</em> <span class="math notranslate nohighlight">\(p_2:\tilde{X}_2 \rightarrow X\)</span> <em>are isomorphic via an
+isomorphism</em> <span class="math notranslate nohighlight">\(f:\tilde{X}_1 \rightarrow \tilde{X}_2\)</span> <em>taking a basepoint</em> <span class="math notranslate nohighlight">\(\tilde{x}_1 \in p^{-1}_1(x_0)\)</span> <em>to a basepoint</em> <span class="math notranslate nohighlight">\(\tilde{x}_2 \in p^{-1}_2(x_0)\)</span>
+<em>iff</em> <span class="math notranslate nohighlight">\(p_{1*}(\pi_1(\tilde{X}_1,\tilde{x}_1)) = p_{2*}(\pi_1(\tilde{X}_2, \tilde{x}_2))\)</span>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> If there is an isomorphism <span class="math notranslate nohighlight">\(f:(\tilde{X}_1, \tilde{x}_1) \rightarrow (\tilde{X}_2, \tilde{x}_2)\)</span>, then from the two relations
+<span class="math notranslate nohighlight">\(p_1=p_2f\)</span> and <span class="math notranslate nohighlight">\(p_2=p_1f^{-1}\)</span> it follows that <span class="math notranslate nohighlight">\(p_{1*}(\pi_1(\tilde{X}_1,\tilde{x}_1))=p_{2*}(\pi_1(\tilde{X}_2,\tilde{x}_2))\)</span>.
+Conversely, suppose that <span class="math notranslate nohighlight">\(p_{1*}(\pi_1(\tilde{X}_1,\tilde{x}_1))=p_{2*}(\pi_1(\tilde{X}_2,\tilde{x}_2))\)</span>. By the lifting criterion,
+we may lift <span class="math notranslate nohighlight">\(p_1\)</span> to a map <span class="math notranslate nohighlight">\(\tilde{p}_1:(\tilde{X}_1,\tilde{x}_1) \rightarrow (\tidle{X}_2,\tilde{x}_2)\)</span> with <span class="math notranslate nohighlight">\(p_2\tilde{p}_1 = p_1\)</span>. Symmetrically, we
+obtain <span class="math notranslate nohighlight">\(\tilde{p}_2:(\tilde{X}_2,\tilde{x}_2) \rightarrow (\tidle{X}_1,\tilde{x}_1)\)</span> with <span class="math notranslate nohighlight">\(p_1\tilde{p}_2 = p_2\)</span>. Then by the unique lifting property,
+<span class="math notranslate nohighlight">\(\tilde{p}_1\tilde{p}_2 = \mathbb{1}\)</span> and <span class="math notranslate nohighlight">\(\tilde{p}_2\tilde{p}_1=\mathbb{1}\)</span> since these composed lifts fix the basepoints. Thus <span class="math notranslate nohighlight">\(\tilde{p}_1\)</span> and
+<span class="math notranslate nohighlight">\(\tilde{p}_2\)</span> are inverse isomorphisms. <span style="float:right">&#9723</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="docutils container" id="theorem-1-38">
+<blockquote>
+<div><p><strong>Theorem 1.38.</strong> <em>Let</em> <span class="math notranslate nohighlight">\(X\)</span> <em>be path-connected, locally path-connected, and semilocally
+simply-connected. Then there is a bijection between the set of basepoint-preserving
+isomorphism classes of path-connected covering spaces</em> <span class="math notranslate nohighlight">\(p:(\tilde{X},\tidle{x}_0) \rihgtarrow(X,x_0)\)</span> <em>and the
+set of subgroups of</em> <span class="math notranslate nohighlight">\(\pi_1(X, x_0)\)</span>, <em>obtained by associating the subgroup</em> <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X}, \tilde{x}_0))\)</span>
+<em>to the covering space</em> <span class="math notranslate nohighlight">\((\tilde{X}, \tilde{x}_0)\)</span>. <em>If basepoints are ignored, this correspondence gives a
+bijection between isomorphism classes of path-connected covering spaces</em> <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span>
+<em>and conjugacy classes of subgroups of</em> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> It remains only to prove the last statement. We show that for covering space
+<span class="math notranslate nohighlight">\(p:(\tilde{X}, \tilde{x}_0) \rightarrow (X, x_0)\)</span>, changing the basepoint <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> within <span class="math notranslate nohighlight">\(p^{-1}(x_0)\)</span> corresponds exactly
+to changing <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0))\)</span> to a conjugate subgroup of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>. Suppose that <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>
+is another basepoint in <span class="math notranslate nohighlight">\(p^{-1}(x_0)\)</span>, and let <span class="math notranslate nohighlight">\(\tilde{\gamma}\)</span> be a path from <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>. Then <span class="math notranslate nohighlight">\(\tilde{\gamma}\)</span> projects
+to a loop <span class="math notranslate nohighlight">\(\gamma\)</span> in <span class="math notranslate nohighlight">\(X\)</span> representing some element <span class="math notranslate nohighlight">\(g \in \pi_1(X,x_0)\)</span>. Set <span class="math notranslate nohighlight">\(H_i = p_*(\pi_1(\tilde{X},\tilde{x}_i))\)</span>
+for <span class="math notranslate nohighlight">\(i=0,1\)</span>. We have an inclusion <span class="math notranslate nohighlight">\(g^{-1}H_0g \subset H_1\)</span> since for <span class="math notranslate nohighlight">\(\tilde{f}\)</span> a loop at <span class="math notranslate nohighlight">\(\tilde{x}_0,\quad \bar{\tilde{\gamma}}\cdot \tilde{f} \cdot \tilde{\gamma}\)</span> is
+a loop at <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>. Similarly we have <span class="math notranslate nohighlight">\(gH_1g^{-1} \subset H_0\)</span>. Conjugating the latter relation by <span class="math notranslate nohighlight">\(g^{-1}\)</span>
+gives <span class="math notranslate nohighlight">\(H_1 \subset g^{-1}H_0g\)</span>, so <span class="math notranslate nohighlight">\(g^{-1}H_0g=H_1\)</span>. Thus, changing the basepoint from <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>
+changes <span class="math notranslate nohighlight">\(H_0\)</span> to the conjugate subgroup <span class="math notranslate nohighlight">\(H_1 = g^{-1}H_0g\)</span>.</p>
+<p><span style="margin-left: 2em"> Conversely, to change <span class="math notranslate nohighlight">\(H_0\)</span> to a conjugate subgroup <span class="math notranslate nohighlight">\(H_1 = g^{-1}H_0g\)</span>, choose a loop
+<span class="math notranslate nohighlight">\(\gamma\)</span> representing <span class="math notranslate nohighlight">\(g\)</span>, lift this to a path <span class="math notranslate nohighlight">\(\tilde{\gamma}\)</span> starting at <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span>, and let <span class="math notranslate nohighlight">\(\tilde{x}_1=\tilde{\gamma}(1)\)</span>. The preceding
+argument then shows that we have hte desired relation <span class="math notranslate nohighlight">\(H_1 = g^{-1}H_0g\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><span style="margin-left: 2em"> A consequence of the lifting criterion is that a simply-connected covering space of
+a path-connected, locally path-connected space <span class="math notranslate nohighlight">\(X\)</span> is a covering space of <span class="math notranslate nohighlight">\(X\)</span> is
+therefore called a <strong>universal cover</strong>. It is unique up to isomorphism, so one is justified
+in calling it <em>the</em> universal cover.</p>
+<p><span style="margin-left: 2em"> More generally, there is a partial ordering on the various path-connected covering
+spaces of <span class="math notranslate nohighlight">\(X\)</span>, according to which ones covver which others. This corresponds to the
+partial ordering by inclusion of the corresponding subgroups of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>, or conjugacy
+classes of subgroups if basepoints are ignored.</p>
+<section id="representing-covering-spaces-by-permutations">
+<h2>Representing Covering Spaces by Permutations<a class="headerlink" href="#representing-covering-spaces-by-permutations" title="Permalink to this heading">#</a></h2>
+<p><span style="margin-left: 2em"> We wish to describe now another way of classifying the different covering spaces
+of a connected, locally path-connected, semilocally simply-connected space <span class="math notranslate nohighlight">\(X\)</span>, without
+restricting just to connected covering spaces.</p>
+<a class="reference internal image-reference" href="../../_images/permutations.png"><img alt="../../_images/permutations.png" class="align-right" src="../../_images/permutations.png" style="width: 20%;" /></a>
+<p>To give this idea, consider
+the <span class="math notranslate nohighlight">\(3\)</span>-sheeted covering spaces of <span class="math notranslate nohighlight">\(S^1\)</span>. There are three of these,
+<span class="math notranslate nohighlight">\(\tilde{X}_1,\quad \tilde{X}_2\)</span>, and <span class="math notranslate nohighlight">\(\tilde{X}_3\)</span>, with the subscript indicating the number of components.
+For each of these covering spaces <span class="math notranslate nohighlight">\(p:\tilde{X}_i \rightarrow S^1\)</span> the three different
+lifts of a loop in <span class="math notranslate nohighlight">\(S^1\)</span> generating <span class="math notranslate nohighlight">\(\pi_1(S^1,x_0)\)</span> determine a permutation of
+<span class="math notranslate nohighlight">\(p^{-1}(x_0)\)</span> sending the starting point of the lift to the ending point of the
+lift. For <span class="math notranslate nohighlight">\(\tilde{X}_1\)</span> this is a cyclic permutation, for <span class="math notranslate nohighlight">\(\tilde{X}_2\)</span> it is a transposition of
+two points fixing the third point, and for <span class="math notranslate nohighlight">\(\tilde{X}_3\)</span> it is the identity permutation.
+These permutations obviously determine the covering spaces
+uniquely, up to isomorphism. The same would be true for <span class="math notranslate nohighlight">\(n\)</span>-sheeted
+covering spaces of <span class="math notranslate nohighlight">\(S^1\)</span> for arbitrary <span class="math notranslate nohighlight">\(n\)</span>, even for <span class="math notranslate nohighlight">\(n\)</span> infinite.</p>
+<p><span style="margin-left: 2em"> The covering spaces of <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> can be encoded using the same idea. Referring
+back to the large table of examples near the beginning of this section, we see in the
+covering space (1) that the loop <span class="math notranslate nohighlight">\(a\)</span> lifts to the identity permutation of the two vertices
+and <span class="math notranslate nohighlight">\(b\)</span> lifts to the permutation that transposes the two vertices. In (2), both <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>
+lift to transpositions of the two vertices. In (3) and (4), <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> lift to transpositions of
+different pairs of the three vertices, while in (5) and (6) they lift to cyclic permutations
+of the vertices. In (11) the vertices can be labeled by <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, with <span class="math notranslate nohighlight">\(a\)</span> lifting to the identity
+permutation and <span class="math notranslate nohighlight">\(b\)</span> lifting to the shift <span class="math notranslate nohighlight">\(n\mapsto n+1\)</span>. Indeed, one can see from these
+examples that a covering space of <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> is nothing more than an efficient graphical
+representation of a pair of permutations of a given set.</p>
+</section>
 </section>
 
 
@@ -505,6 +787,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-covering-spaces-by-permutations">Representing Covering Spaces by Permutations</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
