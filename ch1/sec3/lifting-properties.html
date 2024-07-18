@@ -470,7 +470,7 @@ document.write(`
 <p><span style="margin-left: 2em"> Covering spaces are defined in fairly geometric terms, as maps <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> that are
 local homeomorphisms in a rather strong sense. But from the viewpoint of algebraic
 topology, the distinctive feature of covering spaces is their behavior with respect to
-lifting of maps. Recall the terminology from the proof of <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec1/the-fundamental-group-of-the-circle.html#theorem-1-7"><span class="std std-ref">Theorem</span></a>: A <strong>lift</strong> of a map
+lifting of maps. Recall the terminology from the proof of <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec1/the-fundamental-group-of-the-circle.html#theorem-1-7"><span class="std std-ref">Theorem 1.7</span></a>: A <strong>lift</strong> of a map
 <span class="math notranslate nohighlight">\(f:Y \rightarrow X\)</span> is a map <span class="math notranslate nohighlight">\(\tilde{f} : Y \rightarrow \tilde{X}\)</span> such that <span class="math notranslate nohighlight">\(p\tilde{f}=f\)</span>. We will describe three special lifting
 properties of covering spaces and derive a few applications of these.</p>
 <p><span style="margin-left: 2em"> First we have <strong>homotopy lifting property</strong>, also known as the <strong>covering homotopy property</strong>:</p>
@@ -491,14 +491,9 @@ by the definition of a covering space.</p>
 <p><span style="margin-left: 2em"> Taking <span class="math notranslate nohighlight">\(Y\)</span> to be <span class="math notranslate nohighlight">\(I\)</span>, we see that every homotopy <span class="math notranslate nohighlight">\(f_t\)</span> of a path <span class="math notranslate nohighlight">\(f_0\)</span> in <span class="math notranslate nohighlight">\(X\)</span> lifts to a
 homotopy <span class="math notranslate nohighlight">\(\tilde{f}_t\)</span> of each lift <span class="math notranslate nohighlight">\(\tilde{f}_0\)</span> of <span class="math notranslate nohighlight">\(f_0\)</span>. The lifted homotopy <span class="math notranslate nohighlight">\(\tilde{f}_t\)</span> is a homotopy of paths,
 fixing the endpoints, since as <span class="math notranslate nohighlight">\(t\)</span> varies each endpoint of <span class="math notranslate nohighlight">\(\tilde{f}_t\)</span> traces out a path lifting a
-constant path, which must therefore be constant.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p><span style="margin-left: 2em"> Here is a simple application.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+constant path, which must therefore be constant.
+|
+<span style="margin-left: 2em"> Here is a simple application.</p>
 <div class="docutils container" id="proposition-1-31">
 <blockquote>
 <div><p><strong>Proposition 1.31.</strong> <em>The map</em> <span class="math notranslate nohighlight">\(p_*: \pi_1(\tilde{X},\tilde{x}_0)\rightarrow \pi_1(X,x_0)\)</span> <em>induced by a covering space</em>
@@ -525,7 +520,7 @@ a lift, so by homotopy lifting, the loop itself must have such a lift. <span sty
 </div></blockquote>
 <p><strong>Proof:</strong> For a loop <span class="math notranslate nohighlight">\(g\)</span> in <span class="math notranslate nohighlight">\(X\)</span> based at <span class="math notranslate nohighlight">\(x_0\)</span>, let <span class="math notranslate nohighlight">\(\tilde{g}\)</span> be its lift to <span class="math notranslate nohighlight">\(\tilde{X}\)</span> starting at <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span>. A product
 <span class="math notranslate nohighlight">\(h \cdot g\)</span> with <span class="math notranslate nohighlight">\([h] \in H=p_*(\pi_1(\tilde{X}, \tilde{x}_0))\)</span> has the lift <span class="math notranslate nohighlight">\(\tilde{h} \cdot \tilde{g}\)</span> ending at the same points as <span class="math notranslate nohighlight">\(\tilde{g}\)</span>
-since <span class="math notranslate nohighlight">\(\tilde{h}\)</span> is a loop. Thus we may define a function <span class="math notranslate nohighlight">\(\phi\)</span> from cosets <span class="math notranslate nohighlight">\(H[g]\)</span> to <span class="math notranslate nohighlight">\(\p^{-1}(x_0)\)</span>
+since <span class="math notranslate nohighlight">\(\tilde{h}\)</span> is a loop. Thus we may define a function <span class="math notranslate nohighlight">\(\phi\)</span> from cosets <span class="math notranslate nohighlight">\(H[g]\)</span> to <span class="math notranslate nohighlight">\(p^{-1}(x_0)\)</span>
 by sending <span class="math notranslate nohighlight">\(H[g]\)</span> to <span class="math notranslate nohighlight">\(\tilde{g}(1)\)</span>. The path-connectedness of <span class="math notranslate nohighlight">\(\tilde{X}\)</span> implies that <span class="math notranslate nohighlight">\(\phi\)</span> is surjective
 since <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> can be joined to any point in <span class="math notranslate nohighlight">\(p^{-1}(x_0)\)</span> by a path <span class="math notranslate nohighlight">\(\tilde{g}\)</span> projecting to a loop <span class="math notranslate nohighlight">\(g\)</span> at
 <span class="math notranslate nohighlight">\(x_0\)</span>. To see that <span class="math notranslate nohighlight">\(\phi\)</span> is injective, observe that <span class="math notranslate nohighlight">\(\phi(H[g_1])=\phi(H[g_2])\)</span> implies that <span class="math notranslate nohighlight">\(g_1 \cdot \bar{g}_2\)</span>
@@ -569,7 +564,7 @@ a lift <span class="math notranslate nohighlight">\(\tilde{U} \subset \tilde{X}\
 path-connected open neighborhood <span class="math notranslate nohighlight">\(V\)</span> of <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(f(V) \subset U\)</span>. For paths from <span class="math notranslate nohighlight">\(y_0\)</span> to
 points <span class="math notranslate nohighlight">\(y' \in V\)</span> we can take a fixed path <span class="math notranslate nohighlight">\((f\gamma) \cdot (f\eta)\)</span> in <span class="math notranslate nohighlight">\(X\)</span> have lifts <span class="math notranslate nohighlight">\((\tilde{f\gamma}) \cdot (\tilde{f\eta})\)</span>
 where <span class="math notranslate nohighlight">\(\tilde{f\eta}=p^{-1}f\eta\)</span> and <span class="math notranslate nohighlight">\(p^{-1}:U \rightarrow \tilde{U}\)</span> is the inverse of <span class="math notranslate nohighlight">\(o:\tilde{U} \rightarrow U\)</span>. Thus <span class="math notranslate nohighlight">\(\tilde{f}(V) \subset \tilde{U}\)</span> and
-<span class="math notranslate nohighlight">\(\tilde{f} | V = p^{-1}f\)</span>, hence <span class="math notranslate nohighlight">\(\tilde{f}\)</span> is continuous at <span class="math notranslate nohighlight">\(y\)</span>. <span style="float:right">&#9723</span></p>
+<span class="math notranslate nohighlight">\(\tilde{f} \mid V = p^{-1}f\)</span>, hence <span class="math notranslate nohighlight">\(\tilde{f}\)</span> is continuous at <span class="math notranslate nohighlight">\(y\)</span>. <span style="float:right">&#9723</span></p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>

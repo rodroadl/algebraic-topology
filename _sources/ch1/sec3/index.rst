@@ -5,7 +5,7 @@
 
 |indent| We come now to the second main topic of this chapter, covering spaces. We
 have laready encountered these briefly in our calculation of :math:`\pi_1(S^1)` which used the 
-example of the projection :math:`\mathbb{R} \rightarrw S^1` of a helix onto a circle. As we will see, covering
+example of the projection :math:`\mathbb{R} \rightarrow S^1` of a helix onto a circle. As we will see, covering
 spaces can be used to caluculate fundamental groups of other spaces as well. But the 
 connection between the fundamental group and covering spaces runs much deeper
 than this, and in many ways they can be regarded as two viewpoints toward the same
@@ -31,7 +31,7 @@ connected.
 |indent| An example related to the helix is the helicoid surface :math:`S \subset \mathbb{R}^3` consisting
 of points of the form :math:`(s \cos 2\pi t, s \sin 2 \pi t, t)` for :math:`(s,t) \in (0, \infty) \times \mathbb{R}`. This projects
 onto :math:`\mathbb{R}^2 - \{0\}` via the map :math:`(x,y,z) \mapsto (x,y)`, and this projection defines a voering 
-space :math:`p:S \rightarrow \mathbb{R}^2 -\{0\}` since each point of :math:`\mathbb{R}^2 - \{0\}` is contained in an open disk :math:`\U` in 
+space :math:`p:S \rightarrow \mathbb{R}^2 -\{0\}` since each point of :math:`\mathbb{R}^2 - \{0\}` is contained in an open disk :math:`U` in 
 :math:`\mathbb{R}^2-\{0\}` with :math:`p^{-1}(U)` consisting of countably many disjoint open disks in :math:`S` projecting
 homeomorphically onto :math:`U`.
 
@@ -39,7 +39,7 @@ homeomorphically onto :math:`U`.
     :align: right
     :width: 20%
 
-|indent| Another example is the map :math:`p:S^1 \rightarrow S^1,\quad p(z)=z^n` where we
+|indent| Another example is the map :math:`p:S^1 \rightarrow S^1,\, p(z)=z^n` where we
 view :math:`z` as a complex number with :math:`|z| = 1` and :math:`n` is any positive
 integer. The closest one can come to realizing this covering space
 as a linear projection in :math:`3`-space analogous to the projection of the 
@@ -48,11 +48,11 @@ intersecting itself in :math:`n-1` points that one has to imagine are not
 really intersections. For an alternative picure without this defect,
 embed :math:`S^1` in the boundary torus of a sloid torus :math:`S^1 \times D^2` so that it winds :math:`n` times
 monotonically around the :math:`S^1` factor without self-intersections, then restrict the
-projection :math:`S^1 \times D^2 \rightarrow S^1 \times \{0\}` to this embedded circle. The figure for :ref:`Example 1.29 <Example1.29>` in the 
+projection :math:`S^1 \times D^2 \rightarrow S^1 \times \{0\}` to this embedded circle. The figure for :ref:`Example 1.29 <Example 1.29>` in the 
 preceding section illustrates the case :math:`n=3`.
 
 |indent| These :math:`n`-sheeted covering spaces :math:`S^1\rightarrow S^1` for :math:`n \geq 1` together with the infinite-sheeted
-helix example exhaust all the connected coverings spaces of :math:S^1`, as our general
+helix example exhaust all the connected coverings spaces of :math:`S^1`, as our general
 theory will show. There are many other disconnected covering spaces of :math:`S^1`, such as
 :math:`n` disjoint circles each mapped homeomorphically onto :math:`S^1`, but these disconnected
 covering spaces are just disjoint unions of connected ones. We will usually restrict
@@ -61,7 +61,7 @@ features of covering spaces.
 
 |
 
-|indent| The covering spaces of :math~S^1 \vee S^1` form a remarkably rich family illustrating most of
+|indent| The covering spaces of :math:`S^1 \vee S^1` form a remarkably rich family illustrating most of
 the general theory very concretely, so let us look at a few of these covering spaces to 
 get an idea of what is going on. To abbreviate notation, set :Math:`X = S^1 \vee S^1`.
 
@@ -78,7 +78,7 @@ in such a way that the local picture near each vertex is the same as in :math:`X
 :math:`a`-edge end oriented toward the vertex, and a :math:`b`-edge end oriented away from the 
 vertex. To give a name to this structure, let us call :math:`\tilde{X}` a :math:`2`-*oriented* graph.
 
-|indent| The table on the next page shows justa small sample of the infinite variety of possible examples.
+|indent| The table on the next page shows just a small sample of the infinite variety of possible examples.
 
 |indent| Given a :math:`2`-oriented graph :math:`\tilde{X}` we can construct a map :math:`p:\tilde{X} \rightarrow X` sending all vertices
 of :math:`\tilde{X}` to the vertex of :math:`X` and sending each edge of :math:`\tilde{X}` to the edge of :math:`X` with the same
@@ -111,7 +111,7 @@ the coordinate axes of :math:`\mathbb{R}^2`.
     :align: right
     :width: 40%
 
-Next, for a fixed number :math:`\lambda,\quad 0<\lambda \frac{1}{2}`, for example :math:`\lambda = \frac{1}{3}`, adjoin foru open
+Next, for a fixed number :math:`\lambda,\, 0<\lambda \frac{1}{2}`, for example :math:`\lambda = \frac{1}{3}`, adjoin foru open
 segments of length :math:`2\lambda`, at distance :math:`\lambda` from the ends of 
 the previous segments and perpendicular to them, the
 new shorter segments being bisected by the older ones.
