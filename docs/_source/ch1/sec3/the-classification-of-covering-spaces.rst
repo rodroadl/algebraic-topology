@@ -311,6 +311,52 @@ permutation and :Math:`b` lifting to the shift :math:`n\mapsto n+1`. Indeed, one
 examples that a covering space of :Math:`S^1 \vee S^1` is nothing more than an efficient graphical
 representation of a pair of permutations of a given set.
 
+|indent| This idea of lifting loops to permutations generalized to arbitrary covering spaces.
+For a covering space :math:`p:\tilde{X} \rightarrow X`, a path :math:`\gamma` in :math:`X` has a unique lift :math:`\tilde{\gamma}` starting at a given
+point of :math:`p^{-1}(\gamma(0))`, so we obtain a well-defined map :math:`L_\gamma : p^{-1}(\gamma(0)) \rightarrow p^{-1}(\gamma(1))` by
+sending the starting point :math:`\tilde{\gamma(0)}` of each lift :math:`\tilde{\gamma}` to its ending point :math:`\tilde{\gamma}(1)`. It is evident
+that :math:`L_\gamma` is a bijection since :math:`L_\bar{\gamma}` is its inverse. For a composition of paths :math:`\gamma \cdot \eta` we have
+:math:`\L_{\gamma \cdot \eta}=L_\eta L_\gamma`, rather than :math:`L_\gamma L_\eta`, since composition of paths is written from left to
+right while composition of functions is written from right to left. To compensate for 
+this, let us modify the definition by replacing :math:`L_\gamma` by its inverse. Thus the new :math:`L_\gamma` is 
+a bijection :math:`p^{-1}(\gamma(1))\rightarrow p^{-1}(\gamma(0))`, and :math:`L_{\gamma \cdot \eta}=L_\gamma L_\eta`. Since :math:`L_\gamma` depends only on the
+homotopy class of :math:`\gamma`, this means that if we restrict attention to loops at a basepoint
+:math:`x_0 \in X`, then the association :math:`\gamma \mapsto L_\gamma` gives a homomorphism from :math:`\pi_1(X,x_0)` to the
+group of permutations of :math:`p^{-1}(x_0)`. This is called *the action of* :math:`\pi_1(X,x_0)` *on the fiber* :math:`p^{-1}(x_0)`.
+
+|indent| Let us see how the covering space :math:`p:\tilde{X}\rightarrow X` can be reconstructed from the associated
+action of :math:`\pi_1(X,x_0)` on the fiber :math:`F=p^{-1}(x_0)`, assuming that :math:`X` is path-connected,
+locally path-connected, and semilocally simply-connected, so it has a universal cover
+:math:`\tilde{X}_0 \rightarrow X`. We can take the points of :math:`\tilde{X}_0` to be homotopy classes of paths in :math:`X` starting
+at :math:`x_0`, as in the general construction of a universal cover. Define a map :math:`h:\tilde{X}_0 \times F \rightarrow \tilde{X}`
+sending a pair :math:`([\gamma], \tilde{x}_0)` to :math:`\tilde{\gamma}(1)` where :math:`\tilde{\gamma}` is the lfit of :math:`\gamma` to :math:`\tilde{X}` starting at :math:`\tilde{x}_0`. Then :math:`h`
+is continuous, and in fact a local homeomorphism, since a neighborhood of :math:`([\gamma], \tilde{x}_0)` 
+in :math:`\tilde{X}_0 \times F` consists of the pairs :math:`([\gamma \cdot \eta], \tilde{x}_0)` with :math:`\eta` a path in a suitable neighborhood
+of :math:`\gamma(1)`. It is obvious that :math:`h` is surjective since :math:`X` is path-connected. If :math:`h` were 
+injective as well, it would be a homeomorphism, which is unlikely since :math:`\tilde{X}` is probably not
+homeomorphic to :math:`\tilde{X}_0 \times F`. Even if :math:`h` is not injective, it will induce a homeomorphism
+from some quotient space of :math:`\tilde{X}_0 \times F` onto :math:`\tilde{X}`. To see what this quotient space is,
+suppose :math:`h([\gamma], \tilde{x}_0) = h([\gamma'], \tilde{x}_0')`.
+
+.. image:: fig/quotient-space.png
+    :align: right
+    :width: 25%
+
+Then :math:`\gamma` and :math:`\gamma'` are both
+paths from :math:`x_0` to the same endpoint, and from the figure
+we see that :math:`\tilde{x}_0'=L_{\gamma' \cdot \bar{\gamma}}(\tilde{x}_0)`. Letting :math:`\lambda` be the loop :math:`\gamma' \cdot \bar{\gamma}`, this
+means that :math:`h([\gamma], \tilde{x}_0) = h([\lambda \cdot \gamma], L_\lambda(\tilde{x}_0))`. Conversely, for
+any loop :math:`\lambda` we have :math:`h([\gamma], \tilde{x}_0) = h([\lambda \cdot \gamma], L_\lambda(\tilde{x}_0))`. Thus :math:`h`
+induces a well-defined map to :math:`\tilde{X}` from the quotient space of 
+:math:`\tilde{X}_0 \times F` obtained by identifying :math:`([\gamma],\tilde{x}_0)` with :math:`([\lambda \cdot \gamma], L_\lambda(\tilde{x}_0))`
+for each :math:`[\lambda] \in \pi_1(X,x_0)`. Let this quotient space be denoted :math:`\tilde{X}_\rho` where :math:`\rho` is the 
+homomorphism from :math:`\pi_1(X,x_0)` to the permutation group of :math:`F` specified by the action.
+
+|indent| Notice that the definition of :Math:`\tilde{X}_\rho` makes sense whenever we are given an action :math:`\rho`
+of :math:`\pi_1(X,x_0)` on a set :math:`F` regarded as a space with the discrete topology. There is a 
+natural projection :math:`\tilde{X}_\rho \rightarrow X` sending :math:`([\gamma], \tilde{x}_0)` to :math:`\gamma(1)`, and this is a covering space since
+if :math:`U \subset X` is an open set over which the universal cover :math:`\tilde{X}_0` is a product :math:`U \times \pi_1(X,x_0)`,
+then the identifications defining :math:`\tilde{X}_\rho` simply collapse :math:`U \times \pi_1(X, x_0) \times F` to :math:`U \times F`.
 
 
 
