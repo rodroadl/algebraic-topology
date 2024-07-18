@@ -207,7 +207,7 @@ if :math:`X` is path-connected.
     slightly into the complement of :math:`X`, it becomes evident that :math:`X` is a deformation retract of 
     :math:`\mathbb{R}^3-K`.
 
-    \(a\)    Assuming this bit of geometry, show that :math:`\pi_1(\mathbb{R}^3-K)` has a presentation with one
+    \(a\)   Assuming this bit of geometry, show that :math:`\pi_1(\mathbb{R}^3-K)` has a presentation with one
             generator :math:`x_i` for each strip :math:`R_i` and one relation of the form :math:`x_i x_j x_i^{-1} = x_k` for
             each square :math:`S_l`, where the indices are as in the figures above. [To get the correct
             signs it is helpful to use an orientation of :math:`K`.]
