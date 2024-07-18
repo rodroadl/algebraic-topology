@@ -151,15 +151,15 @@ that the natural map :math:`L(X) \rightarrow X` induces an isomorphism :math:`\p
     mapping cone defined in :ref:`Chapter 0 <Chapter 0>`. Let :math:`X` be the subspace of :math:`\mathbb{R}` consisting of the 
     sequence :math:`1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\cdots` together with its limit point :Math:`0`.
 
-    |indent| (a)    For the suspension :math:`SX`, show that :math:`\pi_1(SX)` is free on a countably infinite set of
-                    generators, and deduce that :math:`\pi_1(SX)` is countable. In contrast to this, the reduced
-                    suspension :math:`\sigma X`, obtained from :math:`SX` by collapsing the segment :math:`\{0\} \times I` to a point, is
-                    the shrinking wedge of circles in :ref:`Example 1.25`, with an uncountable fundamental 
-                    group.
-             (b)    Let :math:`C` be the mapping cone of the quotient map :math:`SX \rightarrow \sigma X`. Show that :math:`\pi_1(C)` is
-                    uncountable by constructing a homomorphism from :math:`\pi_1(C)` onto :math:`\prod_\infty \mathbb{Z} / \bigoplus _\infty \mathbb{Z}`. Note
-                    that :math:`C` is the reduced suspension of the cone :math:`CX`. Thus the reduced suspension
-                    of a contractible space need not be contractible, unlike the unreduced suspension.
+    (a) For the suspension :math:`SX`, show that :math:`\pi_1(SX)` is free on a countably infinite set of
+        generators, and deduce that :math:`\pi_1(SX)` is countable. In contrast to this, the reduced
+        suspension :math:`\sigma X`, obtained from :math:`SX` by collapsing the segment :math:`\{0\} \times I` to a point, is
+        the shrinking wedge of circles in :ref:`Example 1.25`, with an uncountable fundamental 
+        group.
+    (b) Let :math:`C` be the mapping cone of the quotient map :math:`SX \rightarrow \sigma X`. Show that :math:`\pi_1(C)` is
+        uncountable by constructing a homomorphism from :math:`\pi_1(C)` onto :math:`\prod_\infty \mathbb{Z} / \bigoplus _\infty \mathbb{Z}`. Note
+        that :math:`C` is the reduced suspension of the cone :math:`CX`. Thus the reduced suspension
+        of a contractible space need not be contractible, unlike the unreduced suspension.
 
 .. _Excercise 1-2-19:
 
@@ -190,7 +190,7 @@ if :math:`X` is path-connected.
     The configuration at such crossing is shown in the first figure below.
 
     .. image:: fig/ex-1-2-22.png
-        :align: center:
+        :align: center
         :width: 100%
     
     We build a 
@@ -207,11 +207,11 @@ if :math:`X` is path-connected.
     slightly into the complement of :math:`X`, it becomes evident that :math:`X` is a deformation retract of 
     :math:`\mathbb{R}^3-K`.
 
-    |indent| (a)    Assuming this bit of geometry, show that :math:`\pi_1(\mathbb{R}^3-K)` has a presentation with one
-                    generator :math:`x_i` for each strip :math:`R_i` and one relation of the form :math:`x_i x_j x_i^{-1} = x_k` for
-                    each square :math:`S_l`, where the indices are as in the figures above. [To get the correct
-                    signs it is helpful to use an orientation of :math:`K`.]
-             (b)    Use this presentation to show that the abelianization of :math:`\pi_1(\mathbb{R}^3-K)` is :math:`\mathbb{Z}`.
+    \(a\)    Assuming this bit of geometry, show that :math:`\pi_1(\mathbb{R}^3-K)` has a presentation with one
+            generator :math:`x_i` for each strip :math:`R_i` and one relation of the form :math:`x_i x_j x_i^{-1} = x_k` for
+            each square :math:`S_l`, where the indices are as in the figures above. [To get the correct
+            signs it is helpful to use an orientation of :math:`K`.]
+    \(b\)    Use this presentation to show that the abelianization of :math:`\pi_1(\mathbb{R}^3-K)` is :math:`\mathbb{Z}`.
 
 
 .. |indent| raw:: html
