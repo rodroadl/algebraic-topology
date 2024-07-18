@@ -17,7 +17,7 @@ method of classification that includes disconnected covering spaces as well.
 |indent| The Galois correspondence arises from the function that assigns to each covering
 space :math:`p:(\tilde{X}, \tilde{x}_0)` the subgroup :math:`p_*(\pi_1(\tilde{X}, \tilde{x}_0))` of :math:`\pi_1(X,x_0)`. First we 
 consider whether this function is surjective. That is, we ask whether every subgroup of 
-:math:`\pi_1(X,x_0)` is realized as :math:`p_*(\pi_1(\tilde{X},\tilde{x}_0))` for some covering space :math:`p:(\tilde{X},\tilde{x}_0) \rihgtarrow (X, x_0)`.
+:math:`\pi_1(X,x_0)` is realized as :math:`p_*(\pi_1(\tilde{X},\tilde{x}_0))` for some covering space :math:`p:(\tilde{X},\tilde{x}_0) \rightarrow (X, x_0)`.
 In particular we can ask whether the trivial subgroup is realized. Since :math:`p_*` is always 
 injective, this amounts to asking whether :math:`X` has a simply-connected covering space.
 Answering this will take some work.
@@ -42,8 +42,8 @@ it is not locally simply-connected.
 
 |indent| We shall now show how to construct a simply-connected covering space of :math:`X` if
 :math:`X` is paht-connected, locally path-connected, and semilocally simply-connected. To
-motivate the construction, suppose :math:`p:(\tilde{X}, \tidle{x}_0) \rightarrow (X,x_0)` is a simply-connected covering 
-space. Each point :math:`\tilded{x} \in \tilde{X}` can then be joined to :math:`\tilde{x}_0` by a unique homotopy class of
+motivate the construction, suppose :math:`p:(\tilde{X}, \tilde{x}_0) \rightarrow (X,x_0)` is a simply-connected covering 
+space. Each point :math:`\tilde{x} \in \tilde{X}` can then be joined to :math:`\tilde{x}_0` by a unique homotopy class of
 paths, by :ref:`Proposition 1.6 <Proposition 1.6>`, so we can view poitns of :Math:`\tilde{X}` as homotopy classes of paths
 starting at :math:`\tilde{x}_0`. The advantage of this is that, by the homotopy lifting property, homotopy
 classes of paths in :math:`\tilde{X}` starting at :math:`\tilde{x}_0` are the same as homotopy classes of paths
@@ -54,7 +54,7 @@ space :math:`X` with a basepoint :math:`x_0 \in X`, we are therefore led to defi
 
 .. math::
 
-    \tilde{X} = \{ [\gamma] | \gamma \text{ is a path in } X \text{ starting at } x_0\}
+    \tilde{X} = \{ [\gamma] \mid \gamma \text{ is a path in } X \text{ starting at } x_0\}
 
 where, as usual, :matH:`[\gamma]` denotes the homotopy class of :math:`\gamma` with respect to homotopies
 that fix the endpoints :math:`\gamma(0)` and :math:`\gamma(1)`. The function :math:`p:\tilde{X} \rightarrow X` sending :math:`[\gamma]` to :math:`\gamma (1)` is
@@ -73,19 +73,19 @@ path-connected and semilocally simply-connected.
 
 .. math::
 
-    U_{[\gamma]}=\{[\gamma \cdot \eta] | \eta \text{ is a path in } U \text{ with } \eta(0)=\gamma(1) \}
+    U_{[\gamma]}=\{[\gamma \cdot \eta] \mid \eta \text{ is a path in } U \text{ with } \eta(0)=\gamma(1) \}
 
 As the notation indicates, :math:`U_{[\gamma]}` depends only on the homotopy class :math:`[\gamma]`. Observe
 that :math:`p:U_{[\gamma]} \rightarrow U` is surjective since :math:`U` is path-connected and injective since different 
 choices of :math:`\eta` joining :math:`\gamma(1)` to a fixed :math:`x \in U` are all homotopic in :math:`X`, the map
 :math:`\pi_1(U) \rightarrow \pi_1(X)` being trivial. Another property is
 
-(*) :math:`U_{[\gamma]} = U_{[\gamma']}` if :math:`[\gamma'] \in U_{[\gamma]}`. For if :math:`\gamma'=\gamma \cdot \eta` then elements of :math:`U_{[\gamma']}` have the
+(\*) :math:`U_{[\gamma]} = U_{[\gamma']}` if :math:`[\gamma'] \in U_{[\gamma]}`. For if :math:`\gamma'=\gamma \cdot \eta` then elements of :math:`U_{[\gamma']}` have the
     form :math:`[\gamma \cdot \eta \cdot \mu]` and hence lie in :math:`U_{[\gamma]}`, while elements of :math:`U_{[\gamma]}` have the form
     :math:`[\gamma \cdot \mu] = [\gamma \cdot \eta \cdot \bar{\eta} \cdot \mu] = [\gamma' \cdot \bar{\eta} \cdot \mu]` and hence lie in :math:`U_{[\gamma']}`.
 
 This can be used to show that the sets :math:`U_{[\gamma]}` form a basis for a topology on :math:`\tilde{X}`. For if
-we are given two such sets :math:`U_{[\gamma]},\quad V_{[\gamma']}` and an element :math:`[\gamma''] \in U_{[\gamma]} \cap V_{[\gamma']}`, we have
+we are given two such sets :math:`U_{[\gamma]},\, V_{[\gamma']}` and an element :math:`[\gamma''] \in U_{[\gamma]} \cap V_{[\gamma']}`, we have
 :math:`U_{[\gamma]}=U_{[\gamma'']}` and :math:`V_{[\gamma']}=V_{[\gamma]''}` by (*). So if :math:`W \in \mathcal{U}` is contained in :math:`U \cap V` and contains
 :math:`\gamma''(1)` then :math:`W_{[\gamma'']} \subset U_{[\gamma'']} \cap V_{[\gamma'']}` and :math:`[\gamma''] \in W_{[\gamma'']}`.
 
@@ -101,7 +101,7 @@ partition :math:`p^{-1}(U)` because if :math:`[\gamma''] \in U_{[\gamma]} \cap U
 
 |indent| It remains only to show that :math:`\tilde{X}` is simply-connected. For a point :math:`[\gamma] \in \tilde{X}` let :math:`\gamma_t`
 be the path in :math:`X` that equals :math:`\gamma` on :math:`[0,t]` and is stationary at :Math:`\gamma(t)` on :math:`[t,1]`. Then the
-function :math:`t\mapsto [\gamma_t]` is a path in :math:`\tilde{X}`lifting :math:`\gamma` that starts at :math:`[x_0]`, the homotopy class of
+function :math:`t\mapsto [\gamma_t]` is a path in :math:`\tilde{X}` lifting :math:`\gamma` that starts at :math:`[x_0]`, the homotopy class of
 the constant path at :math:`x_0`, and ends at :math:`[\gamma]`. Since :math:`[\gamma]` was an arbitrary point in :Math:`\tilde{X}`, this
 shows that :math:`\tilde{X}` is path-connected. To show that :math:`\pi_1(\tilde{X}, [x_0])=0` it suffices to show
 that the image of this group udner :math:`p_*` are represented by loops :math:`\gamma` at :math:`x_0` that lift to loops in :math:`\tilde{X}` at :math:`[x_0]`. We have
@@ -110,9 +110,7 @@ be a loop means that :math:`[\gamma_1]=[x_0]`. Since :math:`\gamma_1 = \gamma`, 
 nullhomotopic and the image of :math:`p_*` is trivial.
 
 |indent| This completes the construction of a simply-connected covering space :math:`\tilde{X} \rightarrow X`.
-
 |
-
 |indent| In concrete cases one usually constructs a simply-connected covering space by
 more direct methods. For example, suppose :math:`X` is the union of subspaces :math:`A` and :math:`B` for
 which simply-connected covering spaces :math:`\tilde{A} \rightarrow A` and :math:`\tilde{B} \rightarrow B` are already known. Then
@@ -134,7 +132,7 @@ described earlier in this section by glueing together infinitely many copies of 
     encountered the complexes :math:`X_{m,n}` previously in alalyzing orus knot complements in 
     :ref:`Example 1.24 <Example 1.24>`.
 
-    .. image:: fig/eg-1-35-a.png
+    .. image:: fig/eg-1-29.png
         :align: right
         :width: 20%
 
@@ -153,7 +151,7 @@ described earlier in this section by glueing together infinitely many copies of 
     and to each of these lines we attach a new copy of :math:`\tilde{B}`. The process is now repeated ad 
     infinitum in the evident way. Let :math:`\tilde{X}_{m,n}` be the resulting space.
 
-    .. image:: fig/eg-1-35-b.png
+    .. image:: fig/eg-1-35-a.png
         :align: right
         :width: 30%
     
@@ -170,7 +168,7 @@ described earlier in this section by glueing together infinitely many copies of 
     the initial stage :math:`C_m`. Since :math:`C_m` is contractible, this means :math:`T_{m,n}` is contractible, hence
     also :math:`\tilde{X}_{m,n}`, which is the product :math:`T_{m,n} \times \mathbb{R}`. In particular, :math:`\tilde{X}_{m,n}` is simply-connected.
 
-    .. image:: fig/eg-1-35-c.png
+    .. image:: fig/eg-1-35-b.png
         :align: right
         :width: 25%
 
@@ -200,7 +198,7 @@ arbitrary subgroups of :math:`\pi_1(X)`:
         space* :math:`p:X_H \rightarrow X` *such that* :math:`p_*(\pi_1(X_H,\tilde{x}_0))= H` *for a suitably chosen basepoint*
         :math:`\tilde{x}_0 \in X_H`.
     
-    **Proof:** For points :math:`[\gamma],\quad [\gamma']` in the simply-connected covering space :Math:`\tilde{X}` constructed
+    **Proof:** For points :math:`[\gamma],\, [\gamma']` in the simply-connected covering space :Math:`\tilde{X}` constructed
     above, define :math:`[\gamma] ~ [\gamma']` to mean :math:`\gamma(1) =\gamma'(1)` and :math:`[\gamma \cdot \bar{\gamma'} \in H]`. It is easy to see that
     this is an equivalence relation since :math:`H` is a subgroup: it is reflexive since :math:`H` contains 
     the identity element, symmetric since :Math:`H` is closed under inverse, and transitive since
@@ -236,8 +234,8 @@ ahve an equivalence relation.
     **Proof:** If there is an isomorphism :math:`f:(\tilde{X}_1, \tilde{x}_1) \rightarrow (\tilde{X}_2, \tilde{x}_2)`, then from the two relations
     :math:`p_1=p_2f` and :math:`p_2=p_1f^{-1}` it follows that :math:`p_{1*}(\pi_1(\tilde{X}_1,\tilde{x}_1))=p_{2*}(\pi_1(\tilde{X}_2,\tilde{x}_2))`. 
     Conversely, suppose that :math:`p_{1*}(\pi_1(\tilde{X}_1,\tilde{x}_1))=p_{2*}(\pi_1(\tilde{X}_2,\tilde{x}_2))`. By the lifting criterion,
-    we may lift :math:`p_1` to a map :math:`\tilde{p}_1:(\tilde{X}_1,\tilde{x}_1) \rightarrow (\tidle{X}_2,\tilde{x}_2)` with :math:`p_2\tilde{p}_1 = p_1`. Symmetrically, we 
-    obtain :math:`\tilde{p}_2:(\tilde{X}_2,\tilde{x}_2) \rightarrow (\tidle{X}_1,\tilde{x}_1)` with :math:`p_1\tilde{p}_2 = p_2`. Then by the unique lifting property,
+    we may lift :math:`p_1` to a map :math:`\tilde{p}_1:(\tilde{X}_1,\tilde{x}_1) \rightarrow (\tilde{X}_2,\tilde{x}_2)` with :math:`p_2\tilde{p}_1 = p_1`. Symmetrically, we 
+    obtain :math:`\tilde{p}_2:(\tilde{X}_2,\tilde{x}_2) \rightarrow (\tilde{X}_1,\tilde{x}_1)` with :math:`p_1\tilde{p}_2 = p_2`. Then by the unique lifting property,
     :math:`\tilde{p}_1\tilde{p}_2 = \mathbb{1}` and :math:`\tilde{p}_2\tilde{p}_1=\mathbb{1}` since these composed lifts fix the basepoints. Thus :math:`\tilde{p}_1` and
     :math:`\tilde{p}_2` are inverse isomorphisms. |qed|
 |
@@ -248,7 +246,7 @@ ahve an equivalence relation.
 
         **Theorem 1.38.** *Let* :math:`X` *be path-connected, locally path-connected, and semilocally
         simply-connected. Then there is a bijection between the set of basepoint-preserving 
-        isomorphism classes of path-connected covering spaces* :math:`p:(\tilde{X},\tidle{x}_0) \rihgtarrow(X,x_0)` *and the
+        isomorphism classes of path-connected covering spaces* :math:`p:(\tilde{X},\tilde{x}_0) \rightarrow(X,x_0)` *and the
         set of subgroups of* :math:`\pi_1(X, x_0)`, *obtained by associating the subgroup* :math:`p_*(\pi_1(\tilde{X}, \tilde{x}_0))`
         *to the covering space* :math:`(\tilde{X}, \tilde{x}_0)`. *If basepoints are ignored, this correspondence gives a 
         bijection between isomorphism classes of path-connected covering spaces* :math:`p:\tilde{X} \rightarrow X`
@@ -259,7 +257,7 @@ ahve an equivalence relation.
     to changing :math:`p_*(\pi_1(\tilde{X},\tilde{x}_0))` to a conjugate subgroup of :math:`\pi_1(X,x_0)`. Suppose that :matH:`\tilde{x}_1`
     is another basepoint in :math:`p^{-1}(x_0)`, and let :math:`\tilde{\gamma}` be a path from :math:`\tilde{x}_0` to :math:`\tilde{x}_1`. Then :math:`\tilde{\gamma}` projects
     to a loop :math:`\gamma` in :math:`X` representing some element :math:`g \in \pi_1(X,x_0)`. Set :Math:`H_i = p_*(\pi_1(\tilde{X},\tilde{x}_i))`
-    for :math:`i=0,1`. We have an inclusion :math:`g^{-1}H_0g \subset H_1` since for :math:`\tilde{f}` a loop at :math:`\tilde{x}_0,\quad \bar{\tilde{\gamma}}\cdot \tilde{f} \cdot \tilde{\gamma}` is
+    for :math:`i=0,1`. We have an inclusion :math:`g^{-1}H_0g \subset H_1` since for :math:`\tilde{f}` a loop at :math:`\tilde{x}_0,\, \bar{\tilde{\gamma}}\cdot \tilde{f} \cdot \tilde{\gamma}` is
     a loop at :math:`\tilde{x}_1`. Similarly we have :math:`gH_1g^{-1} \subset H_0`. Conjugating the latter relation by :math:`g^{-1}`
     gives :math:`H_1 \subset g^{-1}H_0g`, so :math:`g^{-1}H_0g=H_1`. Thus, changing the basepoint from :math:`\tilde{x}_0` to :math:`\tilde{x}_1`
     changes :math:`H_0` to the conjugate subgroup :math:`H_1 = g^{-1}H_0g`.
@@ -292,7 +290,7 @@ restricting just to connected covering spaces.
 
 To give this idea, consider
 the :math:`3`-sheeted covering spaces of :math:`S^1`. There are three of these,
-:math:`\tilde{X}_1,\quad \tilde{X}_2`, and :math:`\tilde{X}_3`, with the subscript indicating the number of components.
+:math:`\tilde{X}_1,\, \tilde{X}_2`, and :math:`\tilde{X}_3`, with the subscript indicating the number of components.
 For each of these covering spaces :math:`p:\tilde{X}_i \rightarrow S^1` the three different
 lifts of a loop in :math:`S^1` generating :math:`\pi_1(S^1,x_0)` determine a permutation of 
 :math:`p^{-1}(x_0)` sending the starting point of the lift to the ending point of the 

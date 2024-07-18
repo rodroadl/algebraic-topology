@@ -4,7 +4,7 @@ Lifting Properties
 |indent| Covering spaces are defined in fairly geometric terms, as maps :math:`p:\tilde{X} \rightarrow X` that are
 local homeomorphisms in a rather strong sense. But from the viewpoint of algebraic
 topology, the distinctive feature of covering spaces is their behavior with respect to 
-lifting of maps. Recall the terminology from the proof of :ref:`Theorem <Theorem 1.7>`: A **lift** of a map
+lifting of maps. Recall the terminology from the proof of :ref:`Theorem 1.7 <Theorem 1.7>`: A **lift** of a map
 :math:`f:Y \rightarrow X` is a map :math:`\tilde{f} : Y \rightarrow \tilde{X}` such that :math:`p\tilde{f}=f`. We will describe three special lifting
 properties of covering spaces and derive a few applications of these.
 
@@ -33,13 +33,8 @@ by the definition of a covering space.
 homotopy :math:`\tilde{f}_t` of each lift :math:`\tilde{f}_0` of :math:`f_0`. The lifted homotopy :math:`\tilde{f}_t` is a homotopy of paths,
 fixing the endpoints, since as :math:`t` varies each endpoint of :Math:`\tilde{f}_t` traces out a path lifting a 
 constant path, which must therefore be constant.
-
 |
-
 |indent| Here is a simple application.
-
-|
-
 
 .. _Proposition 1.31:
 
@@ -75,14 +70,12 @@ constant path, which must therefore be constant.
     
     **Proof:** For a loop :math:`g` in :math:`X` based at :math:`x_0`, let :math:`\tilde{g}` be its lift to :math:`\tilde{X}` starting at :math:`\tilde{x}_0`. A product
     :math:`h \cdot g` with :math:`[h] \in H=p_*(\pi_1(\tilde{X}, \tilde{x}_0))` has the lift :math:`\tilde{h} \cdot \tilde{g}` ending at the same points as :math:`\tilde{g}`
-    since :math:`\tilde{h}` is a loop. Thus we may define a function :math:`\phi` from cosets :math:`H[g]` to :math:`\p^{-1}(x_0)`
+    since :math:`\tilde{h}` is a loop. Thus we may define a function :math:`\phi` from cosets :math:`H[g]` to :math:`p^{-1}(x_0)`
     by sending :math:`H[g]` to :math:`\tilde{g}(1)`. The path-connectedness of :math:`\tilde{X}` implies that :Math:`\phi` is surjective
     since :math:`\tilde{x}_0` can be joined to any point in :math:`p^{-1}(x_0)` by a path :math:`\tilde{g}` projecting to a loop :math:`g` at
     :math:`x_0`. To see that :math:`\phi` is injective, observe that :math:`\phi(H[g_1])=\phi(H[g_2])` implies that :math:`g_1 \cdot \bar{g}_2`
     lifts to a loop in :math:`\tilde{X}` based at :math:`\tilde{x}_0`, so :math:`[g_1][g_2]^{-1} \in H` and hence :math:`H[g_1]=H[g_2]`. |qed|
-
 |
-
 |indent| It is importnat also to know about the existence and uniqueness of lifts of general
 maps, not just lifts of homotopies. For the existence question an answer is provided
 by the following **lifting criterion:**
@@ -127,7 +120,7 @@ by the following **lifting criterion:**
     path-connected open neighborhood :math:`V` of :math:`y` with :math:`f(V) \subset U`. For paths from :math:`y_0` to
     points :Math:`y' \in V` we can take a fixed path :math:`(f\gamma) \cdot (f\eta)` in :math:`X` have lifts :math:`(\tilde{f\gamma}) \cdot (\tilde{f\eta})`
     where :math:`\tilde{f\eta}=p^{-1}f\eta` and :math:`p^{-1}:U \rightarrow \tilde{U}` is the inverse of :math:`o:\tilde{U} \rightarrow U`. Thus :math:`\tilde{f}(V) \subset \tilde{U}` and
-    :math:`\tilde{f} | V = p^{-1}f`, hence :math:`\tilde{f}` is continuous at :math:`y`. |qed|
+    :math:`\tilde{f} \mid V = p^{-1}f`, hence :math:`\tilde{f}` is continuous at :math:`y`. |qed|
 
 |
 
