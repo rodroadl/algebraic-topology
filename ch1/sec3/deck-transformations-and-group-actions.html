@@ -440,7 +440,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -456,6 +458,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cayley-complexes">Cayley Complexes</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -664,6 +674,161 @@ antipodal points. One can see explicitly that such a loop <span class="math notr
 if <span class="math notranslate nohighlight">\(n \geq 2\)</span> since the composition <span class="math notranslate nohighlight">\(\gamma \cdot \gamma\)</span> lifts to a loop in <span class="math notranslate nohighlight">\(S^n\)</span>, and this can be homotoped to
 the trivial loop since <span class="math notranslate nohighlight">\(\pi_1(S^n) = 0\)</span>, so the projection of this homotopy into <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> gives
 a nullhomotopy of <span class="math notranslate nohighlight">\(\gamma \cdot \gamma\)</span>.</p>
+<p><span style="margin-left: 2em"> One may ask whether there are other finite groups that act freely on <span class="math notranslate nohighlight">\(S^n\)</span>, defining
+covering spaces <span class="math notranslate nohighlight">\(S^n \rightarrow S^n/G\)</span>. We will show in <span class="xref std std-ref">Proposition 2.29</span> that <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> is the only
+possibility when <span class="math notranslate nohighlight">\(n\)</span> is even, but for odd <span class="math notranslate nohighlight">\(n\)</span> the question is much more difficult. It is
+easy to construct a free action of any cyclic group <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span> on <span class="math notranslate nohighlight">\(S^{2k-1}\)</span>, the action generated
+by the rotation <span class="math notranslate nohighlight">\(v \mapsto e^{2\pi i/m}v\)</span> of the unit sphere <span class="math notranslate nohighlight">\(S^{2k-1}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{C}^k = \mathbb{R}^{2k}\)</span>. This action is free
+since an equation <span class="math notranslate nohighlight">\(v=e^{2\pi i/m}v\)</span> with <span class="math notranslate nohighlight">\(0 &lt; l &lt; m\)</span> implies <span class="math notranslate nohighlight">\(v=0\)</span>, but <span class="math notranslate nohighlight">\(0\)</span> is not a point
+of <span class="math notranslate nohighlight">\(S^{2k-1}\)</span>. The orbit space <span class="math notranslate nohighlight">\(S^{2k-1}/\mathbb{Z}_m\)</span> is one of a family of spaces called <em>lens spaces</em>
+defined in <span class="xref std std-ref">Example 2.43</span>.</p>
+<p><span style="margin-left: 2em"> THere are also noncylic finite groups that act freely as rotations of <span class="math notranslate nohighlight">\(S^n\)</span> for odd
+<span class="math notranslate nohighlight">\(n&gt;1\)</span>. These actions are classified quite explicitly in [Wolf 1984]. Examples in the
+simplest case <span class="math notranslate nohighlight">\(n=3\)</span> can be produced as follows. View <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> as the quaternion algebra <span class="math notranslate nohighlight">\(\mathbb{H}\)</span>.
+Multiplication of quaternions satisfies <span class="math notranslate nohighlight">\(|ab| = |a||b|\)</span> where <span class="math notranslate nohighlight">\(|a|\)</span> denotes the usual
+Euclidean length of a vector <span class="math notranslate nohighlight">\(a \in \mathbb{R}^4\)</span>. Thus if <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are unit vectors, so is <span class="math notranslate nohighlight">\(ab\)</span>, and
+hence quaternion multiplication defines a map <span class="math notranslate nohighlight">\(S^3 \times S^3 \rightarrow S^3\)</span>. This in fact makes <span class="math notranslate nohighlight">\(S^3\)</span>
+into a group, though associativity is all we need now since associativity implies that
+any subgroup <span class="math notranslate nohighlight">\(G\)</span> of <span class="math notranslate nohighlight">\(S^3\)</span> acts on <span class="math notranslate nohighlight">\(S^3\)</span> by left-multiplication, <span class="math notranslate nohighlight">\(g(x)=gx\)</span>. This action is
+free since an equation <span class="math notranslate nohighlight">\(x=gx\)</span> in the division algebra <span class="math notranslate nohighlight">\(\mathbb{H}\)</span> implies <span class="math notranslate nohighlight">\(g=1\)</span> or <span class="math notranslate nohighlight">\(x=0\)</span>. As
+a concrete example, <span class="math notranslate nohighlight">\(G\)</span> could be the familiar quaternion group <span class="math notranslate nohighlight">\(Q_8 = \{\pm1, \pm i, \pm h, \pm k\}\)</span>
+from group theory. More generally, for a positive integer <span class="math notranslate nohighlight">\(m\)</span>, let <span class="math notranslate nohighlight">\(Q_{4m}\)</span> be the subgroup
+of <span class="math notranslate nohighlight">\(S^3\)</span> generated by the two quaternions <span class="math notranslate nohighlight">\(a=e^{\pi i/m}\)</span> and <span class="math notranslate nohighlight">\(b=j\)</span>. Thus <span class="math notranslate nohighlight">\(a\)</span> has order
+<span class="math notranslate nohighlight">\(2m\)</span> and <span class="math notranslate nohighlight">\(b\)</span> has order <span class="math notranslate nohighlight">\(4\)</span>. The easily verified relations <span class="math notranslate nohighlight">\(a^m=b^2=-1\)</span> and <span class="math notranslate nohighlight">\(bab^{-1}=a^{-1}\)</span>
+imply that the subgroup <span class="math notranslate nohighlight">\(\mathbb{Z}_{2m}\)</span> generated by <span class="math notranslate nohighlight">\(a\)</span> is normal and of index <span class="math notranslate nohighlight">\(2\)</span> in <span class="math notranslate nohighlight">\(Q_{4m}\)</span>.
+Hence <span class="math notranslate nohighlight">\(Q_{4m}\)</span> is a group of order <span class="math notranslate nohighlight">\(4m\)</span>, called <em>generalized quaternion group</em>. Another
+common name for this group is the <em>binary dihedral group</em> <span class="math notranslate nohighlight">\(D^*_{4m}\)</span> since its quotient by
+the subgroup <span class="math notranslate nohighlight">\(\{\pm 1\}\)</span> is the ordinary dihedral group <span class="math notranslate nohighlight">\(D_{2m}\)</span> of order <span class="math notranslate nohighlight">\(2m\)</span>.</p>
+<p><span style="margin-left: 2em"> Beside the groups <span class="math notranslate nohighlight">\(Q_{4m}=D^*_{4m}\)</span> there are just three other noncyclic finite subgroups
+of <span class="math notranslate nohighlight">\(S^3\)</span>: the binary tetrahedral, octahedral, and icosahedral groups <span class="math notranslate nohighlight">\(T^*_{24},\, O^*_{48}\)</span>,
+and <span class="math notranslate nohighlight">\(I^*_{120}\)</span>, of orders indicated by the subscripts. These project two-to-one onto the
+groups of rotational symmetries of a regular tetrahedron, octahedron (or cube), and
+icosahedron (or dodecahedron). In fact, it is not hard to see that the homomorphism
+<span class="math notranslate nohighlight">\(S^3 \rightarrow SO(3)\)</span> sending <span class="math notranslate nohighlight">\(u \in S^3 \subset \mathbb{H}\)</span> to the isometry <span class="math notranslate nohighlight">\(v \rightarrow u^{-1}vu\)</span> of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, viewing <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> as the
+‘pure imaginary’ quaternions <span class="math notranslate nohighlight">\(v=ai+bj+ck\)</span>, is surjective with kernel <span class="math notranslate nohighlight">\(\{\pm 1\}\)</span>. Then
+the groups <span class="math notranslate nohighlight">\(D^*_{4m},\,T^*_{24},\, O^*_{48},\,I^*_{120}\)</span> are the preimages in <span class="math notranslate nohighlight">\(S^3\)</span> of the groups of rotational
+symmetries of a regular polygon or polyhedron in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
+<p><span style="margin-left: 2em"> There are two conditions that a finite group <span class="math notranslate nohighlight">\(G\)</span> acting freely on <span class="math notranslate nohighlight">\(S^n\)</span> must satisfy:</p>
+<ol class="loweralpha simple">
+<li><p>Every abelian subgroup of <span class="math notranslate nohighlight">\(G\)</span> is cyclic. This is equivalent to saying that <span class="math notranslate nohighlight">\(G\)</span> contains
+no subgroup <span class="math notranslate nohighlight">\(\mathbb{Z}_p \times \mathbb{Z}_p\)</span> with <span class="math notranslate nohighlight">\(p\)</span> prime.</p></li>
+<li><p><span class="math notranslate nohighlight">\(G\)</span> contains at most one element of order <span class="math notranslate nohighlight">\(2\)</span>.</p></li>
+</ol>
+<p>A proof of (a) is sketched in an exercise for <span class="xref std std-ref">§4.2</span>. For a proof of (b) the original
+sourcce [Milnor 1957] is recommended reading. The groups satisfying (a) have been
+completely classified; see [Brown 1982], section VI.9, for details. An example of a
+group satisfying (a) but not (b) is the dihedral group <span class="math notranslate nohighlight">\(D_{2m}\)</span> for odd <span class="math notranslate nohighlight">\(m &gt; 1\)</span>.</p>
+<p><span style="margin-left: 2em"> There is also a much more difficult converse: A finite group satisfying (a) and (b)
+acts freely on <span class="math notranslate nohighlight">\(S^n\)</span> for some <span class="math notranslate nohighlight">\(n\)</span>. References for this are [Madse, Thomas, &amp; Wall 1976]
+and [Davis &amp; Milgram 1985]. There is also almost complete information about which
+<span class="math notranslate nohighlight">\(n\)</span>’s are possible for a given group.</p>
+<div class="docutils container" id="example-1-44">
+<p><strong>Example 1.44.</strong> In <span class="xref std std-ref">Example 1.35</span> we constructed a contractible <span class="math notranslate nohighlight">\(2\)</span>-complex <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}=T_{m,n} \times \matbb{R}\)</span>
+as the universal cover of a finnite <span class="math notranslate nohighlight">\(2\)</span>-complex <span class="math notranslate nohighlight">\(X_{m,n}\)</span> that was the union of
+themapping cylinders of the two maps <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1,\,z\mapsto Z^m\)</span> and <span class="math notranslate nohighlight">\(z\mapsto z^n\)</span>. The group
+of deck transformations of this covering space is therefore the fundamental group
+<span class="math notranslate nohighlight">\(\pi_1(X_{m,n})\)</span>. From <span class="xref std std-ref">van Kampen’s theorem</span> applied to the decomposition of <span class="math notranslate nohighlight">\(X_{m,n}\)</span> into
+the two mapping cylinders we have the presentation <span class="math notranslate nohighlight">\(\langle a,b \mid a^m b^{-n} \rangle\)</span> for this group
+<span class="math notranslate nohighlight">\(G_{m,n}=\pi_1(X_{m,n})\)</span>. It is interesting to look at the action of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> more closely.
+We described a decomposition of <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> into rectangles, with <span class="math notranslate nohighlight">\(X_{m,n}\)</span> the quotient of
+one rectangle. These rectangles in fact define a cell structure on <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> lifting a cell
+structure on <span class="math notranslate nohighlight">\(X_{m,n}\)</span> with two vertices, three edges, and one <span class="math notranslate nohighlight">\(2\)</span>-cell. The group <span class="math notranslate nohighlight">\(G_{m,n}\)</span> is
+thus a group of symmetries of this cell structure on <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span>, then <span class="math notranslate nohighlight">\(G_{m,n}\)</span> is the group of all
+symmetries of <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> preserving the orientations of edges. For example, the element <span class="math notranslate nohighlight">\(a\)</span>
+acts as a ‘screw motion` about an axis that is a vertical line <span class="math notranslate nohighlight">\(\{v_a\} \times \mathbb{R}\)</span> with <span class="math notranslate nohighlight">\(v_a\)</span> a vertex
+of <span class="math notranslate nohighlight">\(T_{m,n}\)</span>, and <span class="math notranslate nohighlight">\(b\)</span> acts similarly for a vertex <span class="math notranslate nohighlight">\(v_b\)</span>.</p>
+<p><span style="margin-left: 2em"> Since the action of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(\tilde{m,n}\)</span> preserves the cell structure, it also preserves
+the product structure <span class="math notranslate nohighlight">\(T_{m,n} \times \mathbb{R}\)</span>. This means that there are actions of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(T_{m,n}\)</span>
+and <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> such that the action on the product <span class="math notranslate nohighlight">\(X_{m,n}=T_{m,n} \times \mathbb{R}\)</span> is the diagonal action
+<span class="math notranslate nohighlight">\(g(x,y)=(g(x),g(y))\)</span> for <span class="math notranslate nohighlight">\(g \in G_{m,n}\)</span>. If we make the rectangles of unit height in the
+<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> coordinate, then the element <span class="math notranslate nohighlight">\(a^m=b^n\)</span> acts on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> as unit translation, while <span class="math notranslate nohighlight">\(a\)</span> acts
+by <span class="math notranslate nohighlight">\(\frac{1}{m}\)</span> translation and <span class="math notranslate nohighlight">\(b\)</span> by <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> translation. The translation actions of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>
+generate a group of translations of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> that is infinite cyclic, generated by translation
+by the reciprocal of the least common multiple of <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p><span style="margin-left: 2em"> The action of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(T_{m,n}\)</span> has kernel consisting of the powers of the element
+<span class="math notranslate nohighlight">\(a^m=b^n\)</span>. This infinite cyclic subgroup is precisely the center of <span class="math notranslate nohighlight">\(G_{m,n{\)</span>, as we saw in
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/the-van-kampen-theorem.html#example-1-24"><span class="std std-ref">Example 1.24</span></a>. There is an induced action of the quotient group <span class="math notranslate nohighlight">\(\mathbb{Z}_m * \mathbb{Z}_n\)</span> on <span class="math notranslate nohighlight">\(T_{m,n}\)</span>,
+but this is not a free action since the elements <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> and all their conjugates fix
+vertices of <span class="math notranslate nohighlight">\(T_{m,n}\)</span>. On the other hand, if we restrict the action of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(T_{m,n}\)</span> to
+the kernel <span class="math notranslate nohighlight">\(K\)</span> of the map <span class="math notranslate nohighlight">\(G_{m,n} \rightarrow \mathbb{Z}\)</span> given by the action of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on the <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> factor of
+<span class="math notranslate nohighlight">\(X_{m,n}\)</span>, then we do obtain a free action of <span class="math notranslate nohighlight">\(K\)</span> on <span class="math notranslate nohighlight">\(T_{m,n}\)</span>. Since this action takes vertices
+to vertices and edges to edges, it is a covering space action, so <span class="math notranslate nohighlight">\(K\)</span> is a free group, the
+fundamental group of the graph <span class="math notranslate nohighlight">\(T_{m,n}/K\)</span>. An exercise at the end of the section is to
+deterimne <span class="math notranslate nohighlight">\(T_{m,n}/K\)</span> explicitly and compute the number of generators of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+</div>
+<section id="cayley-complexes">
+<h2>Cayley Complexes<a class="headerlink" href="#cayley-complexes" title="Permalink to this heading">#</a></h2>
+<p><span style="margin-left: 2em"> Covering spaces can be used to describe a very classical method for viewing
+groups geometrically as graphs. Recall from <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/applications-to-cell-complexes.html#corollary-1-28"><span class="std std-ref">Corollary 1.28</span></a> how we associated to each
+group presentation <span class="math notranslate nohighlight">\(G=\langle g_\alpha \mid r_\beta\)</span> a <span class="math notranslate nohighlight">\(2\)</span>-dimensional cell complex <span class="math notranslate nohighlight">\(X_G\)</span> with <span class="math notranslate nohighlight">\(\pi_1(X_G) \approx G\)</span>
+by taking a wedge-sum of circles, one for each generator <span class="math notranslate nohighlight">\(g_\alpha\)</span>, and then attaching a
+<span class="math notranslate nohighlight">\(2\)</span>-cell for each relator <span class="math notranslate nohighlight">\(r_\beta\)</span>. We can construct a cell complex <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> with a covering space
+action of <span class="math notranslate nohighlight">\(G\)</span> such that <span class="math notranslate nohighlight">\(\tilde{X}_G/G=X_G\)</span> in the following way. Let the vertices of <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> be
+the elements of <span class="math notranslate nohighlight">\(G\)</span> themselves. Then, at each vertex <span class="math notranslate nohighlight">\(g \in G\)</span>, insert an edge joining
+<span class="math notranslate nohighlight">\(g\)</span> to <span class="math notranslate nohighlight">\(gg_\alpha\)</span> for each of the chosen generators <span class="math notranslate nohighlight">\(g_\alpha\)</span>. The resulting graph is known as
+the <strong>Cayley graph</strong> of <span class="math notranslate nohighlight">\(G\)</span> with respect to the generators <span class="math notranslate nohighlight">\(g_\alpha\)</span>. This graph is connected
+since every element of <span class="math notranslate nohighlight">\(G\)</span> is a product of <span class="math notranslate nohighlight">\(g_\alpha\)</span>’s, so there is a path in the graph joining
+each vertex to the identity vertex <span class="math notranslate nohighlight">\(e\)</span>, Each relation <span class="math notranslate nohighlight">\(r_\beta\)</span> determines a loop in the graph,
+starting at any vertex <span class="math notranslate nohighlight">\(g\)</span>, and we attach a <span class="math notranslate nohighlight">\(2\)</span>-cell for each such loop. The resulting cell
+complex <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> is the <strong>Cayley complex</strong> of <span class="math notranslate nohighlight">\(G\)</span>. The group <span class="math notranslate nohighlight">\(G\)</span> acts on <span class="math notranslate nohighlight">\(\tilde{X}_g\)</span> by multiplication
+on the left. Thus, an element <span class="math notranslate nohighlight">\(g \in G\)</span> sends a vertex <span class="math notranslate nohighlight">\(g' \in G\)</span> to the vertex <span class="math notranslate nohighlight">\(gg'\)</span>, and the
+edge from <span class="math notranslate nohighlight">\(g'\)</span> to <span class="math notranslate nohighlight">\(g'g_\alpha\)</span> is sent to the edge from <span class="math notranslate nohighlight">\(gg'\)</span> to <span class="math notranslate nohighlight">\(gg'g_\alpha\)</span> The action extends to
+<span class="math notranslate nohighlight">\(2\)</span>-cells in the obvious way. This is clearly a covering space action, and the orbit space
+is just <span class="math notranslate nohighlight">\(X_G\)</span>.</p>
+<p><span style="margin-left: 2em"> In fact <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> is the universal cover of <span class="math notranslate nohighlight">\(X_G\)</span> since it is simply-connected. This can be
+seen by considering the homomorphims <span class="math notranslate nohighlight">\(\varphi : \pi_1(X_G) \rightarrow G\)</span> defined in the proof of <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-1-39"><span class="std std-ref">Proposition 1.39</span></a>.
+FOr an edge <span class="math notranslate nohighlight">\(e_\alpha\)</span> in <span class="math notranslate nohighlight">\(X_G\)</span> corresponding to a generator <span class="math notranslate nohighlight">\(g_\alpha\)</span> of <span class="math notranslate nohighlight">\(G\)</span>, it is clear
+from the definition of <span class="math notranslate nohighlight">\(\varphi\)</span> that <span class="math notranslate nohighlight">\(\varphi ([e_\alpha])=g_\alpha\)</span>, so <span class="math notranslate nohighlight">\(\varphi\)</span> is an isomorphism. In particular
+the kernel of <span class="math notranslate nohighlight">\(\varphi,\,p_*(\pi_1(\tilde{X}_G))\)</span>, is zero, hence also <span class="math notranslate nohighlight">\(\pi_1(\tilde{X}_G)\)</span> since <span class="math notranslate nohighlight">\(p_*\)</span> is injective.</p>
+<p><span style="margin-left: 2em"> Let us look at some examples of Cayley complexes.
+|
+.. _Example 1.45:</p>
+<div class="docutils container">
+<a class="reference internal image-reference" href="../../_images/eg-1-45.png"><img alt="../../_images/eg-1-45.png" class="align-right" src="../../_images/eg-1-45.png" style="width: 50%;" /></a>
+<p><strong>Example 1.45.</strong> When <span class="math notranslate nohighlight">\(G\)</span> is the free group on
+two generators <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(X_G\)</span> is <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> and
+<span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> is the Cayley graph of <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span> pictured at
+the right. The action of <span class="math notranslate nohighlight">\(a\)</span> on this graph is a
+rightward shift along the central horizontal
+axis, while <span class="math notranslate nohighlight">\(b\)</span> acts by an upward shift along
+the central vertical axis. The composition
+<span class="math notranslate nohighlight">\(ab\)</span> of these two shifts then takes the vertex
+<span class="math notranslate nohighlight">\(e\)</span> to the vertex <span class="math notranslate nohighlight">\(ab\)</span>. Similarly, the action of
+any <span class="math notranslate nohighlight">\(w \in \mathbb{Z} * \mathbb{Z}\)</span> takes <span class="math notranslate nohighlight">\(e\)</span> to the vertex <span class="math notranslate nohighlight">\(w\)</span>.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p id="example-1-46"><strong>Example 1.46.</strong> The group <span class="math notranslate nohighlight">\(G=\mathbb{Z} \times \mathbb{Z}\)</span> with presentation <span class="math notranslate nohighlight">\(\langle x,y \mid xyx^{-1}y^{-1} \rangle\)</span> has <span class="math notranslate nohighlight">\(X_G\)</span>
+the torus <span class="math notranslate nohighlight">\(S^1 \times S^1\)</span>, and <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> with vertices the integer lattice <span class="math notranslate nohighlight">\(\mathbb{Z}^2 \subset \mathbb{R}^2\)</span> and edges
+the horizontal and vertical segments between these lattice points. The action of <span class="math notranslate nohighlight">\(G\)</span> is
+by translations <span class="math notranslate nohighlight">\((x,y) \mapsto (x+m,y+n)\)</span>.
+|
+.. _Example 1.47:</p>
+<p><strong>Example 1.47.</strong> For <span class="math notranslate nohighlight">\(G=\mathbb{Z}_2= \langle x \mid x^2 \rangle ,\, X_G\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}_G = S^2\)</span>. More generally,
+for <span class="math notranslate nohighlight">\(\mathbb{Z}_n = \langle x \mid x^n \rangle ,\, X_G\)</span> is <span class="math notranslate nohighlight">\(S^1\)</span> with a disk attached by the map <span class="math notranslate nohighlight">\(z \mapsto z^n\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> consists of
+<span class="math notranslate nohighlight">\(n\)</span> disks <span class="math notranslate nohighlight">\(D_1 , \cdots , D_n\)</span> with their boundary circles identified. A generator of <span class="math notranslate nohighlight">\(\mathbb{Z}_n\)</span> acts on
+this union of disks by sending <span class="math notranslate nohighlight">\(D_i\)</span> to <span class="math notranslate nohighlight">\(D_{i+1}\)</span> via a <span class="math notranslate nohighlight">\(2\pi / n\)</span> rotation, the subscript <span class="math notranslate nohighlight">\(i\)</span> being
+taken mod <span class="math notranslate nohighlight">\(n\)</span>. The common boundary circle of the disks is rotated by <span class="math notranslate nohighlight">\(2\pi / n\)</span>.
+|
+.. _Example 1.48:</p>
+<div class="docutils container">
+<p><strong>Example 1.48.</strong> If <span class="math notranslate nohighlight">\(G=\mathbb{Z}_2 * \mathbb{Z}_2 = \langle a,b \mid a^2, b^2 \rangle\)</span> then the Cayley graph is a union of
+an infinite sequence of circles each tangent to its two neighbors.</p>
+<a class="reference internal image-reference" href="../../_images/eg-1-48-a.png"><img alt="../../_images/eg-1-48-a.png" class="align-center" src="../../_images/eg-1-48-a.png" style="width: 100%;" /></a>
+<p>We obtain <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> from this graph by making each circle the equator of a <span class="math notranslate nohighlight">\(2\)</span>-sphere, yielding
+an infinite sequence of tangent <span class="math notranslate nohighlight">\(2\)</span>-spheres. Elements of the index-two normal
+subgroup <span class="math notranslate nohighlight">\(\mathbb{Z} \subset \mathbb{Z}_2 * \mathbb{Z}_2\)</span> generated by <span class="math notranslate nohighlight">\(ab\)</span> act on <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> as translations by an even number
+of units, while each of the remaining elements of <span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_2\)</span> acts as the antipodal map on
+one of the spheres and flips the whole chain of spheres end-for-end about this sphere.
+The orbit space <span class="math notranslate nohighlight">\(X_G\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}P^2 \vee \mathbb{R}P^2\)</span></p>
+<p><span style="margin-left: 2em"> It is not hard to see the generalization of this example to <span class="math notranslate nohighlight">\(\mathbb{Z}_m * \mathbb{Z}_n\)</span> with the
+presentation <span class="math notranslate nohighlight">\(\langle a,b \mid a^m, b^n \rangle\)</span>, so that <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> consists of an infinite union of copies of the
+Cayley complexes for <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Z}_n\)</span> constructed in <span class="xref std std-ref">Example 1.47</span>, arranged in a tree0like
+pattern. The case of <span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_3\)</span> is pictured below.</p>
+<a class="reference internal image-reference" href="../../_images/eg-1-48-b.png"><img alt="../../_images/eg-1-48-b.png" class="align-center" src="../../_images/eg-1-48-b.png" style="width: 100%;" /></a>
+</div>
+</section>
 </section>
 
 
@@ -701,6 +866,21 @@ a nullhomotopy of <span class="math notranslate nohighlight">\(\gamma \cdot \gam
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cayley-complexes">Cayley Complexes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
