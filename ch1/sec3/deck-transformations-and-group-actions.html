@@ -467,7 +467,203 @@ document.write(`
                   
   <section id="deck-transformations-and-group-actions">
 <h1>Deck Transformations and Group Actions<a class="headerlink" href="#deck-transformations-and-group-actions" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<p><span style="margin-left: 2em"> For a covering space <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> the isomorphisms <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow \tilde{X}\)</span> are called <strong>deck transfor
+mations</strong> or <strong>covering transformations</strong>. These form a group <span class="math notranslate nohighlight">\(G(\tilde{X})\)</span> under composition.
+For example, for the covering space <span class="math notranslate nohighlight">\(p: \mathbb{R} \rightarrow S^1\)</span> projecting a vertical helix onto a circle,
+the deck transformations are the vertical translations taking the helix onto itself, so
+<span class="math notranslate nohighlight">\(G(\tilde{X}) \approx \mathbb{Z}\)</span> in this case. For the <span class="math notranslate nohighlight">\(n\)</span>-sheeted covering space <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1,\, z \mapsto z^n\)</span>, the deck
+transformations are the rotations of <span class="math notranslate nohighlight">\(S^1\)</span> through angles that are multiples of <span class="math notranslate nohighlight">\(2\pi / n\)</span>,
+so <span class="math notranslate nohighlight">\(G(\tilde{X})=\mathbb{Z}_n\)</span>.</p>
+<p><span style="margin-left: 2em"> By the <a class="hxr-hoverxref hxr-tooltip reference internal" href="lifting-properties.html#proposition-1-34"><span class="std std-ref">unique lifting property</span></a>, a deck transformation is completely determined
+by where it sends a single point, assuming <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is path-connected. In particular, only
+theidentity deck transformation can fix a point of <span class="math notranslate nohighlight">\(\tilde{X}\)</span>.</p>
+<p><span style="margin-left: 2em"> A covering space <span class="math notranslate nohighlight">\(p:\tidle{X} \rightarrow X\)</span> is called <strong>normal</strong> if for each <span class="math notranslate nohighlight">\(x \in X\)</span> and each pair of lifts
+<span class="math notranslate nohighlight">\(\tilde{x},\tilde{x}'\)</span> of <span class="math notranslate nohighlight">\(x\)</span> there is a deck transformation taking <span class="math notranslate nohighlight">\(\tilde{x}`to :math:\)</span>tilde{x}’<cite>. For example, the covering
+space :math:</cite>mathbb{R} rightarrow X^1` and the <span class="math notranslate nohighlight">\(n\)</span>-sheeted covering spaces <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1\)</span> are normal. Intuitively, a
+normal covering space is one with maximal symmetry. This can be seen in the covering
+spaces of <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> shown in the talbe earlier in this section, where the normal covering
+spaces are (1),(2),(5)-(8), and (11). Note that in (7) the group of deck transformations
+is <span class="math notranslate nohighlight">\(\mathbb{Z}_4\)</span> while in (8) it is <span class="math notranslate nohighlight">\(\mathbb{Z}_2 \times \mathbb{Z}_2\)</span>.</p>
+<p><span style="margin-left: 2em"> Sometimes normal covering spaces are called regular covering spaces. The term
+‘normal’ is motivated by the following result.</p>
+<div class="docutils container" id="proposition-1-39">
+<blockquote>
+<div><p><strong>Proposition 1.39.</strong> <em>Let</em> <span class="math notranslate nohighlight">\(p:(\tilde{X}, \tilde{x}_0) \rightarrow (X, x_0)\)</span> <em>be a path-connected covering space of
+the path-connected, locally path-connected space</em> <span class="math notranslate nohighlight">\(X\)</span>, <em>and let</em> <span class="math notranslate nohighlight">\(H\)</span> be the subgroup
+<span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0)) \subset \pi_1(X,x_0)\)</span>. <em>Then</em>:</p>
+<ol class="loweralpha simple">
+<li><p><em>This covering space is normal iff</em> <span class="math notranslate nohighlight">\(H\)</span> <em>is a normal subgroup of</em> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(G(\tilde{X})\)</span> <em>is isomorphic to the quotient</em> <span class="math notranslate nohighlight">\(N(H)/H\)</span> <em>where</em> <span class="math notranslate nohighlight">\(N(H)\)</span> <em>is the normalizer of</em>
+<span class="math notranslate nohighlight">\(H\)</span> <em>in</em> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.</p></li>
+</ol>
+<p><em>In particular,</em> <span class="math notranslate nohighlight">\(G(\tilde{X})\)</span> <em>is isomorphic to</em> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)/H\)</span> <em>if</em> <span class="math notranslate nohighlight">\(\tilde{X}\)</span> <em>is a normal covering. Hence
+for the universal cover</em> <span class="math notranslate nohighlight">\(\tidle{X} \rightarrow X\)</span> <em>we have</em> <span class="math notranslate nohighlight">\(G(\tilde{X}) \approx \pi_1(X)\)</span>.</p>
+</div></blockquote>
+<p><strong>Proof:</strong> We observed earlier in the proof of the <a class="hxr-hoverxref hxr-tooltip reference internal" href="the-classification-of-covering-spaces.html#theorem-1-38"><span class="std std-ref">classification theorem</span></a> that changing
+the basepoint <span class="math notranslate nohighlight">\(\tilde{x}_0 \in p^{-1}(x_0)\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1 \in p^{-1}(x_0)\)</span> corresponds precisely to conjugating
+<span class="math notranslate nohighlight">\(H\)</span> by an element <span class="math notranslate nohighlight">\([\gamma] \in \pi_1(X,x_0)\)</span> where <span class="math notranslate nohighlight">\(\gamma\)</span> lifts to a path <span class="math notranslate nohighlight">\(\tilde{\gamma\)</span> from <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>. Thus <span class="math notranslate nohighlight">\([\gamma]\)</span>
+is in the normalizer <span class="math notranslate nohighlight">\(N(H)\)</span> iff <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0))=p_*(\pi_1(\tilde{X},\tilde{x}_1))\)</span>, which by the <span class="xref std std-ref">lifting
+criterion</span> is equivalent to the existence of a deck transformation taking <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>.
+Hence the covering space is normal iff <span class="math notranslate nohighlight">\(N(H) = \pi_1(X,x_0)\)</span>, that is, iff <span class="math notranslate nohighlight">\(H\)</span> is a normal
+subgroup of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.</p>
+<p><span style="margin-left: 2em"> Define <span class="math notranslate nohighlight">\(\varphi : N(H) \rightarrow G(\tilde{X})\)</span> sending <span class="math notranslate nohighlight">\([\gamma]\)</span> to the deck transformation <span class="math notranslate nohighlight">\(\tau\)</span> taking <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to
+<span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>, in the notation above. Then <span class="math notranslate nohighlight">\(\varphi\)</span> is a homomorphism, for if <span class="math notranslate nohighlight">\(\gamma'\)</span> is another loop corresponding
+to the deck transformation <span class="math notranslate nohighlight">\(\tau '\)</span> taking <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\({x}_1'\)</span> then <span class="math notranslate nohighlight">\(\gamma \cdot \gamma'\)</span> lifts to <span class="math notranslate nohighlight">\(\tilde{\gamma} \cdot (\tau(\tilde{\gamma}'))\)</span>,
+a path from <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tau(\tilde{x}_1')=\tau \tau'(\tilde{x}_0)\)</span>, so <span class="math notranslate nohighlight">\(\tau \tau'\)</span> is the deck transformation corresponding
+to <span class="math notranslate nohighlight">\([\gamma][\gamma']\)</span>. By the preceding paragraph <span class="math notranslate nohighlight">\(\varphi\)</span> is surjective. Its kernel consists of classes
+:math:[gamma] lifting to loops in <span class="math notranslate nohighlight">\(\tilde{X}\)</span>. These are exactly the elements of <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0))= H\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> The group of deck transformations is a special case of the general notion of
+‘groups acting on spaces’. Given a group <span class="math notranslate nohighlight">\(G\)</span> and a space <span class="math notranslate nohighlight">\(Y\)</span>, then an <strong>action</strong> of <span class="math notranslate nohighlight">\(G\)</span>
+on <span class="math notranslate nohighlight">\(Y\)</span> is a homomorphism <span class="math notranslate nohighlight">\(\rho\)</span> from <span class="math notranslate nohighlight">\(G\)</span> to the group Homoe(<span class="math notranslate nohighlight">\(Y\)</span>) of all homeomorphisms
+from <span class="math notranslate nohighlight">\(Y\)</span> to itself. Thus to each <span class="math notranslate nohighlight">\(g \in G\)</span> is associated a homeomorphisms <span class="math notranslate nohighlight">\(\rho(g): Y \rightarrow Y\)</span>,
+which for notational simplicity we write simply as <span class="math notranslate nohighlight">\(g:Y \rightarrow Y\)</span>. For <span class="math notranslate nohighlight">\(\rho\)</span> to be a homomorphism
+amounts to requiring that <span class="math notranslate nohighlight">\(g_1(g_2(y)) = (g_1g_2)(y)\)</span> for all <span class="math notranslate nohighlight">\(g_1,g_2 \in G\)</span> and
+<span class="math notranslate nohighlight">\(y \in Y\)</span>. If <span class="math notranslate nohighlight">\(\rho\)</span> is injective then it identifies <span class="math notranslate nohighlight">\(G\)</span> with a subgroup of Homeo(<span class="math notranslate nohighlight">\(Y\)</span>), and in
+practice not much is lost in assuming <span class="math notranslate nohighlight">\(\rho\)</span> is an inclusion <span class="math notranslate nohighlight">\(G \hookrightarrow`Homeo(:math:`Y\)</span>) since in any
+case the subgroup <span class="math notranslate nohighlight">\(\rho(G) \subset \text{Homeo}(Y)\)</span> contains all the topological information about
+the action.</p>
+<p><span style="margin-left: 2em"> We shall be interested in actions satisfying the following condition:</p>
+<dl class="simple">
+<dt>(<span class="math notranslate nohighlight">\({\Large *}\)</span>) Each <span class="math notranslate nohighlight">\(y \in Y\)</span> has a neighborhood <span class="math notranslate nohighlight">\(U\)</span> such that all the images <span class="math notranslate nohighlight">\(g(U)\)</span> for varying</dt><dd><p><span class="math notranslate nohighlight">\(g \in G\)</span> are disjoint. In other words, <span class="math notranslate nohighlight">\(g_1(U) \cap g_2(U) \neq \emptyset\)</span> implies <span class="math notranslate nohighlight">\(g_1 = g_2\)</span>.</p>
+</dd>
+</dl>
+<p>The action of the deck transformation group <span class="math notranslate nohighlight">\(G(\tilde{x})\)</span> on <span class="math notranslate nohighlight">\(\tilde{X}\)</span> satisfies (<span class="math notranslate nohighlight">\({\Large *}\)</span>). To see this.
+let <span class="math notranslate nohighlight">\(\tilde{U} \subset \tilde{X}\)</span> project homeomorphically to <span class="math notranslate nohighlight">\(U \subset X\)</span>. If <span class="math notranslate nohighlight">\(g_1(\tilde{U}) \cap g_2(\tilde{U}) \neq \emptyset\)</span> for some
+<span class="math notranslate nohighlight">\(g_1,g_2 \in G(\tilde{X})\)</span>, then <span class="math notranslate nohighlight">\(g_1(\tilde{x}_1)=g_2(\tilde{x}_2)\)</span> for some <span class="math notranslate nohighlight">\(\tilde{x}_1,\tilde{x}_2\in \tilde{U}\)</span>. Since <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span> and <span class="math notranslate nohighlight">\(\tilde{x}_2\)</span> must lie
+in the same set <span class="math notranslate nohighlight">\(p^{-1}(x)\)</span>, which interesects <span class="math notranslate nohighlight">\(\tilde{U}\)</span> in only one point, we must have <span class="math notranslate nohighlight">\(\tilde{x}_1=\tilde{x}_2\)</span>.
+THen <span class="math notranslate nohighlight">\(g_1^{-1}g_2\)</span> fixes this point, so <span class="math notranslate nohighlight">\(g_1^{-1}g_2 = \mathbb{1}\)</span> and <span class="math notranslate nohighlight">\(g_1 = g_2\)</span>.</p>
+<p><span style="margin-left: 2em"> Note that in (<span class="math notranslate nohighlight">\({\Large *}\)</span>) it suffices to take <span class="math notranslate nohighlight">\(g_1\)</span> to be the identity since <span class="math notranslate nohighlight">\(g_1(U) \cap g_2(U) \neq \emptyset\)</span>
+is equivalent to <span class="math notranslate nohighlight">\(U \cap g_1^{-1}g_2(U) \neq \emptyset\)</span>. Thus we have the equivalent condition that
+<span class="math notranslate nohighlight">\(U \cap g(U) \neq \emptyset\)</span> only when <span class="math notranslate nohighlight">\(g\)</span> is the identity.</p>
+<p><span style="margin-left: 2em"> Given an action of a group <span class="math notranslate nohighlight">\(G\)</span> on a space <span class="math notranslate nohighlight">\(Y\)</span>, we can form a space <span class="math notranslate nohighlight">\(Y/G\)</span>, the quotient
+space of <span class="math notranslate nohighlight">\(Y\)</span> in which each point <span class="math notranslate nohighlight">\(y\)</span> is identified with all its images <span class="math notranslate nohighlight">\(g(y)\)</span> as <span class="math notranslate nohighlight">\(g\)</span> ranges
+over <span class="math notranslate nohighlight">\(G\)</span>. The points of <span class="math notranslate nohighlight">\(Y/G\)</span> are thus <strong>orbits</strong> <span class="math notranslate nohighlight">\(Gy = \{g(y) \mid g \in G\}\)</span> in <span class="math notranslate nohighlight">\(Y\)</span>, and
+<span class="math notranslate nohighlight">\(Y/G\)</span> is called the <strong>orbit space</strong> of the action. For example, for a normal covering space
+<span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span>, the orbit space <span class="math notranslate nohighlight">\(\tilde{X}/G(\tilde{X})\)</span> is just <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="docutils container" id="proposition-1-40">
+<blockquote>
+<div><p><strong>Proposition 1.40.</strong> <em>If an action of a group</em> <span class="math notranslate nohighlight">\(G\)</span> <em>on a space</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>satisfies</em> (<span class="math notranslate nohighlight">\({\Large *}\)</span>), <em>then</em>:</p>
+<ol class="loweralpha simple">
+<li><p><em>The quotient map</em> <span class="math notranslate nohighlight">\(p:Y \rightarrow Y/G,\, p(y)=Gy\)</span>, <em>is a normal covering space.</em></p></li>
+<li><p><span class="math notranslate nohighlight">\(G\)</span> <em>is the group of deck transformations of this covering space</em> <span class="math notranslate nohighlight">\(Y \rightarrow Y/G\)</span> <em>if</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>is
+path-connected.</em></p></li>
+<li><p><span class="math notranslate nohighlight">\(G\)</span> <em>is isomorphic to</em> <span class="math notranslate nohighlight">\(\pi_1(Y/G)p_*(\pi_1(Y))\)</span> <em>if</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>is path-connected and locally path-
+connected.</em></p></li>
+</ol>
+</div></blockquote>
+<p><strong>Proof:</strong> Given an open set <span class="math notranslate nohighlight">\(U\subset Y\)</span> as in condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>), the quotient map <span class="math notranslate nohighlight">\(p\)</span> simply
+identifies all the disjoint homeomorphic sets <span class="math notranslate nohighlight">\(\{g(U) \mid g \in G\}\)</span> to a single open set
+<span class="math notranslate nohighlight">\(p(U)\)</span> in <span class="math notranslate nohighlight">\(Y/G\)</span>. By the definition of the quotient topology on <span class="math notranslate nohighlight">\(Y/G,\, p\)</span> restricts to
+a homeomorphism from <span class="math notranslate nohighlight">\(g(U)\)</span> onto <span class="math notranslate nohighlight">\(p(U)\)</span> for each <span class="math notranslate nohighlight">\(g \in G\)</span> so we have a covering
+space. Each element of <span class="math notranslate nohighlight">\(G\)</span> acts as a deck transformation, and the covering space is
+normal since <span class="math notranslate nohighlight">\(g_2g_1^{-1}\)</span> takes <span class="math notranslate nohighlight">\(g_1(U)\)</span> to <span class="math notranslate nohighlight">\(g_2(U)\)</span>. The deck transformation group contains
+<span class="math notranslate nohighlight">\(G\)</span> as a subgroup, and equals this subgroup if <span class="math notranslate nohighlight">\(Y\)</span> is path-connected, since if <span class="math notranslate nohighlight">\(f\)</span> is any
+deck transformation, then for an arbitrarily chosen point <span class="math notranslate nohighlight">\(y \in Y\)</span> and <span class="math notranslate nohighlight">\(f(y)\)</span> are
+in the same orbit and there is a <span class="math notranslate nohighlight">\(g \in G\)</span> with <span class="math notranslate nohighlight">\(g(y) = f(y)\)</span>, hence <span class="math notranslate nohighlight">\(f=g\)</span> since deck
+transformations of a path-connected covering space are uniquely determined by where
+they send a point. The final statement of the proposition is immediate from part (b)
+of <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-1-39"><span class="std std-ref">Proposition 1.39</span></a>. <span style="float:right">&#9723</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><span style="margin-left: 2em"> In view of the preceding proposition, we shall call an action satisfying (<span class="math notranslate nohighlight">\({\Large *}\)</span>) a
+<strong>covering space action</strong>. This is not standard terminology, but there does not seem to
+be a universally accepted name for actions satisfying (<span class="math notranslate nohighlight">\({\Large *}\)</span>). Sometimes these are called
+‘properly discontinuous’ actions, but more often this rather unattractive term means
+something weaker: Every point <span class="math notranslate nohighlight">\(x \in X\)</span> has a neighborhood <span class="math notranslate nohighlight">\(U\)</span> such that <span class="math notranslate nohighlight">\(U \cap g(U)\)</span>
+is nonempty for only finitely many <span class="math notranslate nohighlight">\(g \in G\)</span>. Many symmetry groups have this proper
+discontinuity property without satisfying (<span class="math notranslate nohighlight">\({\Large *}\)</span>), for example the group of symmetries
+of the familiar tiling of <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> by regular hexagons. The reason why the action of this
+group on <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> fails to satisfy (<span class="math notranslate nohighlight">\({\Large *}\)</span>) is that there are <strong>fixed points</strong>: points <span class="math notranslate nohighlight">\(y\)</span> for which
+there is a nontrivial element <span class="math notranslate nohighlight">\(g \in G\)</span> with <span class="math notranslate nohighlight">\(g(y)=g\)</span>. For example, the vertices of the
+ehxagons are fixed by the <span class="math notranslate nohighlight">\(120\)</span> degree rotations abotu these points, and the midpoints
+of edges are fixed by <span class="math notranslate nohighlight">\(180\)</span> degree rotations. An action without fixed points is called a
+<strong>free</strong> action. Thus for a free action of <span class="math notranslate nohighlight">\(G\)</span> on <span class="math notranslate nohighlight">\(Y\)</span>, only the identity element of <span class="math notranslate nohighlight">\(G\)</span> fixes any
+point of <span class="math notranslate nohighlight">\(Y\)</span>. This is equivalent to requiring that all the images <span class="math notranslate nohighlight">\(g(y)\)</span> of each <span class="math notranslate nohighlight">\(y \in Y\)</span> are
+distinct, or in other owrds <span class="math notranslate nohighlight">\(g_1(y)=g_2(y)\)</span> only when <span class="math notranslate nohighlight">\(g_1 = g_2\)</span>, since <span class="math notranslate nohighlight">\(g_1(y)=g_2(y)\)</span>
+is equivalent to <span class="math notranslate nohighlight">\(g^{-1}_1g_2(y)=y\)</span>. Though condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>) implies freeness, the converse
+is not always true. An example is the action of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> on <span class="math notranslate nohighlight">\(S^1\)</span> in which a generator of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> acts
+by rotation through an angle <span class="math notranslate nohighlight">\(\alpha\)</span> that is an irrtional multiple of <span class="math notranslate nohighlight">\(2\pi\)</span>. In this case each
+orbit <span class="math notranslate nohighlight">\(\mathbb{Z}y\)</span> is dense in <span class="math notranslate nohighlight">\(S^1\)</span>, so condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>) cannot hold since it implies that orbits are
+discrete subspaces. An exercise at the end of the section is to show that for actions
+on Hausdorff spaces, freeness plus proper discontinuity implies condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>). Note
+that proper discontinuity is automatic for actions by a finite group.
+|</p>
+<div class="docutils container" id="example-1-41">
+<a class="reference internal image-reference" href="../../_images/eg-1-41.png"><img alt="../../_images/eg-1-41.png" class="align-right" src="../../_images/eg-1-41.png" style="width: 30%;" /></a>
+<p><strong>Example 1.41.</strong> Let <span class="math notranslate nohighlight">\(Y\)</span> be the closed orientable surface of genus <span class="math notranslate nohighlight">\(11\)</span>, an ‘<span class="math notranslate nohighlight">\(11\)</span>-hole torus’ as
+shown in the figure. This has a <span class="math notranslate nohighlight">\(5\)</span>-fold rotational symmetry,
+generated by a rotation of angle <span class="math notranslate nohighlight">\(2\pi / 5\)</span>. Thus we have
+the cyclic group <span class="math notranslate nohighlight">\(\mathbb{Z}_5\)</span> acting on <span class="math notranslate nohighlight">\(Y\)</span>, and the condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>) is
+obviously satisfied. The quotient space <span class="math notranslate nohighlight">\(Y/\mathbb{Z}_5\)</span> is a surface
+of genus <span class="math notranslate nohighlight">\(3\)</span>, obtained from one of the five subsrufaces of
+<span class="math notranslate nohighlight">\(Y\)</span> cut off by the circles <span class="math notranslate nohighlight">\(C_1, \cdots, C_5\)</span> by identifying its two
+boundary circles <span class="math notranslate nohighlight">\(C_i\)</span> and <span class="math notranslate nohighlight">\(C_{i+1}\)</span> to form the circle <span class="math notranslate nohighlight">\(C\)</span> as
+shown. Thus we have a covering space <span class="math notranslate nohighlight">\(M_{11} \rightarrow M_3\)</span> where
+<span class="math notranslate nohighlight">\(M_g\)</span> denotes the closed orientable surface of genus <span class="math notranslate nohighlight">\(g\)</span>.
+In particular, we see that <span class="math notranslate nohighlight">\(\pi_1(M_3)\)</span> contains the ‘larger’
+group <span class="math notranslate nohighlight">\(\pi_1(M_{11})\)</span> as a normal subgroup of index <span class="math notranslate nohighlight">\(5\)</span>, with
+quotient <span class="math notranslate nohighlight">\(\mathbb{Z}_5\)</span>. This example obviously generalizes by
+replacing the two holes in each ‘arm’ of <span class="math notranslate nohighlight">\(M_{11}\)</span> by <span class="math notranslate nohighlight">\(m\)</span> holes and the <span class="math notranslate nohighlight">\(5\)</span>-fold symmetry by
+<span class="math notranslate nohighlight">\(n\)</span>-fold symmetry. This gives a covering space <span class="math notranslate nohighlight">\(M_{mn+1} \rightarrow M_{m+1}\)</span>. An exercise in <span class="xref std std-ref">§2.2</span> is
+to show by an Euler characteristic argument that if there is a covering space <span class="math notranslate nohighlight">\(M_g \rightarrow M_g\)</span>
+then <span class="math notranslate nohighlight">\(g=mn+1\)</span> and <span class="math notranslate nohighlight">\(h=m+1\)</span> for some <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><span style="margin-left: 2em"> As a special case of the final statement of the preceding proposition we see that
+for a covering space action of a group <span class="math notranslate nohighlight">\(G\)</span> on a simply-connected locally path-connected
+space <span class="math notranslate nohighlight">\(Y\)</span>, the orbit spacer <span class="math notranslate nohighlight">\(Y/G\)</span> has fundamental group isomorphic to <span class="math notranslate nohighlight">\(G\)</span>. Under this
+isomorphism an element <span class="math notranslate nohighlight">\(g \in G\)</span> corresponds to a loop in <span class="math notranslate nohighlight">\(Y/G\)</span> that is the projection of
+a path in <span class="math notranslate nohighlight">\(Y\)</span> from a chosen basepoint <span class="math notranslate nohighlight">\(y_0\)</span> to <span class="math notranslate nohighlight">\(g(y_0)\)</span>. Any two such paths are homotopic
+since <span class="math notranslate nohighlight">\(Y\)</span> is simply-connected, so we get a well0defined element of <span class="math notranslate nohighlight">\(\pi_1(y/G)\)</span> associated
+to <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p><span style="margin-left: 2em"> This method for computing fundamental groups vai group actions on simply-connected
+spaces is essentially how we computed <span class="math notranslate nohighlight">\(\pi_1(S^1)\)</span> in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec1/index.html#section-1-1"><span class="std std-ref">§1.1</span></a>, via the covering
+space <span class="math notranslate nohighlight">\(\mathbbR{} \rightarrow S^1\)</span> arising from the action of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by translations. This is a useful general
+technique for computing fundamental groups, in fact. Here are some examples
+illustrating this idea.</p>
+<div class="docutils container" id="example-1-42">
+<p><strong>Example 1.42.</strong> Consider the grid in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> formed by the horizontal and vertical lines
+through points in <span class="math notranslate nohighlight">\(\mathbb{Z}^2\)</span>.</p>
+<a class="reference internal image-reference" href="../../_images/eg-1-42.png"><img alt="../../_images/eg-1-42.png" class="align-right" src="../../_images/eg-1-42.png" style="width: 30%;" /></a>
+<p>Let us decorate this grid with arrows in either of the two ways
+shown in the figure, the difference between the two
+cases being that in the second case the horizontal
+arrows in adjacent lines point in opposite directions.
+The group <span class="math notranslate nohighlight">\(G\)</span> consisting of all symmetries
+of the first decorated grid is isomorphic to <span class="math notranslate nohighlight">\(\mathbb{Z} \times \mathbb{Z}\)</span>
+since it consists of all translations <span class="math notranslate nohighlight">\((x,y) \mapsto (x+m,y+n)\)</span> for <span class="math notranslate nohighlight">\(m,n \in \mathbb{Z}\)</span>. For the
+second grid the symmetry group <span class="math notranslate nohighlight">\(G\)</span> contains a subgroup of translations of the form
+<span class="math notranslate nohighlight">\((x,y_ \mapsto (x+m, y+2n))\)</span> for <span class="math notranslate nohighlight">\(m,n \in \mathbb{Z}\)</span>, but there are also glide-reflection symmetries
+consisting of vertical translation by an odd integer distance followed by reflection
+across a vertical line, either a vertical line of the grid or vertical line halfway between
+two adjacent grid lines. For both decorated grids there are elements of <span class="math notranslate nohighlight">\(G\)</span> taking any
+square to nay other, butr only the identity element of <span class="math notranslate nohighlight">\(G\)</span> takes a square to itself. The
+minimum distance any point is moved by a nontrivial element of <span class="math notranslate nohighlight">\(G\)</span> is <span class="math notranslate nohighlight">\(1\)</span>, which easily
+implies the covering space condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>). The orbit space <span class="math notranslate nohighlight">\(\mathbb{R}^2/G\)</span> is the quotient space
+of a square in the grid with opposite edges identified according to the arrows. Thus
+we see that the fundamental groups of the torus and the Klein bottle are the symmetry
+groups <span class="math notranslate nohighlight">\(G\)</span> in the two cases. In the second case the subgroup of <span class="math notranslate nohighlight">\(G\)</span> formed by the
+translations ahs index two, and the orbit space for this subgroup is a torus forming a
+two-sheeted covering spaces of the Klein bottle.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p id="example-1-43"><strong>Example 1.43:</strong> <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span>. The antipodal map of <span class="math notranslate nohighlight">\(S^n.\. x\mapsto -x\)</span>, generates an action of <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span>
+on <span class="math notranslate nohighlight">\(S^n\)</span> with orbit space <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span>, real projective <span class="math notranslate nohighlight">\(n\)</span>-space, as defined in <span class="xref std std-ref">Example 0.4</span>. The
+action is a covering space action since each open hemisphere in <span class="math notranslate nohighlight">\(S^n\)</span> is disjoint from
+its antipodal image. As we saw in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec1/induced-homomorphisms.html#proposition-1-14"><span class="std std-ref">Proposition 1.14</span></a>, <span class="math notranslate nohighlight">\(S^n\)</span> is simply-connected if <span class="math notranslate nohighlight">\(n \geq 2\)</span>,
+so from the covering space <span class="math notranslate nohighlight">\(S^n \rightarrow \mathbb{R}P^n`we deduce that :math:\)</span>pi_1(mathbb{R}P^n) approx mathbb{Z}_2` for <span class="math notranslate nohighlight">\(n \geq 2\)</span>. A
+generator for <span class="math notranslate nohighlight">\(\pi_1(\mathbb{R}P^n)\)</span> is any loop obtained by projecting a path in <span class="math notranslate nohighlight">\(S^n\)</span> connecting two
+antipodal points. One can see explicitly that such a loop <span class="math notranslate nohighlight">\(\gamma\)</span> has order two in <span class="math notranslate nohighlight">\(\pi_1(\mathbb{R}P^n)\)</span>
+if <span class="math notranslate nohighlight">\(n \geq 2\)</span> since the composition <span class="math notranslate nohighlight">\(\gamma \cdot \gamma\)</span> lifts to a loop in <span class="math notranslate nohighlight">\(S^n\)</span>, and this can be homotoped to
+the trivial loop since <span class="math notranslate nohighlight">\(\pi_1(S^n) = 0\)</span>, so the projection of this homotopy into <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span> gives
+a nullhomotopy of <span class="math notranslate nohighlight">\(\gamma \cdot \gamma\)</span>.</p>
 </section>
 
 

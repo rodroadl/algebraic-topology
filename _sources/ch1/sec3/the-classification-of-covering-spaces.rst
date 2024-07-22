@@ -358,16 +358,29 @@ natural projection :math:`\tilde{X}_\rho \rightarrow X` sending :math:`([\gamma]
 if :math:`U \subset X` is an open set over which the universal cover :math:`\tilde{X}_0` is a product :math:`U \times \pi_1(X,x_0)`,
 then the identifications defining :math:`\tilde{X}_\rho` simply collapse :math:`U \times \pi_1(X, x_0) \times F` to :math:`U \times F`.
 
+|indent| Returning to our given covering spce :math:`\tidlex{X} \rightarrow X` with associated action :math:`\rho`, the map
+:math:`\tilde{X}_\rho \rightarrow \tilde{X}` induced by :math:`h` is a bijection and therefore a homeomorphism since :math:`h` was a 
+local homeomorphism. Since this homeomorphism :math:`\tilde{X}_\rho \rightarrow \tilde{X}` takes each fiber of :math:`\tilde{X}_\rho` to
+the corresponding fiber of :math:`\tilde{X}`, it is an isomorphism of covering spaces.
 
+|indent| If two covering spaces :math:`\p_1:\tilde{X} \rightarrow X` and :math:`p_2: \tilde{X}_2 \rightarrow X` are isomorphic, one may ask
+how the corresponding actions of :math:`\pi_1(X,x_0)` on the fibers :math:`F_1` and :math:`F_2` over :math:`x_0` are 
+related. An isomorphism :math:`h:\tilde{X}_1 \rightarrow \tilde{X}_2` restricts to a bijection :math:`F_1 \rightarrow F_2`, and evidently
+:math:`L_\gamma(h(\tilde{x}_0)) =  h(L-\gamma (\tilde{x}_0))`. Using the less cumbersome notation :math:`\gamma \tilde{x}_0` for :math:`L_\gamma (\tilde{x}_0)`, this
+relation can be written more concisely as :math:`\gamma h (\tilde{x}_0) = h(\gamma \tilde{x}_0)`. A bijection :math:`F_1 \rightarrow F_2` with
+this property is what one would naturally call an *isomorphism of sets with* :math:`\pi_1(X,x_0)`
+*action*. Thus isomorphic covering spaces have isomorphic actions on fibers. The
+converse is also true, and easy to prove. One just observes that for isomorphic actions
+:math:`\rho_1` and :math:`\rho_2`, an isomorphism :math:`h:F_1 \rightarrow F_2` induces a map :math:`\tilde{X}_{\rho_1} \rightarrow \tilde{X}_{\rho_2}` and :math:`h^{-1}` induces a 
+similar map in the opposite direction, such that the compositions of these two maps,
+in either order, are the identity.
 
-
-
-
-
-
-
-
-
+|indent| This shows that :math:`n`-sheeted covering spaces of :math:`X` are classified by equivalence
+classes of homomorphisms :math:`\pi_1(X,x_0) \rightarrow \Sigma _n`, where :math:`\Sigma_n` is the symmetric group on :math:`n`
+symbols and the equivalence relation identifies a homomorphism :math:`\rho` with each of its
+conjugates :math:`h^{-1}\rho h` by elements :math:`h \in \Sigma_n`. The study of the various homomorphisms
+from a given group to :math:`\Sigma_n` is a very classical topic in group theory, so we see that this
+algebraic question has a nice geometric interpretation.
 
 
 
