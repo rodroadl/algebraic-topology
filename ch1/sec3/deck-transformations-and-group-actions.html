@@ -58,7 +58,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch1/sec3/deck-transformations-and-group-actions';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Additional Topics" href="../additional-topics/index.html" />
+    <link rel="next" title="Exercises" href="exercises.html" />
     <link rel="prev" title="The Classification of Covering Spaces" href="the-classification-of-covering-spaces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -197,6 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="lifting-properties.html">Lifting Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="the-classification-of-covering-spaces.html">The Classification of Covering Spaces</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Deck Transformations and Group Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises.html">Exercises</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../additional-topics/index.html">Additional Topics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -477,8 +478,8 @@ document.write(`
                   
   <section id="deck-transformations-and-group-actions">
 <h1>Deck Transformations and Group Actions<a class="headerlink" href="#deck-transformations-and-group-actions" title="Permalink to this heading">#</a></h1>
-<p><span style="margin-left: 2em"> For a covering space <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> the isomorphisms <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow \tilde{X}\)</span> are called <strong>deck transfor
-mations</strong> or <strong>covering transformations</strong>. These form a group <span class="math notranslate nohighlight">\(G(\tilde{X})\)</span> under composition.
+<p><span style="margin-left: 2em"> For a covering space <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> the isomorphisms <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow \tilde{X}\)</span> are called <strong>deck transformations</strong> or <strong>covering transformations</strong>.
+These form a group <span class="math notranslate nohighlight">\(G(\tilde{X})\)</span> under composition.
 For example, for the covering space <span class="math notranslate nohighlight">\(p: \mathbb{R} \rightarrow S^1\)</span> projecting a vertical helix onto a circle,
 the deck transformations are the vertical translations taking the helix onto itself, so
 <span class="math notranslate nohighlight">\(G(\tilde{X}) \approx \mathbb{Z}\)</span> in this case. For the <span class="math notranslate nohighlight">\(n\)</span>-sheeted covering space <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1,\, z \mapsto z^n\)</span>, the deck
@@ -487,7 +488,7 @@ so <span class="math notranslate nohighlight">\(G(\tilde{X})=\mathbb{Z}_n\)</spa
 <p><span style="margin-left: 2em"> By the <a class="hxr-hoverxref hxr-tooltip reference internal" href="lifting-properties.html#proposition-1-34"><span class="std std-ref">unique lifting property</span></a>, a deck transformation is completely determined
 by where it sends a single point, assuming <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is path-connected. In particular, only
 theidentity deck transformation can fix a point of <span class="math notranslate nohighlight">\(\tilde{X}\)</span>.</p>
-<p><span style="margin-left: 2em"> A covering space <span class="math notranslate nohighlight">\(p:\tidle{X} \rightarrow X\)</span> is called <strong>normal</strong> if for each <span class="math notranslate nohighlight">\(x \in X\)</span> and each pair of lifts
+<p><span style="margin-left: 2em"> A covering space <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> is called <strong>normal</strong> if for each <span class="math notranslate nohighlight">\(x \in X\)</span> and each pair of lifts
 <span class="math notranslate nohighlight">\(\tilde{x},\tilde{x}'\)</span> of <span class="math notranslate nohighlight">\(x\)</span> there is a deck transformation taking <span class="math notranslate nohighlight">\(\tilde{x}`to :math:\)</span>tilde{x}’<cite>. For example, the covering
 space :math:</cite>mathbb{R} rightarrow X^1` and the <span class="math notranslate nohighlight">\(n\)</span>-sheeted covering spaces <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1\)</span> are normal. Intuitively, a
 normal covering space is one with maximal symmetry. This can be seen in the covering
@@ -507,11 +508,11 @@ the path-connected, locally path-connected space</em> <span class="math notransl
 <span class="math notranslate nohighlight">\(H\)</span> <em>in</em> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.</p></li>
 </ol>
 <p><em>In particular,</em> <span class="math notranslate nohighlight">\(G(\tilde{X})\)</span> <em>is isomorphic to</em> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)/H\)</span> <em>if</em> <span class="math notranslate nohighlight">\(\tilde{X}\)</span> <em>is a normal covering. Hence
-for the universal cover</em> <span class="math notranslate nohighlight">\(\tidle{X} \rightarrow X\)</span> <em>we have</em> <span class="math notranslate nohighlight">\(G(\tilde{X}) \approx \pi_1(X)\)</span>.</p>
+for the universal cover</em> <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> <em>we have</em> <span class="math notranslate nohighlight">\(G(\tilde{X}) \approx \pi_1(X)\)</span>.</p>
 </div></blockquote>
 <p><strong>Proof:</strong> We observed earlier in the proof of the <a class="hxr-hoverxref hxr-tooltip reference internal" href="the-classification-of-covering-spaces.html#theorem-1-38"><span class="std std-ref">classification theorem</span></a> that changing
 the basepoint <span class="math notranslate nohighlight">\(\tilde{x}_0 \in p^{-1}(x_0)\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1 \in p^{-1}(x_0)\)</span> corresponds precisely to conjugating
-<span class="math notranslate nohighlight">\(H\)</span> by an element <span class="math notranslate nohighlight">\([\gamma] \in \pi_1(X,x_0)\)</span> where <span class="math notranslate nohighlight">\(\gamma\)</span> lifts to a path <span class="math notranslate nohighlight">\(\tilde{\gamma\)</span> from <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>. Thus <span class="math notranslate nohighlight">\([\gamma]\)</span>
+<span class="math notranslate nohighlight">\(H\)</span> by an element <span class="math notranslate nohighlight">\([\gamma] \in \pi_1(X,x_0)\)</span> where <span class="math notranslate nohighlight">\(\gamma\)</span> lifts to a path <span class="math notranslate nohighlight">\(\tilde{\gamma}\)</span> from <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>. Thus <span class="math notranslate nohighlight">\([\gamma]\)</span>
 is in the normalizer <span class="math notranslate nohighlight">\(N(H)\)</span> iff <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0))=p_*(\pi_1(\tilde{X},\tilde{x}_1))\)</span>, which by the <span class="xref std std-ref">lifting
 criterion</span> is equivalent to the existence of a deck transformation taking <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{x}_1\)</span>.
 Hence the covering space is normal iff <span class="math notranslate nohighlight">\(N(H) = \pi_1(X,x_0)\)</span>, that is, iff <span class="math notranslate nohighlight">\(H\)</span> is a normal
@@ -521,7 +522,7 @@ subgroup of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>.<
 to the deck transformation <span class="math notranslate nohighlight">\(\tau '\)</span> taking <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\({x}_1'\)</span> then <span class="math notranslate nohighlight">\(\gamma \cdot \gamma'\)</span> lifts to <span class="math notranslate nohighlight">\(\tilde{\gamma} \cdot (\tau(\tilde{\gamma}'))\)</span>,
 a path from <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> to <span class="math notranslate nohighlight">\(\tau(\tilde{x}_1')=\tau \tau'(\tilde{x}_0)\)</span>, so <span class="math notranslate nohighlight">\(\tau \tau'\)</span> is the deck transformation corresponding
 to <span class="math notranslate nohighlight">\([\gamma][\gamma']\)</span>. By the preceding paragraph <span class="math notranslate nohighlight">\(\varphi\)</span> is surjective. Its kernel consists of classes
-:math:[gamma] lifting to loops in <span class="math notranslate nohighlight">\(\tilde{X}\)</span>. These are exactly the elements of <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0))= H\)</span>. <span style="float:right">&#9723</span></p>
+<span class="math notranslate nohighlight">\([\gamma]\)</span> lifting to loops in <span class="math notranslate nohighlight">\(\tilde{X}\)</span>. These are exactly the elements of <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X},\tilde{x}_0))= H\)</span>. <span style="float:right">&#9723</span></p>
 </div>
 <p><span style="margin-left: 2em"> The group of deck transformations is a special case of the general notion of
 ‘groups acting on spaces’. Given a group <span class="math notranslate nohighlight">\(G\)</span> and a space <span class="math notranslate nohighlight">\(Y\)</span>, then an <strong>action</strong> of <span class="math notranslate nohighlight">\(G\)</span>
@@ -529,13 +530,13 @@ on <span class="math notranslate nohighlight">\(Y\)</span> is a homomorphism <sp
 from <span class="math notranslate nohighlight">\(Y\)</span> to itself. Thus to each <span class="math notranslate nohighlight">\(g \in G\)</span> is associated a homeomorphisms <span class="math notranslate nohighlight">\(\rho(g): Y \rightarrow Y\)</span>,
 which for notational simplicity we write simply as <span class="math notranslate nohighlight">\(g:Y \rightarrow Y\)</span>. For <span class="math notranslate nohighlight">\(\rho\)</span> to be a homomorphism
 amounts to requiring that <span class="math notranslate nohighlight">\(g_1(g_2(y)) = (g_1g_2)(y)\)</span> for all <span class="math notranslate nohighlight">\(g_1,g_2 \in G\)</span> and
-<span class="math notranslate nohighlight">\(y \in Y\)</span>. If <span class="math notranslate nohighlight">\(\rho\)</span> is injective then it identifies <span class="math notranslate nohighlight">\(G\)</span> with a subgroup of Homeo(<span class="math notranslate nohighlight">\(Y\)</span>), and in
-practice not much is lost in assuming <span class="math notranslate nohighlight">\(\rho\)</span> is an inclusion <span class="math notranslate nohighlight">\(G \hookrightarrow`Homeo(:math:`Y\)</span>) since in any
+<span class="math notranslate nohighlight">\(y \in Y\)</span>. If <span class="math notranslate nohighlight">\(\rho\)</span> is injective then it identifies <span class="math notranslate nohighlight">\(G\)</span> with a subgroup of <span class="math notranslate nohighlight">\(\text{Homeo}(Y)\)</span>, and in
+practice not much is lost in assuming <span class="math notranslate nohighlight">\(\rho\)</span> is an inclusion <span class="math notranslate nohighlight">\(G \hookrightarrow \text{Homeo}(Y)\)</span> since in any
 case the subgroup <span class="math notranslate nohighlight">\(\rho(G) \subset \text{Homeo}(Y)\)</span> contains all the topological information about
 the action.</p>
 <p><span style="margin-left: 2em"> We shall be interested in actions satisfying the following condition:</p>
 <dl class="simple">
-<dt>(<span class="math notranslate nohighlight">\({\Large *}\)</span>) Each <span class="math notranslate nohighlight">\(y \in Y\)</span> has a neighborhood <span class="math notranslate nohighlight">\(U\)</span> such that all the images <span class="math notranslate nohighlight">\(g(U)\)</span> for varying</dt><dd><p><span class="math notranslate nohighlight">\(g \in G\)</span> are disjoint. In other words, <span class="math notranslate nohighlight">\(g_1(U) \cap g_2(U) \neq \emptyset\)</span> implies <span class="math notranslate nohighlight">\(g_1 = g_2\)</span>.</p>
+<dt>(<span class="math notranslate nohighlight">\({\Large *}\)</span>)    Each <span class="math notranslate nohighlight">\(y \in Y\)</span> has a neighborhood <span class="math notranslate nohighlight">\(U\)</span> such that all the images <span class="math notranslate nohighlight">\(g(U)\)</span> for varying</dt><dd><p><span class="math notranslate nohighlight">\(g \in G\)</span> are disjoint. In other words, <span class="math notranslate nohighlight">\(g_1(U) \cap g_2(U) \neq \emptyset\)</span> implies <span class="math notranslate nohighlight">\(g_1 = g_2\)</span>.</p>
 </dd>
 </dl>
 <p>The action of the deck transformation group <span class="math notranslate nohighlight">\(G(\tilde{x})\)</span> on <span class="math notranslate nohighlight">\(\tilde{X}\)</span> satisfies (<span class="math notranslate nohighlight">\({\Large *}\)</span>). To see this.
@@ -558,7 +559,7 @@ over <span class="math notranslate nohighlight">\(G\)</span>. The points of <spa
 <li><p><em>The quotient map</em> <span class="math notranslate nohighlight">\(p:Y \rightarrow Y/G,\, p(y)=Gy\)</span>, <em>is a normal covering space.</em></p></li>
 <li><p><span class="math notranslate nohighlight">\(G\)</span> <em>is the group of deck transformations of this covering space</em> <span class="math notranslate nohighlight">\(Y \rightarrow Y/G\)</span> <em>if</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>is
 path-connected.</em></p></li>
-<li><p><span class="math notranslate nohighlight">\(G\)</span> <em>is isomorphic to</em> <span class="math notranslate nohighlight">\(\pi_1(Y/G)p_*(\pi_1(Y))\)</span> <em>if</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>is path-connected and locally path-
+<li><p><span class="math notranslate nohighlight">\(G\)</span> <em>is isomorphic to</em> <span class="math notranslate nohighlight">\(\pi_1(Y/G)/p_*(\pi_1(Y))\)</span> <em>if</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>is path-connected and locally path-
 connected.</em></p></li>
 </ol>
 </div></blockquote>
@@ -574,9 +575,6 @@ in the same orbit and there is a <span class="math notranslate nohighlight">\(g 
 transformations of a path-connected covering space are uniquely determined by where
 they send a point. The final statement of the proposition is immediate from part (b)
 of <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-1-39"><span class="std std-ref">Proposition 1.39</span></a>. <span style="float:right">&#9723</span></p>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
 </div>
 <p><span style="margin-left: 2em"> In view of the preceding proposition, we shall call an action satisfying (<span class="math notranslate nohighlight">\({\Large *}\)</span>) a
 <strong>covering space action</strong>. This is not standard terminology, but there does not seem to
@@ -599,8 +597,7 @@ by rotation through an angle <span class="math notranslate nohighlight">\(\alpha
 orbit <span class="math notranslate nohighlight">\(\mathbb{Z}y\)</span> is dense in <span class="math notranslate nohighlight">\(S^1\)</span>, so condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>) cannot hold since it implies that orbits are
 discrete subspaces. An exercise at the end of the section is to show that for actions
 on Hausdorff spaces, freeness plus proper discontinuity implies condition (<span class="math notranslate nohighlight">\({\Large *}\)</span>). Note
-that proper discontinuity is automatic for actions by a finite group.
-|</p>
+that proper discontinuity is automatic for actions by a finite group.</p>
 <div class="docutils container" id="example-1-41">
 <a class="reference internal image-reference" href="../../_images/eg-1-41.png"><img alt="../../_images/eg-1-41.png" class="align-right" src="../../_images/eg-1-41.png" style="width: 30%;" /></a>
 <p><strong>Example 1.41.</strong> Let <span class="math notranslate nohighlight">\(Y\)</span> be the closed orientable surface of genus <span class="math notranslate nohighlight">\(11\)</span>, an ‘<span class="math notranslate nohighlight">\(11\)</span>-hole torus’ as
@@ -621,9 +618,6 @@ replacing the two holes in each ‘arm’ of <span class="math notranslate nohig
 to show by an Euler characteristic argument that if there is a covering space <span class="math notranslate nohighlight">\(M_g \rightarrow M_g\)</span>
 then <span class="math notranslate nohighlight">\(g=mn+1\)</span> and <span class="math notranslate nohighlight">\(h=m+1\)</span> for some <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p><span style="margin-left: 2em"> As a special case of the final statement of the preceding proposition we see that
 for a covering space action of a group <span class="math notranslate nohighlight">\(G\)</span> on a simply-connected locally path-connected
 space <span class="math notranslate nohighlight">\(Y\)</span>, the orbit spacer <span class="math notranslate nohighlight">\(Y/G\)</span> has fundamental group isomorphic to <span class="math notranslate nohighlight">\(G\)</span>. Under this
@@ -633,14 +627,14 @@ since <span class="math notranslate nohighlight">\(Y\)</span> is simply-connecte
 to <span class="math notranslate nohighlight">\(g\)</span>.</p>
 <p><span style="margin-left: 2em"> This method for computing fundamental groups vai group actions on simply-connected
 spaces is essentially how we computed <span class="math notranslate nohighlight">\(\pi_1(S^1)\)</span> in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec1/index.html#section-1-1"><span class="std std-ref">§1.1</span></a>, via the covering
-space <span class="math notranslate nohighlight">\(\mathbbR{} \rightarrow S^1\)</span> arising from the action of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by translations. This is a useful general
+space <span class="math notranslate nohighlight">\(\mathbb{R} \rightarrow S^1\)</span> arising from the action of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by translations. This is a useful general
 technique for computing fundamental groups, in fact. Here are some examples
 illustrating this idea.</p>
 <div class="docutils container" id="example-1-42">
-<p><strong>Example 1.42.</strong> Consider the grid in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> formed by the horizontal and vertical lines
-through points in <span class="math notranslate nohighlight">\(\mathbb{Z}^2\)</span>.</p>
 <a class="reference internal image-reference" href="../../_images/eg-1-42.png"><img alt="../../_images/eg-1-42.png" class="align-right" src="../../_images/eg-1-42.png" style="width: 30%;" /></a>
-<p>Let us decorate this grid with arrows in either of the two ways
+<p><strong>Example 1.42.</strong> Consider the grid in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> formed by the horizontal and vertical lines
+through points in <span class="math notranslate nohighlight">\(\mathbb{Z}^2\)</span>.
+Let us decorate this grid with arrows in either of the two ways
 shown in the figure, the difference between the two
 cases being that in the second case the horizontal
 arrows in adjacent lines point in opposite directions.
@@ -648,7 +642,7 @@ The group <span class="math notranslate nohighlight">\(G\)</span> consisting of 
 of the first decorated grid is isomorphic to <span class="math notranslate nohighlight">\(\mathbb{Z} \times \mathbb{Z}\)</span>
 since it consists of all translations <span class="math notranslate nohighlight">\((x,y) \mapsto (x+m,y+n)\)</span> for <span class="math notranslate nohighlight">\(m,n \in \mathbb{Z}\)</span>. For the
 second grid the symmetry group <span class="math notranslate nohighlight">\(G\)</span> contains a subgroup of translations of the form
-<span class="math notranslate nohighlight">\((x,y_ \mapsto (x+m, y+2n))\)</span> for <span class="math notranslate nohighlight">\(m,n \in \mathbb{Z}\)</span>, but there are also glide-reflection symmetries
+<span class="math notranslate nohighlight">\((x,y \mapsto (x+m, y+2n))\)</span> for <span class="math notranslate nohighlight">\(m,n \in \mathbb{Z}\)</span>, but there are also glide-reflection symmetries
 consisting of vertical translation by an odd integer distance followed by reflection
 across a vertical line, either a vertical line of the grid or vertical line halfway between
 two adjacent grid lines. For both decorated grids there are elements of <span class="math notranslate nohighlight">\(G\)</span> taking any
@@ -664,11 +658,11 @@ two-sheeted covering spaces of the Klein bottle.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p id="example-1-43"><strong>Example 1.43:</strong> <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span>. The antipodal map of <span class="math notranslate nohighlight">\(S^n.\. x\mapsto -x\)</span>, generates an action of <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span>
+<p id="example-1-43"><strong>Example 1.43:</strong> <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span>. The antipodal map of <span class="math notranslate nohighlight">\(S^n,\, x\mapsto -x\)</span>, generates an action of <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span>
 on <span class="math notranslate nohighlight">\(S^n\)</span> with orbit space <span class="math notranslate nohighlight">\(\mathbb{R}P^n\)</span>, real projective <span class="math notranslate nohighlight">\(n\)</span>-space, as defined in <span class="xref std std-ref">Example 0.4</span>. The
 action is a covering space action since each open hemisphere in <span class="math notranslate nohighlight">\(S^n\)</span> is disjoint from
 its antipodal image. As we saw in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec1/induced-homomorphisms.html#proposition-1-14"><span class="std std-ref">Proposition 1.14</span></a>, <span class="math notranslate nohighlight">\(S^n\)</span> is simply-connected if <span class="math notranslate nohighlight">\(n \geq 2\)</span>,
-so from the covering space <span class="math notranslate nohighlight">\(S^n \rightarrow \mathbb{R}P^n`we deduce that :math:\)</span>pi_1(mathbb{R}P^n) approx mathbb{Z}_2` for <span class="math notranslate nohighlight">\(n \geq 2\)</span>. A
+so from the covering space <span class="math notranslate nohighlight">\(S^n \rightarrow \mathbb{R}P^n\)</span> we deduce that <span class="math notranslate nohighlight">\(\pi_1(\mathbb{R}P^n) \approx \mathbb{Z}_2\)</span> for <span class="math notranslate nohighlight">\(n \geq 2\)</span>. A
 generator for <span class="math notranslate nohighlight">\(\pi_1(\mathbb{R}P^n)\)</span> is any loop obtained by projecting a path in <span class="math notranslate nohighlight">\(S^n\)</span> connecting two
 antipodal points. One can see explicitly that such a loop <span class="math notranslate nohighlight">\(\gamma\)</span> has order two in <span class="math notranslate nohighlight">\(\pi_1(\mathbb{R}P^n)\)</span>
 if <span class="math notranslate nohighlight">\(n \geq 2\)</span> since the composition <span class="math notranslate nohighlight">\(\gamma \cdot \gamma\)</span> lifts to a loop in <span class="math notranslate nohighlight">\(S^n\)</span>, and this can be homotoped to
@@ -723,7 +717,7 @@ acts freely on <span class="math notranslate nohighlight">\(S^n\)</span> for som
 and [Davis &amp; Milgram 1985]. There is also almost complete information about which
 <span class="math notranslate nohighlight">\(n\)</span>’s are possible for a given group.</p>
 <div class="docutils container" id="example-1-44">
-<p><strong>Example 1.44.</strong> In <span class="xref std std-ref">Example 1.35</span> we constructed a contractible <span class="math notranslate nohighlight">\(2\)</span>-complex <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}=T_{m,n} \times \matbb{R}\)</span>
+<p><strong>Example 1.44.</strong> In <span class="xref std std-ref">Example 1.35</span> we constructed a contractible <span class="math notranslate nohighlight">\(2\)</span>-complex <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}=T_{m,n} \times \mathbb{R}\)</span>
 as the universal cover of a finnite <span class="math notranslate nohighlight">\(2\)</span>-complex <span class="math notranslate nohighlight">\(X_{m,n}\)</span> that was the union of
 themapping cylinders of the two maps <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1,\,z\mapsto Z^m\)</span> and <span class="math notranslate nohighlight">\(z\mapsto z^n\)</span>. The group
 of deck transformations of this covering space is therefore the fundamental group
@@ -737,7 +731,7 @@ thus a group of symmetries of this cell structure on <span class="math notransla
 symmetries of <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> preserving the orientations of edges. For example, the element <span class="math notranslate nohighlight">\(a\)</span>
 acts as a ‘screw motion` about an axis that is a vertical line <span class="math notranslate nohighlight">\(\{v_a\} \times \mathbb{R}\)</span> with <span class="math notranslate nohighlight">\(v_a\)</span> a vertex
 of <span class="math notranslate nohighlight">\(T_{m,n}\)</span>, and <span class="math notranslate nohighlight">\(b\)</span> acts similarly for a vertex <span class="math notranslate nohighlight">\(v_b\)</span>.</p>
-<p><span style="margin-left: 2em"> Since the action of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(\tilde{m,n}\)</span> preserves the cell structure, it also preserves
+<p><span style="margin-left: 2em"> Since the action of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(\tilde{X}_{m,n}\)</span> preserves the cell structure, it also preserves
 the product structure <span class="math notranslate nohighlight">\(T_{m,n} \times \mathbb{R}\)</span>. This means that there are actions of <span class="math notranslate nohighlight">\(G_{m,n}\)</span> on <span class="math notranslate nohighlight">\(T_{m,n}\)</span>
 and <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> such that the action on the product <span class="math notranslate nohighlight">\(X_{m,n}=T_{m,n} \times \mathbb{R}\)</span> is the diagonal action
 <span class="math notranslate nohighlight">\(g(x,y)=(g(x),g(y))\)</span> for <span class="math notranslate nohighlight">\(g \in G_{m,n}\)</span>. If we make the rectangles of unit height in the
@@ -760,7 +754,7 @@ deterimne <span class="math notranslate nohighlight">\(T_{m,n}/K\)</span> explic
 <h2>Cayley Complexes<a class="headerlink" href="#cayley-complexes" title="Permalink to this heading">#</a></h2>
 <p><span style="margin-left: 2em"> Covering spaces can be used to describe a very classical method for viewing
 groups geometrically as graphs. Recall from <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/applications-to-cell-complexes.html#corollary-1-28"><span class="std std-ref">Corollary 1.28</span></a> how we associated to each
-group presentation <span class="math notranslate nohighlight">\(G=\langle g_\alpha \mid r_\beta\)</span> a <span class="math notranslate nohighlight">\(2\)</span>-dimensional cell complex <span class="math notranslate nohighlight">\(X_G\)</span> with <span class="math notranslate nohighlight">\(\pi_1(X_G) \approx G\)</span>
+group presentation <span class="math notranslate nohighlight">\(G=\langle g_\alpha \mid r_\beta \rangle\)</span> a <span class="math notranslate nohighlight">\(2\)</span>-dimensional cell complex <span class="math notranslate nohighlight">\(X_G\)</span> with <span class="math notranslate nohighlight">\(\pi_1(X_G) \approx G\)</span>
 by taking a wedge-sum of circles, one for each generator <span class="math notranslate nohighlight">\(g_\alpha\)</span>, and then attaching a
 <span class="math notranslate nohighlight">\(2\)</span>-cell for each relator <span class="math notranslate nohighlight">\(r_\beta\)</span>. We can construct a cell complex <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> with a covering space
 action of <span class="math notranslate nohighlight">\(G\)</span> such that <span class="math notranslate nohighlight">\(\tilde{X}_G/G=X_G\)</span> in the following way. Let the vertices of <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> be
@@ -777,14 +771,12 @@ edge from <span class="math notranslate nohighlight">\(g'\)</span> to <span clas
 is just <span class="math notranslate nohighlight">\(X_G\)</span>.</p>
 <p><span style="margin-left: 2em"> In fact <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> is the universal cover of <span class="math notranslate nohighlight">\(X_G\)</span> since it is simply-connected. This can be
 seen by considering the homomorphims <span class="math notranslate nohighlight">\(\varphi : \pi_1(X_G) \rightarrow G\)</span> defined in the proof of <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-1-39"><span class="std std-ref">Proposition 1.39</span></a>.
-FOr an edge <span class="math notranslate nohighlight">\(e_\alpha\)</span> in <span class="math notranslate nohighlight">\(X_G\)</span> corresponding to a generator <span class="math notranslate nohighlight">\(g_\alpha\)</span> of <span class="math notranslate nohighlight">\(G\)</span>, it is clear
+For an edge <span class="math notranslate nohighlight">\(e_\alpha\)</span> in <span class="math notranslate nohighlight">\(X_G\)</span> corresponding to a generator <span class="math notranslate nohighlight">\(g_\alpha\)</span> of <span class="math notranslate nohighlight">\(G\)</span>, it is clear
 from the definition of <span class="math notranslate nohighlight">\(\varphi\)</span> that <span class="math notranslate nohighlight">\(\varphi ([e_\alpha])=g_\alpha\)</span>, so <span class="math notranslate nohighlight">\(\varphi\)</span> is an isomorphism. In particular
 the kernel of <span class="math notranslate nohighlight">\(\varphi,\,p_*(\pi_1(\tilde{X}_G))\)</span>, is zero, hence also <span class="math notranslate nohighlight">\(\pi_1(\tilde{X}_G)\)</span> since <span class="math notranslate nohighlight">\(p_*\)</span> is injective.</p>
-<p><span style="margin-left: 2em"> Let us look at some examples of Cayley complexes.
-|
-.. _Example 1.45:</p>
-<div class="docutils container">
-<a class="reference internal image-reference" href="../../_images/eg-1-45.png"><img alt="../../_images/eg-1-45.png" class="align-right" src="../../_images/eg-1-45.png" style="width: 50%;" /></a>
+<p><span style="margin-left: 2em"> Let us look at some examples of Cayley complexes.</p>
+<div class="docutils container" id="example-1-45">
+<a class="reference internal image-reference" href="../../_images/eg-1-45.png"><img alt="../../_images/eg-1-45.png" class="align-right" src="../../_images/eg-1-45.png" style="width: 40%;" /></a>
 <p><strong>Example 1.45.</strong> When <span class="math notranslate nohighlight">\(G\)</span> is the free group on
 two generators <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(X_G\)</span> is <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> and
 <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> is the Cayley graph of <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span> pictured at
@@ -796,23 +788,16 @@ the central vertical axis. The composition
 <span class="math notranslate nohighlight">\(e\)</span> to the vertex <span class="math notranslate nohighlight">\(ab\)</span>. Similarly, the action of
 any <span class="math notranslate nohighlight">\(w \in \mathbb{Z} * \mathbb{Z}\)</span> takes <span class="math notranslate nohighlight">\(e\)</span> to the vertex <span class="math notranslate nohighlight">\(w\)</span>.</p>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p id="example-1-46"><strong>Example 1.46.</strong> The group <span class="math notranslate nohighlight">\(G=\mathbb{Z} \times \mathbb{Z}\)</span> with presentation <span class="math notranslate nohighlight">\(\langle x,y \mid xyx^{-1}y^{-1} \rangle\)</span> has <span class="math notranslate nohighlight">\(X_G\)</span>
 the torus <span class="math notranslate nohighlight">\(S^1 \times S^1\)</span>, and <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> with vertices the integer lattice <span class="math notranslate nohighlight">\(\mathbb{Z}^2 \subset \mathbb{R}^2\)</span> and edges
 the horizontal and vertical segments between these lattice points. The action of <span class="math notranslate nohighlight">\(G\)</span> is
-by translations <span class="math notranslate nohighlight">\((x,y) \mapsto (x+m,y+n)\)</span>.
-|
-.. _Example 1.47:</p>
-<p><strong>Example 1.47.</strong> For <span class="math notranslate nohighlight">\(G=\mathbb{Z}_2= \langle x \mid x^2 \rangle ,\, X_G\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}_G = S^2\)</span>. More generally,
+by translations <span class="math notranslate nohighlight">\((x,y) \mapsto (x+m,y+n)\)</span>.</p>
+<p id="example-1-47"><strong>Example 1.47.</strong> For <span class="math notranslate nohighlight">\(G=\mathbb{Z}_2= \langle x \mid x^2 \rangle ,\, X_G\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}_G = S^2\)</span>. More generally,
 for <span class="math notranslate nohighlight">\(\mathbb{Z}_n = \langle x \mid x^n \rangle ,\, X_G\)</span> is <span class="math notranslate nohighlight">\(S^1\)</span> with a disk attached by the map <span class="math notranslate nohighlight">\(z \mapsto z^n\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> consists of
 <span class="math notranslate nohighlight">\(n\)</span> disks <span class="math notranslate nohighlight">\(D_1 , \cdots , D_n\)</span> with their boundary circles identified. A generator of <span class="math notranslate nohighlight">\(\mathbb{Z}_n\)</span> acts on
 this union of disks by sending <span class="math notranslate nohighlight">\(D_i\)</span> to <span class="math notranslate nohighlight">\(D_{i+1}\)</span> via a <span class="math notranslate nohighlight">\(2\pi / n\)</span> rotation, the subscript <span class="math notranslate nohighlight">\(i\)</span> being
-taken mod <span class="math notranslate nohighlight">\(n\)</span>. The common boundary circle of the disks is rotated by <span class="math notranslate nohighlight">\(2\pi / n\)</span>.
-|
-.. _Example 1.48:</p>
-<div class="docutils container">
+taken mod <span class="math notranslate nohighlight">\(n\)</span>. The common boundary circle of the disks is rotated by <span class="math notranslate nohighlight">\(2\pi / n\)</span>.</p>
+<div class="docutils container" id="example-1-48">
 <p><strong>Example 1.48.</strong> If <span class="math notranslate nohighlight">\(G=\mathbb{Z}_2 * \mathbb{Z}_2 = \langle a,b \mid a^2, b^2 \rangle\)</span> then the Cayley graph is a union of
 an infinite sequence of circles each tangent to its two neighbors.</p>
 <a class="reference internal image-reference" href="../../_images/eg-1-48-a.png"><img alt="../../_images/eg-1-48-a.png" class="align-center" src="../../_images/eg-1-48-a.png" style="width: 100%;" /></a>
@@ -824,7 +809,7 @@ one of the spheres and flips the whole chain of spheres end-for-end about this s
 The orbit space <span class="math notranslate nohighlight">\(X_G\)</span> is <span class="math notranslate nohighlight">\(\mathbb{R}P^2 \vee \mathbb{R}P^2\)</span></p>
 <p><span style="margin-left: 2em"> It is not hard to see the generalization of this example to <span class="math notranslate nohighlight">\(\mathbb{Z}_m * \mathbb{Z}_n\)</span> with the
 presentation <span class="math notranslate nohighlight">\(\langle a,b \mid a^m, b^n \rangle\)</span>, so that <span class="math notranslate nohighlight">\(\tilde{X}_G\)</span> consists of an infinite union of copies of the
-Cayley complexes for <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Z}_n\)</span> constructed in <span class="xref std std-ref">Example 1.47</span>, arranged in a tree0like
+Cayley complexes for <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Z}_n\)</span> constructed in <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-1-47"><span class="std std-ref">Example 1.47</span></a>, arranged in a tree-like
 pattern. The case of <span class="math notranslate nohighlight">\(\mathbb{Z}_2 * \mathbb{Z}_3\)</span> is pictured below.</p>
 <a class="reference internal image-reference" href="../../_images/eg-1-48-b.png"><img alt="../../_images/eg-1-48-b.png" class="align-center" src="../../_images/eg-1-48-b.png" style="width: 100%;" /></a>
 </div>
@@ -852,11 +837,11 @@ pattern. The case of <span class="math notranslate nohighlight">\(\mathbb{Z}_2 *
       </div>
     </a>
     <a class="right-next"
-       href="../additional-topics/index.html"
+       href="exercises.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Additional Topics</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

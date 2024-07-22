@@ -358,12 +358,12 @@ natural projection :math:`\tilde{X}_\rho \rightarrow X` sending :math:`([\gamma]
 if :math:`U \subset X` is an open set over which the universal cover :math:`\tilde{X}_0` is a product :math:`U \times \pi_1(X,x_0)`,
 then the identifications defining :math:`\tilde{X}_\rho` simply collapse :math:`U \times \pi_1(X, x_0) \times F` to :math:`U \times F`.
 
-|indent| Returning to our given covering spce :math:`\tidlex{X} \rightarrow X` with associated action :math:`\rho`, the map
+|indent| Returning to our given covering space :math:`\tilde{X} \rightarrow X` with associated action :math:`\rho`, the map
 :math:`\tilde{X}_\rho \rightarrow \tilde{X}` induced by :math:`h` is a bijection and therefore a homeomorphism since :math:`h` was a 
 local homeomorphism. Since this homeomorphism :math:`\tilde{X}_\rho \rightarrow \tilde{X}` takes each fiber of :math:`\tilde{X}_\rho` to
 the corresponding fiber of :math:`\tilde{X}`, it is an isomorphism of covering spaces.
 
-|indent| If two covering spaces :math:`\p_1:\tilde{X} \rightarrow X` and :math:`p_2: \tilde{X}_2 \rightarrow X` are isomorphic, one may ask
+|indent| If two covering spaces :math:`p_1:\tilde{X} \rightarrow X` and :math:`p_2: \tilde{X}_2 \rightarrow X` are isomorphic, one may ask
 how the corresponding actions of :math:`\pi_1(X,x_0)` on the fibers :math:`F_1` and :math:`F_2` over :math:`x_0` are 
 related. An isomorphism :math:`h:\tilde{X}_1 \rightarrow \tilde{X}_2` restricts to a bijection :math:`F_1 \rightarrow F_2`, and evidently
 :math:`L_\gamma(h(\tilde{x}_0)) =  h(L-\gamma (\tilde{x}_0))`. Using the less cumbersome notation :math:`\gamma \tilde{x}_0` for :math:`L_\gamma (\tilde{x}_0)`, this

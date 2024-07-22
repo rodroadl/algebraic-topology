@@ -1,8 +1,8 @@
 Deck Transformations and Group Actions
 ================================================
 
-|indent| For a covering space :math:`p:\tilde{X} \rightarrow X` the isomorphisms :math:`\tilde{X} \rightarrow \tilde{X}` are called **deck transfor
-mations** or **covering transformations**. These form a group :math:`G(\tilde{X})` under composition.
+|indent| For a covering space :math:`p:\tilde{X} \rightarrow X` the isomorphisms :math:`\tilde{X} \rightarrow \tilde{X}` are called **deck transformations** or **covering transformations**. 
+These form a group :math:`G(\tilde{X})` under composition.
 For example, for the covering space :math:`p: \mathbb{R} \rightarrow S^1` projecting a vertical helix onto a circle,
 the deck transformations are the vertical translations taking the helix onto itself, so
 :math:`G(\tilde{X}) \approx \mathbb{Z}` in this case. For the :math:`n`-sheeted covering space :math:`S^1 \rightarrow S^1,\, z \mapsto z^n`, the deck
@@ -13,7 +13,7 @@ so :math:`G(\tilde{X})=\mathbb{Z}_n`.
 by where it sends a single point, assuming :math:`\tilde{X}` is path-connected. In particular, only
 theidentity deck transformation can fix a point of :math:`\tilde{X}`.
 
-|indent| A covering space :math:`p:\tidle{X} \rightarrow X` is called **normal** if for each :math:`x \in X` and each pair of lifts
+|indent| A covering space :math:`p:\tilde{X} \rightarrow X` is called **normal** if for each :math:`x \in X` and each pair of lifts
 :math:`\tilde{x},\tilde{x}'` of :math:`x` there is a deck transformation taking :math:`\tilde{x}`to :math:`\tilde{x}'`. For example, the covering
 space :math:`\mathbb{R} \rightarrow X^1` and the :math:`n`-sheeted covering spaces :math:`S^1 \rightarrow S^1` are normal. Intuitively, a 
 normal covering space is one with maximal symmetry. This can be seen in the covering
@@ -36,11 +36,11 @@ is :math:`\mathbb{Z}_4` while in (8) it is :math:`\mathbb{Z}_2 \times \mathbb{Z}
         (b) :math:`G(\tilde{X})` *is isomorphic to the quotient* :math:`N(H)/H` *where* :math:`N(H)` *is the normalizer of*
             :math:`H` *in* :math:`\pi_1(X,x_0)`.
         *In particular,* :math:`G(\tilde{X})` *is isomorphic to* :math:`\pi_1(X,x_0)/H` *if* :math:`\tilde{X}` *is a normal covering. Hence
-        for the universal cover* :math:`\tidle{X} \rightarrow X` *we have* :math:`G(\tilde{X}) \approx \pi_1(X)`.
+        for the universal cover* :math:`\tilde{X} \rightarrow X` *we have* :math:`G(\tilde{X}) \approx \pi_1(X)`.
     
     **Proof:** We observed earlier in the proof of the :ref:`classification theorem <Theorem 1.38>` that changing
     the basepoint :Math:`\tilde{x}_0 \in p^{-1}(x_0)` to :math:`\tilde{x}_1 \in p^{-1}(x_0)` corresponds precisely to conjugating 
-    :math:`H` by an element :math:`[\gamma] \in \pi_1(X,x_0)` where :math:`\gamma` lifts to a path :math:`\tilde{\gamma` from :math:`\tilde{x}_0` to :Math:`\tilde{x}_1`. Thus :math:`[\gamma]`
+    :math:`H` by an element :math:`[\gamma] \in \pi_1(X,x_0)` where :math:`\gamma` lifts to a path :math:`\tilde{\gamma}` from :math:`\tilde{x}_0` to :Math:`\tilde{x}_1`. Thus :math:`[\gamma]`
     is in the normalizer :math:`N(H)` iff :math:`p_*(\pi_1(\tilde{X},\tilde{x}_0))=p_*(\pi_1(\tilde{X},\tilde{x}_1))`, which by the :ref:`lifting
     criterion <Proposition 1.33>` is equivalent to the existence of a deck transformation taking :math:`\tilde{x}_0` to :math:`\tilde{x}_1`.
     Hence the covering space is normal iff :math:`N(H) = \pi_1(X,x_0)`, that is, iff :math:`H` is a normal 
@@ -51,7 +51,7 @@ is :math:`\mathbb{Z}_4` while in (8) it is :math:`\mathbb{Z}_2 \times \mathbb{Z}
     to the deck transformation :math:`\tau '` taking :math:`\tilde{x}_0` to :math:`{x}_1'` then :math:`\gamma \cdot \gamma'` lifts to :math:`\tilde{\gamma} \cdot (\tau(\tilde{\gamma}'))`,
     a path from :math:`\tilde{x}_0` to :math:`\tau(\tilde{x}_1')=\tau \tau'(\tilde{x}_0)`, so :math:`\tau \tau'` is the deck transformation corresponding 
     to :math:`[\gamma][\gamma']`. By the preceding paragraph :math:`\varphi` is surjective. Its kernel consists of classes
-    :math:[\gamma] lifting to loops in :math:`\tilde{X}`. These are exactly the elements of :math:`p_*(\pi_1(\tilde{X},\tilde{x}_0))= H`. |qed|
+    :math:`[\gamma]` lifting to loops in :math:`\tilde{X}`. These are exactly the elements of :math:`p_*(\pi_1(\tilde{X},\tilde{x}_0))= H`. |qed|
 
 |indent| The group of deck transformations is a special case of the general notion of
 'groups acting on spaces'. Given a group :math:`G` and a space :math:`Y`, then an **action** of :Math:`G` 
@@ -59,15 +59,15 @@ on :Math:`Y` is a homomorphism :math:`\rho` from :math:`G` to the group Homoe(:m
 from :math:`Y` to itself. Thus to each :math:`g \in G` is associated a homeomorphisms :math:`\rho(g): Y \rightarrow Y`,
 which for notational simplicity we write simply as :math:`g:Y \rightarrow Y`. For :math:`\rho` to be a homomorphism
 amounts to requiring that :Math:`g_1(g_2(y)) = (g_1g_2)(y)` for all :math:`g_1,g_2 \in G` and
-:math:`y \in Y`. If :math:`\rho` is injective then it identifies :math:`G` with a subgroup of Homeo(:math:`Y`), and in
-practice not much is lost in assuming :math:`\rho` is an inclusion :math:`G \hookrightarrow`Homeo(:math:`Y`) since in any
+:math:`y \in Y`. If :math:`\rho` is injective then it identifies :math:`G` with a subgroup of :math:`\text{Homeo}(Y)`, and in
+practice not much is lost in assuming :math:`\rho` is an inclusion :math:`G \hookrightarrow \text{Homeo}(Y)` since in any
 case the subgroup :math:`\rho(G) \subset \text{Homeo}(Y)` contains all the topological information about 
 the action.
 
 |indent| We shall be interested in actions satisfying the following condition:
 
-(:math:`{\Large *}`) Each :math:`y \in Y` has a neighborhood :math:`U` such that all the images :math:`g(U)` for varying
-    :math:`g \in G` are disjoint. In other words, :math:`g_1(U) \cap g_2(U) \neq \emptyset` implies :math:`g_1 = g_2`.
+(:math:`{\Large *}`)    Each :math:`y \in Y` has a neighborhood :math:`U` such that all the images :math:`g(U)` for varying
+                        :math:`g \in G` are disjoint. In other words, :math:`g_1(U) \cap g_2(U) \neq \emptyset` implies :math:`g_1 = g_2`.
 
 The action of the deck transformation group :math:`G(\tilde{x})` on :math:`\tilde{X}` satisfies (:math:`{\Large *}`). To see this.
 let :math:`\tilde{U} \subset \tilde{X}` project homeomorphically to :math:`U \subset X`. If :math:`g_1(\tilde{U}) \cap g_2(\tilde{U}) \neq \emptyset` for some
@@ -94,7 +94,7 @@ over :Math:`G`. The points of :math:`Y/G` are thus **orbits** :math:`Gy = \{g(y)
         (a) *The quotient map* :math:`p:Y \rightarrow Y/G,\, p(y)=Gy`, *is a normal covering space.*
         (b) :math:`G` *is the group of deck transformations of this covering space* :math:`Y \rightarrow Y/G` *if* :math:`Y` *is
             path-connected.*
-        (c) :math:`G` *is isomorphic to* :math:`\pi_1(Y/G)p_*(\pi_1(Y))` *if* :math:`Y` *is path-connected and locally path-
+        (c) :math:`G` *is isomorphic to* :math:`\pi_1(Y/G)/p_*(\pi_1(Y))` *if* :math:`Y` *is path-connected and locally path-
             connected.*
     
     **Proof:** Given an open set :math:`U\subset Y` as in condition (:math:`{\Large *}`), the quotient map :math:`p` simply
@@ -110,7 +110,6 @@ over :Math:`G`. The points of :math:`Y/G` are thus **orbits** :math:`Gy = \{g(y)
     they send a point. The final statement of the proposition is immediate from part (b)
     of :ref:`Proposition 1.39 <Proposition 1.39>`. |qed|
 
-|
 |indent| In view of the preceding proposition, we shall call an action satisfying (:math:`{\Large *}`) a 
 **covering space action**. This is not standard terminology, but there does not seem to 
 be a universally accepted name for actions satisfying (:math:`{\Large *}`). Sometimes these are called
@@ -133,7 +132,6 @@ orbit :math:`\mathbb{Z}y` is dense in :math:`S^1`, so condition (:math:`{\Large 
 discrete subspaces. An exercise at the end of the section is to show that for actions 
 on Hausdorff spaces, freeness plus proper discontinuity implies condition (:math:`{\Large *}`). Note
 that proper discontinuity is automatic for actions by a finite group.
-|
 
 .. _Example 1.41:
 
@@ -161,7 +159,6 @@ that proper discontinuity is automatic for actions by a finite group.
     to show by an Euler characteristic argument that if there is a covering space :math:`M_g \rightarrow M_g`
     then :math:`g=mn+1` and :math:`h=m+1` for some :math:`m` and :math:`n`.
 
-|
 |indent| As a special case of the final statement of the preceding proposition we see that
 for a covering space action of a group :math:`G` on a simply-connected locally path-connected
 space :math:`Y`, the orbit spacer :math:`Y/G` has fundamental group isomorphic to :Math:`G`. Under this 
@@ -172,7 +169,7 @@ to :math:`g`.
 
 |indent| This method for computing fundamental groups vai group actions on simply-connected
 spaces is essentially how we computed :Math:`\pi_1(S^1)` in :ref:`§1.1 <Section 1.1>`, via the covering
-space :math:`\mathbbR{} \rightarrow S^1` arising from the action of :Math:`\mathbb{Z}` on :math:`\mathbb{R}` by translations. This is a useful general
+space :math:`\mathbb{R} \rightarrow S^1` arising from the action of :Math:`\mathbb{Z}` on :math:`\mathbb{R}` by translations. This is a useful general
 technique for computing fundamental groups, in fact. Here are some examples 
 illustrating this idea.
 
@@ -180,13 +177,12 @@ illustrating this idea.
 
 .. container::
 
-    **Example 1.42.** Consider the grid in :math:`\mathbb{R}^2` formed by the horizontal and vertical lines
-    through points in :math:`\mathbb{Z}^2`. 
-
     .. image:: fig/eg-1-42.png
         :align: right
         :width: 30%
 
+    **Example 1.42.** Consider the grid in :math:`\mathbb{R}^2` formed by the horizontal and vertical lines
+    through points in :math:`\mathbb{Z}^2`. 
     Let us decorate this grid with arrows in either of the two ways 
     shown in the figure, the difference between the two
     cases being that in the second case the horizontal
@@ -195,7 +191,7 @@ illustrating this idea.
     of the first decorated grid is isomorphic to :Math:`\mathbb{Z} \times \mathbb{Z}`
     since it consists of all translations :math:`(x,y) \mapsto (x+m,y+n)` for :Math:`m,n \in \mathbb{Z}`. For the
     second grid the symmetry group :math:`G` contains a subgroup of translations of the form
-    :math:`(x,y_ \mapsto (x+m, y+2n))` for :math:`m,n \in \mathbb{Z}`, but there are also glide-reflection symmetries
+    :math:`(x,y \mapsto (x+m, y+2n))` for :math:`m,n \in \mathbb{Z}`, but there are also glide-reflection symmetries
     consisting of vertical translation by an odd integer distance followed by reflection
     across a vertical line, either a vertical line of the grid or vertical line halfway between
     two adjacent grid lines. For both decorated grids there are elements of :math:`G` taking any
@@ -211,11 +207,11 @@ illustrating this idea.
 |
 .. _Example 1.43:
 
-**Example 1.43:** :math:`\mathbb{R}P^n`. The antipodal map of :Math:`S^n.\. x\mapsto -x`, generates an action of :math:`\mathbb{Z}_2`
+**Example 1.43:** :math:`\mathbb{R}P^n`. The antipodal map of :Math:`S^n,\, x\mapsto -x`, generates an action of :math:`\mathbb{Z}_2`
 on :math:`S^n` with orbit space :math:`\mathbb{R}P^n`, real projective :math:`n`-space, as defined in :ref:`Example 0.4 <Example 0.4>`. The
 action is a covering space action since each open hemisphere in :math:`S^n` is disjoint from
 its antipodal image. As we saw in :ref:`Proposition 1.14 <Proposition 1.14>`, :math:`S^n` is simply-connected if :math:`n \geq 2`,
-so from the covering space :math:`S^n \rightarrow \mathbb{R}P^n`we deduce that :math:`\pi_1(\mathbb{R}P^n) \approx \mathbb{Z}_2` for :math:`n \geq 2`. A
+so from the covering space :math:`S^n \rightarrow \mathbb{R}P^n` we deduce that :math:`\pi_1(\mathbb{R}P^n) \approx \mathbb{Z}_2` for :math:`n \geq 2`. A
 generator for :Math:`\pi_1(\mathbb{R}P^n)` is any loop obtained by projecting a path in :math:`S^n` connecting two
 antipodal points. One can see explicitly that such a loop :math:`\gamma` has order two in :math:`\pi_1(\mathbb{R}P^n)`
 if :Math:`n \geq 2` since the composition :math:`\gamma \cdot \gamma` lifts to a loop in :math:`S^n`, and this can be homotoped to 
@@ -279,7 +275,7 @@ and [Davis & Milgram 1985]. There is also almost complete information about whic
 
 .. container::
 
-    **Example 1.44.** In :ref:`Example 1.35 <Example 1.35>` we constructed a contractible :math:`2`-complex :math:`\tilde{X}_{m,n}=T_{m,n} \times \matbb{R}`
+    **Example 1.44.** In :ref:`Example 1.35 <Example 1.35>` we constructed a contractible :math:`2`-complex :math:`\tilde{X}_{m,n}=T_{m,n} \times \mathbb{R}`
     as the universal cover of a finnite :math:`2`-complex :math:`X_{m,n}` that was the union of 
     themapping cylinders of the two maps :math:`S^1 \rightarrow S^1,\,z\mapsto Z^m` and :math:`z\mapsto z^n`. The group
     of deck transformations of this covering space is therefore the fundamental group
@@ -294,7 +290,7 @@ and [Davis & Milgram 1985]. There is also almost complete information about whic
     acts as a 'screw motion` about an axis that is a vertical line :math:`\{v_a\} \times \mathbb{R}` with :math:`v_a` a vertex
     of :math:`T_{m,n}`, and :math:`b` acts similarly for a vertex :math:`v_b`.
 
-    |indent| Since the action of :Math:`G_{m,n}` on :math:`\tilde{m,n}` preserves the cell structure, it also preserves
+    |indent| Since the action of :Math:`G_{m,n}` on :math:`\tilde{X}_{m,n}` preserves the cell structure, it also preserves
     the product structure :math:`T_{m,n} \times \mathbb{R}`. This means that there are actions of :math:`G_{m,n}` on :math:`T_{m,n}`
     and :math:`\mathbb{R}` such that the action on the product :math:`X_{m,n}=T_{m,n} \times \mathbb{R}` is the diagonal action
     :math:`g(x,y)=(g(x),g(y))` for :math:`g \in G_{m,n}`. If we make the rectangles of unit height in the 
@@ -320,7 +316,7 @@ Cayley Complexes
 
 |indent| Covering spaces can be used to describe a very classical method for viewing 
 groups geometrically as graphs. Recall from :ref:`Corollary 1.28 <Corollary 1.28>` how we associated to each
-group presentation :math:`G=\langle g_\alpha \mid r_\beta` a :math:`2`-dimensional cell complex :math:`X_G` with :math:`\pi_1(X_G) \approx G`
+group presentation :math:`G=\langle g_\alpha \mid r_\beta \rangle` a :math:`2`-dimensional cell complex :math:`X_G` with :math:`\pi_1(X_G) \approx G`
 by taking a wedge-sum of circles, one for each generator :math:`g_\alpha`, and then attaching a 
 :math:`2`-cell for each relator :math:`r_\beta`. We can construct a cell complex :math:`\tilde{X}_G` with a covering space
 action of :math:`G` such that :math:`\tilde{X}_G/G=X_G` in the following way. Let the vertices of :math:`\tilde{X}_G` be 
@@ -338,19 +334,19 @@ is just :Math:`X_G`.
 
 |indent| In fact :math:`\tilde{X}_G` is the universal cover of :Math:`X_G` since it is simply-connected. This can be
 seen by considering the homomorphims :math:`\varphi : \pi_1(X_G) \rightarrow G` defined in the proof of :ref:`Proposition 1.39 <Proposition 1.39>`.
-FOr an edge :math:`e_\alpha` in :math:`X_G` corresponding to a generator :math:`g_\alpha` of :math:`G`, it is clear
+For an edge :math:`e_\alpha` in :math:`X_G` corresponding to a generator :math:`g_\alpha` of :math:`G`, it is clear
 from the definition of :math:`\varphi` that :math:`\varphi ([e_\alpha])=g_\alpha`, so :math:`\varphi` is an isomorphism. In particular
 the kernel of :math:`\varphi,\,p_*(\pi_1(\tilde{X}_G))`, is zero, hence also :math:`\pi_1(\tilde{X}_G)` since :math:`p_*` is injective.
 
 |indent| Let us look at some examples of Cayley complexes.
-|
+
 .. _Example 1.45:
 
 .. container::
 
     .. image:: fig/eg-1-45.png
         :align: right
-        :width: 50%
+        :width: 40%
     
     **Example 1.45.** When :math:`G` is the free group on
     two generators :math:`a` and :math:`b`, :math:`X_G` is :math:`S^1 \vee S^1` and 
@@ -363,14 +359,14 @@ the kernel of :math:`\varphi,\,p_*(\pi_1(\tilde{X}_G))`, is zero, hence also :ma
     :math:`e` to the vertex :math:`ab`. Similarly, the action of
     any :math:`w \in \mathbb{Z} * \mathbb{Z}` takes :math:`e` to the vertex :math:`w`.
 
-|
+
 .. _Example 1.46:
 
 **Example 1.46.** The group :math:`G=\mathbb{Z} \times \mathbb{Z}` with presentation :math:`\langle x,y \mid xyx^{-1}y^{-1} \rangle` has :math:`X_G`
 the torus :math:`S^1 \times S^1`, and :math:`\tilde{X}_G` is :math:`\mathbb{R}^2` with vertices the integer lattice :math:`\mathbb{Z}^2 \subset \mathbb{R}^2` and edges
 the horizontal and vertical segments between these lattice points. The action of :math:`G` is 
 by translations :math:`(x,y) \mapsto (x+m,y+n)`.
-|
+
 .. _Example 1.47:
 
 **Example 1.47.** For :math:`G=\mathbb{Z}_2= \langle x \mid x^2 \rangle ,\, X_G` is :math:`\mathbb{R}P^2` and :math:`\tilde{X}_G = S^2`. More generally, 
@@ -378,7 +374,7 @@ for :math:`\mathbb{Z}_n = \langle x \mid x^n \rangle ,\, X_G` is :math:`S^1` wit
 :math:`n` disks :math:`D_1 , \cdots , D_n` with their boundary circles identified. A generator of :Math:`\mathbb{Z}_n` acts on
 this union of disks by sending :math:`D_i` to :math:`D_{i+1}` via a :math:`2\pi / n` rotation, the subscript :math:`i` being
 taken mod :Math:`n`. The common boundary circle of the disks is rotated by :Math:`2\pi / n`.
-|
+
 .. _Example 1.48: 
 
 .. container::
@@ -399,7 +395,7 @@ taken mod :Math:`n`. The common boundary circle of the disks is rotated by :Math
 
     |indent| It is not hard to see the generalization of this example to :math:`\mathbb{Z}_m * \mathbb{Z}_n` with the 
     presentation :math:`\langle a,b \mid a^m, b^n \rangle`, so that :math:`\tilde{X}_G` consists of an infinite union of copies of the 
-    Cayley complexes for :math:`\mathbb{Z}_m` and :math:`\mathbb{Z}_n` constructed in :ref:`Example 1.47 <Example 1.47>`, arranged in a tree0like
+    Cayley complexes for :math:`\mathbb{Z}_m` and :math:`\mathbb{Z}_n` constructed in :ref:`Example 1.47 <Example 1.47>`, arranged in a tree-like
     pattern. The case of :math:`\mathbb{Z}_2 * \mathbb{Z}_3` is pictured below.
 
     .. image:: fig/eg-1-48-b.png
