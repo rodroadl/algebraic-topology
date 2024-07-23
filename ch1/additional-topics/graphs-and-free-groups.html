@@ -468,7 +468,150 @@ document.write(`
                   
   <section id="a-graphs-and-free-groups">
 <h1>1.A. Graphs and Free Groups<a class="headerlink" href="#a-graphs-and-free-groups" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<p><span style="margin-left: 2em"> Since all groups can be realized as fundamental groups of spaces, this opens the
+way for using topology to study algebraic properties of groups. The topics in this
+section and the next give some illustrations of this principle, mainly using covering
+space theory.</p>
+<p><span style="margin-left: 2em"> We remind the reader that the Additional Topics which form the remainder of
+this chapter are not to be regarded as an essential part of the basic core of the book.
+Readers who are eager to move on to new topics should feel free to skip ahead.
+|
+<span style="margin-left: 2em"> By definition, a <strong>graph</strong> is a <span class="math notranslate nohighlight">\(1\)</span>-dimensional CW complex, in other words, a space
+<span class="math notranslate nohighlight">\(X\)</span> obtained from a discrete set <span class="math notranslate nohighlight">\(X^0\)</span> by attaching a collection of <span class="math notranslate nohighlight">\(1\)</span>-cells <span class="math notranslate nohighlight">\(e_\alpha\)</span>. Thus <span class="math notranslate nohighlight">\(X\)</span>
+is obtained from the disjoint union of <span class="math notranslate nohighlight">\(X^0\)</span> with closed intervals <span class="math notranslate nohighlight">\(I_\alpha\)</span> by identifying the
+two endpoints of each <span class="math notranslate nohighlight">\(I_\alpha\)</span> with points of <span class="math notranslate nohighlight">\(X^0\)</span>. The points of <span class="math notranslate nohighlight">\(X^0\)</span> are the <strong>vertices</strong> and
+the <span class="math notranslate nohighlight">\(1\)</span>-cells the <strong>edges</strong> of <span class="math notranslate nohighlight">\(X\)</span>. Note that with this definition an edge does not include its
+endpoints, so an edge is an open subset of <span class="math notranslate nohighlight">\(X\)</span>. The two endpoints of an edge can be
+the same vertex, so the closure <span class="math notranslate nohighlight">\(\bar{e}_\alpha\)</span> of an edge <span class="math notranslate nohighlight">\(e_\alpha\)</span> in an open (or closed)
+set in <span class="math notranslate nohighlight">\(\bar{e}_\alpha\)</span>. One says that <span class="math notranslate nohighlight">\(X\)</span> has the <strong>weak topology</strong> with respect to the subspaces <span class="math notranslate nohighlight">\(\bar{e}_\alpha\)</span>.
+In this topology a sequence of points in the interiors of distinct edges forms a closed
+subset, hence never converges. This is true in particular if the edges containing the
+sequence all have a common vertex and one tries to choose the sequence so that it
+gets ‘closer and closer’ to the vertex. Thus if there is a vertex that is the endpoint
+of infinitely many edges, then the weak topology cannot be a metric topology. An
+exercise at the end of this section is to show the coverse, that the weak topology is
+a metric topology if each vertex is an endpoint of only finitely many edges.</p>
+<p><span style="margin-left: 2em"> A basis for the topology of <span class="math notranslate nohighlight">\(X\)</span> consists of the open intervals in the edges together
+with the path-connected neighborhoods of the vertices. A neighborhood of the latter
+sort about a vertex <span class="math notranslate nohighlight">\(v\)</span> is the union of connected open neighborhoods <span class="math notranslate nohighlight">\(U_\alpha\)</span> of <span class="math notranslate nohighlight">\(v\)</span> in <span class="math notranslate nohighlight">\(\bar{e}_\alpha\)</span>
+for all <span class="math notranslate nohighlight">\(\bar{e}_\alpha\)</span> containing <span class="math notranslate nohighlight">\(v\)</span>. In particular, we see that <span class="math notranslate nohighlight">\(X\)</span> is locally path-connected. Hence
+a graph is connected iff it is path-connected.</p>
+<p><span style="margin-left: 2em"> If <span class="math notranslate nohighlight">\(X\)</span> has only finitely many vertices and edges, then <span class="math notranslate nohighlight">\(X\)</span> is compact, being the
+continuous image of the compact space <span class="math notranslate nohighlight">\(X^0\coprod _\alpha I_\alpha\)</span>. The converse is also true, and more
+generally, a compact subset <span class="math notranslate nohighlight">\(C\)</span> of a graph <span class="math notranslate nohighlight">\(X\)</span> can meet only finitely many verticces and
+edges of <span class="math notranslate nohighlight">\(X\)</span>. To see this, let the subspace <span class="math notranslate nohighlight">\(D \subset C\)</span> consist of the vertices in <span class="math notranslate nohighlight">\(C\)</span> together
+with one point in each edge that <span class="math notranslate nohighlight">\(C\)</span> meets. Then <span class="math notranslate nohighlight">\(D\)</span> is closed subset of <span class="math notranslate nohighlight">\(X\)</span> since it
+meets each <span class="math notranslate nohighlight">\(\bar{e}_\alpha\)</span> in a closed set. For the same reason, any subset of <span class="math notranslate nohighlight">\(D\)</span> is closed, so <span class="math notranslate nohighlight">\(D\)</span>
+has the discrete topology. But <span class="math notranslate nohighlight">\(D\)</span> is compact, being a closed subset of the compact
+space <span class="math notranslate nohighlight">\(C\)</span>, so <span class="math notranslate nohighlight">\(D\)</span> must be finite. By the definition of <span class="math notranslate nohighlight">\(D\)</span> this means that <span class="math notranslate nohighlight">\(C\)</span> can meet only
+finitely many vertices and edges.</p>
+<p><span style="margin-left: 2em"> A <strong>subgraph</strong> of a graph <span class="math notranslate nohighlight">\(X\)</span> is a subspace <span class="math notranslate nohighlight">\(Y \subsetX\)</span> that is a union of vertices and
+edges of <span class="math notranslate nohighlight">\(X\)</span>, such that <span class="math notranslate nohighlight">\(e_\alpha \subset Y\)</span> implies <span class="math notranslate nohighlight">\(\bar{e}_\alpha \subset Y\)</span>. The latter condition just says that
+<span class="math notranslate nohighlight">\(Y\)</span> is a closed subspace of <span class="math notranslate nohighlight">\(X\)</span>. A tree is a contractible graph. By a tree in a graph <span class="math notranslate nohighlight">\(X\)</span>
+we mean a subgraph that is a tree. We call a tree in <span class="math notranslate nohighlight">\(X\)</span> <strong>maximal</strong> if it contains all the
+vertices of <span class="math notranslate nohighlight">\(X\)</span>. This is equivalent to the more obvious meaning of maximality, as we will see below.</p>
+<div class="docutils container" id="proposition-1a-1">
+<blockquote>
+<div><p><strong>Proposition 1A.1.</strong> <em>Every connected graph contains a maximal tree, and in fact any
+tree in the graph is contained in a maximal tree.</em></p>
+</div></blockquote>
+<p><strong>Proof:</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be a connected graph. We will describe a construction that embeds
+an arbitrary subgraph <span class="math notranslate nohighlight">\(X_0 \subset X\)</span> as a deformation retract of a subgraph <span class="math notranslate nohighlight">\(Y \subset X\)</span> that
+contains all the vertices of <span class="math notranslate nohighlight">\(X\)</span>. By choosing <span class="math notranslate nohighlight">\(X_0\)</span> to be any subtree of <span class="math notranslate nohighlight">\(X\)</span>, for example a
+single vertex, this will prove the proposition.</p>
+<p><span style="margin-left: 2em"> As a preliminary step, we construct a sequence of subgraphs <span class="math notranslate nohighlight">\(X_0 \subset X_1 \subset X_2 \subset \cdots\)</span>,
+letting <span class="math notranslate nohighlight">\(X_{i+1}\)</span> be obtained from <span class="math notranslate nohighlight">\(X_i\)</span> by adjoining the closures <span class="math notranslate nohighlight">\(\bar{e}_\alpha\)</span> of all edges <span class="math notranslate nohighlight">\(e_\alpha \subset X-X_i\)</span>
+having at least one endpoint in <span class="math notranslate nohighlight">\(X_i\)</span>. Furthermore, <span class="math notranslate nohighlight">\(\bigcup _i X_i\)</span> is closed since it is a union
+of closed edges and <span class="math notranslate nohighlight">\(X\)</span> has the weak topology. So <span class="math notranslate nohighlight">\(X=\bigcup _iX_i\)</span> since <span class="math notranslate nohighlight">\(X\)</span> is connected.</p>
+<p><span style="margin-left: 2em"> Now to construct <span class="math notranslate nohighlight">\(Y\)</span> we begin by setting <span class="math notranslate nohighlight">\(Y_0=X_0\)</span>. Then inductively, assuming
+that <span class="math notranslate nohighlight">\(Y_i \subset X_i\)</span> has been constructed so as to contain all the vertices of <span class="math notranslate nohighlight">\(X_i\)</span>, let <span class="math notranslate nohighlight">\(Y_{i+1}\)</span> be
+obtained from <span class="math notranslate nohighlight">\(Y_i\)</span> by adjoining one edge connecting each vertex of <span class="math notranslate nohighlight">\(X_{i+1}-X_i\)</span> to <span class="math notranslate nohighlight">\(Y_i\)</span>, and
+let <span class="math notranslate nohighlight">\(Y=\bigcup _i Y_i\)</span>. It is evident that <span class="math notranslate nohighlight">\(Y_{i+1}\)</span> deformation retracts to <span class="math notranslate nohighlight">\(Y_i\)</span>, and we may obtain
+a deformation retraction of <span class="math notranslate nohighlight">\(Y\)</span> to <span class="math notranslate nohighlight">\(Y_0=X_0\)</span> by performing the deformation retraction
+of <span class="math notranslate nohighlight">\(Y_{i+1}\)</span> to <span class="math notranslate nohighlight">\(Y_i\)</span> during the time interval <span class="math notranslate nohighlight">\([1/2^{i+1}, 1/2^i]\)</span>. Thus a point <span class="math notranslate nohighlight">\(x \in Y_{i+1}-Y_i\)</span> is
+stationary untill this interval, when it moves into <span class="math notranslate nohighlight">\(Y_i\)</span> and thereafter continues moving
+until it reaches <span class="math notranslate nohighlight">\(Y_0\)</span>. The resulting homotopy <span class="math notranslate nohighlight">\(h_t: Y \rightarrow Y\)</span> is continuous since it is
+continuous on the closure of each edge and <span class="math notranslate nohighlight">\(Y\)</span> has the weak topology. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> Given a maximal tree <span class="math notranslate nohighlight">\(T \subset X\)</span> and a base vertex <span class="math notranslate nohighlight">\(x_0 \in T\)</span>, then each edge <span class="math notranslate nohighlight">\(e_\alpha\)</span> of
+<span class="math notranslate nohighlight">\(X-T\)</span> determines a loop <span class="math notranslate nohighlight">\(f_\alpha\)</span> in <span class="math notranslate nohighlight">\(X\)</span> that goes first from <span class="math notranslate nohighlight">\(x_0\)</span> to one endpoint of <span class="math notranslate nohighlight">\(e_\alpha\)</span> by
+a path in <span class="math notranslate nohighlight">\(T\)</span>, then across <span class="math notranslate nohighlight">\(e_\alpha\)</span>, then back to <span class="math notranslate nohighlight">\(x_0\)</span> by a path in <span class="math notranslate nohighlight">\(T\)</span>. Strictly speaking, we
+should first orient the edge <span class="math notranslate nohighlight">\(e_\alpha\)</span> in order to specify which direction to cross it. Note
+that the homotopy class of <span class="math notranslate nohighlight">\(f_\alpha\)</span> is independent of the choice of the paths in <span class="math notranslate nohighlight">\(T\)</span> since <span class="math notranslate nohighlight">\(T\)</span>
+is simply-connected.</p>
+<div class="docutils container" id="proposition-1a-2">
+<blockquote>
+<div><p><strong>Proposition 1A.2.</strong> <em>For a connected graph</em> <span class="math notranslate nohighlight">\(X\)</span> <em>with maximal tree</em> <span class="math notranslate nohighlight">\(T,\, \pi_1(X)\)</span> <em>is a free
+group with basis the classes</em> <span class="math notranslate nohighlight">\([f_\alpha]\)</span> <em>corresponding to the edges</em> <span class="math notranslate nohighlight">\(e_\alpha\)</span> <em>of</em> <span class="math notranslate nohighlight">\(X-T\)</span>.</p>
+</div></blockquote>
+<p><span style="margin-left: 2em"> In particular this implies that a maximal tree is maximal in the sense of not being
+contained in any larger tree, since adjoining any edge to a maximal tree produces a
+graph with nontrivial fundamental group. Another consequence is that a graph is a
+tree iff it is simply-connected.</p>
+<p><strong>Proof:</strong> The quotient map <span class="math notranslate nohighlight">\(X \rightarrow X/T\)</span> is a homotopy equivalence by <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../ch0/the-homotopy-extension-property.html#proposition-0-17"><span class="std std-ref">Proposition 0.17</span></a>.
+The quotient <span class="math notranslate nohighlight">\(X/T\)</span> is a graph with only one vertex, hence is a wedge sum of circles,
+whose fundamental group we showed in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/the-van-kampen-theorem.html#example-1-21"><span class="std std-ref">Example 1.21</span></a> to be free with basis the loops
+given by the edges of <span class="math notranslate nohighlight">\(X/T\)</span>, which are the images of the loops <span class="math notranslate nohighlight">\(f_\alpha\)</span> in <span class="math notranslate nohighlight">\(X\)</span>. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> Here is a very useful fact about graphs:</p>
+<div class="docutils container" id="lemma-1a-3">
+<blockquote>
+<div><p><strong>Lemma 1A.3.</strong> <em>Every covering space of a graph is also a graph, with vertices and
+edges the lifts of the vertices and edges in the base graph.</em></p>
+</div></blockquote>
+<p><strong>Proof:</strong> Let <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> be the covering space. For the vertices of <span class="math notranslate nohighlight">\(\tilde{X}\)</span> we take the discrete
+set <span class="math notranslate nohighlight">\(\tilde{X}^0=p^{-1}(X^0)\)</span>. Writing <span class="math notranslate nohighlight">\(X\)</span> as a quotient space of <span class="math notranslate nohighlight">\(X^0 \coprod _\alpha I_\alpha\)</span> as in the definition
+of a graph and applying the path lifting property to the resulting maps <span class="math notranslate nohighlight">\(I_\alpha \rightarrow X\)</span>, we
+get a unique lift <span class="math notranslate nohighlight">\(I_\alpha \rightarrow \tilde{X}\)</span> passing through each point in <span class="math notranslate nohighlight">\(p^{-1}(x)\)</span>, for <span class="math notranslate nohighlight">\(x \in e_\alpha\)</span>. These
+lifts define the edges of a graph structure on <span class="math notranslate nohighlight">\(\tilde{X}\)</span>. The resulting topology on <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is the
+same as its original topology since both topologies have the same basic open sets, the
+covering projection <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> being a local homeomorphism. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> We can now apply what we have proved about graphs and their fundamental
+groups to prove a basic fact of group theory:</p>
+<div class="docutils container" id="theorem-1a-4">
+<blockquote>
+<div><p><strong>Theorem 1A.4.</strong> <em>Every subgroup of a free group is free.</em></p>
+</div></blockquote>
+<p><strong>Proof:</strong> Given a free group <span class="math notranslate nohighlight">\(F\)</span>, choose a graph <span class="math notranslate nohighlight">\(X\)</span> with <span class="math notranslate nohighlight">\(\pi_1(X) \approx F\)</span>, for example a wedge
+of circles corresponding to a basis for <span class="math notranslate nohighlight">\(F\)</span>. For each subgroup <span class="math notranslate nohighlight">\(G\)</span> of <span class="math notranslate nohighlight">\(F\)</span> there is by
+<span class="xref std std-ref">Proposition 1.36</span> a covering space <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> with <span class="math notranslate nohighlight">\(p_*(\pi_1(\tilde{X}))=G\)</span>, hence <span class="math notranslate nohighlight">\(\pi_1(\tilde{X})\approx G\)</span>
+since <span class="math notranslate nohighlight">\(p_*\)</span> is injective by <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec3/lifting-properties.html#proposition-1-31"><span class="std std-ref">Proposition 1.31</span></a>. Since <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is a graph by the preceding lemma,
+the group <span class="math notranslate nohighlight">\(G\approx \pi_1(\tilde{X})\)</span> is free by <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-1a-2"><span class="std std-ref">Proposition 1A.2</span></a>. <span style="float:right">&#9723</span></p>
+</div>
+<a class="reference internal image-reference" href="../../_images/tree.png"><img alt="../../_images/tree.png" class="align-right" src="../../_images/tree.png" style="width: 20%;" /></a>
+<p><span style="margin-left: 2em"> The structure of trees can be elucidated by looking more closely at the constructions
+in the proof of <a class="hxr-hoverxref hxr-tooltip reference internal" href="#proposition-1a-1"><span class="std std-ref">Proposition 1A.1</span></a>. If <span class="math notranslate nohighlight">\(X\)</span> is a tree and :math;`v_0` is any vertex of <span class="math notranslate nohighlight">\(X\)</span>, then the
+construction of a maximal tree <span class="math notranslate nohighlight">\(Y \subset X\)</span> starting with <span class="math notranslate nohighlight">\(Y_0 = \{v_0\}\)</span>
+yields an increasing sequence of subtrees <span class="math notranslate nohighlight">\(Y_n \subset X\)</span> whose union is
+all of <span class="math notranslate nohighlight">\(X\)</span> since a tree has only one maximal subtree, namely itself.
+We can think of the vertices in <span class="math notranslate nohighlight">\(Y_n - Y_{n-1}\)</span> as being at ‘height’ <span class="math notranslate nohighlight">\(n\)</span>,
+with the edges of <span class="math notranslate nohighlight">\(Y_n - Y_{n-1}\)</span> connecting these vertices to vertices
+of height <span class="math notranslate nohighlight">\(n-1\)</span>. In this way we get a ‘height function’ <span class="math notranslate nohighlight">\(h:X \rightarrow \mathbb{R}\)</span>
+assigning to each vertex its height, and monotone on edges.</p>
+<p><span style="margin-left: 2em"> For each vertex <span class="math notranslate nohighlight">\(v\)</span> of <span class="math notranslate nohighlight">\(X\)</span> there is exactly one edge leading downward from <span class="math notranslate nohighlight">\(v\)</span>, so
+by following these downward edges we obtain a path <span class="math notranslate nohighlight">\(v\)</span> to the base vertex <span class="math notranslate nohighlight">\(v_0\)</span>.
+This is an example of an <strong>edgepath</strong>, which is a composition of finitely many paths each
+consisting of a single edge traversed monotonically. For any edgepath joining <span class="math notranslate nohighlight">\(v\)</span> to <span class="math notranslate nohighlight">\(v_0\)</span>
+other than the downward edgepath, the height function would not be monotone and
+hence would have local maxima, occurring when the edgepath backtracked, retracing
+some edge it had just corssed. Thus in a tree there is a unique nonbacktracking
+edgepath joining any two points. All the vertices and edges along this edgepath are
+distinct.</p>
+<p><span style="margin-left: 2em"> A tree can contain no subgraph homeomorphic to a circle, since two vertices
+in such a subgraph could be joined by more than one nonbacktracking edgepath.
+Conversely, if a connected graph <span class="math notranslate nohighlight">\(X\)</span> contains no circle subgraph, then it must be a
+tree. For if <span class="math notranslate nohighlight">\(T\)</span> is a maximal tree in <span class="math notranslate nohighlight">\(X\)</span> that is not equal to <span class="math notranslate nohighlight">\(X\)</span>, then the union of an edge
+of <span class="math notranslate nohighlight">\(X-T\)</span> with the nonbacktracking edgepath in <span class="math notranslate nohighlight">\(T\)</span> joining the endpoints of this edge is
+a circle subgraph of <span class="math notranslate nohighlight">\(X\)</span>. So if there are no circle subgraphs of <span class="math notranslate nohighlight">\(X\)</span>, we must have <span class="math notranslate nohighlight">\(X=T\)</span>,
+a tree.</p>
+<p><span style="margin-left: 2em"> For an arbitrary connected graph <span class="math notranslate nohighlight">\(X\)</span> and a pair of vertices <span class="math notranslate nohighlight">\(v_0\)</span> and <span class="math notranslate nohighlight">\(v_1\)</span> in <span class="math notranslate nohighlight">\(X\)</span> there is
+a unique nonbacktracking edgepath in each homotopy class of paths from <span class="math notranslate nohighlight">\(v_0\)</span> to <span class="math notranslate nohighlight">\(v_1\)</span>.
+This can be seen by lifting to the universal cover <span class="math notranslate nohighlight">\(\tilde{X}\)</span>, which is a tree since it is simply-connected.
+Choosing a lift <span class="math notranslate nohighlight">\(\tilde{v_0}\)</span> of <span class="math notranslate nohighlight">\(v_0\)</span>, a homotopy class of paths from <span class="math notranslate nohighlight">\(v_0\)</span> to <span class="math notranslate nohighlight">\(v_1\)</span> lifts to
+a homotopy class of paths starting at <span class="math notranslate nohighlight">\(\tilde{v}_0\)</span> and ending at a unique lift <span class="math notranslate nohighlight">\(\tilde{v}_1\)</span> of <span class="math notranslate nohighlight">\(v_1\)</span>. Then
+the unique nonbacktracking edgepath in <span class="math notranslate nohighlight">\(\tilde{X}\)</span> from <span class="math notranslate nohighlight">\(\tilde{v}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{v}_1\)</span> projects to the desired
+nonbacktracking edgepath in <span class="math notranslate nohighlight">\(X\)</span>.</p>
 </section>
 
 

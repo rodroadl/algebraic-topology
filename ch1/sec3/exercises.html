@@ -470,6 +470,165 @@ document.write(`
 <span id="exercise-1-3"></span><h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
 <p id="exercise-1-3-1"><strong>1.</strong> For a covering space <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> and a subspace <span class="math notranslate nohighlight">\(A\subset X\)</span>, let <span class="math notranslate nohighlight">\(\tilde{A}=p^{-1}(A)\)</span>. Show that
 the restriction <span class="math notranslate nohighlight">\(p:\tilde{A} \rightarrow A\)</span> is a covering space.</p>
+<p id="exercise-1-3-2"><strong>2.</strong> Show that if <span class="math notranslate nohighlight">\(p_1:\tilde{X}_1 \rightarrow X_1\)</span> and <span class="math notranslate nohighlight">\(p_2:\tilde{X}_2 \rightarrow X_2\)</span> are covering spaces, so is their product
+<span class="math notranslate nohighlight">\(p_1 \times p_2: \tilde{X}_1 \times \tilde{X}_2 \rightarrow X_1 \times X_2\)</span>.</p>
+<p id="exercise-1-3-3"><strong>3.</strong> Let <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> be a covering space with <span class="math notranslate nohighlight">\(p^{-1}(x)\)</span> finite and nonempty for all <span class="math notranslate nohighlight">\(x \in X\)</span>.
+Show that <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is compact Hausdorff iff <span class="math notranslate nohighlight">\(X\)</span> is compact Hausdorff.</p>
+<p id="exercise-1-3-4"><strong>4.</strong> Construct a simply-connected overing space of the space <span class="math notranslate nohighlight">\(X \subset \mathbb{R}^3\)</span> that is the union
+of a sphere and a diameter. Do the same when <span class="math notranslate nohighlight">\(X\)</span> is the union of a sphere and a circle
+intersecting it in two points.</p>
+<p id="exercise-1-3-5"><strong>5.</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be the subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> consisting of the four sides of the square <span class="math notranslate nohighlight">\([0,1] \times [0,1]\)</span>
+together with the segments of the vertical lines <span class="math notranslate nohighlight">\(x=\frac{1}{2},\frac{1}{3},\frac{1}{4},\cdots\)</span> inside the square.
+Show that for every covering spce <span class="math notranslate nohighlight">\(\tilde{X} \righytarrow X\)</span> there is some neighborhood of the left
+edge of <span class="math notranslate nohighlight">\(X\)</span> that lifts homeomorphically to <span class="math notranslate nohighlight">\(\tilde{X}\)</span>. Deduce that <span class="math notranslate nohighlight">\(X\)</span> has no simply-connected
+covering space.</p>
+<div class="docutils container" id="exercise-1-3-6">
+<p><strong>6.</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be the shrinking wedge of circles in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/the-van-kampen-theorem.html#example-1-25"><span class="std std-ref">Example 1.25</span></a>, and let <span class="math notranslate nohighlight">\(\tilde{X}\)</span> be its covering
+space shown in the figure below.</p>
+<a class="reference internal image-reference" href="../../_images/ex-1-3-6.png"><img alt="../../_images/ex-1-3-6.png" class="align-center" src="../../_images/ex-1-3-6.png" style="width: 100%;" /></a>
+<p>Construct a two-sheeted covering space <span class="math notranslate nohighlight">\(Y \rightarrow \tilde{X}\)</span> such that the composition <span class="math notranslate nohighlight">\(Y \rightarrow \tilde{X} \rightarrow X\)</span>
+of the two covering spaces is not a covering space. Note that a composition of two
+covering spaces does have the unique path lifting property, however.</p>
+</div>
+<div class="docutils container" id="exercise-1-3-7">
+<a class="reference internal image-reference" href="ch1/sec3/fig/ex1-3-7.png"><img alt="ch1/sec3/fig/ex1-3-7.png" class="align-right" src="ch1/sec3/fig/ex1-3-7.png" style="width: 20%;" /></a>
+<p>Let <span class="math notranslate nohighlight">\(Y\)</span> be the <em>quasi-circle</em> shown in the figure, a closed subspace
+of <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> consisting of a portion of the graph of <span class="math notranslate nohighlight">\(y=\sin (1/x)\)</span>, the
+segment <span class="math notranslate nohighlight">\([-1,1]\)</span> in the <span class="math notranslate nohighlight">\(y\)</span>-axis, and an arc connecting these two
+pieces. Collapsing the segment of <span class="math notranslate nohighlight">\(Y\)</span> in the <span class="math notranslate nohighlight">\(y\)</span>-axis to a point
+gives a quotient map <span class="math notranslate nohighlight">\(f:Y\rightarrow S^1\)</span>. Show that <span class="math notranslate nohighlight">\(f\)</span> does not lift to
+the covering space <span class="math notranslate nohighlight">\(\mathbb{R} \rightarrow S^1\)</span>, even though <span class="math notranslate nohighlight">\(\pi_1(Y)=0\)</span>. Thus local
+path-connectedness of <span class="math notranslate nohighlight">\(Y\)</span> is a necessary hypothesis in the lifting criterion.</p>
+</div>
+<p id="exercise-1-3-8"><strong>8.</strong> Let <span class="math notranslate nohighlight">\(\tilde{X}\)</span> and <span class="math notranslate nohighlight">\(\tilde{Y}\)</span> be simply-connected covering spaces of the path-connected, locally
+path-connected space <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>. Show that if <span class="math notranslate nohighlight">\(X \simeq Y\)</span> then <span class="math notranslate nohighlight">\(\tilde{X} \simeq \tilde{Y}\)</span>. [<span class="xref std std-ref">Exercise 11 in Chapter 0</span>
+may be helpful.]</p>
+<p id="exercise-1-3-9"><strong>9.</strong> Show that if a path-connected, locally path-connected space <span class="math notranslate nohighlight">\(X\)</span> has <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> finite,
+then evety map <span class="math notranslate nohighlight">\(X \rightarrow S^1\)</span> is nullhomotopic. [Use the covering space <span class="math notranslate nohighlight">\(\mathbb{R} \rightarrow S^1\)</span>.]</p>
+<p id="exercise-1-3-10"><strong>10.</strong> Find all the connected <span class="math notranslate nohighlight">\(2\)</span>-sheeted and <span class="math notranslate nohighlight">\(3\)</span>-sheeted covering spaces of <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span>, up to
+isomorphism of covering spaces without basepoints.</p>
+<p id="exercise-1-3-11"><strong>11.</strong> Construct finite graphs <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> having a common finite-sheeted covering space
+<span class="math notranslate nohighlight">\(\tilde{X}_1=\tilde{X}_2\)</span>, but such that there is no space having both <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> as covering spaces.</p>
+<p id="exercise-1-3-12"><strong>12.</strong> Let <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> be the generators of <span class="math notranslate nohighlight">\(\pi_1(S^1 \vee S^1)\)</span> corresponding to the two <span class="math notranslate nohighlight">\(S^1\)</span>
+summands. Draw a picture of the covering space of <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> corresponding to the
+normal subgroup generated by <span class="math notranslate nohighlight">\(a^2,\,b^2\)</span>, and <span class="math notranslate nohighlight">\((ab)^4\)</span>, and prove that this covering space
+is indeed the correct one.</p>
+<p id="exercise-1-3-13"><strong>13.</strong> Determine the covering space of <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> corresponding to the subgroup of
+<span class="math notranslate nohighlight">\(\pi_1(S^1 \vee S^1)\)</span> generated by the cubes of all elements. The covering space is <span class="math notranslate nohighlight">\(27`0sheeted
+and can be drawn on a torus so that the complementary regions are nine triangles
+with edges labeled :math:`aaa\)</span>, nine triangles with edges labeled <span class="math notranslate nohighlight">\(bbb\)</span>, and nine hexagons
+with edges labeled <span class="math notranslate nohighlight">\(ababab\)</span>. [For the analogous problem with sixth powers instead
+of cubes, the resulting covering space would have <span class="math notranslate nohighlight">\(2^{28}3^{25}\)</span> sheets! And for <span class="math notranslate nohighlight">\(k^{th}\)</span> powers
+with <span class="math notranslate nohighlight">\(k\)</span> sufficiently large, the covering space would have infinitely many sheets. The
+underlying group theory question here, whether the quotient of <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span> obtained by
+factoring out all <span class="math notranslate nohighlight">\(k^{th}\)</span> powers is finite, is known as Burnside’s problem. It can also be
+asked for a free group on <span class="math notranslate nohighlight">\(n\)</span> generators.]</p>
+<p id="exercise-1-3-14"><strong>14.</strong> Find all the connected covering spaces of <span class="math notranslate nohighlight">\(\mathbb{R}P^2 \vee \mathbb{R}P^2\)</span>.</p>
+<p id="exercise-1-3-15"><strong>15.</strong> Let <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> be a simply-connected covering space of <span class="math notranslate nohighlight">\(X\)</span> and let <span class="math notranslate nohighlight">\(A \subset X\)</span> be a
+path-connected, locally path-connected subspace, with <span class="math notranslate nohighlight">\(\tilde{A} \subset \tilde{X}\)</span> a path-component of
+<span class="math notranslate nohighlight">\(p^{-1}(A)\)</span>. Show that <span class="math notranslate nohighlight">\(p:\tilde{A}\rightarrow A\)</span> is the covering space corresponding to the kernel of the
+map <span class="math notranslate nohighlight">\(\pi_1(A) \rightarrow \pi_1(X)\)</span>.</p>
+<p id="exercise-1-3-16"><strong>16.</strong> Given maps <span class="math notranslate nohighlight">\(X \rightarrow Y \rightarrow Z\)</span> such that both <span class="math notranslate nohighlight">\(Y\rightarrow Z\)</span> and the composition <span class="math notranslate nohighlight">\(X\rightarrow Z\)</span> are
+covering spaces, show that <span class="math notranslate nohighlight">\(X \rightarrow Y\)</span> is a covering space if <span class="math notranslate nohighlight">\(Z\)</span> is locally path-connected,
+and show that this covering space is normal if <span class="math notranslate nohighlight">\(X \rightarrow Z\)</span> is a normal covering space.</p>
+<p id="exercise-1-3-17"><strong>17.</strong> Given a group <span class="math notranslate nohighlight">\(G\)</span> and a normal subgroup <span class="math notranslate nohighlight">\(N\)</span>, show that there exists a normal
+covering space <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> with <span class="math notranslate nohighlight">\(\pi_1(X) \approx,\, \pi_1(\tilde{X}) \approx N\)</span>, and deck transformation group
+<span class="math notranslate nohighlight">\(G(\tilde{X}) \approx G/N\)</span>.</p>
+<p id="exercise-1-3-18"><strong>18.</strong> For a path-connected, locally path-connected, and semilocally simply-connected
+space <span class="math notranslate nohighlight">\(X\)</span>, call a path-connected covering space <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> <em>abelian</em> if it is normal and has
+abelian deck transformation group. Show that <span class="math notranslate nohighlight">\(X\)</span> has an abelian covering space that is
+a covering space of every other abelian covering space of <span class="math notranslate nohighlight">\(X\)</span>, and that such a ‘universal’
+abelian covering space is unique up to isomorphism. Describe this covering space
+explicitly for <span class="math notranslate nohighlight">\(X=S^1 \vee S^1\)</span> and <span class="math notranslate nohighlight">\(X=S^1 \vee S^1 \vee S^1\)</span>.</p>
+<p id="exercise-1-3-19"><strong>19.</strong> Use the preceding problem to show that a closed orientable surface <span class="math notranslate nohighlight">\(M_g\)</span> of a genus
+<span class="math notranslate nohighlight">\(g\)</span> has a connected normal covering space with deck transformation group isomorphic
+to <span class="math notranslate nohighlight">\(\mathbb{Z}^n\)</span> (the product of <span class="math notranslate nohighlight">\(n\)</span> copies of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>) iff <span class="math notranslate nohighlight">\(n \leq 2g\)</span>. For <span class="math notranslate nohighlight">\(n=3\)</span> and <span class="math notranslate nohighlight">\(g \geq 3\)</span>, describe such
+a covering space explicitly as a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> with translations of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> as deck
+transformations. Show that such a covering space in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> exists iff there is an embedding
+of <span class="math notranslate nohighlight">\(M_g\)</span> in the <span class="math notranslate nohighlight">\(3\)</span>-torus <span class="math notranslate nohighlight">\(T^3 = S^1 \times S^1 \times S^1\)</span> such that the induced map <span class="math notranslate nohighlight">\(\pi_1(M_g) \rightarrow \pi_1(T^3)\)</span>
+is surjective.</p>
+<p id="exercise-1-3-20"><strong>20.</strong> Construct nonnormal covering spaces of the Klein bottle by a Klein bottle and by
+a torus.</p>
+<p id="exercise-1-3-21"><strong>21.</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be the space obtained from a torus <span class="math notranslate nohighlight">\(S^1 \times S^1\)</span> by attaching a Möbius band via a
+homeomorphism from the boundary circle of the Möbius band to the circle <span class="math notranslate nohighlight">\(S^1 \times \{x_0\}\)</span>
+in the torus. Compute <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>, describe the universal cover of <span class="math notranslate nohighlight">\(X\)</span>, and describe the
+action of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> on the universal cover. Do the same for the space <span class="math notranslate nohighlight">\(Y\)</span> obtained by
+attaching a Möbius band to <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span> via a homeomorphism from its boundary circle to
+the circle in <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span> formed by the <span class="math notranslate nohighlight">\(1\)</span>-skeleton of the usual CW structure on <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span>.</p>
+<p id="exercise-1-3-22"><strong>22.</strong> Given covering space actions of groups <span class="math notranslate nohighlight">\(G_1\)</span> on <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(G_2\)</span> on <span class="math notranslate nohighlight">\(X_2\)</span>, show that the
+action of <span class="math notranslate nohighlight">\(G_1 \times G_2\)</span> on <span class="math notranslate nohighlight">\(X_1 \times X_2\)</span> defined by <span class="math notranslate nohighlight">\((g_1,g_2)(x_1,x_2)=(g_1(x_1),g_2(x_2))\)</span> is a covering
+space action, and that <span class="math notranslate nohighlight">\((X_1 \times X_2)/(G_1 \times G_2)\)</span> is homeomorphic to <span class="math notranslate nohighlight">\(X_1 / G_1 \times X_2/G_2\)</span>.</p>
+<p id="exercise-1-3-23"><strong>23.</strong> Show that if a group <span class="math notranslate nohighlight">\(G\)</span> acts freely and properly discontinuously on a Hausdorff
+space <span class="math notranslate nohighlight">\(X\)</span>, then the action is a covering space action. (Here ‘properly discontinuously’
+means that each <span class="math notranslate nohighlight">\(x \in X\)</span> has a neighborhood <span class="math notranslate nohighlight">\(U\)</span> such that <span class="math notranslate nohighlight">\(\{g\in G \mid U \cap g(U) \neq \emptyset\}\)</span> is
+finite.) In particular, a free action of a finite group on a Hausdorff space is a covering
+space action.</p>
+<div class="docutils container" id="exercise-1-3-24">
+<p><strong>24.</strong> Given a covering space action of a group <span class="math notranslate nohighlight">\(G\)</span> on a path-connected, locally path-connected
+space <span class="math notranslate nohighlight">\(X\)</span>, then each subgroup <span class="math notranslate nohighlight">\(H \subset G\)</span> determines a composition of covering
+spaces <span class="math notranslate nohighlight">\(X \rightarrow X/H \rightarrow X/G\)</span>. Show:</p>
+<ol class="loweralpha simple">
+<li><p>Every path-connected covering space between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(X/G\)</span> is isomorphic to <span class="math notranslate nohighlight">\(X/H\)</span>
+for some subgroup <span class="math notranslate nohighlight">\(H \subset G\)</span>.</p></li>
+<li><p>Two such covering spaces <span class="math notranslate nohighlight">\(X/H_1\)</span> and <span class="math notranslate nohighlight">\(X/H_2\)</span> of <span class="math notranslate nohighlight">\(X/G\)</span> are isomorphic iff <span class="math notranslate nohighlight">\(H_1\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span>
+are conjugate subgroups of <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>The covering space <span class="math notranslate nohighlight">\(X/H \rightarrow X/G\)</span> is normal iff <span class="math notranslate nohighlight">\(H\)</span> is a normal subgroup of <span class="math notranslate nohighlight">\(G\)</span>, in
+which case the group of deck transformations of this cover is <span class="math notranslate nohighlight">\(G/H\)</span>.</p></li>
+</ol>
+</div>
+<p id="exercise-1-3-25"><strong>25.</strong> Let <span class="math notranslate nohighlight">\(\varphi: \mathbb{R}^2 \rightarrw \mathbb{R}^2\)</span> be the linear transformation <span class="math notranslate nohighlight">\(\varphi (X,y) = (2x, y/2)\)</span>. This generates
+an action of <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> on <span class="math notranslate nohighlight">\(X=\mathbb{R}^2-\{0\}\)</span>. Show this action is a covering space action and
+compute <span class="math notranslate nohighlight">\(\pi_1(X/\mathbb{Z})\)</span>. Show the orbit space <span class="math notranslate nohighlight">\(X/\mathbb{Z}\)</span> is non-Hausdorff, and describe how it is
+a union of four subspaces homeomorphic to <span class="math notranslate nohighlight">\(S^1 \times \mathbb{R}\)</span>, coming from the complementary
+components of the <span class="math notranslate nohighlight">\(x\)</span>-axis and the <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
+<div class="docutils container" id="exercise-1-3-26">
+<p><strong>26.</strong> For a covering space <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> with <span class="math notranslate nohighlight">\(X\)</span> connecetd, locally path-connected, and
+semilocally simply-connected, show:</p>
+<ol class="loweralpha simple">
+<li><p>The components of <span class="math notranslate nohighlight">\(\tilde{X}\)</span> are in one-to-one correspondence with the orbits of the
+action of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> on the fiber <span class="math notranslate nohighlight">\(p^{-1}(x_0)\)</span>.</p></li>
+<li><p>Under the Galois correspondence between connected covering spaces of <span class="math notranslate nohighlight">\(X\)</span> and
+subgroups of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>, the subgroup corresponding to the component of <span class="math notranslate nohighlight">\(\tilde{X}\)</span>
+containing a given lift <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> of <span class="math notranslate nohighlight">\(x_0\)</span> is the <em>stabilizer</em> of <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span>, the subgorup consisting
+of elements whose action on the fiber leaves <span class="math notranslate nohighlight">\(\tilde{x}_0\)</span> fixed.</p></li>
+</ol>
+</div>
+<p id="exercise-1-3-27"><strong>27.</strong> For a universal cover <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> there are two actions of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> on the fiber
+<span class="math notranslate nohighlight">\(p^{-1}(x_0)\)</span>. The first is the action defined on page 69 in which the element of <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span>
+determined by a loop <span class="math notranslate nohighlight">\(\gamma\)</span> sends <span class="math notranslate nohighlight">\(\tilde{\gamma}(1)\)</span> to <span class="math notranslate nohighlight">\(\tilde{\gamma}(0)\)</span> for each lift <span class="math notranslate nohighlight">\(\tilde{\gamma}\)</span> of <span class="math notranslate nohighlight">\(\gamma\)</span> to <span class="math notranslate nohighlight">\(\tilde{X}\)</span>, and the second is
+the action given by restricting deck transformations to the fiber (see <a class="hxr-hoverxref hxr-tooltip reference internal" href="deck-transformations-and-group-actions.html#proposition-1-39"><span class="std std-ref">Proposition 1.39</span></a>).
+Show that these two actions are different when <span class="math notranslate nohighlight">\(X=S^1\vee S^1\)</span> and when <span class="math notranslate nohighlight">\(X=S^1 \times S^1\)</span>
+and determine when the two actions are the same. [This is a revised version of the
+original form of this exercise.]</p>
+<p id="exercise-1-3-28"><strong>28.</strong> Show that for a covering space action of a group <span class="math notranslate nohighlight">\(G\)</span> on a simply-connected space <span class="math notranslate nohighlight">\(Y\)</span>,
+<span class="math notranslate nohighlight">\(\pi_1(Y/G)\)</span> is isomorphic to <span class="math notranslate nohighlight">\(G\)</span>. [If <span class="math notranslate nohighlight">\(Y\)</span> is locally path-connected, this is a special case of
+part (c) of <a class="hxr-hoverxref hxr-tooltip reference internal" href="deck-transformations-and-group-actions.html#proposition-1-40"><span class="std std-ref">Proposition 1.40</span></a>]</p>
+<p id="exericse-1-3-29"><strong>29.</strong> Let <span class="math notranslate nohighlight">\(Y\)</span> be path-connected, locally path-connected, and simply-connected, and let
+<span class="math notranslate nohighlight">\(G_1\)</span> and <span class="math notranslate nohighlight">\(G_2\)</span> be subgroups of <span class="math notranslate nohighlight">\(\text{Homeo}(Y)\)</span> defining covering space actions on <span class="math notranslate nohighlight">\(Y\)</span>. Show
+that the orbit spaces <span class="math notranslate nohighlight">\(Y/G_1\)</span> and <span class="math notranslate nohighlight">\(Y/G_2\)</span> are homeomorphic iff <span class="math notranslate nohighlight">\(G_1\)</span> and <span class="math notranslate nohighlight">\(G_2\)</span> are conjugate
+subgroups of <span class="math notranslate nohighlight">\(\text{Homeo}(Y)\)</span>.</p>
+<p id="exercise-1-3-30"><strong>30.</strong> Draw the Cayley graph of the group <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}_2 = \langle a,b \mid b^2 \rangle\)</span>.</p>
+<p id="exercise-1-3-31"><strong>31.</strong> Show that the normal covering spaces of <span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> are precisely the graphs that
+are Cayley graphs of groups with two generators. More generally, the normal covering
+spaces of the wedge sum of <span class="math notranslate nohighlight">\(n\)</span> circles are the Cayley graphs of groups with <span class="math notranslate nohighlight">\(n\)</span>
+generators.</p>
+<div class="docutils container" id="exercise-1-3-32">
+<p><strong>32.</strong> Consider covering spaces <span class="math notranslate nohighlight">\(p:\tilde{X} \rightarrow X\)</span> with <span class="math notranslate nohighlight">\(\tilde{X}\)</span> and <span class="math notranslate nohighlight">\(X\)</span> connected CW complexes,
+the cells of <span class="math notranslate nohighlight">\(\tilde{X}\)</span> projecting homeomorphically onto cells of <span class="math notranslate nohighlight">\(X\)</span>. Restricting <span class="math notranslate nohighlight">\(p\)</span> to the
+<span class="math notranslate nohighlight">\(1\)</span>-skeleton then gives a covering space <span class="math notranslate nohighlight">\(\tilde{X}^1 \rightarrow X^1\)</span> over the <span class="math notranslate nohighlight">\(1\)</span>-skeleton of <span class="math notranslate nohighlight">\(X\)</span>. Show:</p>
+<ol class="loweralpha simple">
+<li><p>Two such covering spaces <span class="math notranslate nohighlight">\(\tilde{X}_1 \rightarrow X\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}_2 \rightarrow X\)</span> are isomorphic iff the restrictions
+<span class="math notranslate nohighlight">\(\tilde{X}^1_1 \rightarrow X^1\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}^1_2 \rightarrow X^1\)</span> are isomorphic.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> is a normal covering space iff <span class="math notranslate nohighlight">\(\tilde{X}^1 \rightarrow X^1\)</span> is normal.</p></li>
+<li><p>The groups of deck transformations of the coverings <span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> and <span class="math notranslate nohighlight">\(\tilde{X}^1 \rightarrow X^1\)</span> are
+isomorphic, via the restriction map.</p></li>
+</ol>
+</div>
+<p id="exercise-1-3-33"><strong>33.</strong> In <a class="hxr-hoverxref hxr-tooltip reference internal" href="deck-transformations-and-group-actions.html#example-1-44"><span class="std std-ref">Example 1.44</span></a> let <span class="math notranslate nohighlight">\(d\)</span> be the greatest common divisor of <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span>, and let
+<span class="math notranslate nohighlight">\(m'=m/d\)</span> and <span class="math notranslate nohighlight">\(n'=n/d\)</span>. Show that the graph <span class="math notranslate nohighlight">\(T_{m,n}/K\)</span> consists of <span class="math notranslate nohighlight">\(m'\)</span> vertices
+labeled <span class="math notranslate nohighlight">\(a,\,n'\)</span> vertices labeled <span class="math notranslate nohighlight">\(b\)</span>, together with <span class="math notranslate nohighlight">\(d\)</span> edges joining each <span class="math notranslate nohighlight">\(a\)</span> vertex to
+each <span class="math notranslate nohighlight">\(b\)</span> vertex. Deduce that the subgroup <span class="math notranslate nohighlight">\(K \subset G_{m,n}\)</span> is free on <span class="math notranslate nohighlight">\(dm'n'-m'-n'+1\)</span>
+generators.</p>
 </section>
 
 
