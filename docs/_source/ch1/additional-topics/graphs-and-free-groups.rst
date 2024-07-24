@@ -1,3 +1,4 @@
+.. _Section 1.A:
 1.A. Graphs and Free Groups
 ================================================
 
@@ -170,6 +171,84 @@ Choosing a lift :math:`\tilde{v_0}` of :math:`v_0`, a homotopy class of paths fr
 a homotopy class of paths starting at :math:`\tilde{v}_0` and ending at a unique lift :math:`\tilde{v}_1` of :math:`v_1`. Then
 the unique nonbacktracking edgepath in :math:`\tilde{X}` from :math:`\tilde{v}_0` to :math:`\tilde{v}_1` projects to the desired
 nonbacktracking edgepath in :math:`X`.
+
+------------
+Exercises
+------------
+
+.. _Exercise 1-1A-1:
+
+**1.** Let :math:`X` be a graph in which each vertex is an endpoint of only finitely many edges.
+Show that the weak topology on :math:`X` is a metric topology.
+
+.. _Exercise 1-1A-2:
+
+**2.** Show that a connected graph retracts onto any connected subgraph.
+
+.. _Exercise 1-1A-3:
+
+**3.** For a finite graph :math:`X` define the Euler characteristic :math:`\chi (X)` to be the number of
+vertices minus the number of edges. Show that :math:`\chi (X) =1 ` if :math:`X` is a tree, and that the
+rank (number of elements in a basis) of :math:`\pi_1(X)` is :math:`1-\chi (X)` if :math:`X` is connected.
+
+.. _Exercise 1-1A-4:
+
+**4.** If :math:`X` is a finite graph and :math:`Y` is a subgraph homemomorphic to :math:`S^1` and containing the
+basepoint :Math:`x_0`, show that :Math:`\pi_1(X,x_0)` has a basis in which one element is represented
+by the loop :math:`Y`.
+
+.. _Exercise 1-1A-5:
+
+**5.** Construct a connected graph :math:`X` and maps :math:`f,g: X \rightarrow X` such that :math:`fg=\mathbb{1}` but :math:`f`
+and :math:`g` do not induce isomorphisms on :math:`\pi_1`. [Note that :math:`f_* g_*=\mathbb{1}` implies that :math:`f_*` is 
+surjective and :Math:`g_*` is injective.]
+
+.. _Exercise 1-1A-6:
+
+**6.** Let :math:`F` be the free group on two generators and let :math:`F'` be its commutator subgroup.
+Find a set of free generators for :math:`F'` by considering the covering space of the graph
+:math:`S^1 \vee S^1` corresponding to :math:`F'`.
+
+.. _Exercise 1-1A-7:
+**7.** If :math:`F` is a finitely generated free group and :math:`N` is a nontrivial normal subgroup of
+infinite index, show, using covering spaces, that :math:`N` is not finitely generated.
+
+.. _Exercise 1-1A-8:
+**8.** Show that a finitely generated group has only a finite number of subgroups of a 
+given finite index. [First do the case of free groups, using covering spaces of graphs.
+The general case then follows since every group is a quotient group of a free group.]
+
+.. _Exercise 1-1A-9:
+**9.** Using covering spaces, show that an index :math:`n` subgroup :math:`H` of a group :math:`G` has at most
+:math:`n` conjugate subgroups :Math:`gHg^{-1}` in :math:`G`. Apply this to show that there exists a normal
+subgroup :math:`K \subset G` of finite index with :math:`K \subset H`. [For the latter statement, consider
+the intersection of all the conjugate subgroups :math:`gHg^{-1}`. This is the maximal normal
+subgroup of :math:`G` contained in :math:`H`.]
+
+.. _Exercise 1-1A-10:
+**10.** Let :math:`X` be the wedge sum of :math:`n` circles, with its natural graph structure, and let
+:math:`\tilde{X} \rightarrow X` be a covering space with :math:`Y \subset \tilde{X}` a finite connected subgraph. Show there is
+a finite graph :math:`Z \supset Y` having the same vertices as :math:`Y`, such that the projection :math:`Y \rightarrow X`
+extends to a covering space :math:`Z \rightarrow X`.
+
+.. _Exercise 1-1A-11:
+**11.** Apply the two preceding prolbems to show that if :Math:`F` is a finitely generated free
+group and :math:`x \in F` is not the identity element, then there is a normal subgroup :math:`H \subset F`
+of finite index such that :math:`x \in H`. Hence :math:`x` has a nontrivial image in a finite quotient
+group of :math:`F`. In this situation one says :math:`F` is **residually finite**.
+
+.. _Exercise 1-1A-12:
+**12.** Let :math:`F` be a finitely generated free group, :math:`H \subset F` a finitely generated subgroup, and
+:math:`x \in F - H`. Show there is a subgroup :math:`K` of finite index in :math:`F` such that :math:`K \supset H` and
+:math:`x \notin K`. [Apply Exercise 10.]
+
+.. _Exercise 1-1A-13:
+**13.** Let :math:`x` be a nontrivial element of a finitely generated free group :math:`F`. Show there is
+a finite-index subgroup :math:`H \subset F` in which :math:`x` is one element of a basis. [Exercises 4 and 
+10 may be helpful.]
+
+.. _Exercise 1-1A-14:
+**14.** Show that the existence of maximal trees is equivalent to the Axiom of Choice.
 
 .. |indent| raw:: html
 
