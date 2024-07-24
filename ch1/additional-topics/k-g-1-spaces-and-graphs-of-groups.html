@@ -441,7 +441,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -457,6 +459,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphs-of-groups">Graphs of Groups</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -467,8 +477,172 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="b-k-g-1-spaces-and-graphs-of-groups">
-<h1>1.B. K(G,1) Spaces and Graphs of Groups<a class="headerlink" href="#b-k-g-1-spaces-and-graphs-of-groups" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<span id="section-1-b"></span><h1>1.B. K(G,1) Spaces and Graphs of Groups<a class="headerlink" href="#b-k-g-1-spaces-and-graphs-of-groups" title="Permalink to this heading">#</a></h1>
+<p><span style="margin-left: 2em"> In this section we introduce a class of spaces whose homotopy type depends only
+on their fundamental group. These spaces arise many places in topology, especially
+in its interactions with group theory.</p>
+<p><span style="margin-left: 2em"> A path-connected space whose fundamental group is isomorphic to a given group
+<span class="math notranslate nohighlight">\(G\)</span> and which has a contractible universal covering space is called a <span class="math notranslate nohighlight">\(\mathbf{K(G,1)\)</span> <strong>space</strong>. The
+‘<span class="math notranslate nohighlight">\(1\)</span>’ here refers to <span class="math notranslate nohighlight">\(\pi_1\)</span>. More general <span class="math notranslate nohighlight">\(K(G,n)\)</span> spaces are studied in <span class="xref std std-ref">§4.2</span>. All these spaces
+are called Eilenberg-MacLane spaces, though in the case <span class="math notranslate nohighlight">\(n=1\)</span> they were studied by
+Hurewicz before Eilenberg and MacLane took up the general case. Here are some examples:</p>
+<p id="example-1b-1"><strong>Example 1B.1.</strong> <span class="math notranslate nohighlight">\(S^1\)</span> is a <span class="math notranslate nohighlight">\(K(\mathbb{Z}, 1)\)</span>. More generally, a connected graph is a <span class="math notranslate nohighlight">\(K(G,1)\)</span> with
+<span class="math notranslate nohighlight">\(G\)</span> a free group, since by the results of <span class="math notranslate nohighlight">\(§1.A &lt;Section 1.A&gt;\)</span> its universal cover is a tree, hence contractible.</p>
+<p id="example-1b-2"><strong>Example 1B.2.</strong> Closed surfaces with infinite <span class="math notranslate nohighlight">\(\pi_1\)</span>, in other words, closed surfaces other
+than <span class="math notranslate nohighlight">\(S^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span>, are <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s. This will be shown in <span class="xref std std-ref">Example 1B.14</span> below. It also
+follows from the theorem in surface theory that the only simply-connected surfaces
+without boundary are <span class="math notranslate nohighlight">\(S^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, so the universal cover of a closed surface with
+infinite fundamental group must be <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> since it is noncompact. Nonclosed surfaces
+deformation retract onto graphs, so such surfaces are <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s with <span class="math notranslate nohighlight">\(G\)</span> free.</p>
+<p id="example-1b-3"><strong>Example 1B.3.</strong> The infinite-dimensional projective space <span class="math notranslate nohighlight">\(\mathbb{R}P^\infty\)</span> is a <span class="math notranslate nohighlight">\(K(\mathbb{Z}_2, 1)\)</span> since its
+universal cover is <span class="math notranslate nohighlight">\(S^\infty\)</span>, which is contractible. To show the latter fact, a homotopy from
+the identity map of <span class="math notranslate nohighlight">\(S^\infty\)</span> to a constant map be constructed in two stages as follows.
+First, define <span class="math notranslate nohighlight">\(f_t: \mathbb{R}^\infty \rightarrow \mathbb{R}^\infty\)</span> by <span class="math notranslate nohighlight">\(f_t(x_1,x_2,\cdots) = (1-t)(x_1,x_2,\cdots)+t(0,x_1,x_2,\cdots)\)</span>.
+This takes nonzero vectors to nonzero vectors for all <span class="math notranslate nohighlight">\(t \in [0,1], so f_t / |f_t|\)</span> gives a
+homotopy from the identity map of <span class="math notranslate nohighlight">\(S^\infty\)</span> to the map <span class="math notranslate nohighlight">\((x_1,x_2,\cdots) \mapsto (0,x_1,x_2,\cdots)\)</span>. Then a
+homotopy from this map to a constant map is given by <span class="math notranslate nohighlight">\(g_t / |g_t|\)</span> where <span class="math notranslate nohighlight">\(g_t(x_1,x_2,\cdots)=(1-t)(0,x_1,x_2,\cdots) +t(1,0,0,\cdots)\)</span>.</p>
+<p id="example-1b-4"><strong>Example 1B.4.</strong> Generalizing the preceding example, we can construct a <span class="math notranslate nohighlight">\(K(\mathbb{Z}_m,1)\)</span> as
+an infinite-dimensional lens space <span class="math notranslate nohighlight">\(S^\infty / \mathbb{Z}_m\)</span>, where <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span> acts on <span class="math notranslate nohighlight">\(S^\infty\)</span>, regarded as the
+unit sphere in <span class="math notranslate nohighlight">\(\mathbb{C}^\infty\)</span>, by scalar multiplication by <span class="math notranslate nohighlight">\(m^{th}\)</span> roots of unity, a generator of this
+action being the map <span class="math notranslate nohighlight">\((z_1,z_2,\cdots) \mapsto e^{2\pi i/m}(z_1,z_2,\cdots)\)</span>. It is not hard to check that
+this is a covering space action.</p>
+<p id="example-1b-5"><strong>Example 1B.5.</strong> A product <span class="math notranslate nohighlight">\(K(G,1) \times K(H,1)\)</span> is a <span class="math notranslate nohighlight">\(K(G \times H,1)\)</span> since its universal cover
+is the product of the universal covers of <span class="math notranslate nohighlight">\(K(G,1)\)</span> and <span class="math notranslate nohighlight">\(K(H,1)\)</span>. By taking products of
+circles and infinite-dimensional lens spaces we therefore get <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s for arbitrary
+finitely generated abelian groups <span class="math notranslate nohighlight">\(G\)</span>. For example the <span class="math notranslate nohighlight">\(n\)</span>-dimensional torus <span class="math notranslate nohighlight">\(T^n\)</span>, the
+product of <span class="math notranslate nohighlight">\(n\)</span> circles, is a <span class="math notranslate nohighlight">\(K(\mathbb{Z}^n, 1)\)</span>.</p>
+<p id="example-1b-6"><strong>Example 1B.6.</strong> For a closed connected subspace <span class="math notranslate nohighlight">\(K\)</span> of <span class="math notranslate nohighlight">\(S^3\)</span> that is nonempty, the
+complement <span class="math notranslate nohighlight">\(S^3 - K\)</span> is a <span class="math notranslate nohighlight">\(K(G,1)\)</span>. This is a theorem in <span class="math notranslate nohighlight">\(3\)</span>-manifold theory, but in the special
+case that <span class="math notranslate nohighlight">\(K\)</span> is a torus knot the result follows from our study of torus knot complements
+in <span class="xref std std-ref">Examples 1.24</span> and <span class="xref std std-ref">1.35</span>. Namely, we showed that for <span class="math notranslate nohighlight">\(K\)</span> the torus knot <span class="math notranslate nohighlight">\(K_{m,n}\)</span>
+there is a deformation retraction of <span class="math notranslate nohighlight">\(S^3-K\)</span> onto a certain <span class="math notranslate nohighlight">\(2\)</span>-dimensional complex
+<span class="math notranslate nohighlight">\(X_{m,n}\)</span> having contractible universal cover. The homotopy lifting property then implies
+that the universal cover of <span class="math notranslate nohighlight">\(S^3-K\)</span> is homotopy equivalent to the universal cover of
+<span class="math notranslate nohighlight">\(X_{m,n}\)</span>, hence is also contractible.</p>
+<div class="docutils container" id="example-1b-7">
+<p><strong>Example 1B.7.</strong> It is not hard to construct a <span class="math notranslate nohighlight">\(K(G,1)\)</span> for an arbitrary group <span class="math notranslate nohighlight">\(G\)</span>, using
+the notion of a <span class="math notranslate nohighlight">\(\delta -complex\)</span> defined in <span class="xref std std-ref">§2.1</span>. Let <span class="math notranslate nohighlight">\(EG\)</span> be the <span class="math notranslate nohighlight">\(\delta\)</span>-complex whose
+<span class="math notranslate nohighlight">\(n\)</span>-simplices are the ordered <span class="math notranslate nohighlight">\((n+1)\)</span>-tuples <span class="math notranslate nohighlight">\([g_0,\cdots,g_n]\)</span> of elements of <span class="math notranslate nohighlight">\(G\)</span>. Such an
+<span class="math notranslate nohighlight">\(n\)</span>-simplex attaches to the <span class="math notranslate nohighlight">\((n-1)\)</span>-simplices <span class="math notranslate nohighlight">\([g_0,\cdots, \hat{g}_i,\cdots,g_n]\)</span> in the obvious way,
+just as a standard simplex attaches to its faces. (The notation <span class="math notranslate nohighlight">\(\hat{g}_i\)</span> means that this
+vertex is deleted.) The complex <span class="math notranslate nohighlight">\(EG\)</span> is contractible by the homotopy <span class="math notranslate nohighlight">\(h_t\)</span> that slides
+each point <span class="math notranslate nohighlight">\(x \in [g_0, \cdots, g_n]\)</span> along the line segment in <span class="math notranslate nohighlight">\([e,g_0,\cdots,g_n]\)</span> from <span class="math notranslate nohighlight">\(x\)</span> to the
+vertex <span class="math notranslate nohighlight">\([e]\)</span>, where <span class="math notranslate nohighlight">\(e\)</span> is the identity element of <span class="math notranslate nohighlight">\(G\)</span>. This is well-defined in <span class="math notranslate nohighlight">\(EG\)</span> since
+when we restrict to a face <span class="math notranslate nohighlight">\([g_0, \cdots, \hat{g}_i, \cdots, g_n]\)</span> we have the linear deformation to <span class="math notranslate nohighlight">\([e]\)</span>
+in <span class="math notranslate nohighlight">\([e,g_0,\cdots,\hat{g}_i, \cdots, g_n]\)</span>. Note that <span class="math notranslate nohighlight">\(h_t\)</span> carries <span class="math notranslate nohighlight">\([e]\)</span> around the loop <span class="math notranslate nohighlight">\([e,e]\)</span>, so <span class="math notranslate nohighlight">\(h_t\)</span> is not
+actually a deformation retraction of <span class="math notranslate nohighlight">\(EG\)</span> onto <span class="math notranslate nohighlight">\([e]\)</span>.</p>
+<p><span style="margin-left: 2em"> The group <span class="math notranslate nohighlight">\(G\)</span> acts on <span class="math notranslate nohighlight">\(EG\)</span> by left multiplication, an element <span class="math notranslate nohighlight">\(g \in G\)</span> taking the
+simplex <span class="math notranslate nohighlight">\([g_0,\cdots, g_n]\)</span> linearly onto the simplex <span class="math notranslate nohighlight">\([gg_0, \cdots, gg_n]\)</span>. Only the identity <span class="math notranslate nohighlight">\(e\)</span>
+takes any simplex to itself, so by an exercise at the end of this section, the action
+of <span class="math notranslate nohighlight">\(G\)</span> on <span class="math notranslate nohighlight">\(EG\)</span> is covering space action. Hence the quotient map <span class="math notranslate nohighlight">\(EG \rightarrow EG/G\)</span> is the
+universal cover of the orbit space <span class="math notranslate nohighlight">\(BG=EG/G\)</span>, and <span class="math notranslate nohighlight">\(BG\)</span> is a <span class="math notranslate nohighlight">\(K(G,1)\)</span>.</p>
+<p><span style="margin-left: 2em"> Since <span class="math notranslate nohighlight">\(G\)</span> acts on <span class="math notranslate nohighlight">\(EG\)</span> by freely permuting simplices, <span class="math notranslate nohighlight">\(BG\)</span> inherits a <span class="math notranslate nohighlight">\(\Delta\)</span>-complex
+structure from <span class="math notranslate nohighlight">\(EG\)</span>. The action of <span class="math notranslate nohighlight">\(G\)</span> on <span class="math notranslate nohighlight">\(EG\)</span> identifies all the vertices of <span class="math notranslate nohighlight">\(EG\)</span>, so <span class="math notranslate nohighlight">\(BG\)</span>
+has just one vertex. To describe the <span class="math notranslate nohighlight">\(\Delta\)</span>-complex structure on <span class="math notranslate nohighlight">\(BG\)</span> explicitly, note first
+that every <span class="math notranslate nohighlight">\(n\)</span>-simplex of <span class="math notranslate nohighlight">\(EG\)</span> can be written uniquely in the form</p>
+<div class="math notranslate nohighlight">
+\[[g_0,g_0g_1,g_0g_1g_2,\cdots,g_0g_1 \cdots g_n] = g_0[e,g_1,g_1g_2, \cdots, g_1 \cdots g_n]\]</div>
+<p>The image of this simplex in <span class="math notranslate nohighlight">\(BG\)</span> may be denoted unambiguously by the symbol
+<span class="math notranslate nohighlight">\([g_1|g_2|\cdots |g_n]\)</span>. In this ‘bar’ notation the <span class="math notranslate nohighlight">\(g_i\)</span>’s and their ordered products can be
+used to label edges, viewing an
+edge label as the ratio between
+the two labels on the vertices
+at the endpoints of the edge,
+as indicated in the figure. With
+this notation, the boundary of
+a simplex <span class="math notranslate nohighlight">\([g_1|\cdots | g_n]\)</span> of <span class="math notranslate nohighlight">\(BG\)</span>
+consists of the simplices <span class="math notranslate nohighlight">\([g_2|\cdots| g_n],\,[g_1|\cdots|g_{n-1}]\)</span>, and <span class="math notranslate nohighlight">\([g_1|\cdots |g_ig_{i+1}|\cdots|g_n]\)</span>
+for <span class="math notranslate nohighlight">\(i=1,\cdots ,n-1\)</span>.</p>
+</div>
+<p><span style="margin-left: 2em"> This construction of a <span class="math notranslate nohighlight">\(K(G,1)\)</span> produces a rather large space, since <span class="math notranslate nohighlight">\(BG\)</span> is
+always infinite-dimensional, and if <span class="math notranslate nohighlight">\(G\)</span> is infinite, <span class="math notranslate nohighlight">\(BG\)</span> has an infinite number of cells in
+each positive dimension. For example, <span class="math notranslate nohighlight">\(B\mathbb{Z}\)</span> is much bigger than <span class="math notranslate nohighlight">\(S^1\)</span>, the most efficient
+<span class="math notranslate nohighlight">\(K(\mathbb{Z},1)\)</span>. On the other hand, <span class="math notranslate nohighlight">\(BG\)</span> has the virtue of being functorial: A homomorphism
+<span class="math notranslate nohighlight">\(f:G \rightarrow H\)</span> induces a map <span class="math notranslate nohighlight">\(Bf:BG \rightarrow BH\)</span> sending a simplex <span class="math notranslate nohighlight">\([g_1 | \cdots g_n]\)</span> to the simplex
+<span class="math notranslate nohighlight">\([f(g_1)|\cdots |f(g_n)]\)</span>. A different construction of a <span class="math notranslate nohighlight">\(K(G,1)\)</span> is given in <span class="xref std std-ref">§4.2</span>. Here one
+starts with any <span class="math notranslate nohighlight">\(2\)</span>-dimensional complex having fundamental group <span class="math notranslate nohighlight">\(G\)</span>, for example
+the complex <span class="math notranslate nohighlight">\(X_G\)</span> associated to a presentation of <span class="math notranslate nohighlight">\(G\)</span>, and then one attaches cells of
+dimension <span class="math notranslate nohighlight">\(3\)</span> and higher to make the universal cover contractible without affecting <span class="math notranslate nohighlight">\(\pi_1\)</span>.
+In general, it is hard to get any control on the number of higher-dimensional cells
+needed in this construction, so it too can be rather inefficient. Indeed, finding an
+efficient <span class="math notranslate nohighlight">\(K(G,1)\)</span> for a given group <span class="math notranslate nohighlight">\(G\)</span> is often a difficult problem.</p>
+<p><span style="margin-left: 2em"> It is a curious and almost paradoxical fact that if <span class="math notranslate nohighlight">\(G\)</span> contains any elements of finite
+order, then every <span class="math notranslate nohighlight">\(K(G,1)\)</span> CW complex must be infinite-dimensional. This is shown
+in <span class="xref std std-ref">Proposition 2.45</span>. In particular the infinite-dimensional lens space <span class="math notranslate nohighlight">\(K(\mathbb{Z}_m, 1)\)</span>’s in
+<a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-1b-4"><span class="std std-ref">Example 1B.4</span></a> cannot be replaced by any finite-dimensional complex.</p>
+<p><span style="margin-left: 2em"> In spite of the great latitude possible in the construction of <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s, there is a
+very nice homotopical uniqueness property that accounts for much of the interest in
+<span class="math notranslate nohighlight">\(K(G,1)\)</span>’s:</p>
+<p><span style="margin-left: 2em"> Having a unique homotopy type of <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s  associated to each group <span class="math notranslate nohighlight">\(G\)</span> means
+that algebraic invariants of spaces that depend only on homotopy type, such as
+homology and cohomology groups, become invariants of groups. This has proved to be a
+quite fruitful idea, and has been much studied both from the algebraic and topological
+viewpoints. The discussion following <span class="xref std std-ref">Proposition 2.45</span> gives a few references.</p>
+<p><span style="margin-left: 2em"> The preceding theorem will follow easily from:</p>
+<div class="docutils container" id="proposition-1b-9">
+<blockquote>
+<div><p><strong>Proposition 1B.9.</strong> <em>Let</em> <span class="math notranslate nohighlight">\(X\)</span> <em>be a connected CW complex and let</em> <span class="math notranslate nohighlight">\(Y\)</span> <em>be a</em> <span class="math notranslate nohighlight">\(K(G,1)\)</span>. <em>Then
+every homomorphism</em> <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)\)</span> <em>is induced by a map</em> <span class="math notranslate nohighlight">\((X,x_0) \rightarrow (Y,y_0)\)</span>
+<em>that is unique up to homotopy fixing</em> <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
+</div></blockquote>
+<p><span style="margin-left: 2em"> To deduce the theorem from this, let <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> be CW complex <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s with
+isomorphic fundamental groups. The proposition gives maps <span class="math notranslate nohighlight">\(f:(X,x_0) \rightarrow (Y,y_0)\)</span> and
+<span class="math notranslate nohighlight">\(g:(Y,y_0) \rightarrow (X,x_0)\)</span> inducing inverse isomorphisms <span class="math notranslate nohighlight">\(\pi_1(X,x_0) \approx \pi_1(Y,y_0)\)</span>. Then <span class="math notranslate nohighlight">\(fg\)</span>
+and <span class="math notranslate nohighlight">\(gf\)</span> induce the identity on <span class="math notranslate nohighlight">\(\pi_1\)</span> and hence are homotopic to the identity maps.</p>
+<p><strong>Proof of 1B.9:</strong> Let us first consider the case that <span class="math notranslate nohighlight">\(X\)</span> has a single <span class="math notranslate nohighlight">\(0\)</span>-cell, the basepoint
+<span class="math notranslate nohighlight">\(x_0\)</span>. Given a homomorphism <span class="math notranslate nohighlight">\(\varphi: \pi_1(X,x_0) \rightarrow \pi_1(Y,y_0)\)</span>, we begin the construction
+of a map <span class="math notranslate nohighlight">\(f:(X,x_0) \rightarrow (Y,y_0)\)</span> with <span class="math notranslate nohighlight">\(f_* = \varphi\)</span> by setting <span class="math notranslate nohighlight">\(f(x_0)=y_0\)</span>.</p>
+<a class="reference internal image-reference" href="../../_images/prop-1B-9.png"><img alt="../../_images/prop-1B-9.png" class="align-right" src="../../_images/prop-1B-9.png" style="width: 30%;" /></a>
+<p>Each <span class="math notranslate nohighlight">\(1\)</span>-cell
+<span class="math notranslate nohighlight">\(e^1_\alpha\)</span> of <span class="math notranslate nohighlight">\(X\)</span> has closure a circle determining an element
+<span class="math notranslate nohighlight">\([e^1_\alpha]\in \pi_1(X,x_0)\)</span>, and we let <span class="math notranslate nohighlight">\(f\)</span> on the closure of <span class="math notranslate nohighlight">\(e^1_\alpha\)</span>
+be a map representing <span class="math notranslate nohighlight">\(\varphi([e^1_\alpha])\)</span>. If <span class="math notranslate nohighlight">\(i:X^1 \hookrightarrow X\)</span> denotes
+the inclusion, then <span class="math notranslate nohighlight">\(\varphi i_* = f_*\)</span> since <span class="math notranslate nohighlight">\(\pi_1(X^1,x_0)\)</span> is
+generated by the elements <span class="math notranslate nohighlight">\([e^1_\alpha]\)</span>.</p>
+<p><span style="margin-left: 2em"> To extend <span class="math notranslate nohighlight">\(f\)</span> over a cell <span class="math notranslate nohighlight">\(e^2_\beta\)</span> with attaching map <span class="math notranslate nohighlight">\(\psi_\beta : S^1 \rightarrow X^1\)</span>, all we need is for the
+composition <span class="math notranslate nohighlight">\(f \psi_\beta\)</span> to be nullhomotopic. Choosing a basepoint <span class="math notranslate nohighlight">\(s_0 \in S^1\)</span> and a path in <span class="math notranslate nohighlight">\(X^1\)</span>
+from <span class="math notranslate nohighlight">\(\psi_\beta (s_0)\)</span> to <span class="math notranslate nohighlight">\(x_0,\, \psi_\beta\)</span> determines an element <span class="math notranslate nohighlight">\([\psi_\beta] \in \pi_1(X^1, x_0)\)</span>, and the existence
+of a nullhomotopy of <span class="math notranslate nohighlight">\(f\psi_\beta\)</span> is equivalent to <span class="math notranslate nohighlight">\(f_*([\psi_\beta])\)</span> being zero in <span class="math notranslate nohighlight">\(\pi_1(Y,y_0)\)</span>. We
+have <span class="math notranslate nohighlight">\(i_*([\psi_\beta])=0\)</span> since the cell <span class="math notranslate nohighlight">\(e^2_\beta\)</span> provides a nullhomotopy of <span class="math notranslate nohighlight">\(\psi_\beta\)</span> in <span class="math notranslate nohighlight">\(X\)</span>. Hence
+<span class="math notranslate nohighlight">\(f_*([\psi_\beta])=\varphi i_*([\psi_\beta])=0\)</span>, and so <span class="math notranslate nohighlight">\(f\)</span> can be extended over <span class="math notranslate nohighlight">\(e^2_\beta\)</span>.</p>
+<p><span style="margin-left: 2em"> Extending <span class="math notranslate nohighlight">\(f\)</span> inductively over cells <span class="math notranslate nohighlight">\(e^n_\gamma\)</span> with <span class="math notranslate nohighlight">\(n&gt;2\)</span> is possible since the attaching
+maps <span class="math notranslate nohighlight">\(\psi_\gamma : S^{n-1} \rightarrow X^{n-1}\)</span> have nullhomotopic compositions <span class="math notranslate nohighlight">\(f\psi_\gamma : S^{n-1} \rightarrow Y\)</span>. This is
+because <span class="math notranslate nohighlight">\(f\varphi_\gamma\)</span> lifts to the universal cover of <span class="math notranslate nohighlight">\(Y\)</span> if <span class="math notranslate nohighlight">\(n&gt;2\)</span>, and this cover is contractible
+by hypothesis, so the lift of <span class="math notranslate nohighlight">\(f \varphi_\gamma\)</span> is nullhomotopic, hence also <span class="math notranslate nohighlight">\(f\varphi_\gamma\)</span> itself.</p>
+<p><span style="margin-left: 2em"> Turning to the uniqueness statement, if two maps <span class="math notranslate nohighlight">\(f_0,f_1:(X,x_0) \rightarrow (Y,y_0)\)</span> induce
+the same homomorphism on <span class="math notranslate nohighlight">\(\pi_1\)</span>, then we see immediately that their restrictions
+to <span class="math notranslate nohighlight">\(X^1\)</span> are homotopic, fixing <span class="math notranslate nohighlight">\(x_0\)</span>. To extend the resulting map <span class="math notranslate nohighlight">\(X^1 \times I \cup X \times \partial I \rightarrow Y\)</span>
+over the remaining cells <span class="math notranslate nohighlight">\(e^n \times (0,1)\)</span> of <span class="math notranslate nohighlight">\(X \times I\)</span> we can proceed just as in the preceding
+paragraph since these cells have dimension <span class="math notranslate nohighlight">\(n+1 &gt;2\)</span>. Thus we obtain a homotopy
+<span class="math notranslate nohighlight">\(f_t:(X,x_0)\rightarrow (Y,y_0)\)</span>, finishing the proof in the case that <span class="math notranslate nohighlight">\(X\)</span> has a single <span class="math notranslate nohighlight">\(0\)</span>-cell.</p>
+<p><span style="margin-left: 2em"> The case that <span class="math notranslate nohighlight">\(X\)</span> has more than one <span class="math notranslate nohighlight">\(0\)</span>-cell can be treated by a small elaboration
+on this argument. Choose a maximal tree <span class="math notranslate nohighlight">\(T \subset X\)</span>. To construct a map <span class="math notranslate nohighlight">\(f\)</span> realizing a
+given <span class="math notranslate nohighlight">\(\varphi\)</span>, begin by setting <span class="math notranslate nohighlight">\(f(t)=y_0\)</span>. Then each edge <span class="math notranslate nohighlight">\(e^1_\alpha\)</span> in <span class="math notranslate nohighlight">\(X-T\)</span> determines an
+element <span class="math notranslate nohighlight">\([e^1_\alpha] \in \pi_1(X,x_0)\)</span>, and we let <span class="math notranslate nohighlight">\(f\)</span> on the closure of <span class="math notranslate nohighlight">\(e^1_\alpha\)</span> be a map representing
+<span class="math notranslate nohighlight">\(\varphi([e^1_\alpha])\)</span>. Extending <span class="math notranslate nohighlight">\(f\)</span> over higher-dimensional cells then proceeds just as before.
+Constructing a homotopy <span class="math notranslate nohighlight">\(f_t\)</span> joining two given maps <span class="math notranslate nohighlight">\(f_0\)</span> and <span class="math notranslate nohighlight">\(f_1\)</span> with <span class="math notranslate nohighlight">\(f_{0*}=f_{1*}\)</span> also
+has an extra step. Let <span class="math notranslate nohighlight">\(h_t:X^1 \rightarrow X^1\)</span> be a homotopy starting with <span class="math notranslate nohighlight">\(h_0=\mathbb{1}\)</span> and restricting
+to a deformation retraction of <span class="math notranslate nohighlight">\(T\)</span> onto <span class="math notranslate nohighlight">\(x_0\)</span>. (It is easy to extend such a deformation
+retraction to a homotopy defined on all of <span class="math notranslate nohighlight">\(X^1\)</span>.) We can construct a homotopy from
+<span class="math notranslate nohighlight">\(f_0 | X^1\)</span> to <span class="math notranslate nohighlight">\(f_1|X^1\)</span> by first deforming <span class="math notranslate nohighlight">\(f_0|X^1\)</span> and <span class="math notranslate nohighlight">\(f_1|X^1\)</span> to take <span class="math notranslate nohighlight">\(T\)</span> to <span class="math notranslate nohighlight">\(y_0\)</span> by composing with
+<span class="math notranslate nohighlight">\(h_t\)</span>, then applying the earlier argument to obtain a homotopy between the modified
+<span class="math notranslate nohighlight">\(f_0|X^1\)</span> and <span class="math notranslate nohighlight">\(f_1|X^1\)</span>. Having a homotopy <span class="math notranslate nohighlight">\(f_0|X^1 \simeq f_1|X^1\)</span> we extend this over all of <span class="math notranslate nohighlight">\(X\)</span> in
+the same way as before. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> The first part of the preceding proof also works for the <span class="math notranslate nohighlight">\(2\)</span>-dimensional complexes
+<span class="math notranslate nohighlight">\(X_G\)</span> associated to presentations of groups. Thus every homomorphism <span class="math notranslate nohighlight">\(G \rightarrow H\)</span> is
+realized as the induced homomorphism of some map <span class="math notranslate nohighlight">\(X_G \rightarrow X_H\)</span>. However, there is no
+uniqueness statement for this map, and it can easily happen that different presentations
+of a group <span class="math notranslate nohighlight">\(G\)</span> give <span class="math notranslate nohighlight">\(X_G\)</span>’s that are not homotopy equivalent.</p>
+<section id="graphs-of-groups">
+<h2>Graphs of Groups<a class="headerlink" href="#graphs-of-groups" title="Permalink to this heading">#</a></h2>
+<p><span style="margin-left: 2em"> As an illustration of how <span class="math notranslate nohighlight">\(K(G,1)\)</span> spaces can be useful in group theory, we shall
+describe a procedure for assembling a collection of <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s together into a <span class="math notranslate nohighlight">\(K(G,1)\)</span>
+for a larger group <span class="math notranslate nohighlight">\(G\)</span>. Group-theoretically, this gives a method for assembling smaller
+groups together to form a larger group, generalizing the notion of free products.</p>
+<p><span style="margin-left: 2em"> Let <span class="math notranslate nohighlight">\(\Gamma\)</span> be a graph that is connected and oriented, that is, its edges are viewed as
+arrows, each edge having a specified direction. Suppose that at each vertex <span class="math notranslate nohighlight">\(v\)</span> of <span class="math notranslate nohighlight">\(\Gamma\)</span> we</p>
+</section>
 </section>
 
 
@@ -506,6 +680,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphs-of-groups">Graphs of Groups</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

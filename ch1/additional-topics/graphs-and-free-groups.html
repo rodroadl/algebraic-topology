@@ -441,7 +441,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -457,6 +459,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -467,7 +477,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="a-graphs-and-free-groups">
-<h1>1.A. Graphs and Free Groups<a class="headerlink" href="#a-graphs-and-free-groups" title="Permalink to this heading">#</a></h1>
+<span id="section-1-a"></span><h1>1.A. Graphs and Free Groups<a class="headerlink" href="#a-graphs-and-free-groups" title="Permalink to this heading">#</a></h1>
 <p><span style="margin-left: 2em"> Since all groups can be realized as fundamental groups of spaces, this opens the
 way for using topology to study algebraic properties of groups. The topics in this
 section and the next give some illustrations of this principle, mainly using covering
@@ -612,6 +622,49 @@ Choosing a lift <span class="math notranslate nohighlight">\(\tilde{v_0}\)</span
 a homotopy class of paths starting at <span class="math notranslate nohighlight">\(\tilde{v}_0\)</span> and ending at a unique lift <span class="math notranslate nohighlight">\(\tilde{v}_1\)</span> of <span class="math notranslate nohighlight">\(v_1\)</span>. Then
 the unique nonbacktracking edgepath in <span class="math notranslate nohighlight">\(\tilde{X}\)</span> from <span class="math notranslate nohighlight">\(\tilde{v}_0\)</span> to <span class="math notranslate nohighlight">\(\tilde{v}_1\)</span> projects to the desired
 nonbacktracking edgepath in <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<p id="exercise-1-1a-1"><strong>1.</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be a graph in which each vertex is an endpoint of only finitely many edges.
+Show that the weak topology on <span class="math notranslate nohighlight">\(X\)</span> is a metric topology.</p>
+<p id="exercise-1-1a-2"><strong>2.</strong> Show that a connected graph retracts onto any connected subgraph.</p>
+<p id="exercise-1-1a-3"><strong>3.</strong> For a finite graph <span class="math notranslate nohighlight">\(X\)</span> define the Euler characteristic <span class="math notranslate nohighlight">\(\chi (X)\)</span> to be the number of
+vertices minus the number of edges. Show that <span class="math notranslate nohighlight">\(\chi (X) =1 ` if :math:`X\)</span> is a tree, and that the
+rank (number of elements in a basis) of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is <span class="math notranslate nohighlight">\(1-\chi (X)\)</span> if <span class="math notranslate nohighlight">\(X\)</span> is connected.</p>
+<p id="exercise-1-1a-4"><strong>4.</strong> If <span class="math notranslate nohighlight">\(X\)</span> is a finite graph and <span class="math notranslate nohighlight">\(Y\)</span> is a subgraph homemomorphic to <span class="math notranslate nohighlight">\(S^1\)</span> and containing the
+basepoint <span class="math notranslate nohighlight">\(x_0\)</span>, show that <span class="math notranslate nohighlight">\(\pi_1(X,x_0)\)</span> has a basis in which one element is represented
+by the loop <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+<p id="exercise-1-1a-5"><strong>5.</strong> Construct a connected graph <span class="math notranslate nohighlight">\(X\)</span> and maps <span class="math notranslate nohighlight">\(f,g: X \rightarrow X\)</span> such that <span class="math notranslate nohighlight">\(fg=\mathbb{1}\)</span> but <span class="math notranslate nohighlight">\(f\)</span>
+and <span class="math notranslate nohighlight">\(g\)</span> do not induce isomorphisms on <span class="math notranslate nohighlight">\(\pi_1\)</span>. [Note that <span class="math notranslate nohighlight">\(f_* g_*=\mathbb{1}\)</span> implies that <span class="math notranslate nohighlight">\(f_*\)</span> is
+surjective and <span class="math notranslate nohighlight">\(g_*\)</span> is injective.]</p>
+<p id="exercise-1-1a-6"><strong>6.</strong> Let <span class="math notranslate nohighlight">\(F\)</span> be the free group on two generators and let <span class="math notranslate nohighlight">\(F'\)</span> be its commutator subgroup.
+Find a set of free generators for <span class="math notranslate nohighlight">\(F'\)</span> by considering the covering space of the graph
+<span class="math notranslate nohighlight">\(S^1 \vee S^1\)</span> corresponding to <span class="math notranslate nohighlight">\(F'\)</span>.</p>
+<p id="exercise-1-1a-7"><strong>7.</strong> If <span class="math notranslate nohighlight">\(F\)</span> is a finitely generated free group and <span class="math notranslate nohighlight">\(N\)</span> is a nontrivial normal subgroup of
+infinite index, show, using covering spaces, that <span class="math notranslate nohighlight">\(N\)</span> is not finitely generated.</p>
+<p id="exercise-1-1a-8"><strong>8.</strong> Show that a finitely generated group has only a finite number of subgroups of a
+given finite index. [First do the case of free groups, using covering spaces of graphs.
+The general case then follows since every group is a quotient group of a free group.]</p>
+<p id="exercise-1-1a-9"><strong>9.</strong> Using covering spaces, show that an index <span class="math notranslate nohighlight">\(n\)</span> subgroup <span class="math notranslate nohighlight">\(H\)</span> of a group <span class="math notranslate nohighlight">\(G\)</span> has at most
+<span class="math notranslate nohighlight">\(n\)</span> conjugate subgroups <span class="math notranslate nohighlight">\(gHg^{-1}\)</span> in <span class="math notranslate nohighlight">\(G\)</span>. Apply this to show that there exists a normal
+subgroup <span class="math notranslate nohighlight">\(K \subset G\)</span> of finite index with <span class="math notranslate nohighlight">\(K \subset H\)</span>. [For the latter statement, consider
+the intersection of all the conjugate subgroups <span class="math notranslate nohighlight">\(gHg^{-1}\)</span>. This is the maximal normal
+subgroup of <span class="math notranslate nohighlight">\(G\)</span> contained in <span class="math notranslate nohighlight">\(H\)</span>.]</p>
+<p id="exercise-1-1a-10"><strong>10.</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be the wedge sum of <span class="math notranslate nohighlight">\(n\)</span> circles, with its natural graph structure, and let
+<span class="math notranslate nohighlight">\(\tilde{X} \rightarrow X\)</span> be a covering space with <span class="math notranslate nohighlight">\(Y \subset \tilde{X}\)</span> a finite connected subgraph. Show there is
+a finite graph <span class="math notranslate nohighlight">\(Z \supset Y\)</span> having the same vertices as <span class="math notranslate nohighlight">\(Y\)</span>, such that the projection <span class="math notranslate nohighlight">\(Y \rightarrow X\)</span>
+extends to a covering space <span class="math notranslate nohighlight">\(Z \rightarrow X\)</span>.</p>
+<p id="exercise-1-1a-11"><strong>11.</strong> Apply the two preceding prolbems to show that if <span class="math notranslate nohighlight">\(F\)</span> is a finitely generated free
+group and <span class="math notranslate nohighlight">\(x \in F\)</span> is not the identity element, then there is a normal subgroup <span class="math notranslate nohighlight">\(H \subset F\)</span>
+of finite index such that <span class="math notranslate nohighlight">\(x \in H\)</span>. Hence <span class="math notranslate nohighlight">\(x\)</span> has a nontrivial image in a finite quotient
+group of <span class="math notranslate nohighlight">\(F\)</span>. In this situation one says <span class="math notranslate nohighlight">\(F\)</span> is <strong>residually finite</strong>.</p>
+<p id="exercise-1-1a-12"><strong>12.</strong> Let <span class="math notranslate nohighlight">\(F\)</span> be a finitely generated free group, <span class="math notranslate nohighlight">\(H \subset F\)</span> a finitely generated subgroup, and
+<span class="math notranslate nohighlight">\(x \in F - H\)</span>. Show there is a subgroup <span class="math notranslate nohighlight">\(K\)</span> of finite index in <span class="math notranslate nohighlight">\(F\)</span> such that <span class="math notranslate nohighlight">\(K \supset H\)</span> and
+<span class="math notranslate nohighlight">\(x \notin K\)</span>. [Apply Exercise 10.]</p>
+<p id="exercise-1-1a-13"><strong>13.</strong> Let <span class="math notranslate nohighlight">\(x\)</span> be a nontrivial element of a finitely generated free group <span class="math notranslate nohighlight">\(F\)</span>. Show there is
+a finite-index subgroup <span class="math notranslate nohighlight">\(H \subset F\)</span> in which <span class="math notranslate nohighlight">\(x\)</span> is one element of a basis. [Exercises 4 and
+10 may be helpful.]</p>
+<p id="exercise-1-1a-14"><strong>14.</strong> Show that the existence of maximal trees is equivalent to the Axiom of Choice.</p>
+</section>
 </section>
 
 
@@ -649,6 +702,21 @@ nonbacktracking edgepath in <span class="math notranslate nohighlight">\(X\)</sp
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
