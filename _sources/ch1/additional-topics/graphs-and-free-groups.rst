@@ -10,7 +10,7 @@ space theory.
 |indent| We remind the reader that the Additional Topics which form the remainder of 
 this chapter are not to be regarded as an essential part of the basic core of the book.
 Readers who are eager to move on to new topics should feel free to skip ahead.
-|
+
 |indent| By definition, a **graph** is a :math:`1`-dimensional CW complex, in other words, a space
 :math:`X` obtained from a discrete set :Math:`X^0` by attaching a collection of :Math:`1`-cells :Math:`e_\alpha`. Thus :math:`X`
 is obtained from the disjoint union of :math:`X^0` with closed intervals :math:`I_\alpha` by identifying the
@@ -43,7 +43,7 @@ has the discrete topology. But :math:`D` is compact, being a closed subset of th
 space :math:`C`, so :math:`D` must be finite. By the definition of :math:`D` this means that :math:`C` can meet only
 finitely many vertices and edges.
 
-|indent| A **subgraph** of a graph :math:`X` is a subspace :math:`Y \subsetX` that is a union of vertices and 
+|indent| A **subgraph** of a graph :math:`X` is a subspace :math:`Y \subset X` that is a union of vertices and 
 edges of :math:`X`, such that :math:`e_\alpha \subset Y` implies :math:`\bar{e}_\alpha \subset Y`. The latter condition just says that
 :math:`Y` is a closed subspace of :math:`X`. A tree is a contractible graph. By a tree in a graph :math:`X`
 we mean a subgraph that is a tree. We call a tree in :math:`X` **maximal** if it contains all the 

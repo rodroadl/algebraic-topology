@@ -14,7 +14,7 @@ Hurewicz before Eilenberg and MacLane took up the general case. Here are some ex
 
 .. _Example 1B.1:
 **Example 1B.1.** :math:`S^1` is a :math:`K(\mathbb{Z}, 1)`. More generally, a connected graph is a :math:`K(G,1)` with
-:math:`G` a free group, since by the results of :math:`§1.A <Section 1.A>` its universal cover is a tree, hence contractible.
+:math:`G` a free group, since by the results of :ref:`§1.A <Section 1.A>` its universal cover is a tree, hence contractible.
 
 .. _Example 1B.2:
 **Example 1B.2.** Closed surfaces with infinite :math:`\pi_1`, in other words, closed surfaces other
@@ -61,7 +61,7 @@ that the universal cover of :math:`S^3-K` is homotopy equivalent to the universa
 .. container::
 
     **Example 1B.7.** It is not hard to construct a :math:`K(G,1)` for an arbitrary group :math:`G`, using
-    the notion of a :math:`\delta -complex` defined in :ref:`§2.1 <Section 2.1>`. Let :Math:`EG` be the :math:`\delta`-complex whose
+    the notion of a :math:`\Delta -complex` defined in :ref:`§2.1 <Section 2.1>`. Let :Math:`EG` be the :math:`\Delta`-complex whose
     :math:`n`-simplices are the ordered :math:`(n+1)`-tuples :math:`[g_0,\cdots,g_n]` of elements of :math:`G`. Such an
     :math:`n`-simplex attaches to the :Math:`(n-1)`-simplices :math:`[g_0,\cdots, \hat{g}_i,\cdots,g_n]` in the obvious way,
     just as a standard simplex attaches to its faces. (The notation :math:`\hat{g}_i` means that this 
@@ -150,16 +150,13 @@ viewpoints. The discussion following :ref:`Proposition 2.45 <Proposition 2.45>` 
     :math:`g:(Y,y_0) \rightarrow (X,x_0)` inducing inverse isomorphisms :math:`\pi_1(X,x_0) \approx \pi_1(Y,y_0)`. Then :math:`fg`
     and :math:`gf` induce the identity on :math:`\pi_1` and hence are homotopic to the identity maps.
 
-    **Proof of 1B.9:** Let us first consider the case that :math:`X` has a single :math:`0`-cell, the basepoint
-    :math:`x_0`. Given a homomorphism :math:`\varphi: \pi_1(X,x_0) \rightarrow \pi_1(Y,y_0)`, we begin the construction
-    of a map :math:`f:(X,x_0) \rightarrow (Y,y_0)` with :math:`f_* = \varphi` by setting :Math:`f(x_0)=y_0`. 
-    
     .. image:: fig/prop-1B-9.png
         :align: right
         :width: 30%
 
-
-    Each :math:`1`-cell
+    **Proof of 1B.9:** Let us first consider the case that :math:`X` has a single :math:`0`-cell, the basepoint
+    :math:`x_0`. Given a homomorphism :math:`\varphi: \pi_1(X,x_0) \rightarrow \pi_1(Y,y_0)`, we begin the construction
+    of a map :math:`f:(X,x_0) \rightarrow (Y,y_0)` with :math:`f_* = \varphi` by setting :Math:`f(x_0)=y_0`. Each :math:`1`-cell
     :math:`e^1_\alpha` of :Math:`X` has closure a circle determining an element
     :math:`[e^1_\alpha]\in \pi_1(X,x_0)`, and we let :math:`f` on the closure of :math:`e^1_\alpha`
     be a map representing :math:`\varphi([e^1_\alpha])`. If :math:`i:X^1 \hookrightarrow X` denotes
@@ -216,6 +213,67 @@ groups together to form a larger group, generalizing the notion of free products
 
 |indent| Let :math:`\Gamma` be a graph that is connected and oriented, that is, its edges are viewed as
 arrows, each edge having a specified direction. Suppose that at each vertex :math:`v` of :math:`\Gamma` we
+place a group :math:`G_v` and along each edge :math:`e` of :math:`\Gamma` we put a homomorphism :math:`\varphi_e` from the
+group at the tail of the edge to the group at the head of the edge. We call this data a
+**graph of groups**. Now build a space :math:`B\Gamm` by putting the space :maht:`BG_v` from :ref:`Example 1B.7 <Example 1B.7>`
+at each vertex :math:`v` of :math:`\Gamma` and then filling in a mapping cylinder of the map :math:`B\varphi_e` along
+each edge :math:`e` of :math:`\Gamma`, identifying the two ends of the mapping cylinder with the two :math:`BG_v`'s
+at the ends of :Math:`e`. The resulting space :math:`B\Gamma` is then a CW complex since the maps :math:`B\varphi_e`
+take :math:`n`-cells homeomorphically onto :math:`n`-cells. In fact, the cell structure on :Math:`B\Gamma` can be
+canonically subdivided into a :math:`\Delta-complex` structure using the prism construction from
+the proof of :ref:`Theorem 2.10 <Theorem 2.10>`, but we will not need to do this here.
+
+|indent| More generally, instead of :math:`BG_v` one could take any CW complex :math:`K(G_v,1)` at the
+vertex :math:`v`, and then along edges put mapping cylinders of maps realizing the homomorphisms
+:math:`\varphi_e`. We leave it for the reader to check that the resulting space :math:`K\Gamma` is
+homotopy equivalent to the :math:`B\Gamma` constructed above.
+
+.. _Example 1B.10:
+**Example 1B.10.** Suppose :math:`\Gamma` consists of one central vertex with a number of edges
+radiating out from it, and the group :math:`G_v` at this central vertex is trivial, hence also all
+the edge homomorphisms. Then :ref:`van Kampen's theorem <Theorem 1.20>` implies that :math:`\pi_1(K\Gamma)` is the
+free product of the groups at all the outer vertices.
+
+|indent| In view of this example, we shall call :math:`\pi_1(K\Gamma)` for a general graph of groups :math:`\Gamma` the
+**graph product** of the vertex groups :math:`G_v` with respect to the edge homomorphisms :math:`\varphi_e`.
+The name for :math:`\pi_1(K\Gamma)` that is generally used in the literature is the rather awkward
+phrase, 'the fundamental group of the graph of groups'.
+
+|indent| Here is the main result we shall prove about graphs of groups:
+
+.. _Theorem 1B.11:
+    **Theorem 1B.11.** *If all the edge homorphisms* :math:`\varphi_e` *are injective, then* :math:`K\Gamma` *is a*
+    :math:`K(G,1)` *and the inclusions* :math:`K(G_v,1) \hookrightarrow K\Gamma` *induce injective maps on* :math:`\pi_1`.
+
+|indent| Before giving the proof, let us look at some interesting special cases:
+
+.. _Example 1B.12:
+.. container::
+
+    **Example 1B.12: Free products with Amalgamation.** Suppose the graph of groups is
+    :math:`A \leftarrow C \rightarrow B`, with the two maps monomorphisms. One can regard this data as a specifying
+    embeddings of :math:`C` as subgroups of :math:`A` and :math:`B`. Applying :ref:`van Kampen's theorem <Theorem 1.20>`
+    to the decomposition of :math:`K\Gamma` into its two mapping cylidners, we see that :math:`\pi_1(K\Gamma)` is
+    the quotient of :math:`A{\Large *}B` obtained by identifying the subgroup :math:`C \subset A` with the subgroup
+    :math:`C \subset B`. The standard notation for this group is :math:`A{\Large *}_C B`, the free product of :math:`A` and
+    :math:`B` **amalgamated** along the subgroup :math:`C`. According to the theorem, :math:`A {\Large *}_C B` contains
+    both :math:`A` and :math:`B` as subgroups.
+
+    |indent| For example, a free product with amalgamation :math:`\mathbb{Z} {\Large *}_\mathbb{Z} \mathbb{Z}` can be realized by 
+    mapping cylinders of the maps :math:`S^1 \leftarrow S^1 \rightarrow S^1` that are :math:`m`-sheeted and :Math:`n`-sheeted covering
+    spaces, respectively. We studied this case in :ref:`Examples 1.24 <Examples 1.24>` and :ref:`1.35 <Examples 1.35>` where we showed
+    that the complex :math:`K\Gamma` is a deformation retract of the complement of a torus knot in
+    :math:`S^3` if :math:`m` and :math:`n` are relatively prime. It is a basic result in :math:`3`-manifold theory that the
+    complement of every smooth knot in :math:`S^3` can be built up by iterated graph of groups
+    constructions with injective edge homomorphisms, starting with free groups, so the
+    theorem implies that these knot complements are :math:`K(G,1)`'s. Their universal covers
+    are all :math:`\mathbb{R}^3`, in fact.
+
+.. _Example 1B.13:
+.. container::
+
+    **Example 1B.13: HNN Extensions.** Consider a graph of groups :math:`C \mathrel{\substack {\varphi \\ \longrightarrow\\ \longrightarrow\\ \psi}} A` with :math:`\varphi`
+    and :math:`\psi` both monomorphisms.
 
 
 
