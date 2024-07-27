@@ -465,6 +465,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphs-of-groups">Graphs of Groups</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -643,7 +644,7 @@ groups together to form a larger group, generalizing the notion of free products
 arrows, each edge having a specified direction. Suppose that at each vertex <span class="math notranslate nohighlight">\(v\)</span> of <span class="math notranslate nohighlight">\(\Gamma\)</span> we
 place a group <span class="math notranslate nohighlight">\(G_v\)</span> and along each edge <span class="math notranslate nohighlight">\(e\)</span> of <span class="math notranslate nohighlight">\(\Gamma\)</span> we put a homomorphism <span class="math notranslate nohighlight">\(\varphi_e\)</span> from the
 group at the tail of the edge to the group at the head of the edge. We call this data a
-<strong>graph of groups</strong>. Now build a space <span class="math notranslate nohighlight">\(B\Gamm\)</span> by putting the space <a href="#id1"><span class="problematic" id="id2">:maht:`BG_v`</span></a> from <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-1b-7"><span class="std std-ref">Example 1B.7</span></a>
+<strong>graph of groups</strong>. Now build a space <span class="math notranslate nohighlight">\(B\Gamma\)</span> by putting the space <span class="math notranslate nohighlight">\(BG_v\)</span> from <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-1b-7"><span class="std std-ref">Example 1B.7</span></a>
 at each vertex <span class="math notranslate nohighlight">\(v\)</span> of <span class="math notranslate nohighlight">\(\Gamma\)</span> and then filling in a mapping cylinder of the map <span class="math notranslate nohighlight">\(B\varphi_e\)</span> along
 each edge <span class="math notranslate nohighlight">\(e\)</span> of <span class="math notranslate nohighlight">\(\Gamma\)</span>, identifying the two ends of the mapping cylinder with the two <span class="math notranslate nohighlight">\(BG_v\)</span>’s
 at the ends of <span class="math notranslate nohighlight">\(e\)</span>. The resulting space <span class="math notranslate nohighlight">\(B\Gamma\)</span> is then a CW complex since the maps <span class="math notranslate nohighlight">\(B\varphi_e\)</span>
@@ -686,7 +687,7 @@ are all <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, in f
 <div class="docutils container" id="example-1b-13">
 <p><strong>Example 1B.13: HNN Extensions.</strong> Consider a graph of groups <span class="math notranslate nohighlight">\(C \mathrel{\substack {\varphi \\ \longrightarrow\\ \longrightarrow\\ \psi}} A\)</span> with <span class="math notranslate nohighlight">\(\varphi\)</span>
 and <span class="math notranslate nohighlight">\(\psi\)</span> both monomorphisms. This is analogous to the previous case <span class="math notranslate nohighlight">\(A \leftarrow C \rightarrow B\)</span>,
-but with the two groups <span class="math notranslate nohighlight">\(A\)</span> and <a href="#id3"><span class="problematic" id="id4">:amth:`B`</span></a> coalesced to a single group. The group <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span>,
+but with the two groups <span class="math notranslate nohighlight">\(A\)</span> and <a href="#id1"><span class="problematic" id="id2">:amth:`B`</span></a> coalesced to a single group. The group <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span>,
 which was denoted <span class="math notranslate nohighlight">\(A{\large *}_C B\)</span> in the previous case, is now denoted <span class="math notranslate nohighlight">\(A{\large *}_C\)</span>. To see what
 this group looks like, let us regard <span class="math notranslate nohighlight">\(K\Gamma\)</span> as being obtained from <span class="math notranslate nohighlight">\(K(A,1)\)</span> by attaching
 <span class="math notranslate nohighlight">\(K(C,1) \times I\)</span> along the two ends <span class="math notranslate nohighlight">\(K(C,1)\times \partial I\)</span> via maps realizing the monomorphisms
@@ -706,16 +707,16 @@ a single edge, labeled <span class="math notranslate nohighlight">\(\psi\)</span
 then identify the resulting boundary circle with a longitudinal circle of the torus. This
 produces a space <span class="math notranslate nohighlight">\(X\)</span> that happens to be homeomorphic to a subspace of the standard
 picture of a Klein bottle in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>; see <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/exercises.html#exercise-1-2-12"><span class="std std-ref">Exercise 12 of §1.2</span></a>. The fundamental group
-<span class="math notranslate nohighlight">\(\pi_1(X)\)</span> has the form <span class="math notranslate nohighlight">\((\mathbb{Z} * \amthbb{Z})*_\mathbb{Z} \mathbb{Z}\)</span> with the defining relation <span class="math notranslate nohighlight">\(tb^{\pm 1}t^{-1} = aba^{-1}b^{-1}\)</span>
+<span class="math notranslate nohighlight">\(\pi_1(X)\)</span> has the form <span class="math notranslate nohighlight">\((\mathbb{Z} * \mathbb{Z})*_\mathbb{Z} \mathbb{Z}\)</span> with the defining relation <span class="math notranslate nohighlight">\(tb^{\pm 1}t^{-1} = aba^{-1}b^{-1}\)</span>
 where <span class="math notranslate nohighlight">\(a\)</span> is a meridional loop and <span class="math notranslate nohighlight">\(b\)</span> is a longitudinal loop on the torus. The sign
 of the exponent in the term <span class="math notranslate nohighlight">\(b^{\pm 1}\)</span> is immaterial since the two ways of glueing the
-boundary circle to the longitude produce homeomorphic spaces. The group <span class="math notranslate nohighlight">\(\pi_1(X)=\langle a,b,t \mid tbt^{-1}^aba^{-1}b^{-1} \ranlgle\)</span>
+boundary circle to the longitude produce homeomorphic spaces. The group <span class="math notranslate nohighlight">\(\pi_1(X)=\langle a,b,t \mid tbt^{-1}aba^{-1}b^{-1} \ranlgle\)</span>
 abelianizes to <span class="math notranslate nohighlight">\(\mathbb{Z} \times \mathbb{Z}\)</span>, but to show that <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is not
 isomorphic to <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span> takes some work. There is a surjection <span class="math notranslate nohighlight">\(\pi_1(X) \rightarrow \mathbb{Z} * \mathbb{Z}\)</span> obtained by
 setting <span class="math notranslate nohighlight">\(b=1\)</span>. This has nontrivial kernel since <span class="math notranslate nohighlight">\(b\)</span> is nontrivial in <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> by the
 preceding theorem. If <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> were isomorphic to <span class="math notranslate nohighlight">\(\mathbb{Z} \times \mathbb{Z}\)</span>, we would then have a surjective
 homomorphism <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z} \rightarrow \mathbb{Z} *\mathbb{Z}\)</span> that was not an isomorphism. However, it is a theorem
-in group theory that a free group <span class="math notranslate nohighlight">\(F\)</span> is <em>hopfian</em> — every surjective homomorphism
+in group theory that a free group <span class="math notranslate nohighlight">\(F\)</span> is <em>hopfian</em> – every surjective homomorphism
 <span class="math notranslate nohighlight">\(F \rightarrow F\)</span> must be injective. Hence <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is not free.</p>
 </div>
 <div class="docutils container" id="example-1b-14">
@@ -755,7 +756,7 @@ simply-connected, hence is the universal cover of <span class="math notranslate 
 then the remarks in the preceding paragraph apply, and the components of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span>
 are universal covers of <span class="math notranslate nohighlight">\(A\)</span>. If we assume further that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s, then <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span>
 and the components of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span> are contractible, and we claim that <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span> deformation
-retracts onto each component <span class="math notranslate nohighlight">\(\tilde{A}\)</span> of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span>. Namely, the inclusion <span class="math notranslate nohighlight">\(\tilde{A} \hookrigtharrow \tilde{M}_f\)</span> is a
+retracts onto each component <span class="math notranslate nohighlight">\(\tilde{A}\)</span> of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span>. Namely, the inclusion <span class="math notranslate nohighlight">\(\tilde{A} \hookrightarrow \tilde{M}_f\)</span> is a
 homotopy equivalence since both spaces are contractible, and then <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../ch0/the-homotopy-extension-property.html#corollary-0-20"><span class="std std-ref">Corollary 0.20</span></a> implies
 that <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span> deformation retracts onto <span class="math notranslate nohighlight">\(\tilde{A}\)</span> since the pair <span class="math notranslate nohighlight">\((\tilde{M}_f,\tilde{A})\)</span> satisfies the homotopy
 extension property, as shown in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../ch0/the-homotopy-extension-property.html#example-0-15"><span class="std std-ref">Example 0.15</span></a>.</p>
@@ -809,6 +810,9 @@ usually taken to be slightly more restrictive than the one we have given here, n
 one considers only oriented graphs obtained from an unoriented graph by subdividing
 each edge by adding a vertex at its midpoint, then orienting the two resulting edges
 outward, away from the new vertex.</p>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <p id="exercise-1-1b-1"><strong>1.</strong> Suppose a group <span class="math notranslate nohighlight">\(G\)</span> acts simplicially on a <span class="math notranslate nohighlight">\(\Delta\)</span>-complex <span class="math notranslate nohighlight">\(X\)</span>, where ‘simplicially’ means
 that each element of <span class="math notranslate nohighlight">\(G\)</span> takes each simplex of <span class="math notranslate nohighlight">\(X\)</span> onto another simplex by a linear
 homeomorphism. If the action is free, show it is a covering space action.</p>
@@ -890,6 +894,7 @@ see [Scott &amp; Wall 1979], Theorem 7.3]</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphs-of-groups">Graphs of Groups</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
