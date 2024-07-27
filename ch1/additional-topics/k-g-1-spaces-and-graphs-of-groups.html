@@ -489,7 +489,7 @@ Hurewicz before Eilenberg and MacLane took up the general case. Here are some ex
 <p id="example-1b-1"><strong>Example 1B.1.</strong> <span class="math notranslate nohighlight">\(S^1\)</span> is a <span class="math notranslate nohighlight">\(K(\mathbb{Z}, 1)\)</span>. More generally, a connected graph is a <span class="math notranslate nohighlight">\(K(G,1)\)</span> with
 <span class="math notranslate nohighlight">\(G\)</span> a free group, since by the results of <a class="hxr-hoverxref hxr-tooltip reference internal" href="graphs-and-free-groups.html#section-1-a"><span class="std std-ref">§1.A</span></a> its universal cover is a tree, hence contractible.</p>
 <p id="example-1b-2"><strong>Example 1B.2.</strong> Closed surfaces with infinite <span class="math notranslate nohighlight">\(\pi_1\)</span>, in other words, closed surfaces other
-than <span class="math notranslate nohighlight">\(S^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span>, are <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s. This will be shown in <span class="xref std std-ref">Example 1B.14</span> below. It also
+than <span class="math notranslate nohighlight">\(S^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span>, are <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s. This will be shown in <a class="hxr-hoverxref hxr-tooltip reference internal" href="#example-1b-14"><span class="std std-ref">Example 1B.14</span></a> below. It also
 follows from the theorem in surface theory that the only simply-connected surfaces
 without boundary are <span class="math notranslate nohighlight">\(S^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, so the universal cover of a closed surface with
 infinite fundamental group must be <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> since it is noncompact. Nonclosed surfaces
@@ -685,8 +685,162 @@ are all <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, in f
 </div>
 <div class="docutils container" id="example-1b-13">
 <p><strong>Example 1B.13: HNN Extensions.</strong> Consider a graph of groups <span class="math notranslate nohighlight">\(C \mathrel{\substack {\varphi \\ \longrightarrow\\ \longrightarrow\\ \psi}} A\)</span> with <span class="math notranslate nohighlight">\(\varphi\)</span>
-and <span class="math notranslate nohighlight">\(\psi\)</span> both monomorphisms.</p>
+and <span class="math notranslate nohighlight">\(\psi\)</span> both monomorphisms. This is analogous to the previous case <span class="math notranslate nohighlight">\(A \leftarrow C \rightarrow B\)</span>,
+but with the two groups <span class="math notranslate nohighlight">\(A\)</span> and <a href="#id3"><span class="problematic" id="id4">:amth:`B`</span></a> coalesced to a single group. The group <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span>,
+which was denoted <span class="math notranslate nohighlight">\(A{\large *}_C B\)</span> in the previous case, is now denoted <span class="math notranslate nohighlight">\(A{\large *}_C\)</span>. To see what
+this group looks like, let us regard <span class="math notranslate nohighlight">\(K\Gamma\)</span> as being obtained from <span class="math notranslate nohighlight">\(K(A,1)\)</span> by attaching
+<span class="math notranslate nohighlight">\(K(C,1) \times I\)</span> along the two ends <span class="math notranslate nohighlight">\(K(C,1)\times \partial I\)</span> via maps realizing the monomorphisms
+<span class="math notranslate nohighlight">\(\varphi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span>. Using a <span class="math notranslate nohighlight">\(K(C,1)\)</span> with a single <span class="math notranslate nohighlight">\(0\)</span>-cell, we see that <span class="math notranslate nohighlight">\(K\Gamma\)</span> can be obtained from
+<span class="math notranslate nohighlight">\(K(A,1)\vee S^1\)</span> by attaching cells of dimension two and greatrer, so <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span> is a quotient
+of <span class="math notranslate nohighlight">\(A{\large *}\mathbb{Z}\)</span>, and it is not hard to figure out that the relations defining this quotient are of
+the form <span class="math notranslate nohighlight">\(t\varphi (c)t^{-1}=\psi(c)\)</span> where <span class="math notranslate nohighlight">\(t\)</span> is a generator of the <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> factor and <span class="math notranslate nohighlight">\(c\)</span> ranges over
+<span class="math notranslate nohighlight">\(C\)</span>, or a set of generators for <span class="math notranslate nohighlight">\(C\)</span>. We leave the verification of this for the Exercises.</p>
+<p><span style="margin-left: 2em"> As a very special case, taking <span class="math notranslate nohighlight">\(\varphi=\psi=\mathbb{1}\)</span> gives <span class="math notranslate nohighlight">\(A{\large *}_A=A \times \mathbb{Z}\)</span> since we can take
+<span class="math notranslate nohighlight">\(K\Gamma = K(A,1) \times S^1\)</span> in this case. More generally, taking <span class="math notranslate nohighlight">\(\varphi = \mathbb{1}\)</span> with <span class="math notranslate nohighlight">\(\psi\)</span> an arbitrary
+automorphism of <span class="math notranslate nohighlight">\(A\)</span>, we realize any semidirect product of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> as <span class="math notranslate nohighlight">\(A{\large *}_A\)</span>. For
+example, the Klein bottle occurs this way, with <span class="math notranslate nohighlight">\(\varphi\)</span> realized by the identity map of <span class="math notranslate nohighlight">\(S^1\)</span>
+and <span class="math notranslate nohighlight">\(\psi\)</span> by a reflection. In this cases when <span class="math notranslate nohighlight">\(\varphi = \mathbb{1}\)</span> we could realize the same group
+<span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span> using a slightly simpler graph of groups, with a single vertex, labeled <span class="math notranslate nohighlight">\(A\)</span>, and
+a single edge, labeled <span class="math notranslate nohighlight">\(\psi\)</span>.</p>
+<p><span style="margin-left: 2em"> Here is another special case. Suppose we take a torus, delete a small open disk,
+then identify the resulting boundary circle with a longitudinal circle of the torus. This
+produces a space <span class="math notranslate nohighlight">\(X\)</span> that happens to be homeomorphic to a subspace of the standard
+picture of a Klein bottle in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>; see <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/exercises.html#exercise-1-2-12"><span class="std std-ref">Exercise 12 of §1.2</span></a>. The fundamental group
+<span class="math notranslate nohighlight">\(\pi_1(X)\)</span> has the form <span class="math notranslate nohighlight">\((\mathbb{Z} * \amthbb{Z})*_\mathbb{Z} \mathbb{Z}\)</span> with the defining relation <span class="math notranslate nohighlight">\(tb^{\pm 1}t^{-1} = aba^{-1}b^{-1}\)</span>
+where <span class="math notranslate nohighlight">\(a\)</span> is a meridional loop and <span class="math notranslate nohighlight">\(b\)</span> is a longitudinal loop on the torus. The sign
+of the exponent in the term <span class="math notranslate nohighlight">\(b^{\pm 1}\)</span> is immaterial since the two ways of glueing the
+boundary circle to the longitude produce homeomorphic spaces. The group <span class="math notranslate nohighlight">\(\pi_1(X)=\langle a,b,t \mid tbt^{-1}^aba^{-1}b^{-1} \ranlgle\)</span>
+abelianizes to <span class="math notranslate nohighlight">\(\mathbb{Z} \times \mathbb{Z}\)</span>, but to show that <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is not
+isomorphic to <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z}\)</span> takes some work. There is a surjection <span class="math notranslate nohighlight">\(\pi_1(X) \rightarrow \mathbb{Z} * \mathbb{Z}\)</span> obtained by
+setting <span class="math notranslate nohighlight">\(b=1\)</span>. This has nontrivial kernel since <span class="math notranslate nohighlight">\(b\)</span> is nontrivial in <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> by the
+preceding theorem. If <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> were isomorphic to <span class="math notranslate nohighlight">\(\mathbb{Z} \times \mathbb{Z}\)</span>, we would then have a surjective
+homomorphism <span class="math notranslate nohighlight">\(\mathbb{Z} * \mathbb{Z} \rightarrow \mathbb{Z} *\mathbb{Z}\)</span> that was not an isomorphism. However, it is a theorem
+in group theory that a free group <span class="math notranslate nohighlight">\(F\)</span> is <em>hopfian</em> — every surjective homomorphism
+<span class="math notranslate nohighlight">\(F \rightarrow F\)</span> must be injective. Hence <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is not free.</p>
 </div>
+<div class="docutils container" id="example-1b-14">
+<p><strong>Example 1B.14: Closed Surfaces.</strong> A closed orientable surface <span class="math notranslate nohighlight">\(M\)</span> of genus two or
+greater can be cut along a circle into two compact surfaces <span class="math notranslate nohighlight">\(M_1\)</span> and <span class="math notranslate nohighlight">\(M_2\)</span> such that the
+closed surfaces obtained from <span class="math notranslate nohighlight">\(M_1\)</span> and <span class="math notranslate nohighlight">\(M_2\)</span> by filling in their boundary circle with a
+disk have smaller genus than <span class="math notranslate nohighlight">\(M\)</span>. Each of <span class="math notranslate nohighlight">\(M_1\)</span> and <span class="math notranslate nohighlight">\(M_2\)</span> is the mapping cylinder of a
+map from <span class="math notranslate nohighlight">\(S^1\)</span> to a finite graph. Namely, view <span class="math notranslate nohighlight">\(M_i\)</span> as obtained from a closed surface
+by deleting an open disk in the iterior of the <span class="math notranslate nohighlight">\(2\)</span>-cell in the standard CW structure
+described in <span class="xref std std-ref">Chapter 0</span>, so that <span class="math notranslate nohighlight">\(M_i\)</span> becomes the mapping cylinder of the attaching
+map of the <span class="math notranslate nohighlight">\(2\)</span>-cell. This attaching map is not null homotopic, so it induces an injection
+on <span class="math notranslate nohighlight">\(\pi_1\)</span> since free groups are torsionfree. Thus we have realized the original surface
+<span class="math notranslate nohighlight">\(M\)</span> as <span class="math notranslate nohighlight">\(K\Gamma\)</span> for <span class="math notranslate nohighlight">\(\Gamma\)</span> a graph of groups of the form <span class="math notranslate nohighlight">\(F_1 \leftarrow \mathbb{Z} \rightarrow F_2\)</span> with <span class="math notranslate nohighlight">\(F_1\)</span> and <span class="math notranslate nohighlight">\(F_2\)</span> free and
+the two maps injective. The theorem then says that <span class="math notranslate nohighlight">\(M\)</span> is a <span class="math notranslate nohighlight">\(K(G,1)\)</span>.</p>
+<p><span style="margin-left: 2em"> A similar argument works for closed nonorientable surfaces other than <span class="math notranslate nohighlight">\(\mathbb{R}P^2\)</span>. For
+example, the Klein bottle is obtained from two Möbius bands by identifying their
+boundary circles, and a Möbius band is the mapping cylinder of the <span class="math notranslate nohighlight">\(2\)</span>-sheeted covering
+space <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1\)</span>.</p>
+</div>
+<p><strong>Proof of 1B.11:</strong> We shall construct a covering space <span class="math notranslate nohighlight">\(\tilde{K} \rightarrow K \Gamma\)</span> by gluing together copies
+of the universal covering spaces of the various mapping cylinders in <span class="math notranslate nohighlight">\(K\Gamma\)</span> in such a way
+that <span class="math notranslate nohighlight">\(\tilde{K}\)</span> will be contractible. Hence <span class="math notranslate nohighlight">\(\tilde{K}\)</span> will be the universal cover of <span class="math notranslate nohighlight">\(K\Gamma\)</span>, which will
+therefore be a <span class="math notranslate nohighlight">\(K(G,1)\)</span>.</p>
+<p><span style="margin-left: 2em"> A preliminary observation: Given a universal covering space <span class="math notranslate nohighlight">\(p:\tilde{X}\rightarrow X\)</span> and a
+connected, locally path-connected subspace <span class="math notranslate nohighlight">\(A \subset X\)</span> such that the inclusion <span class="math notranslate nohighlight">\(A \hookrightarrow X\)</span>
+induces an injection on <span class="math notranslate nohighlight">\(\pi_1\)</span>, then each component <span class="math notranslate nohighlight">\(\tilde{A}\)</span> of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span> is a universal cover
+of <span class="math notranslate nohighlight">\(A\)</span>. To see this, note that <span class="math notranslate nohighlight">\(p:\tilde{A} \rightarrow A\)</span> is a covering space, so we have injective
+maps <span class="math notranslate nohighlight">\(\pi_1(\tilde{A}) \rightarrow \pi_1(A) \rightarrow \pi_1(X)\)</span> whose composition factors through <span class="math notranslate nohighlight">\(\pi_1(\tilde{X})=0\)</span>, hence
+<span class="math notranslate nohighlight">\(\pi_1(\tilde{A})=0\)</span>. For example, if <span class="math notranslate nohighlight">\(X\)</span> is the torus <span class="math notranslate nohighlight">\(S^1\times S^1\)</span> and <span class="math notranslate nohighlight">\(A\)</span> is the circle <span class="math notranslate nohighlight">\(S^1 \times \{x_0\}\)</span>, then
+<span class="math notranslate nohighlight">\(p^{-1}(A)\)</span> consists of infinitely many parallel lines in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, each a universal cover of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><span style="margin-left: 2em"> For a map <span class="math notranslate nohighlight">\(f: A\rightarrow B\)</span> between connected CW complexes, let <span class="math notranslate nohighlight">\(p:\tilde{M}_f \rightarrow M_f\)</span> be the
+universal cover of the mapping cylinder <span class="math notranslate nohighlight">\(M_f\)</span>. Then <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span> is itself the mapping cylinder
+of a map <span class="math notranslate nohighlight">\(\tilde{f}:p^{-1}(A) \rightarrow p^{-1}(B)\)</span> since the line segments in the mapping cylinder structure
+on <span class="math notranslate nohighlight">\(M_f\)</span> lift to line segments in <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span> defining a mapping cylinder structure. Since
+<span class="math notranslate nohighlight">\(\tilde{M}_f\)</span> is a mapping cylinder, it deformation retracts onto <span class="math notranslate nohighlight">\(p^{-1}(B)\)</span>, so <span class="math notranslate nohighlight">\(p^{-1}(B)\)</span> is also
+simply-connected, hence is the universal cover of <span class="math notranslate nohighlight">\(B\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> induces an injection on <span class="math notranslate nohighlight">\(\pi_1\)</span>,
+then the remarks in the preceding paragraph apply, and the components of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span>
+are universal covers of <span class="math notranslate nohighlight">\(A\)</span>. If we assume further that <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are <span class="math notranslate nohighlight">\(K(G,1)\)</span>’s, then <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span>
+and the components of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span> are contractible, and we claim that <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span> deformation
+retracts onto each component <span class="math notranslate nohighlight">\(\tilde{A}\)</span> of <span class="math notranslate nohighlight">\(p^{-1}(A)\)</span>. Namely, the inclusion <span class="math notranslate nohighlight">\(\tilde{A} \hookrigtharrow \tilde{M}_f\)</span> is a
+homotopy equivalence since both spaces are contractible, and then <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../ch0/the-homotopy-extension-property.html#corollary-0-20"><span class="std std-ref">Corollary 0.20</span></a> implies
+that <span class="math notranslate nohighlight">\(\tilde{M}_f\)</span> deformation retracts onto <span class="math notranslate nohighlight">\(\tilde{A}\)</span> since the pair <span class="math notranslate nohighlight">\((\tilde{M}_f,\tilde{A})\)</span> satisfies the homotopy
+extension property, as shown in <a class="hxr-hoverxref hxr-tooltip reference internal" href="../../ch0/the-homotopy-extension-property.html#example-0-15"><span class="std std-ref">Example 0.15</span></a>.</p>
+<p><span style="margin-left: 2em"> Now we can describe the construction of the covering space <span class="math notranslate nohighlight">\(\tilde{K}\)</span> of <span class="math notranslate nohighlight">\(K\Gamma\)</span>. It will be
+the union of an increasing sequence of spaces <span class="math notranslate nohighlight">\(\tilde{K}_1 \subset \tilde{K}_2 \subset \cdots\)</span>. For the first stage,
+let <span class="math notranslate nohighlight">\(\tilde{K}_1\)</span> be the universal cover of one of the mapping cylinders <span class="math notranslate nohighlight">\(M_f\)</span> of <span class="math notranslate nohighlight">\(K\Gamma1\)</span>. By the
+preceding remarks, this contains various disjoint copies of universal covers of the
+two <span class="math notranslate nohighlight">\(K(G_v,1)\)</span>’s at the ends of <span class="math notranslate nohighlight">\(M_f\)</span>. We build <span class="math notranslate nohighlight">\(\tilde{K}_2\)</span> from <span class="math notranslate nohighlight">\(\tilde{K}_1\)</span> by attaching to each of these
+universal covers of <span class="math notranslate nohighlight">\(K(G_v,1)\)</span>’s a copy of the universal cover of each mapping cylinder
+<span class="math notranslate nohighlight">\(M_g\)</span> of <span class="math notranslate nohighlight">\(K\Gamma\)</span> meeting <span class="math notranslate nohighlight">\(M_f\)</span> at the end of <span class="math notranslate nohighlight">\(M_f\)</span> in question. Now repeat the process to
+construct <span class="math notranslate nohighlight">\(\tilde{K}_3\)</span> by attaching universal covers of mapping cylinders at all the universal
+covers of <span class="math notranslate nohighlight">\(K(G_v,1)\)</span>’s created in the previous step. In the same way, we construct <span class="math notranslate nohighlight">\(\tilde{K}_{n+1}\)</span>
+from <span class="math notranslate nohighlight">\(\tilde{K}_n\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>, and then we set <span class="math notranslate nohighlight">\(\tilde{K}=\bigcup_n \tilde{K}_n\)</span>.</p>
+<p><span style="margin-left: 2em"> Note that <span class="math notranslate nohighlight">\(\tilde{K}_{n+1}\)</span> deformation retracts onto <span class="math notranslate nohighlight">\(\tilde{K}_n\)</span> since it is formed by attaching
+pieces to <span class="math notranslate nohighlight">\(\tilde{K}_n\)</span> that deformation retract onto the subspaces along which they attach,
+by our earlier remarks. It follows that <span class="math notranslate nohighlight">\(\tilde{K}\)</span> is contractible since we can deformation
+retract <span class="math notranslate nohighlight">\(\tilde{K}_{n+1}\)</span> onto <span class="math notranslate nohighlight">\(\tilde{K}_n\)</span> during the time interval <span class="math notranslate nohighlight">\([1/2^{n+1}, 1/2^n]\)</span>, and then finish with a
+contraction of <span class="math notranslate nohighlight">\(\tilde{K}_1\)</span> to a point during the time interval <span class="math notranslate nohighlight">\([\frac{1}{2},1]\)</span>.</p>
+<p><span style="margin-left: 2em"> The natural projection <span class="math notranslate nohighlight">\(\tilde{K} \rightarrow K\Gamma\)</span> is clearly a covering space, so this finishes the
+proof that <span class="math notranslate nohighlight">\(K\Gamma\)</span> is a <span class="math notranslate nohighlight">\(K(G,1)\)</span>.</p>
+<p><span style="margin-left: 2em"> The remaining statement that each inclusion <span class="math notranslate nohighlight">\(K(G_v,1) \hookrightarrow K\Gamma\)</span> induces an injection
+on <span class="math notranslate nohighlight">\(\pi_1\)</span> can easily be deduced from the preceding constructuions. For suppose a loop
+<span class="math notranslate nohighlight">\(\gamma : S^1 \rightarrow K(G_v,1)\)</span> is nullhomotopic in <span class="math notranslate nohighlight">\(K\Gamma\)</span>. By the lifting criterion for covering spaces,
+there is a lift <span class="math notranslate nohighlight">\(\tilde{\gamma}:S^1 \rightarrow \tilde{K}\)</span>. This has image contained in one of copies of the universal
+cover of <span class="math notranslate nohighlight">\(K(G_v,1)\)</span>, so <span class="math notranslate nohighlight">\(\tilde{\gamma}\)</span> is nullhomotopic in this universal cover, and hence <span class="math notranslate nohighlight">\(\gamma\)</span> is
+nullhomotopic in <span class="math notranslate nohighlight">\(K(G_v,1)\)</span>. <span style="float:right">&#9723</span></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><span style="margin-left: 2em"> The various mapping cylinders that make up the universal cover of <span class="math notranslate nohighlight">\(K\Gamma\)</span> are
+arranged in a treeelike pattern. The tree in question, call it <span class="math notranslate nohighlight">\(T\Gamma\)</span>, has one vertex for each
+copy of a universal cover of a <span class="math notranslate nohighlight">\(K(G_v,1)\)</span> in <span class="math notranslate nohighlight">\(\tilde{K}\)</span>, and two vertices are joined by an edge
+whenever the two universal covers of <span class="math notranslate nohighlight">\(K(G_v,1)\)</span>’s corresponding to these vertices are
+connected by a line segment lifting a line segment in the mapping cylinder structure of
+a mapping cylinder of <span class="math notranslate nohighlight">\(K\Gamma\)</span>. The inductive construction of <span class="math notranslate nohighlight">\(\tilde{X}\)</span> is reflected in an inductive
+construction of <span class="math notranslate nohighlight">\(T\Gamma\)</span> as a union of an increasing sequence of subtrees <span class="math notranslate nohighlight">\(T_1 \subset T_2 \subset \cdots\)</span>.
+Corresponding to <span class="math notranslate nohighlight">\(\tilde{K}_1\)</span> is a subtree <span class="math notranslate nohighlight">\(T_1 \subset T\Gamma\)</span> consisting of a central vertex with a number
+of edges radiating out from it, an ‘asterisk’ with possibly an infinite number of edges.
+When we enlarge <span class="math notranslate nohighlight">\(\tilde{K}_1\)</span> to <span class="math notranslate nohighlight">\(\tilde{K}_2\)</span>, <span class="math notranslate nohighlight">\(T_1\)</span> is correspondingly enlarged to a tree <span class="math notranslate nohighlight">\(T_2\)</span> by attaching
+a similar asterisk at the end of each outer vertex of <span class="math notranslate nohighlight">\(T_1\)</span>, and each subsequent enlargement
+is handled in the same way. The action of <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span> on <span class="math notranslate nohighlight">\(\tilde{K}\)</span> as deck transformations
+induces an action on <span class="math notranslate nohighlight">\(T\Gamma\)</span>, permuting its vertices and edges, and the orbit space of <span class="math notranslate nohighlight">\(T\Gamma\)</span>
+under this action on <span class="math notranslate nohighlight">\(T\Gamma\)</span>, permuting its vertices and edges, and the orbit space of <span class="math notranslate nohighlight">\(T\Gamma\)</span>
+under this action is just the original graph <span class="math notranslate nohighlight">\(\Gamma\)</span>. The action on <span class="math notranslate nohighlight">\(T\Gamma\)</span> will not generally
+be a free action since the elements of a subgroup <span class="math notranslate nohighlight">\(G_v \subset \pi_1(K\Gamma)\)</span> fix the vertex of <span class="math notranslate nohighlight">\(T\Gamma\)</span>
+corresponding to one of the universal covers of <span class="math notranslate nohighlight">\(K(G_v,1)\)</span>.</p>
+<p><span style="margin-left: 2em"> There is in fact an exact correspondence between graphs of groups and groups
+acting on trees. See [Scott &amp; Wall 1979] for an exposition of this rather nice theory.
+From the viewpoint of groups acting on trees, the definition of a graph of groups is
+usually taken to be slightly more restrictive than the one we have given here, namely,
+one considers only oriented graphs obtained from an unoriented graph by subdividing
+each edge by adding a vertex at its midpoint, then orienting the two resulting edges
+outward, away from the new vertex.</p>
+<p id="exercise-1-1b-1"><strong>1.</strong> Suppose a group <span class="math notranslate nohighlight">\(G\)</span> acts simplicially on a <span class="math notranslate nohighlight">\(\Delta\)</span>-complex <span class="math notranslate nohighlight">\(X\)</span>, where ‘simplicially’ means
+that each element of <span class="math notranslate nohighlight">\(G\)</span> takes each simplex of <span class="math notranslate nohighlight">\(X\)</span> onto another simplex by a linear
+homeomorphism. If the action is free, show it is a covering space action.</p>
+<p id="exercise-1-1b-2"><strong>2.</strong> Let <span class="math notranslate nohighlight">\(X\)</span> be a connected CW complex and <span class="math notranslate nohighlight">\(G\)</span> a group such that every homomorphism
+<span class="math notranslate nohighlight">\(\pi_1(X) \rightarrow G\)</span> is trivial. Show that every map <span class="math notranslate nohighlight">\(X \rightarrow K(G,1)\)</span> is nullhomotopic.</p>
+<p id="exercise-1-1b-3"><strong>3.</strong> Show that every graph product of trivial groups is free.</p>
+<p id="exercise-1-1b-4"><strong>4.</strong> Use <a class="hxr-hoverxref hxr-tooltip reference internal" href="../sec2/the-van-kampen-theorem.html#theorem-1-20"><span class="std std-ref">van Kampen’s theorem</span></a> to compute <span class="math notranslate nohighlight">\(A{\large *}_C\)</span> as a quotient of <span class="math notranslate nohighlight">\(A{\large *}\mathbb{Z}\)</span>, as stated in
+the text.</p>
+<p id="exercise-1-1b-5"><strong>5.</strong> Consider the graph of groups <span class="math notranslate nohighlight">\(\Gamma\)</span> having one vertex, <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, and one edge, the map <span class="math notranslate nohighlight">\(\mathbb{Z}\rightarrow \mathbb{Z}\)</span>
+that is multiplication by <span class="math notranslate nohighlight">\(2\)</span>, realized by the <span class="math notranslate nohighlight">\(2\)</span>-sheeted covering spaces <span class="math notranslate nohighlight">\(S^1 \rightarrow S^1\)</span>. Show
+that <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span> has presentation <span class="math notranslate nohighlight">\(\langle a,b \mid bab^{-1}a^{-2} \rangle\)</span> and describe the universal cover
+of <span class="math notranslate nohighlight">\(K\Gamma\)</span> explicitly as a product <span class="math notranslate nohighlight">\(T \times \mathbb{R}\)</span> with <span class="math notranslate nohighlight">\(T\)</span> a tree. [The group <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span> is the first in
+a family of groups called Baumslag-Solitar groups, having presentations of the form
+<span class="math notranslate nohighlight">\(\langle a,b \mid ba^mb^{-1}a^{-n}\rangle\)</span>. These are HNN extensions <span class="math notranslate nohighlight">\(\mathbb{Z}{\large *}_\mathbb{Z}\)</span>.]</p>
+<p id="exercise-1-1b-6"><strong>6.</strong> Show that for a graph of groups all of whose edge homomorphisms are injective
+maps <span class="math notranslate nohighlight">\(\mathbb{Z} \rightarrow \mathbb{Z}\)</span>, we can choose <span class="math notranslate nohighlight">\(K\Gamma\)</span> to have universal cover a product <span class="math notranslate nohighlight">\(T \times \mathbb{R}\)</span> with <span class="math notranslate nohighlight">\(T\)</span> a
+tree. Work out in detail the case that the graph of groups is the infinite sequence
+<span class="math notranslate nohighlight">\(\mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{3} \mathbb{Z} \xrightarrow{4} \mathbb{Z} \rightarrow \cdots\)</span> where the map <span class="math notranslate nohighlight">\(\mathbb{Z} \rightarrow{n} \mathbb{Z}\)</span> is multiplication by <span class="math notranslate nohighlight">\(n\)</span>. Show
+that <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span> is isomorphic to <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> in this case. How would one modify this example
+to get <span class="math notranslate nohighlight">\(\pi_1(K\Gamma)\)</span> isomorphic to the subgroup of <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> consisting of rational numbers with
+denominator of a power of <span class="math notranslate nohighlight">\(2\)</span>?</p>
+<p id="exercise-1-1b-7"><strong>7.</strong> Show that every graph product of groups can be realized by a graph whose vertices
+are partitioned into two subsets, with every oriented edge going from a vertex in the
+first subset to a vertex in the second subset.</p>
+<p id="exercise-1-1b-8"><strong>8.</strong> Show that a finite graph product of finitely generated groups is finitely generated,
+and similarly for finitely presented groups.</p>
+<p id="exercise-1-1b-9"><strong>9.</strong> If <span class="math notranslate nohighlight">\(\Gamma\)</span> is a finite graph of finite groups with injective edge homomorphisms, show that
+the graph product of the groups has a free subgroup of finite index by constructing
+a suitable finite-sheeted covering space of <span class="math notranslate nohighlight">\(K\Gamma\)</span> from universal covers of the mapping
+cylinders in <span class="math notranslate nohighlight">\(K\Gamma\)</span>. [The converse is also true: A finitely generated group having a free
+subgroup of finite index is isomorphic to such a graph product. For a proof of this
+see [Scott &amp; Wall 1979], Theorem 7.3]</p>
 </section>
 </section>
 
