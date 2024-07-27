@@ -273,7 +273,197 @@ phrase, 'the fundamental group of the graph of groups'.
 .. container::
 
     **Example 1B.13: HNN Extensions.** Consider a graph of groups :math:`C \mathrel{\substack {\varphi \\ \longrightarrow\\ \longrightarrow\\ \psi}} A` with :math:`\varphi`
-    and :math:`\psi` both monomorphisms.
+    and :math:`\psi` both monomorphisms. This is analogous to the previous case :math:`A \leftarrow C \rightarrow B`,
+    but with the two groups :math:`A` and :amth:`B` coalesced to a single group. The group :math:`\pi_1(K\Gamma)`,
+    which was denoted :math:`A{\large *}_C B` in the previous case, is now denoted :math:`A{\large *}_C`. To see what
+    this group looks like, let us regard :math:`K\Gamma` as being obtained from :math:`K(A,1)` by attaching
+    :math:`K(C,1) \times I` along the two ends :math:`K(C,1)\times \partial I` via maps realizing the monomorphisms
+    :math:`\varphi` and :math:`\psi`. Using a :math:`K(C,1)` with a single :math:`0`-cell, we see that :math:`K\Gamma` can be obtained from
+    :math:`K(A,1)\vee S^1` by attaching cells of dimension two and greatrer, so :math:`\pi_1(K\Gamma)` is a quotient
+    of :math:`A{\large *}\mathbb{Z}`, and it is not hard to figure out that the relations defining this quotient are of
+    the form :math:`t\varphi (c)t^{-1}=\psi(c)` where :math:`t` is a generator of the :math:`\mathbb{Z}` factor and :math:`c` ranges over
+    :math:`C`, or a set of generators for :math:`C`. We leave the verification of this for the Exercises.
+
+    |indent| As a very special case, taking :Math:`\varphi=\psi=\mathbb{1}` gives :math:`A{\large *}_A=A \times \mathbb{Z}` since we can take
+    :math:`K\Gamma = K(A,1) \times S^1` in this case. More generally, taking :math:`\varphi = \mathbb{1}` with :math:`\psi` an arbitrary
+    automorphism of :math:`A`, we realize any semidirect product of :math:`A` and :math:`\mathbb{Z}` as :math:`A{\large *}_A`. For
+    example, the Klein bottle occurs this way, with :math:`\varphi` realized by the identity map of :math:`S^1`
+    and :math:`\psi` by a reflection. In this cases when :math:`\varphi = \mathbb{1}` we could realize the same group
+    :math:`\pi_1(K\Gamma)` using a slightly simpler graph of groups, with a single vertex, labeled :math:`A`, and 
+    a single edge, labeled :math:`\psi`.
+
+    |indent| Here is another special case. Suppose we take a torus, delete a small open disk,
+    then identify the resulting boundary circle with a longitudinal circle of the torus. This 
+    produces a space :math:`X` that happens to be homeomorphic to a subspace of the standard
+    picture of a Klein bottle in :Math:`\mathbb{R}^3`; see :ref:`Exercise 12 of §1.2 <Exercise 1-2-12>`. The fundamental group
+    :math:`\pi_1(X)` has the form :math:`(\mathbb{Z} * \amthbb{Z})*_\mathbb{Z} \mathbb{Z}` with the defining relation :math:`tb^{\pm 1}t^{-1} = aba^{-1}b^{-1}`
+    where :math:`a` is a meridional loop and :math:`b` is a longitudinal loop on the torus. The sign
+    of the exponent in the term :math:`b^{\pm 1}` is immaterial since the two ways of glueing the
+    boundary circle to the longitude produce homeomorphic spaces. The group :math:`\pi_1(X)=\langle a,b,t \mid tbt^{-1}^aba^{-1}b^{-1} \ranlgle`
+    abelianizes to :math:`\mathbb{Z} \times \mathbb{Z}`, but to show that :math:`\pi_1(X)` is not 
+    isomorphic to :math:`\mathbb{Z} * \mathbb{Z}` takes some work. There is a surjection :math:`\pi_1(X) \rightarrow \mathbb{Z} * \mathbb{Z}` obtained by
+    setting :Math:`b=1`. This has nontrivial kernel since :Math:`b` is nontrivial in :math:`\pi_1(X)` by the 
+    preceding theorem. If :Math:`\pi_1(X)` were isomorphic to :math:`\mathbb{Z} \times \mathbb{Z}`, we would then have a surjective
+    homomorphism :math:`\mathbb{Z} * \mathbb{Z} \rightarrow \mathbb{Z} *\mathbb{Z}` that was not an isomorphism. However, it is a theorem
+    in group theory that a free group :math:`F` is *hopfian* --- every surjective homomorphism
+    :math:`F \rightarrow F` must be injective. Hence :math:`\pi_1(X)` is not free.
+
+.. _Example 1B.14:
+.. container::
+
+    **Example 1B.14: Closed Surfaces.** A closed orientable surface :math:`M` of genus two or
+    greater can be cut along a circle into two compact surfaces :math:`M_1` and :math:`M_2` such that the
+    closed surfaces obtained from :math:`M_1` and :math:`M_2` by filling in their boundary circle with a 
+    disk have smaller genus than :math:`M`. Each of :Math:`M_1` and :math:`M_2` is the mapping cylinder of a
+    map from :Math:`S^1` to a finite graph. Namely, view :math:`M_i` as obtained from a closed surface
+    by deleting an open disk in the iterior of the :math:`2`-cell in the standard CW structure
+    described in :ref:`Chapter 0 <Chapter 0>`, so that :Math:`M_i` becomes the mapping cylinder of the attaching
+    map of the :math:`2`-cell. This attaching map is not null homotopic, so it induces an injection
+    on :Math:`\pi_1` since free groups are torsionfree. Thus we have realized the original surface
+    :math:`M` as :math:`K\Gamma` for :Math:`\Gamma` a graph of groups of the form :math:`F_1 \leftarrow \mathbb{Z} \rightarrow F_2` with :math:`F_1` and :math:`F_2` free and
+    the two maps injective. The theorem then says that :math:`M` is a :math:`K(G,1)`.
+
+    |indent| A similar argument works for closed nonorientable surfaces other than :math:`\mathbb{R}P^2`. For
+    example, the Klein bottle is obtained from two Möbius bands by identifying their
+    boundary circles, and a Möbius band is the mapping cylinder of the :Math:`2`-sheeted covering
+    space :math:`S^1 \rightarrow S^1`.
+
+**Proof of 1B.11:** We shall construct a covering space :math:`\tilde{K} \rightarrow K \Gamma` by gluing together copies
+of the universal covering spaces of the various mapping cylinders in :Math:`K\Gamma` in such a way
+that :math:`\tilde{K}` will be contractible. Hence :math:`\tilde{K}` will be the universal cover of :math:`K\Gamma`, which will
+therefore be a :math:`K(G,1)`.
+
+|indent| A preliminary observation: Given a universal covering space :math:`p:\tilde{X}\rightarrow X` and a 
+connected, locally path-connected subspace :math:`A \subset X` such that the inclusion :Math:`A \hookrightarrow X` 
+induces an injection on :math:`\pi_1`, then each component :math:`\tilde{A}` of :Math:`p^{-1}(A)` is a universal cover
+of :math:`A`. To see this, note that :math:`p:\tilde{A} \rightarrow A` is a covering space, so we have injective
+maps :math:`\pi_1(\tilde{A}) \rightarrow \pi_1(A) \rightarrow \pi_1(X)` whose composition factors through :math:`\pi_1(\tilde{X})=0`, hence
+:math:`\pi_1(\tilde{A})=0`. For example, if :math:`X` is the torus :math:`S^1\times S^1` and :math:`A` is the circle :math:`S^1 \times \{x_0\}`, then
+:math:`p^{-1}(A)` consists of infinitely many parallel lines in :math:`\mathbb{R}^2`, each a universal cover of :math:`A`.
+
+|indent| For a map :math:`f: A\rightarrow B` between connected CW complexes, let :math:`p:\tilde{M}_f \rightarrow M_f` be the
+universal cover of the mapping cylinder :math:`M_f`. Then :math:`\tilde{M}_f` is itself the mapping cylinder
+of a map :math:`\tilde{f}:p^{-1}(A) \rightarrow p^{-1}(B)` since the line segments in the mapping cylinder structure
+on :math:`M_f` lift to line segments in :math:`\tilde{M}_f` defining a mapping cylinder structure. Since
+:math:`\tilde{M}_f` is a mapping cylinder, it deformation retracts onto :math:`p^{-1}(B)`, so :math:`p^{-1}(B)` is also
+simply-connected, hence is the universal cover of :math:`B`. If :math:`f` induces an injection on :math:`\pi_1`,
+then the remarks in the preceding paragraph apply, and the components of :math:`p^{-1}(A)`
+are universal covers of :math:`A`. If we assume further that :math:`A` and :math:`B` are :math:`K(G,1)`'s, then :math:`\tilde{M}_f`
+and the components of :math:`p^{-1}(A)` are contractible, and we claim that :math:`\tilde{M}_f` deformation
+retracts onto each component :math:`\tilde{A}` of :Math:`p^{-1}(A)`. Namely, the inclusion :math:`\tilde{A} \hookrigtharrow \tilde{M}_f` is a
+homotopy equivalence since both spaces are contractible, and then :ref:`Corollary 0.20 <Corollary 0.20>` implies
+that :math:`\tilde{M}_f` deformation retracts onto :math:`\tilde{A}` since the pair :math:`(\tilde{M}_f,\tilde{A})` satisfies the homotopy
+extension property, as shown in :ref:`Example 0.15 <Example 0.15>`.
+
+|indent| Now we can describe the construction of the covering space :math:`\tilde{K}` of :math:`K\Gamma`. It will be
+the union of an increasing sequence of spaces :math:`\tilde{K}_1 \subset \tilde{K}_2 \subset \cdots`. For the first stage,
+let :math:`\tilde{K}_1` be the universal cover of one of the mapping cylinders :Math:`M_f` of :math:`K\Gamma1`. By the
+preceding remarks, this contains various disjoint copies of universal covers of the
+two :math:`K(G_v,1)`'s at the ends of :math:`M_f`. We build :math:`\tilde{K}_2` from :math:`\tilde{K}_1` by attaching to each of these
+universal covers of :math:`K(G_v,1)`'s a copy of the universal cover of each mapping cylinder
+:math:`M_g` of :math:`K\Gamma` meeting :math:`M_f` at the end of :math:`M_f` in question. Now repeat the process to
+construct :math:`\tilde{K}_3` by attaching universal covers of mapping cylinders at all the universal
+covers of :math:`K(G_v,1)`'s created in the previous step. In the same way, we construct :math:`\tilde{K}_{n+1}`
+from :math:`\tilde{K}_n` for all :math:`n`, and then we set :math:`\tilde{K}=\bigcup_n \tilde{K}_n`.
+
+|indent| Note that :math:`\tilde{K}_{n+1}` deformation retracts onto :Math:`\tilde{K}_n` since it is formed by attaching
+pieces to :math:`\tilde{K}_n` that deformation retract onto the subspaces along which they attach,
+by our earlier remarks. It follows that :math:`\tilde{K}` is contractible since we can deformation
+retract :math:`\tilde{K}_{n+1}` onto :math:`\tilde{K}_n` during the time interval :math:`[1/2^{n+1}, 1/2^n]`, and then finish with a 
+contraction of :math:`\tilde{K}_1` to a point during the time interval :math:`[\frac{1}{2},1]`.
+
+|indent| The natural projection :Math:`\tilde{K} \rightarrow K\Gamma` is clearly a covering space, so this finishes the
+proof that :math:`K\Gamma` is a :math:`K(G,1)`.
+
+|indent| The remaining statement that each inclusion :math:`K(G_v,1) \hookrightarrow K\Gamma` induces an injection 
+on :math:`\pi_1` can easily be deduced from the preceding constructuions. For suppose a loop
+:math:`\gamma : S^1 \rightarrow K(G_v,1)` is nullhomotopic in :math:`K\Gamma`. By the lifting criterion for covering spaces,
+there is a lift :math:`\tilde{\gamma}:S^1 \rightarrow \tilde{K}`. This has image contained in one of copies of the universal
+cover of :Math:`K(G_v,1)`, so :math:`\tilde{\gamma}` is nullhomotopic in this universal cover, and hence :math:`\gamma` is
+nullhomotopic in :math:`K(G_v,1)`. |qed|
+
+|
+
+|indent| The various mapping cylinders that make up the universal cover of :Math:`K\Gamma` are
+arranged in a treeelike pattern. The tree in question, call it :math:`T\Gamma`, has one vertex for each
+copy of a universal cover of a :math:`K(G_v,1)` in :math:`\tilde{K}`, and two vertices are joined by an edge
+whenever the two universal covers of :math:`K(G_v,1)`'s corresponding to these vertices are
+connected by a line segment lifting a line segment in the mapping cylinder structure of 
+a mapping cylinder of :math:`K\Gamma`. The inductive construction of :math:`\tilde{X}` is reflected in an inductive
+construction of :math:`T\Gamma` as a union of an increasing sequence of subtrees :math:`T_1 \subset T_2 \subset \cdots`.
+Corresponding to :math:`\tilde{K}_1` is a subtree :math:`T_1 \subset T\Gamma` consisting of a central vertex with a number
+of edges radiating out from it, an 'asterisk' with possibly an infinite number of edges.
+When we enlarge :Math:`\tilde{K}_1` to :math:`\tilde{K}_2`, :math:`T_1` is correspondingly enlarged to a tree :math:`T_2` by attaching
+a similar asterisk at the end of each outer vertex of :math:`T_1`, and each subsequent enlargement
+is handled in the same way. The action of :Math:`\pi_1(K\Gamma)` on :Math:`\tilde{K}` as deck transformations
+induces an action on :math:`T\Gamma`, permuting its vertices and edges, and the orbit space of :math:`T\Gamma`
+under this action on :Math:`T\Gamma`, permuting its vertices and edges, and the orbit space of :math:`T\Gamma`
+under this action is just the original graph :math:`\Gamma`. The action on :Math:`T\Gamma` will not generally
+be a free action since the elements of a subgroup :math:`G_v \subset \pi_1(K\Gamma)` fix the vertex of :Math:`T\Gamma`
+corresponding to one of the universal covers of :math:`K(G_v,1)`.
+
+|indent| There is in fact an exact correspondence between graphs of groups and groups
+acting on trees. See [Scott & Wall 1979] for an exposition of this rather nice theory.
+From the viewpoint of groups acting on trees, the definition of a graph of groups is
+usually taken to be slightly more restrictive than the one we have given here, namely,
+one considers only oriented graphs obtained from an unoriented graph by subdividing
+each edge by adding a vertex at its midpoint, then orienting the two resulting edges
+outward, away from the new vertex.
+
+--------------------
+Exercises
+----------------------
+
+.. _Exercise 1-1B-1:
+**1.** Suppose a group :math:`G` acts simplicially on a :math:`\Delta`-complex :math:`X`, where 'simplicially' means
+that each element of :math:`G` takes each simplex of :math:`X` onto another simplex by a linear
+homeomorphism. If the action is free, show it is a covering space action.
+
+.. _Exercise 1-1B-2:
+**2.** Let :math:`X` be a connected CW complex and :math:`G` a group such that every homomorphism
+:math:`\pi_1(X) \rightarrow G` is trivial. Show that every map :math:`X \rightarrow K(G,1)` is nullhomotopic.
+
+.. _Exercise 1-1B-3:
+**3.** Show that every graph product of trivial groups is free.
+
+.. _Exercise 1-1B-4:
+**4.** Use :ref:`van Kampen's theorem <Theorem 1.20>` to compute :Math:`A{\large *}_C` as a quotient of :math:`A{\large *}\mathbb{Z}`, as stated in
+the text.
+
+.. _Exercise 1-1B-5:
+**5.** Consider the graph of groups :math:`\Gamma` having one vertex, :math:`\mathbb{Z}`, and one edge, the map :math:`\mathbb{Z}\rightarrow \mathbb{Z}`
+that is multiplication by :Math:`2`, realized by the :math:`2`-sheeted covering spaces :math:`S^1 \rightarrow S^1`. Show
+that :math:`\pi_1(K\Gamma)` has presentation :math:`\langle a,b \mid bab^{-1}a^{-2} \rangle` and describe the universal cover
+of :math:`K\Gamma` explicitly as a product :math:`T \times \mathbb{R}` with :math:`T` a tree. [The group :math:`\pi_1(K\Gamma)` is the first in
+a family of groups called Baumslag-Solitar groups, having presentations of the form
+:math:`\langle a,b \mid ba^mb^{-1}a^{-n}\rangle`. These are HNN extensions :Math:`\mathbb{Z}{\large *}_\mathbb{Z}`.]
+
+.. _Exercise 1-1B-6:
+**6.** Show that for a graph of groups all of whose edge homomorphisms are injective
+maps :math:`\mathbb{Z} \rightarrow \mathbb{Z}`, we can choose :math:`K\Gamma` to have universal cover a product :math:`T \times \mathbb{R}` with :math:`T` a 
+tree. Work out in detail the case that the graph of groups is the infinite sequence
+:math:`\mathbb{Z} \xrightarrow{2} \mathbb{Z} \xrightarrow{3} \mathbb{Z} \xrightarrow{4} \mathbb{Z} \rightarrow \cdots` where the map :math:`\mathbb{Z} \rightarrow{n} \mathbb{Z}` is multiplication by :math:`n`. Show
+that :math:`\pi_1(K\Gamma)` is isomorphic to :Math:`\mathbb{Q}` in this case. How would one modify this example
+to get :math:`\pi_1(K\Gamma)` isomorphic to the subgroup of :math:`\mathbb{Q}` consisting of rational numbers with
+denominator of a power of :Math:`2`?
+
+.. _Exercise 1-1B-7:
+**7.** Show that every graph product of groups can be realized by a graph whose vertices
+are partitioned into two subsets, with every oriented edge going from a vertex in the
+first subset to a vertex in the second subset.
+
+.. _Exercise 1-1B-8:
+**8.** Show that a finite graph product of finitely generated groups is finitely generated,
+and similarly for finitely presented groups.
+
+.. _Exercise 1-1B-9:
+**9.** If :math:`\Gamma` is a finite graph of finite groups with injective edge homomorphisms, show that
+the graph product of the groups has a free subgroup of finite index by constructing
+a suitable finite-sheeted covering space of :Math:`K\Gamma` from universal covers of the mapping
+cylinders in :Math:`K\Gamma`. [The converse is also true: A finitely generated group having a free
+subgroup of finite index is isomorphic to such a graph product. For a proof of this
+see [Scott & Wall 1979], Theorem 7.3]
+
 
 
 
