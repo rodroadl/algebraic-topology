@@ -215,7 +215,7 @@ groups together to form a larger group, generalizing the notion of free products
 arrows, each edge having a specified direction. Suppose that at each vertex :math:`v` of :math:`\Gamma` we
 place a group :math:`G_v` and along each edge :math:`e` of :math:`\Gamma` we put a homomorphism :math:`\varphi_e` from the
 group at the tail of the edge to the group at the head of the edge. We call this data a
-**graph of groups**. Now build a space :math:`B\Gamm` by putting the space :maht:`BG_v` from :ref:`Example 1B.7 <Example 1B.7>`
+**graph of groups**. Now build a space :math:`B\Gamma` by putting the space :math:`BG_v` from :ref:`Example 1B.7 <Example 1B.7>`
 at each vertex :math:`v` of :math:`\Gamma` and then filling in a mapping cylinder of the map :math:`B\varphi_e` along
 each edge :math:`e` of :math:`\Gamma`, identifying the two ends of the mapping cylinder with the two :math:`BG_v`'s
 at the ends of :Math:`e`. The resulting space :math:`B\Gamma` is then a CW complex since the maps :math:`B\varphi_e`
@@ -296,16 +296,16 @@ phrase, 'the fundamental group of the graph of groups'.
     then identify the resulting boundary circle with a longitudinal circle of the torus. This 
     produces a space :math:`X` that happens to be homeomorphic to a subspace of the standard
     picture of a Klein bottle in :Math:`\mathbb{R}^3`; see :ref:`Exercise 12 of §1.2 <Exercise 1-2-12>`. The fundamental group
-    :math:`\pi_1(X)` has the form :math:`(\mathbb{Z} * \amthbb{Z})*_\mathbb{Z} \mathbb{Z}` with the defining relation :math:`tb^{\pm 1}t^{-1} = aba^{-1}b^{-1}`
+    :math:`\pi_1(X)` has the form :math:`(\mathbb{Z} * \mathbb{Z})*_\mathbb{Z} \mathbb{Z}` with the defining relation :math:`tb^{\pm 1}t^{-1} = aba^{-1}b^{-1}`
     where :math:`a` is a meridional loop and :math:`b` is a longitudinal loop on the torus. The sign
     of the exponent in the term :math:`b^{\pm 1}` is immaterial since the two ways of glueing the
-    boundary circle to the longitude produce homeomorphic spaces. The group :math:`\pi_1(X)=\langle a,b,t \mid tbt^{-1}^aba^{-1}b^{-1} \ranlgle`
+    boundary circle to the longitude produce homeomorphic spaces. The group :math:`\pi_1(X)=\langle a,b,t \mid tbt^{-1}aba^{-1}b^{-1} \ranlgle`
     abelianizes to :math:`\mathbb{Z} \times \mathbb{Z}`, but to show that :math:`\pi_1(X)` is not 
     isomorphic to :math:`\mathbb{Z} * \mathbb{Z}` takes some work. There is a surjection :math:`\pi_1(X) \rightarrow \mathbb{Z} * \mathbb{Z}` obtained by
     setting :Math:`b=1`. This has nontrivial kernel since :Math:`b` is nontrivial in :math:`\pi_1(X)` by the 
     preceding theorem. If :Math:`\pi_1(X)` were isomorphic to :math:`\mathbb{Z} \times \mathbb{Z}`, we would then have a surjective
     homomorphism :math:`\mathbb{Z} * \mathbb{Z} \rightarrow \mathbb{Z} *\mathbb{Z}` that was not an isomorphism. However, it is a theorem
-    in group theory that a free group :math:`F` is *hopfian* --- every surjective homomorphism
+    in group theory that a free group :math:`F` is *hopfian* -- every surjective homomorphism
     :math:`F \rightarrow F` must be injective. Hence :math:`\pi_1(X)` is not free.
 
 .. _Example 1B.14:
@@ -350,7 +350,7 @@ simply-connected, hence is the universal cover of :math:`B`. If :math:`f` induce
 then the remarks in the preceding paragraph apply, and the components of :math:`p^{-1}(A)`
 are universal covers of :math:`A`. If we assume further that :math:`A` and :math:`B` are :math:`K(G,1)`'s, then :math:`\tilde{M}_f`
 and the components of :math:`p^{-1}(A)` are contractible, and we claim that :math:`\tilde{M}_f` deformation
-retracts onto each component :math:`\tilde{A}` of :Math:`p^{-1}(A)`. Namely, the inclusion :math:`\tilde{A} \hookrigtharrow \tilde{M}_f` is a
+retracts onto each component :math:`\tilde{A}` of :Math:`p^{-1}(A)`. Namely, the inclusion :math:`\tilde{A} \hookrightarrow \tilde{M}_f` is a
 homotopy equivalence since both spaces are contractible, and then :ref:`Corollary 0.20 <Corollary 0.20>` implies
 that :math:`\tilde{M}_f` deformation retracts onto :math:`\tilde{A}` since the pair :math:`(\tilde{M}_f,\tilde{A})` satisfies the homotopy
 extension property, as shown in :ref:`Example 0.15 <Example 0.15>`.
@@ -412,7 +412,7 @@ outward, away from the new vertex.
 
 --------------------
 Exercises
-----------------------
+--------------------
 
 .. _Exercise 1-1B-1:
 **1.** Suppose a group :math:`G` acts simplicially on a :math:`\Delta`-complex :math:`X`, where 'simplicially' means
