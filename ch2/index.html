@@ -441,7 +441,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -457,6 +459,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-idea-of-homology">The Idea of Homology</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -467,8 +477,196 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="chapter-2-homology">
-<h1>Chapter 2. Homology<a class="headerlink" href="#chapter-2-homology" title="Permalink to this heading">#</a></h1>
-<p>content</p>
+<span id="chatper-2"></span><h1>Chapter 2. Homology<a class="headerlink" href="#chapter-2-homology" title="Permalink to this heading">#</a></h1>
+<p>Homology</p>
+<p><span style="margin-left: 2em"> The fundamental group <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> is especially useful when studying spaces of low
+dimension, as one would expect from its definition which involves only maps from
+low-dimensional spaces into <span class="math notranslate nohighlight">\(X\)</span>, namely loops <span class="math notranslate nohighlight">\(I \rightarrow X\)</span> and homotopies of loops, maps
+<span class="math notranslate nohighlight">\(I\times I \rightarrow X\)</span>. The definition in terms of objects that are most <span class="math notranslate nohighlight">\(2\)</span>-dimensional manifests
+itself for example in the fact that when <span class="math notranslate nohighlight">\(X\)</span> is a CW complex, <span class="math notranslate nohighlight">\(\pi_1(X)\)</span> depends only on
+the <span class="math notranslate nohighlight">\(2\)</span>-skeleton of <span class="math notranslate nohighlight">\(X\)</span>. In view of the low-dimensional nature of the fundamental group,
+we should not expect it to be a very refined toll for dealing with high-dimensional
+spaces. Thus it cannt distinguish between sphere <span class="math notranslate nohighlight">\(S^n\)</span> with <span class="math notranslate nohighlight">\(n \geq 2\)</span>. This limitation
+to low dimensions can be removed by considering the natural higher-dimensional
+analogs of <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>, the homotopy groups <span class="math notranslate nohighlight">\(\pi_n(X)\)</span>, which are defined in terms of maps
+of the <span class="math notranslate nohighlight">\(n\)</span>-dimensional cube <span class="math notranslate nohighlight">\(I^n\)</span> into <span class="math notranslate nohighlight">\(X\)</span> and homotopies <span class="math notranslate nohighlight">\(I^n\times I \rightarrow X\)</span> of such maps. Not
+surprisingly, when <span class="math notranslate nohighlight">\(X\)</span> is a CW complex, <span class="math notranslate nohighlight">\(\pi_n(X)\)</span> depends only on the <span class="math notranslate nohighlight">\((n+1)-skeleton\)</span>
+of <span class="math notranslate nohighlight">\(X\)</span>. And as one might hope, homotopy groups do indeed distinguish spheres of all
+dimensions since <span class="math notranslate nohighlight">\(\pi_i(S^n)\)</span> is <span class="math notranslate nohighlight">\(0\)</span> for <span class="math notranslate nohighlight">\(i&lt;n\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> for <span class="math notranslate nohighlight">\(i=n\)</span>.</p>
+<p><span style="margin-left: 2em"> However, the higher-dimensional homotopy groups have the serious drawback
+that they are extremely difficult to compute in general. Even for simple spaces like
+spheres, the calculation of <span class="math notranslate nohighlight">\(\pi_i(S^n)\)</span> for <span class="math notranslate nohighlight">\(i&gt;n\)</span> turns out to be a huge problem. Fortunately
+there is a more computable alternative to homotopy groups: the homology
+groups <span class="math notranslate nohighlight">\(H_n(X)\)</span>. Like <span class="math notranslate nohighlight">\(\pi_n(X)\)</span>, the homology group <span class="math notranslate nohighlight">\(H_n(X)\)</span> for a CW complex <span class="math notranslate nohighlight">\(X\)</span>
+depends only on the <span class="math notranslate nohighlight">\((n+1)\)</span>-skeleton. For spheres, the homology groups <span class="math notranslate nohighlight">\(H_i(S^n)\)</span> are
+isomorphic to the homotopy groups <span class="math notranslate nohighlight">\(\pi_i(S^n)\)</span> in the range <span class="math notranslate nohighlight">\(1\leq i \leq n\)</span>, but homology
+groups have the advantage that <span class="math notranslate nohighlight">\(H_i(S^n)=0\)</span> for <span class="math notranslate nohighlight">\(i \geq n\)</span>.</p>
+<p><span style="margin-left: 2em"> The computability of homology groups does not come for free, unfortunately.
+The definition of homology groups is decidedly less transparent than the definition
+of homotopy groups, and once on gets beyond the definition there is a certain amount
+of technical machinery to be set up before any real calculations and applications can
+be given. In the exposition below we approach the definition of <span class="math notranslate nohighlight">\(H_n(X)\)</span> by two preliminary
+stages, first giving a few motivating examples nonrigorously, then constructing
+a restricted model of of homology theory called simplicial homology, before plunging
+into the general theory, known as singular homology. After the definition of singular
+homology has been assimilated, the real work of establishing its basic properties begins.
+This take close to 20 pages, and there is no getting around the fact that it is a
+substantial effort. This takes up most of the first section of the cahpter, with small
+digressions only for two applications to classical theorems of Brouwer: the fixed point
+theorem and ‘invariance of dimension’.</p>
+<p><span style="margin-left: 2em"> The second section of the chapter gives more applications, including the
+homology definition of Euler characteristic and Brouwer’s notion of degree for maps
+<span class="math notranslate nohighlight">\(S^n\rightarrow S^n\)</span>. However, the main thrust of this section is toward developing techniques
+for calculating homology groups efficiently. The maximally efficient method is known
+as cellular homology, whose power comes perhaps from the fact that it is ‘homology
+squared’ – homology defined in terms of homology. Another quite useful tool is
+Mayer-Vietoris sequences, the analog for homology of <a class="hxr-hoverxref hxr-tooltip reference internal" href="../ch1/sec2/the-van-kampen-theorem.html#theorem-1-20"><span class="std std-ref">van Kampen’s theorem</span></a> for the
+fundamental group.</p>
+<p><span style="margin-left: 2em"> An interesting feature of homology that begins to emerge after one has worked
+with it for a while is that it is the basic properties of homology that are used most
+often, and not the actual definition itself. This suggests that an axiomatic approach
+to homology might be possible. This is indeed the case, and in the third section of
+the capter we list axioms which completely characterize homology groups for CW
+complexes. One could take the viewpoint that these rather algebraic axiomx are all that
+really matters about homology groups, that the geometry involved in the definition of
+homology is secondary, needed only to show that the axiomatic theory is not vacuous.
+The extent to which one adopts this viewpoint is a matter of taste, and the route taken
+here of postponing the axioms until the theory is well-established is just one of several
+possible approaches.</p>
+<p><span style="margin-left: 2em"> The chapter then concludes with three optional sections of Additional Topics. The
+first is rather brief, relating <span class="math notranslate nohighlight">\(H_1(X)\)</span> to <span class="math notranslate nohighlight">\(\pi_1(X)\)</span>, while the other two contain a selection
+of classical applications of homology. These include the <span class="math notranslate nohighlight">\(n\)</span>-dimensional version of the
+Jordan curve theorem and the ‘invariance of domain’ theorem, both due to Brouwer,
+along with the Lefxchetz fixed point theorem.</p>
+<section id="the-idea-of-homology">
+<h2>The Idea of Homology<a class="headerlink" href="#the-idea-of-homology" title="Permalink to this heading">#</a></h2>
+<p><span style="margin-left: 2em"> The difficulty with the higher homotopy groups <span class="math notranslate nohighlight">\(\pi_n\)</span> is that they are not directly
+computable from a cell structure as <span class="math notranslate nohighlight">\(\pi_1\)</span> is. For example, the <span class="math notranslate nohighlight">\(2\)</span>-sphere has no cells in
+dimensions greater than <span class="math notranslate nohighlight">\(2\)</span>, yet its <span class="math notranslate nohighlight">\(n\)</span>-dimensional homotopy group <span class="math notranslate nohighlight">\(\pi_n(S^2)\)</span> is nonzero
+for infinitely many values of <span class="math notranslate nohighlight">\(n\)</span>. Homology groups, by contrast, are quite directly
+related to cell structures, and may indeed be regarded as simply an algebraization of
+the first layer of geometry in cell structures: how cells of dimension <span class="math notranslate nohighlight">\(n\)</span> attach to cells
+of dimension <span class="math notranslate nohighlight">\(n-1\)</span>.</p>
+<a class="reference internal image-reference" href="ch2/fig/X1.png"><img alt="ch2/fig/X1.png" class="align-right" src="ch2/fig/X1.png" style="width: 25%;" /></a>
+<p><span style="margin-left: 2em"> Let us look at some examples to see what the idea is. Consider the graph <span class="math notranslate nohighlight">\(X_1\)</span> shown
+in the figure, consisting of two vertices joined by four edges.
+When studying the fundamental group of <span class="math notranslate nohighlight">\(X_1\)</span> we consider
+loops formed by sequences of edges, starting and ending
+at a fixed basepoint. For example, at the basepoint <span class="math notranslate nohighlight">\(x\)</span>, the
+loop <span class="math notranslate nohighlight">\(ab^{-1}\)</span> travels forward along the edge <span class="math notranslate nohighlight">\(a\)</span>, then backward
+along <span class="math notranslate nohighlight">\(b\)</span>, as indicated by the exponent <span class="math notranslate nohighlight">\(-1\)</span>. A more complicated
+loop would be <span class="math notranslate nohighlight">\(ac^{-1}bd^{-1}ca^{-1}\)</span>. A salient feature of the
+fundamental group is that it is generally nonabelian, which both enriches and complicates
+the theory. Suppose we simplify matters by abelianizing. Thus for example the
+two loops <span class="math notranslate nohighlight">\(ab^{-1}\)</span> and <span class="math notranslate nohighlight">\(b^{-1}a\)</span> are to be regarded as equal if we make <span class="math notranslate nohighlight">\(a\)</span> commute with
+<span class="math notranslate nohighlight">\(b^{-1}\)</span>. These two loops <span class="math notranslate nohighlight">\(ab^{-1}\)</span> and <span class="math notranslate nohighlight">\(b^{-1}a\)</span> are really the same circle, jsut with a different
+choice of starting and ending point: <span class="math notranslate nohighlight">\(x\)</span> for <span class="math notranslate nohighlight">\(ab^{-1}\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for <span class="math notranslate nohighlight">\(b^{-1}a\)</span>. The same thing
+happens for all loops: Rechoosing the basepoint in a loop just permutes its letters
+cyclically, so a byproduct of abelianizing is that we no logner have to pin all our loops
+down to a fixed basepoint. Thus loops become <em>cycles</em>, without a chosen basepoint.</p>
+<p><span style="margin-left: 2em"> Having abelianized, let us switch to additive notation, so cycles become linear
+combinations of edges with integer coefficients, such as <span class="math notranslate nohighlight">\(a-b+c-d\)</span>. Let us call
+these linear combinations <em>chains</em> of edges. Some chains can be decomposed into
+cycles in several different ways, for example <span class="math notranslate nohighlight">\((a-c)+(b-d)=(a-d)+(b-c)\)</span>,
+and if we adopt an algebraic viewpoint then we do not want to distinguish between
+these different decompositions. Thus we broaden the meaning of the term ‘cycle’ to
+be simply any linear combination of edges for which at least one decomposition into
+cycles in the previous more geometric sense exists.</p>
+<p><span style="margin-left: 2em"> What is the condition for a chain to be a cycle in this more algebraic sense? A
+geometric cycle, thought of as a path traversed in time, is distinguished by the property
+that it enters each vertex the same number of times that it leaves the vertex. For
+an arbitrary chain <span class="math notranslate nohighlight">\(ka+lb_mc_nd\)</span>, the net number of times this chain enters <span class="math notranslate nohighlight">\(y\)</span>
+is <span class="math notranslate nohighlight">\(k+l+m+n\)</span> since each of <span class="math notranslate nohighlight">\(a,b,c\)</span>, and <span class="math notranslate nohighlight">\(d\)</span> enters <span class="math notranslate nohighlight">\(y\)</span> once. Similarly, each of the
+four edges leaves <span class="math notranslate nohighlight">\(x\)</span> once, so the net number of times the chain <span class="math notranslate nohighlight">\(ka+lb+mc+nd\)</span>
+enters <span class="math notranslate nohighlight">\(x\)</span> is <span class="math notranslate nohighlight">\(-k-l-m-n\)</span>. Thus the condition for <span class="math notranslate nohighlight">\(ka+lb+mc+nd\)</span> to be a cycle
+is simply <span class="math notranslate nohighlight">\(k+l+m+n=0\)</span>.</p>
+<p><span style="margin-left: 2em"> To describe this result in a way that would generalize to all graphs, let <span class="math notranslate nohighlight">\(C_1\)</span> be the
+free abelian group with basis the edges <span class="math notranslate nohighlight">\(a,b,c,d\)</span> and let <span class="math notranslate nohighlight">\(C_0\)</span> be the free abelian group
+with basis the vertices <span class="math notranslate nohighlight">\(x,y\)</span>. Elements of <span class="math notranslate nohighlight">\(C_1\)</span> are chains of edges, or <span class="math notranslate nohighlight">\(1\)</span>-dimensional
+chains, and elements of <span class="math notranslate nohighlight">\(C_0\)</span> are linear combinations of vertices, or <span class="math notranslate nohighlight">\(0\)</span>-dimensional
+chains. Define a homomorphism <span class="math notranslate nohighlight">\(\partial :C_1 \rightarrow C_0\)</span> by sending each basis element <span class="math notranslate nohighlight">\(a,b,c,d\)</span>
+to <span class="math notranslate nohighlight">\(y-x\)</span>, the vertex at the head of the edge minus the vertex at the tail. Thus we have
+<span class="math notranslate nohighlight">\(\partila(ka+lb+mc+nd)=(k+l+m+n)y-(k+l+m+n)x\)</span>, and the cycles are
+precisely the kernel of <span class="math notranslate nohighlight">\(\partial\)</span>. It is a simple calculation to verify that <span class="math notranslate nohighlight">\(a-b,\, b-c,\,\)</span> and <span class="math notranslate nohighlight">\(c-d\)</span>
+form a basis for this kernel. Thus every cycle in <span class="math notranslate nohighlight">\(X_1\)</span> is a unique linear combination of
+these three most obvious cycles. By means of these basic cycles we convey the
+geometric information that the graph <span class="math notranslate nohighlight">\(X_1\)</span> has three visible ‘holes’, the empty spaces
+between the four edges.</p>
+<a class="reference internal image-reference" href="ch2/fig/X_2.png"><img alt="ch2/fig/X_2.png" class="align-right" src="ch2/fig/X_2.png" style="width: 25%;" /></a>
+<p><span style="margin-left: 2em"> Let us now enlarge the preceding graph <span class="math notranslate nohighlight">\(X_1\)</span> by attaching a <span class="math notranslate nohighlight">\(2\)</span>-cell <span class="math notranslate nohighlight">\(A\)</span> along the
+cycle <span class="math notranslate nohighlight">\(a-b\)</span>, producing a <span class="math notranslate nohighlight">\(2\)</span>-cell <span class="math notranslate nohighlight">\(A\)</span> as being oriented clockwise, then
+we can regard its boundary as the cycle <span class="math notranslate nohighlight">\(a-b\)</span>. This cycle is
+now homotopically trivial since we can contract it to a point
+by sliding over <span class="math notranslate nohighlight">\(A\)</span>. In other words, it no longer encloses a
+hole in <span class="math notranslate nohighlight">\(X_2\)</span>. This suggests that we form a quotient of the
+group of cycles in the preceding example by factoring out
+the subgroup generated by <span class="math notranslate nohighlight">\(a-b\)</span>. In this quotient the cycles <span class="math notranslate nohighlight">\(a-c\)</span> and <span class="math notranslate nohighlight">\(b-c\)</span>, for
+example, become equivalent, consistent with the fact that tey are homotopic in <span class="math notranslate nohighlight">\(X_2\)</span>.</p>
+<p><span style="margin-left: 2em"> Algebraically, we can define now a pair of homomorphisms <span class="math notranslate nohighlight">\(C_2 \xrightarrow{\partial_2}C_1\xrightarrow{\partial_1}C_0\)</span>
+where <span class="math notranslate nohighlight">\(C_2\)</span> is the infinite cyclic group generated by <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\partial_2(A)=a-b\)</span>. The map
+<span class="math notranslate nohighlight">\(\partial_1\)</span> is the boundary homomorphism in the previous example. The quotient group we
+are interested in is <span class="math notranslate nohighlight">\(\text{Ker} \partial_1 / \text{Im} \partial_2\)</span>, the kernel of <span class="math notranslate nohighlight">\(\partial_1\)</span> modulo the images of <span class="math notranslate nohighlight">\(\partial_2\)</span>, or in other
+words, the <span class="math notranslate nohighlight">\(1\)</span>-dimensional cycles modulo those that are boundaries, the multiples of
+<span class="math notranslate nohighlight">\(a-b\)</span>. This quotient group is the <em>homology group</em> <span class="math notranslate nohighlight">\(H_1(X_2)\)</span>. The previous example can
+be fit into this scheme too by taking <span class="math notranslate nohighlight">\(C_2\)</span> to be zero since ther are no <span class="math notranslate nohighlight">\(2\)</span>-cells in <span class="math notranslate nohighlight">\(X_1\)</span>,
+so in this case <span class="math notranslate nohighlight">\(H_1(X_1)=\text{Ker}\partial_1 / \text{Im}\partial_2 = \text{Ker}\partial_1\)</span>, which as we saw was free abelian on
+three generators. In the present example, <span class="math notranslate nohighlight">\(H_1(X_2)\)</span> is free abelian on two generators,
+<span class="math notranslate nohighlight">\(b-c\)</span> and <span class="math notranslate nohighlight">\(c-d\)</span>, expressing the geometric fact that by filling in the <span class="math notranslate nohighlight">\(2\)</span>-cell <span class="math notranslate nohighlight">\(A\)</span> we have
+reduced the number of ‘holes’ in our space from three to two.</p>
+<a class="reference internal image-reference" href="ch2/fig/X_3.png"><img alt="ch2/fig/X_3.png" class="align-right" src="ch2/fig/X_3.png" style="width: 25%;" /></a>
+<p><span style="margin-left: 2em"> Suppose we enlarge <span class="math notranslate nohighlight">\(X_2\)</span> to a space <span class="math notranslate nohighlight">\(X_3\)</span> by attaching a second <span class="math notranslate nohighlight">\(2\)</span>-cell <span class="math notranslate nohighlight">\(B\)</span> along the
+same cycle <span class="math notranslate nohighlight">\(a-b\)</span>. This gives a <span class="math notranslate nohighlight">\(2\)</span>-dimensional chain group <span class="math notranslate nohighlight">\(C_2\)</span>
+consisting of linear combinations of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, and the boundary
+homomorphism <span class="math notranslate nohighlight">\(\partial_2:C_2\rightarrow C_1\)</span> sends both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> to <span class="math notranslate nohighlight">\(a-b\)</span>.
+The homology gorup <span class="math notranslate nohighlight">\(H_1(X_3)=\text{Ker}\partial_1/\text{Im}\partial_2\)</span> is the same as
+for <span class="math notranslate nohighlight">\(X_2\)</span>, but now <span class="math notranslate nohighlight">\(\partial_2\)</span> has a nontrivial kernel, the infinite cyclic
+group generated by <span class="math notranslate nohighlight">\(A-B\)</span>. We view <span class="math notranslate nohighlight">\(A-B\)</span> as a <span class="math notranslate nohighlight">\(2\)</span>-dimensional
+cycle, generating the homology group <span class="math notranslate nohighlight">\(H_2(X_3)=\text{Ker}\partial_2\approx\mathbb{Z}\)</span>.
+Topologically, the cycle <span class="math notranslate nohighlight">\(A-B\)</span> is the sphere formed by the cells <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> together
+with their common boundary circle. This spherical cycle detects the presence of a
+‘hole’ in <span class="math notranslate nohighlight">\(X_3\)</span>, the missing interior of the sphere. However, since this hole is enclosed
+by a sphere rather than a circle, it is of a different sort from the holes detected by
+<span class="math notranslate nohighlight">\(H_1(X_3)\approx \mathbb{Z}\times\mathbb{Z}\)</span>, which are detected by the cycles <span class="math notranslate nohighlight">\(b-c\)</span> and <span class="math notranslate nohighlight">\(c-d\)</span>.</p>
+<p><span style="margin-left: 2em"> Let us continue one more step and construct a complex <span class="math notranslate nohighlight">\(X_4\)</span> from <span class="math notranslate nohighlight">\(X_3\)</span> by attaching
+a <span class="math notranslate nohighlight">\(3\)</span>-cell <span class="math notranslate nohighlight">\(C\)</span> along the <span class="math notranslate nohighlight">\(2\)</span>-sphere formed by <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. This creates a chain group <span class="math notranslate nohighlight">\(C_3\)</span>
+generated by this <span class="math notranslate nohighlight">\(3\)</span>-cell <span class="math notranslate nohighlight">\(C\)</span>, and we define a boundary homomorphism <span class="math notranslate nohighlight">\(\partial_3:C_3\rightarrow C_2\)</span>
+sending <span class="math notranslate nohighlight">\(C\)</span> to <span class="math notranslate nohighlight">\(A-B\)</span> since the cycle <span class="math notranslate nohighlight">\(A-B\)</span> should be viewed as the boundary of <span class="math notranslate nohighlight">\(C\)</span>
+in the same way that the <span class="math notranslate nohighlight">\(1\)</span>-dimensional cycle <span class="math notranslate nohighlight">\(a-b\)</span> is the boundary of <span class="math notranslate nohighlight">\(A\)</span>. Now we
+have a sequence of three boundary homomorphisms <span class="math notranslate nohighlight">\(C_3 \xrightarrow{\partial_3}C_2 \xrightarrow{\partial_2}C_1 \xrightarrow{\partial_1}C_0\)</span> and
+the quotient <span class="math notranslate nohighlight">\(H_2(X_4)=\text{Ker}\partial_2 / \text{Im}\partial_3\)</span> has become trivial. Also <span class="math notranslate nohighlight">\(H_3(X_4)=\text{Ker}\partial_3=0\)</span>.
+The group <span class="math notranslate nohighlight">\(H_1(X_4)\)</span> is the same as <span class="math notranslate nohighlight">\(H_1(X_3)\)</span>, namely <span class="math notranslate nohighlight">\(\mathbb{Z}\times\mathbb{Z}\)</span>, so this is the only nontrivial
+homology group of <span class="math notranslate nohighlight">\(X_4\)</span>.</p>
+<p><span style="margin-left: 2em"> It is clear what the general pattern of the examples is. For a cell complex <span class="math notranslate nohighlight">\(X\)</span> one
+has chain groups <span class="math notranslate nohighlight">\(C_n(X)\)</span> which are free abelian groups with basis the <span class="math notranslate nohighlight">\(n\)</span>-cells of <span class="math notranslate nohighlight">\(X\)</span>,
+and there are boundary homomorphisms <span class="math notranslate nohighlight">\(\partial_n:C_n(X) \rightarrow C_{n-1}(X)\)</span>, in terms of which
+one defines the homology group <span class="math notranslate nohighlight">\(H_n(X)=\text{Ker}\partial_n/\text{Im}\partial_{n+1}\)</span>. The major difficulty is
+how to define <span class="math notranslate nohighlight">\(\partial_n\)</span> in general. For <span class="math notranslate nohighlight">\(n=1\)</span> this is easy: The boundary of an oriented
+edge is the vertex at its head minus the vertex at its tail. The next case <span class="math notranslate nohighlight">\(n=2\)</span> is also
+not hard, at least for cells attached along cycles that are simply loops of edges, for
+then the boundary of the cell is this cycle of edges, with the appropriate signs taking
+orientations into account. But for larget <span class="math notranslate nohighlight">\(n\)</span>, matters become more complicated. Even
+if one restricts attention to cell complexes formed from polyhedral cells with nice
+attaching maps, there is still the matter of orientations to sort out.</p>
+<p><span style="margin-left: 2em"> The best solution to this problem seems to be to adopt an indirect approach.
+Arbitrary polyhedra can always be subdivided into special polyhedra called simplices
+(the triangle and the tetrahedron are the <span class="math notranslate nohighlight">\(2\)</span>-dimensional and <span class="math notranslate nohighlight">\(3\)</span>-dimensional instances)
+so there is no loss of generality, though initially there is some loss of efficiency, in
+restricting attention entirely to simplices. For simplices there is no difficulty in defining
+boundary maps or in handling orientations. So one obtains a homology theory, called
+simplicial homology, for cell complexes built from simplices. Still, this is a rather
+restricted class of spaces, and the theory itself has a certain rigidity that makes it
+awkward to work with.</p>
+<p><span style="margin-left: 2em"> The way around these obstacles is to step back from the geometry of spaces
+decomposed into simplices and to consider instead something which at first glance
+seems wildly more complicated, the collection of all possible continuous maps of
+simplices into a given space <span class="math notranslate nohighlight">\(X\)</span>. These maps generate tremendously large chain groups
+<span class="math notranslate nohighlight">\(C_n(X)\)</span>, but the quotients <span class="math notranslate nohighlight">\(H_n(X)=\text{Ker}\partial_n / \text{Im}\partial_{n+1}\)</span>, called singular homology groups,
+turn out to be much smaller, at least for reasonably nice spaces <span class="math notranslate nohighlight">\(X\)</span>. In particular, for
+spaces like those in the four examples above, the singular homology groups coincide
+with the homology groups we computed from the cellular chains. And as we shall
+see later in this chapter, singular homology allows one to define these nice cellular
+homology groups for all cell complexes, and in particular to solve the problem of
+defining the boundary maps for cellular chains.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="sec1/index.html">2.1. Simplicial and Singular Homology</a><ul>
@@ -500,6 +698,7 @@ document.write(`
 </li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -537,6 +736,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-idea-of-homology">The Idea of Homology</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
