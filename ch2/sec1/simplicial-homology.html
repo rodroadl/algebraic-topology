@@ -468,7 +468,58 @@ document.write(`
                   
   <section id="simplicial-homology">
 <h1>Simplicial Homology<a class="headerlink" href="#simplicial-homology" title="Permalink to this heading">#</a></h1>
-</section>
+<p><span style="margin-left: 2em"> Our goal now is to define the simplicial homology groups of a <span class="math notranslate nohighlight">\(\Delta\)</span>-complex <span class="math notranslate nohighlight">\(X\)</span>. Let
+<span class="math notranslate nohighlight">\(\Delta_n(X)\)</span> be the free abelian group with basis the open <span class="math notranslate nohighlight">\(n\)</span>-simplices <span class="math notranslate nohighlight">\(e^n_\alpha\)</span> of <span class="math notranslate nohighlight">\(X\)</span>. Elements
+of <span class="math notranslate nohighlight">\(\Delta_n(X)\)</span>, called <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>-<strong>chains</strong>, can be written as finite formal sums <span class="math notranslate nohighlight">\(\sum_\alpha n_\alpha e^n_\alpha\)</span> with
+coefficients <span class="math notranslate nohighlight">\(n_\alpha \in \mathbb{Z}\)</span>. Equivalently, we could write <span class="math notranslate nohighlight">\(\sum_\alpha n_\alpha \sigma_\alpha\)</span> where <span class="math notranslate nohighlight">\(\sigma_\alpha: \Delta^n \rightarrow X\)</span> is the
+characteristic map of <span class="math notranslate nohighlight">\(e^n_\alpha\)</span>, with image the closure of <span class="math notranslate nohighlight">\(e^n_\alpha\)</span> as described above. Such a
+sum <span class="math notranslate nohighlight">\(\sum_\alpha n_\alpha \sigma_\alpha\)</span> can be thought of as finite collection, or ‘chain’, of <span class="math notranslate nohighlight">\(n\)</span>-simplices in <span class="math notranslate nohighlight">\(X\)</span>
+with integer multiplicities, the coefficients <span class="math notranslate nohighlight">\(n_\alpha\)</span>.</p>
+<p><span style="margin-left: 2em"> As one can see in the next figure, the boundary of the <span class="math notranslate nohighlight">\(n\)</span>-simplex <span class="math notranslate nohighlight">\([v_0,\cdots ,v_n]\)</span>
+consists of the various <span class="math notranslate nohighlight">\((n-1)\)</span>-dimensional simplices <span class="math notranslate nohighlight">\([v_0,\cdots,\hat{v}_i,\cdots,v_n]\)</span>, where the ‘hat’
+symbol <span class="math notranslate nohighlight">\(\hat\)</span> over <span class="math notranslate nohighlight">\(v-i\)</span> indicates that this vertex is deleted from the sequence <span class="math notranslate nohighlight">\(v_0,\cdots,v_n\)</span>.
+In terms of chains, we might then wish to say that the boundary of <span class="math notranslate nohighlight">\([v_0,\cdots,v_n]\)</span> is the
+<span class="math notranslate nohighlight">\((n-1)\)</span>-chain formed by the sum of the faces <span class="math notranslate nohighlight">\([v_0,\cdots,\hat{v}_i,\cdots,v_n]\)</span>. However, it turns
+out to be better to insert certain signs and instead let the boundary of <span class="math notranslate nohighlight">\([v_0,\cdots,v_n]\)</span> be
+<span class="math notranslate nohighlight">\(\sum_i (-1)^i[v_0,\cdots,\hat{v}_i,\cdots,v_n]\)</span>. Heuristically, the signs are inserted to take orientations
+into account, so that all the faces of a simplex are coherently oriented, as indicated in
+the following figure:</p>
+<a class="reference internal image-reference" href="ch2/sec1/fig/orientation.png"><img alt="ch2/sec1/fig/orientation.png" class="align-center" src="ch2/sec1/fig/orientation.png" style="width: 100%;" /></a>
+<p>In the last case, the orientations of the two hidden faces are also counterclockwise
+when viewed from outside the <span class="math notranslate nohighlight">\(3\)</span>-simplex.</p>
+<p><span style="margin-left: 2em"> With this geometry in mind we define for a general <span class="math notranslate nohighlight">\(\Delta\)</span>-complex <span class="math notranslate nohighlight">\(X\)</span> a <strong>boundary
+homomorphism</strong> <span class="math notranslate nohighlight">\(\partial_n : \Delta_n(X) \rightarrow \Delta_{n-1}(X)\)</span> by specifying its values on basis elements:</p>
+<div class="math notranslate nohighlight">
+\[\partial_n(\sigma_\alpha)=\sum_i(-1)^i\sigma_\alpha\mid[v_0,\cdots,\hat{v}_i,\cdots,v_n]\]</div>
+<p>Note that the right side of this equation does indeed lie in <span class="math notranslate nohighlight">\(\Delta_{n-1}(X)\)</span> since each restriction
+<span class="math notranslate nohighlight">\(\sigma_\alpha \mid [v_0,\cdots,\hat{v}_i,\cdots,v_n]\)</span> is the characteristic map of an <span class="math notranslate nohighlight">\((n-1)\)</span>-simplex of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="docutils container" id="lemma-2-1">
+<blockquote>
+<div><p><strong>Lemma 2.1.</strong> <em>The composition</em> <span class="math notranslate nohighlight">\(\Delta_n(X) \xrightarrow{\partial_n}\Delta_{n-1}\xrightarrow{\partial_{n-1}}\Delta_{n-2}(X)\)</span> <em>is zero.</em></p>
+</div></blockquote>
+<p><strong>Proof:</strong> We have <span class="math notranslate nohighlight">\(\partial_n(\sigma)=\sum_i(-1)^i\sigma\mid[v_0,\cdots,\hat{v}_i,\cdots,v_n]\)</span>, and hence</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\partial_{n-1}\partial_n(\sigma)&amp;=\sum_{j&lt;i}(-1)^i(-1)^j\sigma\mid[v_0,\cdots,\hat{v}_j,\cdots,\hat{v}_i,\cdots,v_n]\\
+\sum_{j&gt;i}(-1)^i(-1)^{j-1}\sigma\mid[v_0,\cdots,\hat{v}_i,\cdots,\hat{v}_j,\cdots,v_n]\\\end{split}\]</div>
+<p>The latter two summations cancel since after switching <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> in the second sum, it
+becomes the negative of the first. <span style="float:right">&#9723</span></p>
+</div>
+<p><span style="margin-left: 2em"> The algebraic situation we have now is a sequence of homomorphisms of abelian
+groups</p>
+<div class="math notranslate nohighlight">
+\[\cdots \rightarrow C_{n+1} \xrightarrow{\partial_{n+1}} C_{n} \xrightarrow{\partial_{n+1}} C_{n-1} \rightarrow \cdots \rightarrow C_{1} \xrightarrow{\partial_{1}} C_{0} \xrightarrow{\partial_{0}} 0\]</div>
+<p>with <span class="math notranslate nohighlight">\(\partial_n \partial_{n+1}=0\)</span> for each <span class="math notranslate nohighlight">\(n\)</span>. Such a sequelnce is called a <strong>chain complex</strong>. Note that
+we have extended the sequence by a <span class="math notranslate nohighlight">\(0\)</span> at the right end, with <span class="math notranslate nohighlight">\(\partial_0=0\)</span>. The equation
+<span class="math notranslate nohighlight">\(\partial_n\partial_{n+1}=0\)</span> is equivalent to the inclusion <span class="math notranslate nohighlight">\(\text{Im}\partial_{n+1} \subset \text{Ker}\partial_n\)</span>, where Im and Ker denote
+image and kernel. So we can define the <span class="math notranslate nohighlight">\(n^{th}\)</span> <strong>homology group</strong> of the chain complex to
+be the quotient group <span class="math notranslate nohighlight">\(H_n=\text{Ker}\partial_n/\text{Im}\partial_{n+1}\)</span>. Elements of <span class="math notranslate nohighlight">\(\text{Ker}\partial_n\)</span> are called <strong>cycles</strong> and
+elements of <span class="math notranslate nohighlight">\(\text{Im}\partial_{n+1}\)</span> are called <strong>boundaries</strong>. Elements of <span class="math notranslate nohighlight">\(H_n\)</span> are cosets of <span class="math notranslate nohighlight">\(\text{Im}\partial_{n+1}\)</span>,
+called <strong>homology classes</strong>. Two cycles representing the same homology class are said
+to be <strong>homologous</strong>. This means their difference is a boundary.</p>
+<p><span style="margin-left: 2em"> Returning to the case that <span class="math notranslate nohighlight">\(C_n=\Delta_n(X)\)</span>, the homology group <span class="math notranslate nohighlight">\(\text{Ker}\partial_n /\text{Im}\partial_{n+1}\)</span> will
+be denoted <span class="math notranslate nohighlight">\(H^\Delta_n(X)\)</span> and called the <span class="math notranslate nohighlight">\(n^{th}\)</span> <strong>simplicial homology group</strong> of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<span class="target" id="example-2-2"></span></section>
 
 
                 </article>
